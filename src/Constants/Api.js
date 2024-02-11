@@ -1,0 +1,1 @@
+export const API = "https://portal.learnasyougo.org/api/v1";
