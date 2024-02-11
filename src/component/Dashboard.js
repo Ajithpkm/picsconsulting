@@ -1,323 +1,204 @@
 import React from 'react';
-import Logo_dtskill from '../images/logo-dtskill.png';
-import Logo from '../images/logo.svg';
-import Increased_profitability from '../images/increased-profitability.svg';
-import Higher_accuracy from '../images/higher-accuracy.svg';
-import blog_01 from '../images/blog_01.jpg';
-import blog_02 from '../images/blog_02.jpg';
-import blog_03 from '../images/blog_03.jpg';
-import testimonial_one from '../images/testimonial-one.png';
-import testimonial_two from '../images/testimonial-two.png';
-import testimonial_three from '../images/testimonial-three.png';
-import logo_white from '../images/logo-white.svg';
-import facebook from '../images/facebook.svg';
-import twitter from '../images/twitter.svg';
-import snapchat from '../images/snapchat.svg';
-import instagram from '../images/instagram.svg';
-import linkedin from '../images/linkedin.svg';
-import slider_01 from '../images/slider-01.jpg';
-import newsletter_bg from '../images/newsletter-bg.jpg';
-import section_bg from '../images/section-bg-03.jpg';
+import Logo from '../images/logo.png';
+import university_01 from '../images/university-01.png';
+import university_02 from '../images/university-02.png';
+import university_03 from '../images/university-03.png';
+import university_04 from '../images/university-04.png';
+import pics_consultants from '../images/pics_consultants.jpg';
+import footer_logo from '../images/footer-logo.png';
+import facebook from '../images/facebook.png';
+import instagram from '../images/instagram.png';
+import whatsapp from '../images/whatsapp.png';
+import slider_01 from '../images/home-bg.jpg';
 import './style.css';
- 
+import '../css/verticals.min.css';
 const Dashboard = () => {
 
     return (
         <div>
             <div>
-                <title>DT SKill</title>
-                {/* <div className="page-loader">
-                    <div className="loader"><img src={Logo_dtskill} /></div>
-                </div> */}
+                <title>PICS Consultants</title>
                 <a href="#main" className="btn skip-to-content">Skip to Content</a>
                 <div className="page" id="top">
-                    {/* Navigation panel */}
                     <nav className="main-nav stick-fixed">
                         <div className="full-wrapper relative clearfix">
-                            {/* Logo ( * your text or image into link tag *) */}
                             <div className="nav-logo-wrap local-scroll">
                                 <a href="index" className="logo">
-                                    <img src={Logo} alt="DT SKill" />
+                                    <img src={Logo} alt="PICS Consultants" />
                                 </a>
                             </div>
                             <div className="mobile-nav" role="button" tabIndex={0}>
                                 <i className="fa fa-bars" />
                                 <span className="sr-only">Menu</span>
                             </div>
-                            {/* Main Menu */}
                             <div className="inner-nav desktop-nav">
                                 <ul className="clearlist">
-                                    <li className="active"><a href="index">Home</a></li>
-                                    <li>
-                                        <a href="#" className="mn-has-sub">Services <i className="las la-angle-down" /></a>
-                                        <ul className="mn-sub to-right">
-                                            <li><a href="robotic-process-automation">Robotic Process Automation (RPA)</a></li>
-                                            <li><a href="work-flow-automation">Work Flow Automation (WFA)</a></li>
-                                            <li><a href="orchestration">Orchestration</a></li>
-                                            <li><a href="digital-twins">Digital Twins</a></li>
-                                        </ul>
-                                    </li>
+                                    <li className="active"><a href="index">study international</a></li>
                                     <li><a href="about">About</a></li>
-                                    <li><a href="careers">Careers</a></li>
-                                    <li><a href="contact">Contact</a></li>
-                                    <li><a href="#"><span className="btn btn-mod btn-red btn-circle btn-medium">Request Consultation</span></a></li>
+                                    <li><a href="careers">FAQ</a></li>
+                                    <li><a href="#"><span className="btn btn-mod btn-red btn-circle btn-medium">Get in Touch</span></a></li>
                                 </ul>
                             </div>
-                            {/* End Main Menu */}
                         </div>
                     </nav>
-                    {/* End Navigation panel */}
                     <main id="main">
-                        {/* Fullwidth Slider */}
-                        <div className="home-section fullwidth-slider mt-60" id="home">
-                            {/* Slide Item */}
-                            <section className="home-section bg-scroll fixed-height-small" data-background={slider_01}>
+                        <div className="home-section fullwidth-slider" id="home">
+                            <section className="home-section bg-scroll fixed-height-medium" style={{
+                                  background: `url(${slider_01})`,
+                                }}>
                                 <div className="js-height-parent container-1400">
-                                    {/* Hero Content */}
                                     <div className="home-content">
                                         <div className="home-text">
-                                            <div className="row d-flex align-items-center">
-                                                <div className="col-md-6">
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10 pt-120">
-                                                        Driving Digital Transformations<br />
-                                                        <span>Automation, Digital Twins &amp; Orchestration</span><br />
-                                                        for Streamlined Operations<br />
+                                            <div className="row d-flex align-items-center justify-content-center">
+                                                <div className="col-md-8">
+                                                    <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10 pt-40">
+                                                        PICS<br />Your pathway to STUDY in UK, USA,<br />Canada & Australia 
                                                     </div>
-                                                    <div className="local-scroll text-center">
-                                                        <a href="javascript:;" className="btn btn-mod btn-red btn-round btn-medium shadow">Request consultation</a>
+                                                    <div className="hs-line-2 text-center">
+                                                        Includes admissions to top institutions like Oxford, Cambridg <br />and 225+ Universities across the globeasd
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* End Hero Content */}
                                 </div>
                             </section>
-                            {/* End Slide Item */}
                         </div>
-                        {/* End Fullwidth Slider */}
-                        {/* Why DTskill Digital Transformations Skill Team Section */}
-                        <section className="small-section bg-scroll bg-pos-top-right" data-background={section_bg}>
-                            <div className="container-1400 relative">
-                                <div className="row d-flex justify-content-center text-center">
-                                    <div className="col-md-9">
-                                        <h2 className="section-title font-alt align-center mb-30 mb-sm-40 wow fadeInDown" data-wow-delay="0.1s">
-                                            Why DTskill Team
+
+                        <section className="small-section bg-white pt-30 pb-30">
+                            <div className="container relative">
+                                <div className="row d-flex justify-content-between">
+                                    <div className='col-md-5'>
+                                        <h2 className="banner-title mb-0 mb-xs-0">
+                                            Degree Programs include
                                         </h2>
-                                        <div className="section-text">
-                                            <p>Our Digital Transformation services and solutions would be the stepping stone to the continual transformation with no changes in the existing systems, tools, process &amp; environment</p>
+                                        <div className="banner-desc">
+                                            UG, PG, Phd & Foundation,  Engineering, Management, Medicine, Law, Research & English Program
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <div className='universities'>
+                                            <ul>
+                                                <li><img src={university_01} alt="" /></li>
+                                                <li><img src={university_02} alt="" /></li>
+                                                <li><img src={university_03} alt="" /></li>
+                                                <li><img src={university_04} alt="" /></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row d-flex justify-content-center">
-                                    <div className="col-md-6">
-                                        <div className="digitalFuture">
-                                            <div className="digitalFuture-icon">
-                                                <div className="box"><img src={Increased_profitability} /></div>
-                                            </div>
-                                            <div className="digitalFuture-content">
-                                                <div className="title font-alt">Increased profitability</div>
-                                                <div className="desc">Achieve more efficiency with fewer resources. Our orchestrated automation services will help you streamline your business processes by focusing on automating predominant tasks to reduce operational expenses.</div>
-                                            </div>
-                                        </div>
+                            </div>
+                        </section>
+
+                        <section className='small-section'>
+                            <div className='container relative'>
+                                <div className='row d-flex justify-content-between'>
+                                    <div className='col-md-7'>
+                                        <div className='image-rounded'><img src={pics_consultants} alt="" className='img-fluid' /></div>
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="digitalFuture">
-                                            <div className="digitalFuture-icon">
-                                                <div className="box dark"><img src={Higher_accuracy} /></div>
+                                    <div className='col-md-5'>
+                                        <div className='inner-container'>
+                                            <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
+                                                PICS Consultants
                                             </div>
-                                            <div className="digitalFuture-content">
-                                                <div className="title font-alt">Higher accuracy and quality</div>
-                                                <div className="desc">Automated systems eliminate the error of mundane and monotonous human tasks resulting in higher accuracy and improved customer satisfaction.</div>
+                                            <div className='section-text'>
+                                                PICS Consultants takes a <b>Student- Centred Approach (P-I-C-S approach)</b> and our mission is to provide right guidance by having a transparent discussion with the student. We discuss with you to understand your requirement, Use our knowledge and provide you a list of university that’s well-matched and we help you to make the right decision that meet your requirement. Here is our exclusive PICS approach, 
+                                            </div>
+
+                                            <div className='pics-abbr mt-30'>
+                                                <div className='d-flex align-items-center mb-1'>
+                                                    <div className='capital font-alt'>P</div>
+                                                    <div className='desc'>
+                                                        <div className='desc-btn'>Prepare for the meeting</div>
+                                                    </div>
+                                                </div>
+                                                <div className='d-flex align-items-center mb-1'>
+                                                    <div className='capital font-alt'>I</div>
+                                                    <div className='desc'>
+                                                        <div className='desc-btn'>Identify your Requirement</div>
+                                                    </div>
+                                                </div>
+                                                <div className='d-flex align-items-center mb-1'>
+                                                    <div className='capital font-alt'>C</div>
+                                                    <div className='desc'>
+                                                        <div className='desc-btn'>Choose the University</div>
+                                                    </div>
+                                                </div>
+                                                <div className='d-flex align-items-center mb-1'>
+                                                    <div className='capital font-alt'>S</div>
+                                                    <div className='desc'>
+                                                        <div className='desc-btn'>Submit the application</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='mt-40'>
+                                                <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        {/* End Why DTskill Digital Transformations Skill Team Section */}
-                        {/*News & Blog Section*/}
-                        <section className="small-section bg-gray-lighter pt-40 pb-40">
-                            <div className="container-1400 relative">
-                                <div className="row d-flex justify-content-center">
-                                    <div className="col-md-6">
-                                        <h2 className="section-title font-alt align-center mb-40 mb-sm-40 wow fadeInDown" data-wow-delay="0.1s">
-                                            News &amp; Updates
-                                        </h2>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    {/*Repeat Post*/}
-                                    <div className="col-md-3">
-                                        <div className="blogPost">
-                                            <a href="javascript:;">
-                                                <div className="post-prev-img">
-                                                    <img src={blog_01} alt="" />
-                                                </div>
-                                                <div className="post-category">
-                                                    Technology
-                                                </div>
-                                                <div className="post-prev-title mb-20 font-alt">
-                                                    Is Machine Learning Right Going On Good Way
-                                                </div>
-                                                <div className="alt-service-item">
-                                                    <div className="alt-service-icon">
-                                                        <img src={testimonial_one} />
-                                                    </div>
-                                                    <h3 className="alt-services-title font-alt">By: David Joe</h3>
-                                                    3 January 2023
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {/*End Repeat Post*/}
-                                    {/*Repeat Post*/}
-                                    <div className="col-md-3">
-                                        <div className="blogPost">
-                                            <a href="javascript:;">
-                                                <div className="post-prev-img">
-                                                    <img src={blog_02} alt="" />
-                                                </div>
-                                                <div className="post-category">
-                                                    Robot
-                                                </div>
-                                                <div className="post-prev-title mb-20 font-alt">
-                                                    The Current State Of Artificial Intelligence Infographic
-                                                </div>
-                                                <div className="alt-service-item">
-                                                    <div className="alt-service-icon">
-                                                        <img src={testimonial_two} />
-                                                    </div>
-                                                    <h3 className="alt-services-title font-alt">By: David Joe</h3>
-                                                    3 January 2023
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {/*End Repeat Post*/}
-                                    {/*Repeat Post*/}
-                                    <div className="col-md-3">
-                                        <div className="blogPost">
-                                            <a href="javascript:;">
-                                                <div className="post-prev-img">
-                                                    <img src={blog_03} alt="" />
-                                                </div>
-                                                <div className="post-category">
-                                                    Machine
-                                                </div>
-                                                <div className="post-prev-title mb-20 font-alt">
-                                                    Our Company As A Global Leader In Big Data
-                                                </div>
-                                                <div className="alt-service-item">
-                                                    <div className="alt-service-icon">
-                                                        <img src={testimonial_three} />
-                                                    </div>
-                                                    <h3 className="alt-services-title font-alt">By: David Joe</h3>
-                                                    3 January 2023
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {/*End Repeat Post*/}
-                                    {/*Repeat Post*/}
-                                    <div className="col-md-3">
-                                        <div className="blogPost">
-                                            <a href="javascript:;">
-                                                <div className="post-prev-img">
-                                                    <img src={blog_01} alt="" />
-                                                </div>
-                                                <div className="post-category">
-                                                    Technology
-                                                </div>
-                                                <div className="post-prev-title mb-20 font-alt">
-                                                    Is Machine Learning Right Going On Good Way
-                                                </div>
-                                                <div className="alt-service-item">
-                                                    <div className="alt-service-icon">
-                                                        <img src={testimonial_one} />
-                                                    </div>
-                                                    <h3 className="alt-services-title font-alt">By: David Joe</h3>
-                                                    3 January 2023
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {/*End Repeat Post*/}
-                                </div>
-                            </div>
-                        </section>
-                        {/*End News & Blog Section*/}
-                        {/*Subscribe For Newsletter*/}
-                        <section className="small-section bg-scroll bg-pos-top" data-background={newsletter_bg}>
-                            <div className="container-1400 relative">
-                                <form className="form align-center">
-                                    <div className="row d-flex justify-content-center">
-                                        <div className="col-md-6">
-                                            <h3 className="hs-line-2 font-alt mb-10">Subscribe For Newsletter</h3>
-                                            <h3 className="hs-line-3 font-alt mb-40">Subscribe To Our Newsletter &amp; Stay Updated</h3>
-                                            <div className="inputContainer">
-                                                <input placeholder="Enter Your Email" className="newsletter-field form-control input-md round mb-xs-10" type="email" pattern=".{5,100}" required aria-required="true" id="newsletter_field" name="EMAIL" />
-                                                <button type="submit" aria-controls="subscribe-result" className="btn btn-mod btn-red btn-circle btn-medium mb-xs-10">
-                                                    Subscribe
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </section>
-                        {/*End Subscribe For Newsletter*/}
                     </main>
-                    {/* Footer */}
-                    <footer className="small-section bg-gray footer pb-60">
-                        <div className="container-1400">
-                            <div className="row d-flex align-items-center pb-40">
-                                <div className="col-md-4">
-                                    <a href="#top"><img src={logo_white} width={180} alt="DT SKill" /></a>
+
+                    <footer className="small-section bg-gray-lighter footer pb-60">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-3 text-center">
+                                    <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
                                 </div>
-                                <div className="col-md-8">
-                                    <div className="footer-menu d-flex justify-content-end">
+                                <div className="col-md-9">
+                                    <div className="footer-menu">
                                         <ul className="clearlist">
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><a href="#">Resources</a></li>
+                                            <li><a href="#">Study International</a></li>
                                             <li><a href="#">About</a></li>
-                                            <li><a href="#">Careers</a></li>
+                                            <li><a href="#">FAQ</a></li>
                                             <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Terms & conditions</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Cookie Policy</a></li>
                                         </ul>
+                                    </div>
+
+                                    <div className='row pt-40 pb-40'>
+                                        <div className='col-md-4'>
+                                            <div className='footer-widget'>
+                                                <div className='title'>PICS - Headquarters</div>
+                                                Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                                <button className='map-link' onClick=''>Get Directions</button>
+                                            </div>
+                                        </div>
+                                        <div className='col-md-4'>
+                                            <div className='footer-widget'>
+                                                <div className='title'>india</div>
+                                                Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                                <button className='map-link' onClick=''>Get Directions</button>
+                                            </div>
+                                        </div>
+                                        <div className='col-md-4'>
+                                            <div className='footer-widget'>
+                                                <div className="social-icons mb-10">
+                                                    <ul>
+                                                        <li><a href="#"><img src={facebook} /></a></li>
+                                                        <li><a href="#"><img src={instagram} /></a></li>
+                                                        <li><a href="#"><img src={whatsapp} /></a></li>
+                                                    </ul>
+                                                </div>
+                                                @PICSConsultants
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+
+                                    <div className="footer-copy pt-20 pb-0">
+                                        Copyright@2024 Pappa International LTD t/a PICS | REG NO: 13199591
                                     </div>
                                 </div>
                             </div>
-                            {/* Footer Text */}
-                            <div className="footer-text pt-40">
-                                <div className="d-flex align-items-center justify-content-between">
-                                    <div className="footer-copy">
-                                        © 2023 DT Skill. All Rights Reserved.
-                                    </div>
-                                    {/* Social Links */}
-                                    <div className="social-icons">
-                                        <ul>
-                                            <li><a href="javascript:;"><img src={facebook} /></a></li>
-                                            <li><a href="javascript:;"><img src={twitter} /></a></li>
-                                            <li><a href="javascript:;"><img src={snapchat} /></a></li>
-                                            <li><a href="javascript:;"><img src={instagram} /></a></li>
-                                            <li><a href="javascript:;"><img src={linkedin} /></a></li>
-                                        </ul>
-                                    </div>
-                                    {/* End Social Links */}
-                                </div>
-                            </div>
-                            {/* End Footer Text */}
                         </div>
-                        {/* Top Link */}
-                        <div className="local-scroll">
-                            <a href="#top" className="link-to-top"><i className="fa fa-caret-up" /></a>
-                        </div>
-                        {/* End Top Link */}
                     </footer>
-                    {/* End Footer */}
                 </div>
             </div>
         </div>
