@@ -265,6 +265,7 @@ const Dashboard = () => {
                                     <Tab icon={<PhoneIcon />} iconPosition="end" label="one" />
                                     <Tab icon={<PhoneIcon />} iconPosition="end" label="two" />
                                     <Tab icon={<PhoneIcon />} iconPosition="end" label="three" />
+                                    
                                 </Tabs>
                             </div>
                         </section>
