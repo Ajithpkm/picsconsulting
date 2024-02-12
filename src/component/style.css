@@ -6728,3 +6728,7 @@ section:hover .small-item-carousel .owl-next{
     font-weight: 400;
     margin-bottom: 0;
 }
+
+.small-section .css-1aquho2-MuiTabs-indicator {
+    display: none;
+}
