@@ -3,7 +3,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
-import PhoneIcon from '@mui/icons-material/Phone';
 import university_01 from '../images/united-kingdom.png';
 import university_02 from '../images/united-states.png';
 import university_03 from '../images/canada.png';
@@ -19,6 +18,12 @@ import unversity_bg from '../images/university-bg.jpg';
 import icon_01 from '../images/university-offer.svg';
 import icon_02 from '../images/dedicated-pics-consultant.svg';
 import icon_03 from '../images/professional-service.svg';
+import university_list from '../images/university-list.jpg';
+import uk_01 from '../images/uk-01.png';
+import uk_02 from '../images/uk-02.png';
+import uk_03 from '../images/uk-03.png';
+import uk_04 from '../images/uk-04.png';
+import uk_05 from '../images/uk-05.png';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal'
 import './style.css';
@@ -106,7 +111,7 @@ const Dashboard = () => {
                 <title>PICS Consultants</title>
                 <a href="#main" className="btn skip-to-content">Skip to Content</a>
                 <div className="page" id="top">
-                    <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed ak" : "main-nav stick-fixed"}>
+                    <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
                         <div className="full-wrapper relative clearfix">
                             <div className="nav-logo-wrap local-scroll">
                                 <a href="index" className="logo">
@@ -287,29 +292,83 @@ const Dashboard = () => {
                             </div>
                         </section>
 
-                        <section className='small-section'>
-                            <Button onClick={handleOpen}>Open modal</Button>
+                        <section className='small-section bg-scroll bg-pos-center' style={{
+                            background: `url(${university_list})`,
+                        }}>
+                            <div className='container relative'>
+                                <div className='row'>
+                                    <div className='col-md-12'>
+                                        <div className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                            PICS Global University List 
+                                        </div>
+                                        <div className='row d-flex justify-content-center mb-20'>
+                                            <div className='col-md-8'>
+                                                <div className='section-text text-center mb-30'>
+                                                PICS can help students in gaining entry to some of world’s leading universities. Students success is our success and we want the best outcomes for them
+                                                </div>
+
+                                                <div className='hs-line-4'>
+                                                    Click to view Universities by Country
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* <Button onClick={handleOpen}>Open modal</Button> */}
                             <div className='container'>
                                 <Tabs
                                     orientation="horizontal"
                                     variant="scrollable"
                                     value={value}
                                     onChange={handleChange}
+                                    className='pics-tabs'
                                     aria-label="horizontal tabs example"
-                                    sx={{ borderRight: 1, borderColor: 'divider' }}
                                 >
-                                    <Tab label="Item One" {...a11yProps(0)} />
-                                    <Tab label="Item Two" {...a11yProps(1)} />
-                                    <Tab label="Item Three" {...a11yProps(2)} />
+                                    <Tab className='tab-single uk' label="UK" {...a11yProps(0)} />
+                                    <Tab className='tab-single usa' label="USA" {...a11yProps(1)} />
+                                    <Tab className='tab-single canada' label="Canada" {...a11yProps(2)} />
+                                    <Tab className='tab-single australia' label="Australia" {...a11yProps(3)} />
                                 </Tabs>
                                 <TabPanel value={value} index={0}>
-                                    Item One
+                                    <Box className='mt-10'>
+                                        <Grid sx={{ mb: 2 }} container  direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_01} /></div>
+                                                <h4>University of oxford</h4>
+                                                <p>Oxford, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_02} /></div>
+                                                <h4>University of Cambridge</h4>
+                                                <p>Cambridge, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_03} /></div>
+                                                <h4>Imperial College</h4>
+                                                <p>London, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_04} /></div>
+                                                <h4>University of Edinburgh</h4>
+                                                <p>Edinburgh, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_05} /></div>
+                                                <h4>University of Bristol</h4>
+                                                <p>Bristol, UK</p>
+                                            </Grid>
+                                        </Grid>
+                                    </Box>
                                 </TabPanel>
                                 <TabPanel value={value} index={1}>
                                     Item Two
                                 </TabPanel>
                                 <TabPanel value={value} index={2}>
                                     Item Three
+                                </TabPanel>
+                                <TabPanel value={value} index={3}>
+                                    Item Four
                                 </TabPanel>
                             </div>
                         </section>

@@ -24,7 +24,14 @@ Project: DT Skill
 .color{ color: #182E46 !important; }
 .glass{ opacity: .5; }
 .overflow {overflow: visible !important;}
-.bg-pos-bottom {background-position: bottom center !important;}
+.bg-pos-bottom {
+    background-position: bottom center !important;
+    background-size: cover !important;
+}
+.bg-pos-center {
+    background-position: center center !important;
+    background-size: cover !important;
+}
 body.modal-open {
     padding-right: 0 !important;
     overflow: visible !important;
@@ -1230,13 +1237,14 @@ a.bg-video-button-muted{
 .hs-line-4{
     margin-top: 0;
     position: relative;
-    font-size: 24px;
+    font-size: 13px;
+    text-align: center;
     font-weight: 400;
-    text-transform: none;
+    text-transform: uppercase;
     line-height: 1.6;
     font-weight: 400;
     letter-spacing: 0px;
-    color: #333333;
+    color: #313131;
 }
 .hs-line-5{
     margin-top: 0;
@@ -1494,6 +1502,7 @@ a.bg-video-button-muted{
     display: flex;
     align-items: center;
     height: 110px;
+    margin-top: 10px;
     
     -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
     -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
@@ -6612,4 +6621,110 @@ section:hover .small-item-carousel .owl-next{
 }
 .pb-160 {
     padding-bottom: 160px;;
+}
+.sticky-header {
+    background-color: #182E46;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sticky-header .nav-logo-wrap .logo {
+    height: 65px;
+    margin-top: 5px;
+}
+.pics-tabs {
+    min-height: 40px !important;
+    border: none !important;
+    padding: 10px 0 !important;
+    margin: 10px 0 !important;
+    overflow: visible !important;
+}
+.pics-tabs .MuiTabs-scroller {
+    display: flex;
+    justify-content: center;
+}
+.pics-tabs .tab-single {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    align-items: self-start;
+    text-align: left;
+    border-radius: 6px;
+    padding: 4px 20px;
+    color: #182E46;
+    text-transform: uppercase;
+    min-width: 190px;
+    min-height: 28px;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    margin: 5px 6px;
+}
+.pics-tabs .tab-single.Mui-selected {
+    background-color: #182E46;
+    border-bottom: 2px solid #182E46 !important;
+    color: #fff;
+    outline:  none !important;
+}
+.pics-tabs .tab-single.uk::after {
+    background-image: url('../images/uk-sm.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.pics-tabs .tab-single.usa::after {
+    background-image: url('../images/usa-sm.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.pics-tabs .tab-single.canada::after {
+    background-image: url('../images/canada-sm.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.pics-tabs .tab-single.australia::after {
+    background-image: url('../images/australia-sm.png');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.univ-box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px !important;
+    margin: 0 10px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+.univ-box h4 {
+    color: #182E46;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.univ-box p {
+    color: #182E46;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 0;
 }
