@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
@@ -39,10 +39,18 @@ const Dashboard = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-
+    const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrollValueMoreThanHeaderHeight(window.scrollY > 96);
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll);
+    },[])
 
     return (
         <div>
@@ -65,7 +73,7 @@ const Dashboard = () => {
                 <title>PICS Consultants</title>
                 <a href="#main" className="btn skip-to-content">Skip to Content</a>
                 <div className="page" id="top">
-                    <nav className="main-nav stick-fixed">
+                    <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed ak" : "main-nav stick-fixed"}>
                         <div className="full-wrapper relative clearfix">
                             <div className="nav-logo-wrap local-scroll">
                                 <a href="index" className="logo">
