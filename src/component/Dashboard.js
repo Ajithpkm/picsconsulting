@@ -1,15 +1,21 @@
 import React from 'react';
+import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
-import university_01 from '../images/university-01.png';
-import university_02 from '../images/university-02.png';
-import university_03 from '../images/university-03.png';
-import university_04 from '../images/university-04.png';
+import university_01 from '../images/united-kingdom.png';
+import university_02 from '../images/united-states.png';
+import university_03 from '../images/canada.png';
+import university_04 from '../images/australia.png';
 import pics_consultants from '../images/pics_consultants.jpg';
 import footer_logo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
 import slider_01 from '../images/home-bg.jpg';
+import application_service_bg from '../images/application-service-bg.jpg';
+import unversity_bg from '../images/university-bg.jpg';
+import icon_01 from '../images/university-offer.svg';
+import icon_02 from '../images/dedicated-pics-consultant.svg';
+import icon_03 from '../images/professional-service.svg';
 import './style.css';
 import '../css/verticals.min.css';
 const Dashboard = () => {
@@ -90,7 +96,7 @@ const Dashboard = () => {
                             </div>
                         </section>
 
-                        <section className='small-section'>
+                        <section className='small-section pb-250'>
                             <div className='container relative'>
                                 <div className='row d-flex justify-content-between'>
                                     <div className='col-md-7'>
@@ -132,12 +138,78 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='mt-40'>
+                                            <div className='mt-40 mb-0'>
                                                 <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        <section className='small-section pt-50 bg-scroll bg-pos-bottom pb-160 overflow'style={{
+                                background: `url(${application_service_bg})`,
+                            }}>
+                            <div className='container relative'>
+                                <div className='row'>
+                                    <div className='col-md-12'>
+                                        <div className='image-rounded pull-top'>
+                                            <img src={unversity_bg} alt='' />
+                                        </div>
+                                        <div className='mt-30'>
+                                            <div className="hs-line-3 white text-center font-alt mb-20 mb-xs-10">
+                                                PICS FREE University Application Service 
+                                            </div>
+                                            <div className='row d-flex justify-content-center mb-40'>
+                                                <div className='col-md-9'>
+                                                    <div className='section-text text-center white'>
+                                                        Applying to an university can be time-consuming and challenging for an international student. That is why the PICS FREE University Application Service does the hard work for you with offerings like;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <Box className="mt-10">
+                                                <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
+                                                    <Grid item xs={12} sm={4}>
+                                                        <div className="pics-service">
+                                                            <div className='icon'><img src={icon_01} /></div>
+                                                            <h4>100% PICS Guaranteed University offer</h4>
+                                                            <p>PICS will provide you with an offer from an university when eligibility criteria are met.</p>
+                                                        </div>
+                                                    </Grid>
+                                                    <Grid item xs={12} sm={4}>
+                                                        <div className="pics-service">
+                                                            <div className='icon'><img src={icon_02} /></div>
+                                                            <h4>Your dedicated PICS<br />Consultant</h4>
+                                                            <p>From first contact to admission, your PICS consultant will work with you through all the processes.</p>
+                                                        </div>
+                                                    </Grid>
+                                                    <Grid item xs={12} sm={4}>
+                                                        <div className="pics-service">
+                                                            <div className='icon'><img src={icon_03} /></div>
+                                                            <h4>Reliable & Professional<br />Service</h4>
+                                                            <p>From writing personal statements to understanding eligibility criteria, we will strive to provide the best result.</p>
+                                                        </div>
+                                                    </Grid>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-40 mb-20 text-center'>
+                                                <a href='javascript:;' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                            </div>
+                                            {/* <Card className='cardinfo' sx={{ minWidth: 275 }} >
+                                                <CardContent className='listrdo mb-listrdo' >
+                                                    <h4 className='title-head'> Which fuel does it use?</h4>
+                                                    
+                                                </CardContent>
+                                            </Card> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <section className='small-section'>
+                            <div className='container'>
+                                
                             </div>
                         </section>
                     </main>
