@@ -1,4 +1,8 @@
 import React from 'react';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
 import university_01 from '../images/united-kingdom.png';
@@ -209,7 +213,20 @@ const Dashboard = () => {
                         
                         <section className='small-section'>
                             <div className='container'>
-                                
+                            <Box sx={{ width: '100%', typography: 'body1' }}>
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+          <Tab icon={<facebook />} iconPosition="end" label="end" value="1" />
+          <Tab icon={<facebook />} iconPosition="end" label="end" value="2" />
+          <Tab icon={<facebook />} iconPosition="end" label="end" value="3" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">Item One</TabPanel>
+        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="3">Item Three</TabPanel>
+      </TabContext>
+    </Box>
                             </div>
                         </section>
                     </main>
