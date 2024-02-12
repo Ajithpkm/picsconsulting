@@ -42,7 +42,7 @@ const Dashboard = () => {
                                     <li className="active"><a href="index">study international</a></li>
                                     <li><a href="about">About</a></li>
                                     <li><a href="careers">FAQ</a></li>
-                                    <li><a href="#"><span className="btn btn-mod btn-red btn-circle btn-medium">Get in Touch</span></a></li>
+                                    <li><a href="#"><span className="btn btn-mod btn-w btn-circle btn-medium">Get in Touch</span></a></li>
                                 </ul>
                             </div>
                         </div>
