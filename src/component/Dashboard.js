@@ -24,6 +24,10 @@ import uk_02 from '../images/uk-02.png';
 import uk_03 from '../images/uk-03.png';
 import uk_04 from '../images/uk-04.png';
 import uk_05 from '../images/uk-05.png';
+import uk_06 from '../images/uk-06.png';
+import uk_07 from '../images/uk-07.png';
+import uk_08 from '../images/uk-08.png';
+import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal'
 import './style.css';
@@ -96,15 +100,85 @@ const Dashboard = () => {
                 <Modal
                     open={open}
                     onClose={handleClose}
+                    className="university-list"
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <Box sx={style}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            Text in a modal
+                    <Box sx={style} className='university-list-bx'>
+                        <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
+                            <div className='row d-flex align-items-center'>
+                                <div className='col-md-2'>
+                                    <img src={university_01} alt="" />
+                                </div>
+                                <div className='col-md-6'>
+                                    <div className='country-name font-alt'>UK<br />University list</div>
+                                </div>
+                                <div className='col-md-4'>
+                                    <div className='text-center'>
+                                        <a href='javascript:;' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                    </div>
+                                </div>
+                            </div>
                         </Typography>
-                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                        <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
+                            <div className='font-alt hs-line-5'>A</div>
+                            <div className='desc mb-20'>
+                                <div className='row'>
+                                    <div className='col-md-6'>
+                                        <ul>
+                                            <li>University of oxford</li>
+                                            <li>University of Cambridge</li>
+                                            <li>Imperial College</li>
+                                            <li>University of Edinburgh</li>
+                                            <li>King's College London</li>
+                                            <li>University of Manchester</li>
+                                            <li>University of Glasgow</li>
+                                            <li>University of Bristol</li>
+                                        </ul>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <ul>
+                                            <li>University of oxford</li>
+                                            <li>University of Cambridge</li>
+                                            <li>Imperial College</li>
+                                            <li>University of Edinburgh</li>
+                                            <li>King's College London</li>
+                                            <li>University of Manchester</li>
+                                            <li>University of Glasgow</li>
+                                            <li>University of Bristol</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='font-alt hs-line-5'>B</div>
+                            <div className='desc mb-20'>
+                                <div className='row'>
+                                    <div className='col-md-6'>
+                                        <ul>
+                                            <li>University of oxford</li>
+                                            <li>University of Cambridge</li>
+                                            <li>Imperial College</li>
+                                            <li>University of Edinburgh</li>
+                                            <li>King's College London</li>
+                                            <li>University of Manchester</li>
+                                            <li>University of Glasgow</li>
+                                            <li>University of Bristol</li>
+                                        </ul>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <ul>
+                                            <li>University of oxford</li>
+                                            <li>University of Cambridge</li>
+                                            <li>Imperial College</li>
+                                            <li>University of Edinburgh</li>
+                                            <li>King's College London</li>
+                                            <li>University of Manchester</li>
+                                            <li>University of Glasgow</li>
+                                            <li>University of Bristol</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </Typography>
                     </Box>
                 </Modal>
@@ -315,7 +389,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <Button onClick={handleOpen}>Open modal</Button> */}
+                            
                             <div className='container'>
                                 <Tabs
                                     orientation="horizontal"
@@ -358,8 +432,34 @@ const Dashboard = () => {
                                                 <h4>University of Bristol</h4>
                                                 <p>Bristol, UK</p>
                                             </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_06} /></div>
+                                                <h4>King's College London</h4>
+                                                <p>London, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_07} /></div>
+                                                <h4>University of Manchester</h4>
+                                                <p>Manchester, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_08} /></div>
+                                                <h4>University of Glasgow</h4>
+                                                <p>Glasgow, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_01} /></div>
+                                                <h4>University of oxford</h4>
+                                                <p>Oxford, UK</p>
+                                            </Grid>
+                                            <Grid item className="univ-box">
+                                                <div className='icon'><img src={uk_02} /></div>
+                                                <h4>University of Cambridge</h4>
+                                                <p>Cambridge, UK</p>
+                                            </Grid>
                                         </Grid>
                                     </Box>
+                                    <div className='mt-20 text-center'><Button onClick={handleOpen} className='buttonlink2'>View More</Button></div>
                                 </TabPanel>
                                 <TabPanel value={value} index={1}>
                                     Item Two
@@ -370,6 +470,63 @@ const Dashboard = () => {
                                 <TabPanel value={value} index={3}>
                                     Item Four
                                 </TabPanel>
+                            </div>
+                        </section>
+
+                        <section className='small-section bg-scroll bg-pos-center' style={{
+                            background: `url(${free_consultation})`,
+                        }}>
+                            <div className='container relative'>
+                                <div className='row'>
+                                    <div className='col-md-12'>
+                                        <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
+                                            Steps to a FREE PICS Consultation
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='row'>
+                                    <div className='col-md-6'>
+                                        <div className='step-container'>
+                                            <div className='count font-alt'>01</div>
+                                            <div className='description'>
+                                                <h4>Prepare for the meeting</h4>
+                                                <p>Just click Get in Touch button and submit the form and your dedicated PICS consultant will contact you soon</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <div className='step-container'>
+                                            <div className='count font-alt'>03</div>
+                                            <div className='description'>
+                                                <h4>Choose the university</h4>
+                                                <p>Your PICS consultants will match your requirements and will provide a list of university for you to choose and make a life time decision</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <div className='step-container'>
+                                            <div className='count font-alt'>02</div>
+                                            <div className='description'>
+                                                <h4>Identify your university requirements</h4>
+                                                <p>Your PICS consultant will identify and understand your requirements like  degree, country, financials & more</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <div className='step-container'>
+                                            <div className='count font-alt'>04</div>
+                                            <div className='description'>
+                                                <h4>Submit the application</h4>
+                                                <p>Submit the application for an university offer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='mt-40 mb-0 text-center'>
+                                    <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                </div>
                             </div>
                         </section>
                     </main>
