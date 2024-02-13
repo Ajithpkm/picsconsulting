@@ -32,6 +32,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal'
 import './style.css';
 import '../css/verticals.min.css';
+import { Height } from '@material-ui/icons';
 const style = {
     position: 'absolute',
     top: '50%',
@@ -120,7 +121,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                         </Typography>
-                        <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
+                        <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }} style={{height: '500px', overflowY: 'scroll'}}>
                             <div className='font-alt hs-line-5'>A</div>
                             <div className='desc mb-20'>
                                 <div className='row'>
@@ -198,10 +199,10 @@ const Dashboard = () => {
                             </div>
                             <div className="inner-nav desktop-nav">
                                 <ul className="clearlist">
-                                    <li className="active"><a href="index">study international</a></li>
+                                    <li className="active"><a href="/">study international</a></li>
                                     <li><a href="about">About</a></li>
-                                    <li><a href="careers">FAQ</a></li>
-                                    <li><a href="#"><span className="btn btn-mod btn-w btn-circle btn-medium">Get in Touch</span></a></li>
+                                    <li><a href="faq">FAQ</a></li>
+                                    <li><a href="/"><span className="btn btn-mod btn-w btn-circle btn-medium">Get in Touch</span></a></li>
                                 </ul>
                             </div>
                         </div>
