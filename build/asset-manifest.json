@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29fed268.chunk.css",
+    "main.js": "/static/js/main.51828c69.chunk.js",
+    "main.js.map": "/static/js/main.51828c69.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.34fda1c1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.34fda1c1.js.map",
+    "static/js/2.91fb1ee2.chunk.js": "/static/js/2.91fb1ee2.chunk.js",
+    "static/js/2.91fb1ee2.chunk.js.map": "/static/js/2.91fb1ee2.chunk.js.map",
+    "static/js/3.0c8e00de.chunk.js": "/static/js/3.0c8e00de.chunk.js",
+    "static/js/3.0c8e00de.chunk.js.map": "/static/js/3.0c8e00de.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.29fed268.chunk.css.map": "/static/css/main.29fed268.chunk.css.map",
+    "static/js/2.91fb1ee2.chunk.js.LICENSE.txt": "/static/js/2.91fb1ee2.chunk.js.LICENSE.txt",
+    "static/media/application-service-bg.1eaacd9b.jpg": "/static/media/application-service-bg.1eaacd9b.jpg",
+    "static/media/dedicated-pics-consultant.fc759203.svg": "/static/media/dedicated-pics-consultant.fc759203.svg",
+    "static/media/style.css": "/static/media/pattern-bg-2.2a6c9a30.png",
+    "static/media/footer-logo.3298577c.png": "/static/media/footer-logo.3298577c.png",
+    "static/media/free_consultation.7db01add.jpg": "/static/media/free_consultation.7db01add.jpg",
+    "static/media/home-bg.29bcdd9c.jpg": "/static/media/home-bg.29bcdd9c.jpg",
+    "static/media/pics_consultants.13b58fee.jpg": "/static/media/pics_consultants.13b58fee.jpg",
+    "static/media/professional-service.bd6525c8.svg": "/static/media/professional-service.bd6525c8.svg",
+    "static/media/uk-01.2292b341.png": "/static/media/uk-01.2292b341.png",
+    "static/media/uk-02.4360a054.png": "/static/media/uk-02.4360a054.png",
+    "static/media/uk-03.70b5e669.png": "/static/media/uk-03.70b5e669.png",
+    "static/media/uk-04.f4aaa819.png": "/static/media/uk-04.f4aaa819.png",
+    "static/media/uk-05.96cb3b6c.png": "/static/media/uk-05.96cb3b6c.png",
+    "static/media/uk-08.9e3e6228.png": "/static/media/uk-08.9e3e6228.png",
+    "static/media/university-bg.8ec24bd0.jpg": "/static/media/university-bg.8ec24bd0.jpg",
+    "static/media/university-list.fefa346d.jpg": "/static/media/university-list.fefa346d.jpg",
+    "static/media/university-offer.f72b8bb5.svg": "/static/media/university-offer.f72b8bb5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34fda1c1.js",
+    "static/js/2.91fb1ee2.chunk.js",
+    "static/css/main.29fed268.chunk.css",
+    "static/js/main.51828c69.chunk.js"
+  ]
+}

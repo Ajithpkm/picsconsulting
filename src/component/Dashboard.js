@@ -99,15 +99,15 @@ const Dashboard = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
-        }, 2000);
+        }, 800);
     }, [])
 
     return (
         <>
             <div>
                 {loading === false ?
-                    <div style={{ textAlign: 'center', justifyContentontent: 'center' }}>
-                        <span>Please wait...</span>
+                    <div className='page-loader'>
+                        <span class="loader"></span>
                     </div> :
                     <div>
                         <Modal
@@ -165,6 +165,35 @@ const Dashboard = () => {
                                             </div>
                                         </div>
                                         <div className='font-alt hs-line-5'>B</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>University of oxford</li>
+                                                        <li>University of Cambridge</li>
+                                                        <li>Imperial College</li>
+                                                        <li>University of Edinburgh</li>
+                                                        <li>King's College London</li>
+                                                        <li>University of Manchester</li>
+                                                        <li>University of Glasgow</li>
+                                                        <li>University of Bristol</li>
+                                                    </ul>
+                                                </div>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>University of oxford</li>
+                                                        <li>University of Cambridge</li>
+                                                        <li>Imperial College</li>
+                                                        <li>University of Edinburgh</li>
+                                                        <li>King's College London</li>
+                                                        <li>University of Manchester</li>
+                                                        <li>University of Glasgow</li>
+                                                        <li>University of Bristol</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>C</div>
                                         <div className='desc mb-20'>
                                             <div className='row'>
                                                 <div className='col-md-6'>
@@ -408,7 +437,6 @@ const Dashboard = () => {
                                     <div className='container'>
                                         <Tabs
                                             orientation="horizontal"
-                                            variant="scrollable"
                                             value={value}
                                             onChange={handleChange}
                                             className='pics-tabs'
@@ -477,13 +505,125 @@ const Dashboard = () => {
                                             <div className='mt-20 text-center'><Button onClick={handleOpen} className='buttonlink2'>View More</Button></div>
                                         </TabPanel>
                                         <TabPanel value={value} index={1}>
-                                            Item Two
+                                        <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_01} /></div>
+                                                        <h4>University of oxford</h4>
+                                                        <p>Oxford, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_02} /></div>
+                                                        <h4>University of Cambridge</h4>
+                                                        <p>Cambridge, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_03} /></div>
+                                                        <h4>Imperial College</h4>
+                                                        <p>London, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_04} /></div>
+                                                        <h4>University of Edinburgh</h4>
+                                                        <p>Edinburgh, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_05} /></div>
+                                                        <h4>University of Bristol</h4>
+                                                        <p>Bristol, UK</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={handleOpen} className='buttonlink2'>View More</Button></div>
                                         </TabPanel>
                                         <TabPanel value={value} index={2}>
-                                            Item Three
+                                        <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_01} /></div>
+                                                        <h4>University of oxford</h4>
+                                                        <p>Oxford, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_02} /></div>
+                                                        <h4>University of Cambridge</h4>
+                                                        <p>Cambridge, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_03} /></div>
+                                                        <h4>Imperial College</h4>
+                                                        <p>London, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_04} /></div>
+                                                        <h4>University of Edinburgh</h4>
+                                                        <p>Edinburgh, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_05} /></div>
+                                                        <h4>University of Bristol</h4>
+                                                        <p>Bristol, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_06} /></div>
+                                                        <h4>King's College London</h4>
+                                                        <p>London, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_07} /></div>
+                                                        <h4>University of Manchester</h4>
+                                                        <p>Manchester, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_08} /></div>
+                                                        <h4>University of Glasgow</h4>
+                                                        <p>Glasgow, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_01} /></div>
+                                                        <h4>University of oxford</h4>
+                                                        <p>Oxford, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_02} /></div>
+                                                        <h4>University of Cambridge</h4>
+                                                        <p>Cambridge, UK</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={handleOpen} className='buttonlink2'>View More</Button></div>
                                         </TabPanel>
                                         <TabPanel value={value} index={3}>
-                                            Item Four
+                                        <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_01} /></div>
+                                                        <h4>University of oxford</h4>
+                                                        <p>Oxford, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_02} /></div>
+                                                        <h4>University of Cambridge</h4>
+                                                        <p>Cambridge, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_03} /></div>
+                                                        <h4>Imperial College</h4>
+                                                        <p>London, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_04} /></div>
+                                                        <h4>University of Edinburgh</h4>
+                                                        <p>Edinburgh, UK</p>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={uk_05} /></div>
+                                                        <h4>University of Bristol</h4>
+                                                        <p>Bristol, UK</p>
+                                                    </Grid>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={handleOpen} className='buttonlink2'>View More</Button></div>
                                         </TabPanel>
                                     </div>
                                 </section>
