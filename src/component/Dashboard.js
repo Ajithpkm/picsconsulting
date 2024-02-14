@@ -82,9 +82,12 @@ function a11yProps(index: number) {
 const Dashboard = () => {
     const [value, setValue] = React.useState(0);
     const [open, setOpen] = React.useState(false);
+    const [contactopen, setContactOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const handleOpenContact = () => setContactOpen(true);
+    const handleCloseContact = () => setContactOpen(false);
     const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -231,6 +234,23 @@ const Dashboard = () => {
                                 </SimpleBar>
                             </Box>
                         </Modal>
+
+                        <Modal
+                            open={contactopen}
+                            onClose={handleCloseContact}
+                            className="university-list"
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box sx={style} className='contactmodal-bx'>
+                                <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
+                                    <div className='country-name font-alt'>Get in touch</div>
+                                </Typography>
+                                <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
+                                    <div className='content'> Send us a email to <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button> and one of our consultants will contact you.</div>
+                                </Typography>
+                            </Box>
+                        </Modal>
                         <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
@@ -247,10 +267,10 @@ const Dashboard = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            <li className="active"><a href="/">study international</a></li>
-                                            {/* <li><a href="about">About</a></li>
+                                            {/* <li className="active"><a href="/">study international</a></li>
+                                            <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li> */}
-                                            <li><a href="/"><span className="btn btn-mod btn-w btn-circle btn-medium">Get in Touch</span></a></li>
+                                            <li><button onClick={handleOpenContact} className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -698,7 +718,7 @@ const Dashboard = () => {
                                             <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            <div className="footer-menu">
+                                            {/* <div className="footer-menu">
                                                 <ul className="clearlist">
                                                     <li><a href="#">Study International</a></li>
                                                     <li><a href="#">About</a></li>
@@ -708,21 +728,21 @@ const Dashboard = () => {
                                                     <li><a href="#">Privacy Policy</a></li>
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
-                                            </div>
+                                            </div> */}
 
                                             <div className='row pt-40 pb-40'>
                                                 <div className='col-md-4'>
                                                     <div className='footer-widget'>
                                                         <div className='title'>PICS - Headquarters</div>
                                                         Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
-                                                        <button className='map-link' onClick=''>Get Directions</button>
+                                                        {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
                                                 <div className='col-md-4'>
                                                     <div className='footer-widget'>
                                                         <div className='title'>india</div>
                                                         Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
-                                                        <button className='map-link' onClick=''>Get Directions</button>
+                                                        {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
                                                 <div className='col-md-4'>
