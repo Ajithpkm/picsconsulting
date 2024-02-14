@@ -2674,7 +2674,7 @@ a.logo:hover{
     min-height: 800px;
 }
 .fixed-height-medium{
-    min-height: 700px;
+    min-height: 760px;
 }
 .fixed-height-small{
     min-height: 550px;
@@ -5302,6 +5302,13 @@ section:hover .small-item-carousel .owl-next{
     list-style: none;
     display: inline;
     margin: 0 15px;
+    transition: 0.3s;
+}
+.universities ul li img {
+    transition: 0.3s;
+}
+.universities ul li img:hover {
+    margin-top: -8px;
 }
 .image-rounded img {
     border-radius: 8px;
@@ -5769,20 +5776,6 @@ section:hover .small-item-carousel .owl-next{
 .blog-item-body{
 	color: #555555;
 }
-
-
-/* ==============================
-   Wow animation fix
-   ============================== */
-  
-.wow{
-    opacity: 0.01;
-}
-.wow.animated,
-.mobile .wow{
-    opacity: 1;
-}
-
 
 /* ==============================
    Morphext
@@ -6429,7 +6422,7 @@ section:hover .small-item-carousel .owl-next{
     padding-bottom: 160px;;
 }
 .sticky-header {
-    background-color: #182E46;
+    background-color: rgba(24, 46, 70, 0.85);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .sticky-header .nav-logo-wrap .logo {

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import WOW from 'wowjs';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
 import university_01 from '../images/united-kingdom.png';
@@ -101,6 +102,10 @@ const Dashboard = () => {
             setLoading(true);
         }, 800);
     }, [])
+
+    new WOW.WOW({
+        live: false
+    }).init();
 
     return (
         <>
@@ -230,7 +235,7 @@ const Dashboard = () => {
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
-                                <div className="full-wrapper relative clearfix">
+                                <div className="container relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
                                         <a href="index" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
@@ -243,8 +248,8 @@ const Dashboard = () => {
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
                                             <li className="active"><a href="/">study international</a></li>
-                                            <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li>
+                                            {/* <li><a href="about">About</a></li>
+                                            <li><a href="faq">FAQ</a></li> */}
                                             <li><a href="/"><span className="btn btn-mod btn-w btn-circle btn-medium">Get in Touch</span></a></li>
                                         </ul>
                                     </div>
@@ -303,7 +308,7 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-7'>
-                                                <div className='image-rounded'><img src={pics_consultants} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded wow fadeInLeft' data-wow-delay="0.1s"><img src={pics_consultants} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
@@ -316,25 +321,25 @@ const Dashboard = () => {
 
                                                     <div className='pics-abbr mt-30'>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt'>P</div>
+                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.1s">P</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Prepare for the meeting</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt'>I</div>
+                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.2s">I</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Identify your Requirement</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt'>C</div>
+                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.3s">C</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Choose the University</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt'>S</div>
+                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.4s">S</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Submit the application</div>
                                                             </div>
@@ -373,21 +378,21 @@ const Dashboard = () => {
                                                     <Box className="mt-10">
                                                         <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service">
+                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.1s">
                                                                     <div className='icon'><img src={icon_01} /></div>
                                                                     <h4>100% PICS Guaranteed University offer</h4>
                                                                     <p>PICS will provide you with an offer from an university when eligibility criteria are met.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service">
+                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.2s">
                                                                     <div className='icon'><img src={icon_02} /></div>
                                                                     <h4>Your dedicated PICS<br />Consultant</h4>
                                                                     <p>From first contact to admission, your PICS consultant will work with you through all the processes.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service">
+                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.3s">
                                                                     <div className='icon'><img src={icon_03} /></div>
                                                                     <h4>Reliable & Professional<br />Service</h4>
                                                                     <p>From writing personal statements to understanding eligibility criteria, we will strive to provide the best result.</p>
@@ -724,8 +729,8 @@ const Dashboard = () => {
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
-                                                                <li><a href="#"><img src={facebook} /></a></li>
-                                                                <li><a href="#"><img src={instagram} /></a></li>
+                                                                <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
+                                                                <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
                                                                 <li><a href="#"><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>

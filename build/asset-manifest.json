@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.29fed268.chunk.css",
-    "main.js": "/static/js/main.51828c69.chunk.js",
-    "main.js.map": "/static/js/main.51828c69.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.34fda1c1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.34fda1c1.js.map",
-    "static/js/2.91fb1ee2.chunk.js": "/static/js/2.91fb1ee2.chunk.js",
-    "static/js/2.91fb1ee2.chunk.js.map": "/static/js/2.91fb1ee2.chunk.js.map",
-    "static/js/3.0c8e00de.chunk.js": "/static/js/3.0c8e00de.chunk.js",
-    "static/js/3.0c8e00de.chunk.js.map": "/static/js/3.0c8e00de.chunk.js.map",
+    "main.css": "/static/css/main.016df8af.chunk.css",
+    "main.js": "/static/js/main.09ad0f14.chunk.js",
+    "main.js.map": "/static/js/main.09ad0f14.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.eea6b06f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.eea6b06f.js.map",
+    "static/js/2.fb55c417.chunk.js": "/static/js/2.fb55c417.chunk.js",
+    "static/js/2.fb55c417.chunk.js.map": "/static/js/2.fb55c417.chunk.js.map",
+    "static/js/3.bb9d4bfb.chunk.js": "/static/js/3.bb9d4bfb.chunk.js",
+    "static/js/3.bb9d4bfb.chunk.js.map": "/static/js/3.bb9d4bfb.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.29fed268.chunk.css.map": "/static/css/main.29fed268.chunk.css.map",
-    "static/js/2.91fb1ee2.chunk.js.LICENSE.txt": "/static/js/2.91fb1ee2.chunk.js.LICENSE.txt",
+    "static/css/main.016df8af.chunk.css.map": "/static/css/main.016df8af.chunk.css.map",
+    "static/js/2.fb55c417.chunk.js.LICENSE.txt": "/static/js/2.fb55c417.chunk.js.LICENSE.txt",
     "static/media/application-service-bg.1eaacd9b.jpg": "/static/media/application-service-bg.1eaacd9b.jpg",
     "static/media/dedicated-pics-consultant.fc759203.svg": "/static/media/dedicated-pics-consultant.fc759203.svg",
     "static/media/style.css": "/static/media/pattern-bg-2.2a6c9a30.png",
@@ -31,9 +31,9 @@
     "static/media/university-offer.f72b8bb5.svg": "/static/media/university-offer.f72b8bb5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.34fda1c1.js",
-    "static/js/2.91fb1ee2.chunk.js",
-    "static/css/main.29fed268.chunk.css",
-    "static/js/main.51828c69.chunk.js"
+    "static/js/runtime-main.eea6b06f.js",
+    "static/js/2.fb55c417.chunk.js",
+    "static/css/main.016df8af.chunk.css",
+    "static/js/main.09ad0f14.chunk.js"
   ]
 }
