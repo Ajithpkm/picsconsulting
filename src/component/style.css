@@ -22,6 +22,7 @@ Project: DT Skill
 .white{ color: #fff !important; }
 .black{ color: #111 !important; }
 .color{ color: #182E46 !important; }
+.color-2 { color: #B9943C !important; }
 .glass{ opacity: .5; }
 .overflow {overflow: visible !important;}
 .bg-pos-bottom {
@@ -1211,7 +1212,9 @@ a.bg-video-button-muted{
     
     border: 1px solid rgba(255,255,255, .5);
 }
-
+.js-height-parent {
+    height: 760px;
+}
 .hs-wrap-1{
     max-width: 350px;
     margin: 0 auto;
@@ -1224,7 +1227,6 @@ a.bg-video-button-muted{
 }
 
 .hs-line-1{
-    margin-top: 200px;
     position: relative;
     text-transform: none;
     font-size: 45px;
@@ -1293,10 +1295,11 @@ a.bg-video-button-muted{
 .hs-line-7{
     margin-top: 0;
     position: relative;
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 600;;
+    color: #B9943C;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     line-height: 1.2;
 }
 .hs-line-8{
@@ -1407,6 +1410,9 @@ a.bg-video-button-muted{
 }
 .inner-container {
     padding-left: 30px;
+}
+.inner-container-right {
+    padding-right: 30px;
 }
 .pics-abbr .capital {
     font-size: 40px;
@@ -5977,4 +5983,42 @@ section:hover .small-item-carousel .owl-next{
     color: #182E46;
     padding: 2px 0;
     font-weight: 500;
+}
+.readmore {
+    font-size: 14px;
+    color: #B9943C;
+    font-weight: 600;
+}
+.pics-values {
+    background-color: #ECECEC;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    min-height: 265px;
+    -webkit-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
+    -moz-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+    -o-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
+    transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+.pics-values:hover {
+    background-color: #fff;
+}
+.pics-values .icon img {
+    width: 60px;
+    height: 60px;
+}
+.pics-values h4 {
+    color: #B9943C;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 30px;
+}
+.pics-values p {
+    color: #182E46;
+    font-size: 15px;
+    margin-bottom: 0;
 }

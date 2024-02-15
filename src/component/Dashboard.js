@@ -285,7 +285,7 @@ const Dashboard = () => {
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
-                                                            <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10 pt-40">
+                                                            <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
                                                                 PICS<br />Your pathway to STUDY in UK, USA,<br />Canada & Australia
                                                             </div>
                                                             <div className="hs-line-2 text-center">
@@ -328,7 +328,7 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-7'>
-                                                <div className='image-rounded wow fadeInLeft' data-wow-delay="0.1s"><img src={pics_consultants} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded wow fadeInDown' data-wow-delay="0.1s"><img src={pics_consultants} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
