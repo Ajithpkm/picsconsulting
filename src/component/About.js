@@ -186,14 +186,18 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='section-text'>
                                                         <p>Vetri is from India and founded PICS ( Pappa International Consultants) a pathway to Study or Work Consultancy. Pappa is a family name , an informal term for a father.</p>
-                                                        <p>Vetri, after completing his Bachelors in India and travelled to UK in 2007 for his Masters Degree in Business Management and graduated from Heriot-Watt University . From being a student to CEO at PICS , Pappa groups Ltd , lives and resides in UK over 15 years , Married, Owns a home in UK and also recently elected City Councillor and a father of one. <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? 'Read Less' : 'Read more'}</a></p>
+                                                        <p>Vetri, after completing his Bachelors in India and travelled to UK in 2007 for his Masters Degree in Business Management and graduated from Heriot-Watt University . From being a student to CEO at PICS , Pappa groups Ltd , lives and resides in UK over 15 years , Married, Owns a home in UK and also recently elected City Councillor and a father of one.
+                                                            <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? '' : 'Read more'}</a>
+                                                        </p>
 
                                                         {vertriPapaReadMore && <div className='additonal-content'>
                                                             <p>“As a student who came to the UK for a degree program, I know firsthand how beneficial and life-changing it can be to receive a support in making a lifetime decision to choose an International university to study or even an International country to work”</p>
 
                                                             <p>Vetri Co-founded PICS with Andre and handful of his other contacts who he built life-long relationships with, in the belief that together they could positively impact students all over the world.</p>
 
-                                                            <p>Our PICS Consultants is a team of experts who have experience in helping applicants achieving their long-term goals is the most effective approach in helping them be successful. Vetri’s international experience continues to be motivation behind providing the highest standard of educational services and advice to students around the world, sharing the knowledge and support he was so grateful to have received himself.</p>
+                                                            <p>Our PICS Consultants is a team of experts who have experience in helping applicants achieving their long-term goals is the most effective approach in helping them be successful. Vetri’s international experience continues to be motivation behind providing the highest standard of educational services and advice to students around the world, sharing the knowledge and support he was so grateful to have received himself.
+                                                                <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? 'Read Less' : ''}</a>
+                                                            </p>
                                                         </div>
                                                         }
                                                     </div>
@@ -214,12 +218,16 @@ const Dashboard = () => {
                                                         Andre
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id odio et metus faucibus tempor vel ac neque. Vestibulum rhoncus mauris non velit efficitur convallis. Nam congue, nisi eget semper efficitur, felis tortor vulputate risus, in imperdiet nisi diam ac augue. Etiam in orci vel mauris vestibulum rhoncus sit amet sollicitudin nulla. Nulla ex dui, scelerisque a ligula nec, tincidunt imperdiet tellus. Maecenas egestas, risus a interdum semper, sem ex fermentum ante, in commodo ex arcu gravida <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? 'Read Less' : 'Read more'}</a></p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id odio et metus faucibus tempor vel ac neque. Vestibulum rhoncus mauris non velit efficitur convallis. Nam congue, nisi eget semper efficitur, felis tortor vulputate risus, in imperdiet nisi diam ac augue. Etiam in orci vel mauris vestibulum rhoncus sit amet sollicitudin nulla. Nulla ex dui, scelerisque a ligula nec, tincidunt imperdiet tellus. Maecenas egestas, risus a interdum semper, sem ex fermentum ante, in commodo ex arcu gravida.
+                                                            <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? '' : 'Read more'}</a>
+                                                        </p>
 
                                                         {andreReadMore && <div className='additonal-content'>
                                                             <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat, accumsan purus. Duis eu nisl in leo iaculis venenatis ac quis risus. Nulla nec urna dignissim, rutrum augue sed, rhoncus nulla. Fusce lacinia erat enim. Cras vel elit condimentum, euismod metus a, lobortis ligula. Cras cursus interdum posuere.</p>
 
-                                                            <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat.</p>
+                                                            <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat.
+                                                                <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? 'Read Less' : ''}</a>
+                                                            </p>
                                                         </div>}
                                                     </div>
                                                 </div>
