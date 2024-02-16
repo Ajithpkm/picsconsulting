@@ -16,15 +16,6 @@ import optimization from '../images/optimization.svg';
 import outsourcing from '../images/outsourcing.svg';
 import outline from '../images/outline.svg';
 import university_list from '../images/university-list.jpg';
-import uk_01 from '../images/uk-01.png';
-import uk_02 from '../images/uk-02.png';
-import uk_03 from '../images/uk-03.png';
-import uk_04 from '../images/uk-04.png';
-import uk_05 from '../images/uk-05.png';
-import uk_06 from '../images/uk-06.png';
-import uk_07 from '../images/uk-07.png';
-import uk_08 from '../images/uk-08.png';
-import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import SimpleBar from 'react-custom-scrollbars';
@@ -47,6 +38,7 @@ interface TabPanelProps {
     index: number;
     value: number;
 }
+
 
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
@@ -76,6 +68,8 @@ function a11yProps(index: number) {
 }
 
 const Dashboard = () => {
+    const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
+    const [andreReadMore, setandreReadMore] = React.useState(false);
     const [value, setValue] = React.useState(0);
     const [open, setOpen] = React.useState(false);
     const [contactopen, setContactOpen] = React.useState(false);
@@ -111,7 +105,7 @@ const Dashboard = () => {
             <div>
                 {loading === false ?
                     <div className='page-loader'>
-                        <span class="loader"></span>
+                        <span className="loader"></span>
                     </div> :
                     <div>
                         <title>PICS Consultants</title>
@@ -152,7 +146,7 @@ const Dashboard = () => {
                                                                 About Us
                                                             </div>
                                                             <div className="hs-line-2 text-center">
-                                                                We have walked this path many times before<br />and we are here to help you find your path  
+                                                                We have walked this path many times before<br />and we are here to help you find your path
                                                             </div>
                                                         </div>
                                                     </div>
@@ -177,7 +171,7 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </section>
-                                
+
                                 <section className='small-section pt-0'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
@@ -188,19 +182,20 @@ const Dashboard = () => {
                                                 <div className='inner-container'>
                                                     <div className='hs-line-7'>Meet the Founder</div>
                                                     <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
-                                                        Vetri Pappa 
+                                                        Vetri Pappa
                                                     </div>
                                                     <div className='section-text'>
                                                         <p>Vetri is from India and founded PICS ( Pappa International Consultants) a pathway to Study or Work Consultancy. Pappa is a family name , an informal term for a father.</p>
-                                                        <p>Vetri, after completing his Bachelors in India and travelled to UK in 2007 for his Masters Degree in Business Management and graduated from Heriot-Watt University . From being a student to CEO at PICS , Pappa groups Ltd , lives and resides in UK over 15 years , Married, Owns a home in UK and also recently elected City Councillor and a father of one. <a href='javascript:;' className='readmore'>Read more</a></p>
+                                                        <p>Vetri, after completing his Bachelors in India and travelled to UK in 2007 for his Masters Degree in Business Management and graduated from Heriot-Watt University . From being a student to CEO at PICS , Pappa groups Ltd , lives and resides in UK over 15 years , Married, Owns a home in UK and also recently elected City Councillor and a father of one. <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? 'Read Less' : 'Read more'}</a></p>
 
-                                                        <div className='additonal-content'>
-                                                            <p>“As a student who came to the UK for a degree program, I know firsthand how beneficial and life-changing it can be to receive a support in making a lifetime decision to choose an International university to study or even an International country to work”</p>  
+                                                        {vertriPapaReadMore && <div className='additonal-content'>
+                                                            <p>“As a student who came to the UK for a degree program, I know firsthand how beneficial and life-changing it can be to receive a support in making a lifetime decision to choose an International university to study or even an International country to work”</p>
 
                                                             <p>Vetri Co-founded PICS with Andre and handful of his other contacts who he built life-long relationships with, in the belief that together they could positively impact students all over the world.</p>
 
                                                             <p>Our PICS Consultants is a team of experts who have experience in helping applicants achieving their long-term goals is the most effective approach in helping them be successful. Vetri’s international experience continues to be motivation behind providing the highest standard of educational services and advice to students around the world, sharing the knowledge and support he was so grateful to have received himself.</p>
                                                         </div>
+                                                        }
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,7 +206,7 @@ const Dashboard = () => {
                                 <section className='small-section pt-0'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
-                                            
+
                                             <div className='col-md-8'>
                                                 <div className='inner-container-right'>
                                                     <div className='hs-line-7'>Meet the co-Founder</div>
@@ -219,13 +214,13 @@ const Dashboard = () => {
                                                         Andre
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id odio et metus faucibus tempor vel ac neque. Vestibulum rhoncus mauris non velit efficitur convallis. Nam congue, nisi eget semper efficitur, felis tortor vulputate risus, in imperdiet nisi diam ac augue. Etiam in orci vel mauris vestibulum rhoncus sit amet sollicitudin nulla. Nulla ex dui, scelerisque a ligula nec, tincidunt imperdiet tellus. Maecenas egestas, risus a interdum semper, sem ex fermentum ante, in commodo ex arcu gravida <a href='javascript:;' className='readmore'>Read more</a></p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id odio et metus faucibus tempor vel ac neque. Vestibulum rhoncus mauris non velit efficitur convallis. Nam congue, nisi eget semper efficitur, felis tortor vulputate risus, in imperdiet nisi diam ac augue. Etiam in orci vel mauris vestibulum rhoncus sit amet sollicitudin nulla. Nulla ex dui, scelerisque a ligula nec, tincidunt imperdiet tellus. Maecenas egestas, risus a interdum semper, sem ex fermentum ante, in commodo ex arcu gravida <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? 'Read Less' : 'Read more'}</a></p>
 
-                                                        <div className='additonal-content'>
-                                                            <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat, accumsan purus. Duis eu nisl in leo iaculis venenatis ac quis risus. Nulla nec urna dignissim, rutrum augue sed, rhoncus nulla. Fusce lacinia erat enim. Cras vel elit condimentum, euismod metus a, lobortis ligula. Cras cursus interdum posuere.</p>  
+                                                        {andreReadMore && <div className='additonal-content'>
+                                                            <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat, accumsan purus. Duis eu nisl in leo iaculis venenatis ac quis risus. Nulla nec urna dignissim, rutrum augue sed, rhoncus nulla. Fusce lacinia erat enim. Cras vel elit condimentum, euismod metus a, lobortis ligula. Cras cursus interdum posuere.</p>
 
                                                             <p>Sed mi ex, convallis id tempus sit amet, dictum at nunc. Quisque ut ipsum scelerisque, volutpat mauris nec, egestas lorem. Duis hendrerit elit at venenatis hendrerit. Sed consectetur laoreet tristique. Nam eu nibh fringilla, iaculis nunc placerat.</p>
-                                                        </div>
+                                                        </div>}
                                                     </div>
                                                 </div>
                                             </div>
@@ -243,7 +238,7 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color-2 text-center font-alt mb-20 mb-xs-10">
-                                                    PICS Values 
+                                                    PICS Values
                                                 </div>
                                                 <div className='row d-flex justify-content-center mb-20'>
                                                     <div className='col-md-8'>
@@ -257,34 +252,34 @@ const Dashboard = () => {
 
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                            <Box className="mt-10">
-                                                <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
-                                                    <Grid item xs={12} sm={4}>
-                                                        <div className="pics-values wow fadeInDown" data-wow-delay="0.1s">
-                                                            <div className='icon'><img src={optimization} /></div>
-                                                            <h4>Speed</h4>
-                                                            <p>Communication is key. We aim to provide a tailored, dedicated consulting support and one of the main aspect is responding faster and ensuring the applicant is kept updated at all levels and times.</p>
-                                                        </div>
+                                                <Box className="mt-10">
+                                                    <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
+                                                        <Grid item xs={12} sm={4}>
+                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.1s">
+                                                                <div className='icon'><img src={optimization} /></div>
+                                                                <h4>Speed</h4>
+                                                                <p>Communication is key. We aim to provide a tailored, dedicated consulting support and one of the main aspect is responding faster and ensuring the applicant is kept updated at all levels and times.</p>
+                                                            </div>
+                                                        </Grid>
+                                                        <Grid item xs={12} sm={4}>
+                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.2s">
+                                                                <div className='icon'><img src={outsourcing} /></div>
+                                                                <h4>Lead Together</h4>
+                                                                <p>PICS employees and the applicants are the heart of the PICS operation. We strongly believe giving the right guidance to applicants and growing the team is key. We welcome new ideas and learn from each other and grow together.</p>
+                                                            </div>
+                                                        </Grid>
+                                                        <Grid item xs={12} sm={4}>
+                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.3s">
+                                                                <div className='icon'><img src={outline} /></div>
+                                                                <h4>Transparency</h4>
+                                                                <p>Transparency lead to Trust. At PICS we place value in doing things right, right things, establishing trust and enduring relationships with applicants, ensuring the trust is kept.</p>
+                                                            </div>
+                                                        </Grid>
                                                     </Grid>
-                                                    <Grid item xs={12} sm={4}>
-                                                        <div className="pics-values wow fadeInDown" data-wow-delay="0.2s">
-                                                            <div className='icon'><img src={outsourcing} /></div>
-                                                            <h4>Lead Together</h4>
-                                                            <p>PICS employees and the applicants are the heart of the PICS operation. We strongly believe giving the right guidance to applicants and growing the team is key. We welcome new ideas and learn from each other and grow together.</p>
-                                                        </div>
-                                                    </Grid>
-                                                    <Grid item xs={12} sm={4}>
-                                                        <div className="pics-values wow fadeInDown" data-wow-delay="0.3s">
-                                                            <div className='icon'><img src={outline} /></div>
-                                                            <h4>Transparency</h4>
-                                                            <p>Transparency lead to Trust. At PICS we place value in doing things right, right things, establishing trust and enduring relationships with applicants, ensuring the trust is kept.</p>
-                                                        </div>
-                                                    </Grid>
-                                                </Grid>
-                                            </Box>
-                                            <div className='mt-30 mb-20 text-center'>
-                                                <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
-                                            </div>
+                                                </Box>
+                                                <div className='mt-30 mb-20 text-center'>
+                                                    <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
