@@ -284,7 +284,7 @@ const Faq = () => {
                                                         <Typography className='Lato faq-question'>What happens if the tutor isn't the right match for my child?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                        <Typography className='Lato'>
+                                                        <Typography className='Lato faq-answer'>
                                                             We speak with you as a family to understand exactly what your child's need are in term of subject,
                                                             exam board availability and their long term goals. We then hand-pick the best tutor for you based
                                                             on their experience and teaching style.
@@ -300,7 +300,7 @@ const Faq = () => {
                                                         <Typography className='Lato faq-question'>Do you offer short-term tuition?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                        <Typography className='Lato'>
+                                                        <Typography className='Lato faq-answer'>
                                                             We speak with you as a family to understand exactly what your child's need are in term of subject,
                                                             exam board availability and their long term goals. We then hand-pick the best tutor for you based
                                                             on their experience and teaching style.
@@ -316,7 +316,7 @@ const Faq = () => {
                                                         <Typography className='Lato faq-question'>Do I have to commit to a minimum number of lessons?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                        <Typography className='Lato'>
+                                                        <Typography className='Lato faq-answer'>
                                                             We speak with you as a family to understand exactly what your child's need are in term of subject,
                                                             exam board availability and their long term goals. We then hand-pick the best tutor for you based
                                                             on their experience and teaching style.
@@ -332,7 +332,7 @@ const Faq = () => {
                                                         <Typography className='Lato faq-question'>What is included in the hourly rate?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                        <Typography className='Lato'>
+                                                        <Typography className='Lato faq-answer'>
                                                             We speak with you as a family to understand exactly what your child's need are in term of subject,
                                                             exam board availability and their long term goals. We then hand-pick the best tutor for you based
                                                             on their experience and teaching style.
@@ -348,7 +348,7 @@ const Faq = () => {
                                                         <Typography className='Lato faq-question'>Do I have to commit to a minimum number of lessons?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                        <Typography className='Lato'>
+                                                        <Typography className='Lato faq-answer'>
                                                             We speak with you as a family to understand exactly what your child's need are in term of subject,
                                                             exam board availability and their long term goals. We then hand-pick the best tutor for you based
                                                             on their experience and teaching style.
