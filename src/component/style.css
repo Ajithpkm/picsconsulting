@@ -4031,7 +4031,8 @@ a.logo:hover{
 .img-container {
     display: flex;
     overflow: hidden;
-    width: 500px;
+    width: 95%;
+    padding: 10px 0;
 }
 
 /* ==============================
@@ -6017,6 +6018,7 @@ section:hover .small-item-carousel .owl-next{
 }
 .pics-values:hover {
     background-color: #fff;
+    margin-top: -8px;
 }
 .pics-values .icon img {
     width: 60px;
@@ -6084,7 +6086,17 @@ section:hover .small-item-carousel .owl-next{
     width: 200px;
     height: 120px;
     text-align: center;
+    cursor: pointer;
     margin: 0 10px !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.faq-filter:hover {
+    margin-top: -4px;
+    background-color: #f5f5f5;
 }
 .faq-filter h4 {
     color: #8F8F8F;
@@ -6093,13 +6105,18 @@ section:hover .small-item-carousel .owl-next{
     margin-bottom: 0px;
 }
 .faq-filter.active .icon svg path {
-    fill: #fff;
     stroke: #fff;
+}
+.faq-filter.active {
+    background-color: #B9943C;
 }
 .faq-filter.active .icon svg ellipse {
-    fill: #fff;
     stroke: #fff;
 }
+.faq-filter.active h4 {
+    color: #fff;
+}
+
 .faqs .MuiAccordion-root {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 6px 0px;
     margin: 18px 0;
@@ -6126,4 +6143,10 @@ section:hover .small-item-carousel .owl-next{
 .faq-answer {
     font-size: 16px !important;
     color: #fff;
+}
+.faqs .MuiSvgIcon-root {
+    fill: #182E46;
+}
+.faqs .Mui-expanded .MuiSvgIcon-root {
+    fill: #fff;
 }
