@@ -39,6 +39,16 @@ import usa_07 from '../images/usa7.jpg';
 import usa_08 from '../images/usa8.jpg';
 import usa_09 from '../images/usa9.jpg';
 import usa_10 from '../images/usa10.jpg';
+import canada_01 from '../images/canada1.jpg';
+import canada_02 from '../images/canada2.jpg';
+import canada_03 from '../images/canada3.jpg';
+import canada_04 from '../images/canada4.jpg';
+import canada_05 from '../images/canada5.jpg';
+import canada_06 from '../images/canada6.jpg';
+import canada_07 from '../images/canada7.jpg';
+import canada_08 from '../images/canada8.jpg';
+import canada_09 from '../images/canada9.jpg';
+import canada_10 from '../images/canada10.jpg';
 import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -95,12 +105,15 @@ const Dashboard = () => {
     const [value, setValue] = React.useState(0);
     const [ukModelopen, setukModelopen] = React.useState(false);
     const [usaModelopen, setusaModelopen] = React.useState(false);
+    const [canadaModelopen, setcanadaModelopen] = React.useState(false);
     const [contactopen, setContactOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
     const handleUkOpen = () => setukModelopen(true);
     const handleUkClose = () => setukModelopen(false);
     const handleUsaOpen = () => setusaModelopen(true);
     const handleUsaClose = () => setusaModelopen(false);
+    const handleCanadaOpen = () => setcanadaModelopen(true);
+    const handleCanadaClose = () => setcanadaModelopen(false);
     const handleOpenContact = () => setContactOpen(true);
     const handleCloseContact = () => setContactOpen(false);
     const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
@@ -959,6 +972,387 @@ const Dashboard = () => {
                         </Modal>
 
                         <Modal
+                            open={canadaModelopen}
+                            onClose={handleCanadaClose}
+                            className="university-list"
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
+                        >
+                            <Box sx={style} className='university-list-bx'>
+                                <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
+                                    <div className='row d-flex align-items-center'>
+                                        <div className='col-2 col-md-2'>
+                                            <img src={university_02} alt="" />
+                                        </div>
+                                        <div className='col-10 col-md-10'>
+                                            <div className='country-name font-alt'>CANADA<br />University list</div>
+                                        </div>
+                                    </div>
+                                </Typography>
+                                <SimpleBar id="RSC-Example" style={{ height: 450 }}>
+                                    <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
+                                        <div className='font-alt hs-line-5'>A</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Acadia University
+
+                                                        </li>
+                                                        <li>Alexander College
+
+                                                        </li>
+                                                        <li>Algoma University
+
+                                                        </li>
+                                                        <li>Algonquin College
+                                                        </li>
+                                                        <li>ALI - Académie Linguistique Internationale
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>B</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Brescia University College
+
+                                                        </li>
+                                                        <li>British Columbia Institute of Technology
+
+                                                        </li>
+                                                        <li>Brock University
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>C</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Cambrian College
+
+                                                        </li>
+                                                        <li>Cape Breton University
+
+                                                        </li>
+                                                        <li>Capilano University
+
+                                                        </li>
+                                                        <li>Conestoga College
+
+                                                        </li>
+                                                        <li>Crandall University
+
+                                                        </li>
+                                                        <li>Culture & Language Connections
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>D</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Durham College
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>F</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Fairleigh Dickinson University
+
+                                                        </li>
+                                                        <li>Fanshawe College
+
+                                                        </li>
+                                                        <li>Fanshawe@ILAC
+
+                                                        </li>
+                                                        <li>Fleming College
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>G</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Georgian College
+
+                                                        </li>
+                                                        <li>Georgian@ILAC
+
+                                                        </li>
+                                                        <li>Global Village Canada
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>H</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Humber College
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>I</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>ILAC International College
+
+                                                        </li>
+                                                        <li>ILAC International Language Academy of Canada
+
+                                                        </li>
+                                                        <li>ILSC Education Group
+
+                                                        </li>
+                                                        <li>International House Vancouver
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>K</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Kaplan Canada
+
+                                                        </li>
+                                                        <li>Kwantlen Polytechnic University
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>L</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Lakehead University
+
+                                                        </li>
+                                                        <li>Langara College
+
+                                                        </li>
+                                                        <li>Laurentian University
+
+                                                        </li>
+                                                        <li>LCI Education Network
+                                                        </li>
+                                                        <li>Le Cordon Bleu - Canada
+                                                        </li>
+                                                        <li>Loyalist College
+
+                                                        </li>
+                                                        <li>LSI Canada
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>M</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Medicine Hat
+                                                        </li>
+                                                        <li>Memorial University of Newfoundland
+                                                        </li>
+                                                        <li>Mount Royal University
+                                                        </li>
+                                                        <li>Mount Saint Vincent University
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>N</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Navitas Canada
+
+                                                        </li>
+                                                        <li>Niagara College
+
+                                                        </li>
+                                                        <li>Niagara University in Ontario
+
+                                                        </li>
+                                                        <li>Norquest College
+
+                                                        </li>
+                                                        <li>North Island College
+
+                                                        </li>
+                                                        <li>Northern Alberta Institute of Technology
+
+                                                        </li>
+                                                        <li>Northern Lights College
+
+                                                        </li>
+                                                        <li>NSCAD University
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>O</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Oxford International Education Group Services Limited Canada
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>R</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Red Deer Polytechnic
+                                                        </li>
+                                                        <li>Royal Roads University
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> <div className='font-alt hs-line-5'>S</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Saskatchewan Colleges
+                                                        </li>
+                                                        <li>Saskatchewan Polytechnic
+                                                        </li>
+                                                        <li>Southern Alberta Institute of Technology
+                                                        </li>
+                                                        <li>St. George International College (SGIC)
+                                                        </li>
+                                                        <li>St. Lawrence College
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> <div className='font-alt hs-line-5'>T</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Thompson Rivers University (TRU)
+
+                                                        </li>
+                                                        <li>Toronto Metropolitan University
+
+                                                        </li>
+                                                        <li>Trent University
+
+                                                        </li>
+                                                        <li>Trinity Western University
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div> <div className='font-alt hs-line-5'>U</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>University Canada West
+                                                        </li>
+                                                        <li>University of Alberta
+                                                        </li>
+                                                        <li>University of Lethbridge
+                                                        </li>
+                                                        <li>University of Niagara Falls Canada (GUS)
+                                                        </li>
+                                                        <li>University of Northern British Columbia
+                                                        </li>
+                                                        <li>University of Regina
+                                                        </li>
+                                                        <li>University of the Fraser Valley
+                                                        </li>
+                                                        <li>University of Windsor
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>V</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Vancouver Film School
+                                                        </li>
+                                                        <li>Vancouver Island University
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='font-alt hs-line-5'>Y</div>
+                                        <div className='desc mb-20'>
+                                            <div className='row'>
+                                                <div className='col-md-6'>
+                                                    <ul>
+                                                        <li>Yorkville Education LP
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Typography>
+                                </SimpleBar>
+                            </Box>
+                        </Modal>
+
+                        <Modal
                             open={contactopen}
                             onClose={handleCloseContact}
                             className="university-list"
@@ -1030,7 +1424,7 @@ const Dashboard = () => {
                                                     Degree Programs include
                                                 </h2>
                                                 <div className="banner-desc">
-                                                UG, PG, PHD, Foundation <br />Engineering, Management, Medicine, <br />Law, Arts & Science & English programs
+                                                    UG, PG, PHD, Foundation <br />Engineering, Management, Medicine, <br />Law, Arts & Science & English programs
                                                 </div>
                                             </div>
                                             <div className='col-md-6'>
@@ -1059,7 +1453,7 @@ const Dashboard = () => {
                                                         PICS Consultants
                                                     </div>
                                                     <div className='section-text'>
-                                                        We take a <b>student-centred approach (P-I-C-S)</b> by having an open, honest and transparent discussion. Our mission is to identify your requirements, use our knowledge and provide you with a list of universities that are matched. So, you can take your first step closer to your aspiration of having an international degree. 
+                                                        We take a <b>student-centred approach (P-I-C-S)</b> by having an open, honest and transparent discussion. Our mission is to identify your requirements, use our knowledge and provide you with a list of universities that are matched. So, you can take your first step closer to your aspiration of having an international degree.
                                                     </div>
 
                                                     <div className='pics-abbr mt-30'>
@@ -1192,8 +1586,8 @@ const Dashboard = () => {
                                         >
                                             <Tab className='tab-single uk' label="UK" {...a11yProps(0)} />
                                             <Tab className='tab-single usa' label="USA" {...a11yProps(1)} />
-                                            {/* <Tab className='tab-single canada' label="Canada" {...a11yProps(2)} />
-                                            <Tab className='tab-single australia' label="Australia" {...a11yProps(3)} /> */}
+                                            <Tab className='tab-single canada' label="Canada" {...a11yProps(2)} />
+                                            <Tab className='tab-single australia' label="Australia" {...a11yProps(3)} />
                                         </Tabs>
                                         <TabPanel value={value} index={0}>
                                             <Box className='mt-10 xs-padding-12'>
@@ -1295,6 +1689,62 @@ const Dashboard = () => {
                                                 <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </TabPanel>
+                                        <TabPanel value={value} index={2}>
+                                            <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_01} /></div>
+                                                        <h4>University of Alberta</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_02} /></div>
+                                                        <h4>Algoma University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_03} /></div>
+                                                        <h4>Lakehead University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_04} /></div>
+                                                        <h4>Laurentian University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_05} /></div>
+                                                        <h4>Memorial Uni of NewFoundland</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_06} /></div>
+                                                        <h4>Niagara University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_07} /></div>
+                                                        <h4>Royal Road University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_08} /></div>
+                                                        <h4>Thompson River University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_09} /></div>
+                                                        <h4>Toronto Metropolitan University</h4>
+                                                    </Grid>
+                                                    <Grid item className="univ-box">
+                                                        <div className='icon'><img src={canada_10} /></div>
+                                                        <h4>University of Victoria</h4>
+                                                    </Grid>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={handleCanadaOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                            </div>
+                                        </TabPanel>
+                                        <TabPanel value={value} index={3}>
+                                            <div className='mt-20 text-center'><p>Coming Soon for Australia</p></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                            </div>
+                                        </TabPanel>
                                     </div>
                                 </section>
 
@@ -1379,7 +1829,7 @@ const Dashboard = () => {
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget '>
                                                         <div className='title'>PICS Offices</div>
-                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT 
+                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
