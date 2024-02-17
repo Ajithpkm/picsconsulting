@@ -37,6 +37,7 @@ body.modal-open {
     padding-right: 0 !important;
     overflow: visible !important;
 }
+body { padding-right: 0 !important }
 .image-fullwidth img{
     width: 100%;
 }
@@ -1421,6 +1422,7 @@ a.bg-video-button-muted{
     margin-right: 15px;
     line-height: 50px;
     min-width: 50px;
+    text-align: center;
 }
 .pics-abbr .desc-btn {
     background-color: #B9943C;
@@ -4028,10 +4030,8 @@ a.logo:hover{
   
 .img-container {
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
-    border: 5px solid #ffffff;
-    border-radius: 10px;
 }
 
 /* ==============================
@@ -5851,7 +5851,8 @@ section:hover .small-item-carousel .owl-next{
     margin-bottom: 20px !important;
     text-align: center;
     font-family: "Lato", sans-serif;
-    max-width: 220px;
+    width: 210px;
+    height: 180px;
     -webkit-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
     -moz-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
     -o-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);
@@ -5899,17 +5900,17 @@ section:hover .small-item-carousel .owl-next{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     align-items: center;
-    min-height: 245px;
+    min-height: 210px;
     margin-bottom: 25px;
 }
 .step-container .description {
     color: #313131;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.5;
     padding-left: 30px;
     border-left: 2px solid #B9943C;
-    min-height: 160px;
+    min-height: 150px;
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -6034,4 +6035,95 @@ section:hover .small-item-carousel .owl-next{
     color: #182E46;
     font-size: 15px;
     margin-bottom: 0;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.search-form .search-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: #182E46;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    padding: 5px 30px;
+    border-radius: 6px;
+    color: #fff;
+}
+.search-form input {
+    border: none;
+    background-color: #fff;
+    height: 38px;
+    border-radius: 6px;
+    font-family: "Lato", sans-serif;
+    padding: 5px 55px;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.search-form .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    z-index: 99;
+}
+.search-form .MuiOutlinedInput-notchedOutline {
+    border:none !important
+}
+.search-form .MuiInputLabel-root {
+    font-family: "Lato", sans-serif;
+    line-height: 1em;
+    left: 45px;
+}
+.faq-filter {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 6px 0px;
+    padding: 15px 20px !important;
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    margin: 0 10px !important;
+}
+.faq-filter h4 {
+    color: #8F8F8F;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.faq-filter.active .icon svg path {
+    fill: #fff;
+    stroke: #fff;
+}
+.faq-filter.active .icon svg ellipse {
+    fill: #fff;
+    stroke: #fff;
+}
+.faqs .MuiAccordion-root {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 6px 0px;
+    margin: 18px 0;
+    border-radius: 8px !important;
+    padding: 5px 10px;
+}
+.faqs .Mui-expanded {
+    background-color: #182E46;
+}
+.faqs .MuiAccordion-root::before {
+    background-color: transparent !important;
+}
+.Lato {
+    font-family: "Lato", sans-serif !important;
+}
+.faq-question {
+    color: #8F8F8F;
+    font-size: 15px;
+}
+.faqs .Mui-expanded .faq-question {
+    color: #fff;
+    font-size: 18px !important;
+}
+.faq-answer {
+    font-size: 16px !important;
+    color: #fff;
 }

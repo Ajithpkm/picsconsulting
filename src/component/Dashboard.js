@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import WOW from 'wowjs';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
 import university_01 from '../images/united-kingdom.png';
@@ -46,6 +45,7 @@ import Modal from '@mui/material/Modal';
 import SimpleBar from 'react-custom-scrollbars';
 import './style.css';
 import '../css/verticals.min.css';
+import '../css/style-responsive.css';
 import { Height } from '@material-ui/icons';
 const style = {
     position: 'absolute',
@@ -118,12 +118,8 @@ const Dashboard = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
-        }, 800);
+        }, 1000);
     }, [])
-
-    new WOW.WOW({
-        live: false
-    }).init();
 
     return (
         <>
@@ -143,16 +139,11 @@ const Dashboard = () => {
                             <Box sx={style} className='university-list-bx'>
                                 <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
                                     <div className='row d-flex align-items-center'>
-                                        <div className='col-md-2'>
+                                        <div className='col-2 col-md-2'>
                                             <img src={university_01} alt="" />
                                         </div>
-                                        <div className='col-md-6'>
+                                        <div className='col-10 col-md-10'>
                                             <div className='country-name font-alt'>UK<br />University list</div>
-                                        </div>
-                                        <div className='col-md-4'>
-                                            <div className='text-center'>
-                                                <a href='javascript:;' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </Typography>
@@ -588,16 +579,11 @@ const Dashboard = () => {
                             <Box sx={style} className='university-list-bx'>
                                 <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
                                     <div className='row d-flex align-items-center'>
-                                        <div className='col-md-2'>
-                                            <img src={university_01} alt="" />
+                                        <div className='col-2 col-md-2'>
+                                            <img src={university_02} alt="" />
                                         </div>
-                                        <div className='col-md-6'>
+                                        <div className='col-10 col-md-10'>
                                             <div className='country-name font-alt'>USA<br />University list</div>
-                                        </div>
-                                        <div className='col-md-4'>
-                                            <div className='text-center'>
-                                                <a href='javascript:;' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
-                                            </div>
                                         </div>
                                     </div>
                                 </Typography>
@@ -994,7 +980,7 @@ const Dashboard = () => {
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
                                 <div className="container relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
-                                        <a href="index" className="logo">
+                                        <a href="/" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
                                         </a>
                                     </div>
@@ -1023,10 +1009,10 @@ const Dashboard = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                PICS<br />Your pathway to STUDY in UK, USA,<br />Canada & Australia
+                                                                PICS<br />Your pathway to STUDY in <br />UK, USA,Canada & Australia
                                                             </div>
                                                             <div className="hs-line-2 text-center">
-                                                                Includes admissions to top institutions like Oxford, Cambridg <br />and 225+ Universities across the globeasd
+                                                                Includes admissions to top institutions like Oxford, Cambridge <br />and 225+ Universities across the globe
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1039,12 +1025,12 @@ const Dashboard = () => {
                                 <section className="small-section bg-white pt-30 pb-30">
                                     <div className="container relative">
                                         <div className="row d-flex justify-content-between">
-                                            <div className='col-md-5'>
+                                            <div className='col-md-5 mb-xs-20'>
                                                 <h2 className="banner-title mb-0 mb-xs-0">
                                                     Degree Programs include
                                                 </h2>
                                                 <div className="banner-desc">
-                                                    UG, PG, Phd & Foundation,  Engineering, Management, Medicine, Law, Research & English Program
+                                                UG, PG, PHD, Foundation <br />Engineering, Management, Medicine, <br />Law, Arts & Science & English programs
                                                 </div>
                                             </div>
                                             <div className='col-md-6'>
@@ -1061,11 +1047,11 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section pb-250'>
+                                <section className='small-section pb-250 pt-xs-30 pb-xs-120'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
-                                            <div className='col-md-7'>
-                                                <div className='image-rounded wow fadeInDown' data-wow-delay="0.1s"><img src={pics_consultants} alt="" className='img-fluid' /></div>
+                                            <div className='col-md-7 mb-xs-20'>
+                                                <div className='image-rounded'><img src={pics_consultants} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
@@ -1073,30 +1059,30 @@ const Dashboard = () => {
                                                         PICS Consultants
                                                     </div>
                                                     <div className='section-text'>
-                                                        PICS Consultants takes a <b>Student- Centred Approach (P-I-C-S approach)</b> and our mission is to provide right guidance by having a transparent discussion with the student. We discuss with you to understand your requirement, Use our knowledge and provide you a list of university that’s well-matched and we help you to make the right decision that meet your requirement. Here is our exclusive PICS approach,
+                                                        We take a <b>student-centred approach (P-I-C-S)</b> by having an open, honest and transparent discussion. Our mission is to identify your requirements, use our knowledge and provide you with a list of universities that are matched. So, you can take your first step closer to your aspiration of having an international degree. 
                                                     </div>
 
                                                     <div className='pics-abbr mt-30'>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.1s">P</div>
+                                                            <div className='capital font-alt'>P</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Prepare for the meeting</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.2s">I</div>
+                                                            <div className='capital font-alt'>I</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Identify your Requirement</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.3s">C</div>
+                                                            <div className='capital font-alt'>C</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Choose the University</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
-                                                            <div className='capital font-alt wow fadeInDown' data-wow-delay="0.4s">S</div>
+                                                            <div className='capital font-alt'>S</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>Submit the application</div>
                                                             </div>
@@ -1104,7 +1090,7 @@ const Dashboard = () => {
                                                     </div>
 
                                                     <div className='mt-40 mb-0'>
-                                                        <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                        <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1135,21 +1121,21 @@ const Dashboard = () => {
                                                     <Box className="mt-10">
                                                         <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.1s">
+                                                                <div className="pics-service">
                                                                     <div className='icon'><img src={icon_01} /></div>
                                                                     <h4>100% PICS Guaranteed University offer</h4>
                                                                     <p>PICS will provide you with an offer from an university when eligibility criteria are met.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.2s">
+                                                                <div className="pics-service">
                                                                     <div className='icon'><img src={icon_02} /></div>
                                                                     <h4>Your dedicated PICS<br />Consultant</h4>
                                                                     <p>From first contact to admission, your PICS consultant will work with you through all the processes.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
-                                                                <div className="pics-service wow fadeInDown" data-wow-delay="0.3s">
+                                                                <div className="pics-service">
                                                                     <div className='icon'><img src={icon_03} /></div>
                                                                     <h4>Reliable & Professional<br />Service</h4>
                                                                     <p>From writing personal statements to understanding eligibility criteria, we will strive to provide the best result.</p>
@@ -1158,7 +1144,7 @@ const Dashboard = () => {
                                                         </Grid>
                                                     </Box>
                                                     <div className='mt-40 mb-20 text-center'>
-                                                        <a href='javascript:;' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                                        <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
                                                     </div>
                                                     {/* <Card className='cardinfo' sx={{ minWidth: 275 }} >
                                                 <CardContent className='listrdo mb-listrdo' >
@@ -1181,14 +1167,14 @@ const Dashboard = () => {
                                                 <div className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
                                                     PICS Global University List
                                                 </div>
-                                                <div className='row d-flex justify-content-center mb-20'>
+                                                <div className='row d-flex justify-content-center mb-0'>
                                                     <div className='col-md-8'>
                                                         <div className='section-text text-center mb-30'>
                                                             PICS can help students in gaining entry to some of world’s leading universities. Students success is our success and we want the best outcomes for them
                                                         </div>
 
-                                                        <div className='hs-line-4'>
-                                                            Click to view Universities by Country
+                                                        <div className='hs-line-4 mb-0'>
+                                                            <b>Click to view Universities by Country</b>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1210,61 +1196,54 @@ const Dashboard = () => {
                                             <Tab className='tab-single australia' label="Australia" {...a11yProps(3)} /> */}
                                         </Tabs>
                                         <TabPanel value={value} index={0}>
-                                            <Box className='mt-10'>
+                                            <Box className='mt-10 xs-padding-12'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_01} /></div>
                                                         <h4>University of Bristol</h4>
-                                                        {/* <p>Oxford, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_02} /></div>
                                                         <h4>University of Cambridge</h4>
-                                                        {/* <p>Cambridge, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_03} /></div>
                                                         <h4>University of Edinburgh</h4>
-                                                        {/* <p>London, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_04} /></div>
                                                         <h4>University of Glasgow</h4>
-                                                        {/* <p>Edinburgh, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_05} /></div>
                                                         <h4>Imperial College London</h4>
-                                                        {/* <p>Bristol, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_06} /></div>
                                                         <h4>King's College London</h4>
-                                                        {/* <p>London, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_07} /></div>
                                                         <h4>University of Manchester</h4>
-                                                        {/* <p>Manchester, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_08} /></div>
                                                         <h4>University of Oxford</h4>
-                                                        {/* <p>Glasgow, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_09} /></div>
                                                         <h4>University College London</h4>
-                                                        {/* <p>Oxford, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={uk_10} /></div>
                                                         <h4>University of Warwick</h4>
-                                                        {/* <p>Cambridge, UK</p> */}
                                                     </Grid>
                                                 </Grid>
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={handleUkOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                            </div>
                                         </TabPanel>
                                         <TabPanel value={value} index={1}>
                                             <Box className='mt-10'>
@@ -1272,7 +1251,6 @@ const Dashboard = () => {
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={usa_01} /></div>
                                                         <h4>Adelphi University</h4>
-                                                        {/* <p>Oxford, UK</p> */}
                                                     </Grid>
                                                     <Grid item className="univ-box">
                                                         <div className='icon'><img src={usa_02} /></div>
@@ -1313,6 +1291,9 @@ const Dashboard = () => {
                                                 </Grid>
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={handleUsaOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                            </div>
                                         </TabPanel>
                                     </div>
                                 </section>
@@ -1330,7 +1311,7 @@ const Dashboard = () => {
                                         </div>
 
                                         <div className='row'>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-6 xs-order-1'>
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>01</div>
                                                     <div className='description'>
@@ -1339,7 +1320,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-6 xs-order-3'>
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>03</div>
                                                     <div className='description'>
@@ -1348,7 +1329,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-6 xs-order-2'>
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>02</div>
                                                     <div className='description'>
@@ -1357,7 +1338,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-6 xs-order-4'>
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>04</div>
                                                     <div className='description'>
@@ -1368,8 +1349,8 @@ const Dashboard = () => {
                                             </div>
                                         </div>
 
-                                        <div className='mt-40 mb-0 text-center'>
-                                            <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                        <div className='mt-40 mb-0 mt-xs-20 text-center'>
+                                            <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                         </div>
                                     </div>
                                 </section>
@@ -1378,7 +1359,7 @@ const Dashboard = () => {
                             <footer className="small-section bg-gray-lighter footer pb-60">
                                 <div className="container">
                                     <div className="row">
-                                        <div className="col-md-3 text-center">
+                                        <div className="col-md-3 text-center m-center mb-xs-20">
                                             <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
@@ -1394,28 +1375,28 @@ const Dashboard = () => {
                                                 </ul>
                                             </div> */}
 
-                                            <div className='row pt-40 pb-40'>
-                                                <div className='col-md-4'>
-                                                    <div className='footer-widget'>
-                                                        <div className='title'>PICS - Headquarters</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                            <div className='row pt-40 pb-40 pt-xs-20 pb-xs-10'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='footer-widget '>
+                                                        <div className='title'>PICS Offices</div>
+                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT 
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        <div className='title'>india</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                                        <div className='title'>India</div>
+                                                        Launching Soon
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
                                                                 <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
                                                                 <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href="#"><img src={whatsapp} /></a></li>
+                                                                <li><a href="https://api.whatsapp.com/send?phone=447510830896" target='_blank'><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>
                                                         @PICSConsultants
@@ -1423,10 +1404,11 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
-
-                                            <div className="footer-copy pt-20 pb-0">
-                                                Copyright@2024 Pappa International LTD t/a PICS | REG NO: 13199591
+                                            <div className='m-center'>
+                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+                                            </div>
+                                            <div className="footer-copy pt-20 pb-0 m-center">
+                                                Copyright@2024 Pappa International LTD. T/A PICS Consultants | REG NO: 13199591
                                             </div>
                                         </div>
                                     </div>

@@ -330,19 +330,73 @@ Project: DT Skill
         padding-top: 27px;
         padding-bottom: 33px;
     }
+    .nav-logo-wrap .logo {
+        height: 75px;
+    }
+    .xs-order-1 {
+        order: 1;
+    }
+    .xs-order-2 {
+        order: 2;
+    }
+    .xs-order-3 {
+        order: 3;
+    }
+    .xs-order-4 {
+        order: 4;
+    }
     .hs-line-1 {
-        font-size: 24px;
+        font-size: 28px;
     }
     .hs-line-2{
-        font-size: 36px;
-    }    
+        font-size: 18px;
+    }   
+    .home-section .hs-line-2 br{
+        display: none;
+    } 
+    .js-height-parent {
+        height: 560px;
+    }
     .hs-line-3 {
-        font-size: 13px;
+        font-size: 30px;
     }
     .hs-image{
         display: none;
     }
-    
+    .m-center {
+        text-align: center !important;
+    }
+    .inner-nav ul li {
+        padding: 0;
+    }
+    .loader { 
+        left: 45%;
+    }
+    .university-list-bx {
+        width: 100% !important;
+    }
+    .university-list-bx .modal-bx-header .country-name {
+        font-size: 18px;
+    }
+    .univ-box {
+        width: 160px;
+        height: 130px;
+    }
+    .step-container {
+        min-height: 215px;
+    }
+    .step-container h4 {
+        font-size: 16px;
+    }
+    .step-container .description {
+        font-size: 14px;
+    }
+    .step-container .count {
+        font-size: 48px;
+    }
+    .univ-box .icon {
+        width: 90px;
+    }
     .hs-wrap-1{
         max-width: 240px;
     }    
@@ -552,6 +606,12 @@ Project: DT Skill
         font-size: 110%;
         line-height: 1.2;
     }
+    .inner-container {
+        padding-left: 0;
+    }
+    .pull-top {
+        margin-top: -130px;
+    }
 }
 
 
@@ -578,11 +638,11 @@ Project: DT Skill
         height: 38px;
     }
     .hs-line-1 {
-        font-size: 20px;
+        font-size: 28px;
         letter-spacing: 0px;
     }
     .hs-line-2{
-        font-size: 28px;
+        font-size: 18px;
     }
     .hs-line-6 {
         font-size: 15px;
@@ -766,7 +826,7 @@ Project: DT Skill
         min-height: 300px;
     }
     .fixed-height-medium{
-        min-height: 350px;
+        min-height: 560px;
     }
     .fixed-height-large{
         min-height: 400px;
