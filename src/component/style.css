@@ -4030,8 +4030,8 @@ a.logo:hover{
   
 .img-container {
     display: flex;
-    overflow: visible;
-    width: 100%;
+    overflow: hidden;
+    width: 500px;
 }
 
 /* ==============================
