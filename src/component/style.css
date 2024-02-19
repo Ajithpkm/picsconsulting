@@ -38,6 +38,9 @@ body.modal-open {
     overflow: visible !important;
 }
 body { padding-right: 0 !important }
+body > iframe {
+    pointer-events: none;
+}
 .image-fullwidth img{
     width: 100%;
 }
@@ -1306,11 +1309,10 @@ a.bg-video-button-muted{
 .hs-line-8{
     margin-top: 0;
     position: relative;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.3em;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0em;
     line-height: 1.2;
-    opacity: .75;
 }
 .hs-line-8.no-transp{
     opacity: 1;

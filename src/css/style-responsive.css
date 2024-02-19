@@ -612,6 +612,9 @@ Project: DT Skill
     .pull-top {
         margin-top: -130px;
     }
+    .xs-hide {
+        display: none
+    }
 }
 
 

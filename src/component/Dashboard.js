@@ -1608,27 +1608,27 @@ const Dashboard = () => {
                                                         <div className='icon'><img src={uk_04} /></div>
                                                         <h4>University of Glasgow</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_05} /></div>
                                                         <h4>Imperial College London</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_06} /></div>
                                                         <h4>King's College London</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_07} /></div>
                                                         <h4>University of Manchester</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_08} /></div>
                                                         <h4>University of Oxford</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_09} /></div>
                                                         <h4>University College London</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={uk_10} /></div>
                                                         <h4>University of Warwick</h4>
                                                     </Grid>
@@ -1658,27 +1658,27 @@ const Dashboard = () => {
                                                         <div className='icon'><img src={usa_04} /></div>
                                                         <h4>Gonzaga University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_05} /></div>
                                                         <h4>University of Illinois at Chicago</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_06} /></div>
                                                         <h4>University of Illinois Springfield</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_07} /></div>
                                                         <h4>Johns Hopkins University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_08} /></div>
                                                         <h4>University of Kansas</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_09} /></div>
                                                         <h4>University of the Pacific</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={usa_10} /></div>
                                                         <h4>University of Utah</h4>
                                                     </Grid>
@@ -1708,27 +1708,27 @@ const Dashboard = () => {
                                                         <div className='icon'><img src={canada_04} /></div>
                                                         <h4>Laurentian University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_05} /></div>
                                                         <h4>Memorial Uni of NewFoundland</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_06} /></div>
                                                         <h4>Niagara University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_07} /></div>
                                                         <h4>Royal Road University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_08} /></div>
                                                         <h4>Thompson River University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_09} /></div>
                                                         <h4>Toronto Metropolitan University</h4>
                                                     </Grid>
-                                                    <Grid item className="univ-box">
+                                                    <Grid item className="univ-box xs-hide">
                                                         <div className='icon'><img src={canada_10} /></div>
                                                         <h4>University of Victoria</h4>
                                                     </Grid>
@@ -1824,19 +1824,19 @@ const Dashboard = () => {
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
                                             </div> */}
-
-                                            <div className='row pt-40 pb-40 pt-xs-20 pb-xs-10'>
+                                            <div className='footer-widget'>
+                                                <div className='title'>PICS Offices</div>
+                                            </div>
+                                            <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget '>
-                                                        <div className='title'>PICS Offices</div>
                                                         UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        <div className='title'>India</div>
-                                                        Launching Soon
+                                                        India - Launching Soon
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
