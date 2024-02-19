@@ -98,7 +98,7 @@ const Faq = () => {
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
                                 <div className="container relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
-                                        <a href="index" className="logo">
+                                        <a href="/" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
                                         </a>
                                     </div>

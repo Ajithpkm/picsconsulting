@@ -114,7 +114,7 @@ const Dashboard = () => {
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
                                 <div className="container relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
-                                        <a href="index" className="logo">
+                                        <a href="/" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
                                         </a>
                                     </div>
@@ -212,7 +212,7 @@ const Dashboard = () => {
                                             <div className='col-md-8'>
                                                 <div className='inner-container-right'>
                                                     <div className='hs-line-7'>Meet the co-Founder</div>
-                                                    <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
+                                                    <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
                                                         Andre Ribeiro
                                                     </div>
                                                     <div className='section-text'>
