@@ -615,6 +615,17 @@ Project: DT Skill
     .xs-hide {
         display: none
     }
+    .pics-tabs, .pics-tabs .MuiTabs-flexContainer {
+        display: inline-block !important;
+    }
+    .pics-tabs .MuiTabs-scroller {
+        display: inline-block !important;
+        white-space: normal !important
+    }
+    .pics-tabs .tab-single {
+        display: inline-block;
+        min-width: 170px;
+    }
 }
 
 
