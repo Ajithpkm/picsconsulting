@@ -1,36 +1,65 @@
 import React, { useEffect } from 'react';
 import { TextField, Checkbox, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import contact_step_1 from '../images/contact-step-1.jpg';
-import './style.css';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import TimePicker from 'react-time-picker';
+import 'react-time-picker/dist/TimePicker.css';
+import 'react-clock/dist/Clock.css'; import './style.css';
 import '../css/verticals.min.css';
-import EastIcon from '@mui/icons-material/East';
 
 const Dashboard = () => {
-    const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
-    const [contactopen, setContactOpen] = React.useState(false);
-    const [loading, setLoading] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const handleOpenContact = () => setContactOpen(true);
-    const handleCloseContact = () => setContactOpen(false);
-    const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrollValueMoreThanHeaderHeight(window.scrollY > 96);
-        }
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+    const [loading, setLoading] = React.useState(false);
+    let [firstName, setFirstName] = React.useState('');
+    let [lastName, setLastName] = React.useState('');
+    let [email, setEmail] = React.useState('');
+    let [studyDestination, setStudyDestination] = React.useState('');
+    let [phoneNumber, setPhoneNumber] = React.useState('');
+    const [fromDate, setFromDate] = React.useState(null);
+    const [time, setTime] = React.useState('00:00');
+    let [ampm, setampm] = React.useState('AM');
+    let [phonecode, setPhonecode] = React.useState('+91');
+    const [checked, setChecked] = React.useState(false);
+
+    function policyHandleChange(e) {
+        setChecked(e.target.checked);
+    }
+
+    const handleChange = (event) => {
+        if (event.target.name === 'firstName') setFirstName(event.target.value);
+        else if (event.target.name === 'lastName') setLastName(event.target.value);
+        else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
+        else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
+        else if (event.target.name === 'phonecode') setPhonecode(event.target.value);
+    }
+
+    const emailHandleChange = (e) => {
+        // const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        // if (e.target?.value && e.target.value.match(isValidEmail)) {
+        // showNoValidEmail(false);
+        setEmail(e.target.value);
+        // } else {
+        // showNoValidEmail(true);
+        // }
+    }
+
+    const onTimeChange = (time) => {
+        let localTime = time.substring(0, time.indexOf(":"));
+        var ampm = (localTime >= 12) ? "PM" : "AM";
+        setampm(ampm)
+        setTime(time);
+    }
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
         }, 800);
-    }, [])
+    }, []);
+
     return (
         <>
             <div>
@@ -67,6 +96,9 @@ const Dashboard = () => {
                                                             id="standard-basic"
                                                             label="First Name*"
                                                             variant="standard"
+                                                            name='firstName'
+                                                            value={firstName}
+                                                            onChange={handleChange}
                                                         />
                                                     </div>
                                                     <div className='col-md-6'>
@@ -76,6 +108,9 @@ const Dashboard = () => {
                                                             id="standard-basic"
                                                             label="Last Name*"
                                                             variant="standard"
+                                                            name='lastName'
+                                                            value={lastName}
+                                                            onChange={handleChange}
                                                         />
                                                     </div>
                                                     <div className='col-md-12'>
@@ -85,23 +120,99 @@ const Dashboard = () => {
                                                             id="standard-basic"
                                                             label="Email Address*"
                                                             variant="standard"
+                                                            type="email"
+                                                            name='email'
+                                                            value={email}
+                                                            onChange={emailHandleChange}
                                                         />
                                                     </div>
+                                                    <div className='col-md-2 mt-20'>
+                                                        <FormControl variant="standard" sx={{ m: 1, minWidth: 100 }}>
+                                                            <Select
+                                                                labelId="demo-simple-select-standard-label"
+                                                                id="demo-simple-select-standard"
+                                                                name='phonecode'
+                                                                value={phonecode}
+                                                                onChange={handleChange}
+                                                            >
+                                                                <MenuItem value='+91'>+91</MenuItem>
+                                                            </Select>
+                                                        </FormControl>
+                                                    </div>
+                                                    <div className='col-md-4'>
+                                                        <TextField
+                                                            fullWidth
+                                                            className='form-control'
+                                                            id="standard-basic"
+                                                            label="Phone Number*"
+                                                            variant="standard"
+                                                            type='number'
+                                                            name='phoneNumber'
+                                                            value={phoneNumber}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </div>
+                                                    <div className='col-md-6 mb-30'>
+                                                        <FormControl className='form-control mt-10'
+                                                            id="standard-basic" variant="standard">
+                                                            <InputLabel id="demo-simple-select-standard-label">Study Destination</InputLabel>
+                                                            <Select
+                                                                labelId="demo-simple-select-standard-label"
+                                                                id="demo-simple-select-standard"
+                                                                name='studyDestination'
+                                                                value={studyDestination}
+                                                                onChange={handleChange}
+                                                            >
+                                                                <MenuItem value={10}>Ten</MenuItem>
+                                                                <MenuItem value={20}>Twenty</MenuItem>
+                                                                <MenuItem value={30}>Thirty</MenuItem>
+                                                            </Select>
+                                                        </FormControl>
+                                                    </div>
+                                                    <div className='hs-line-5 mb-20'>Preferred time to connect with you</div>
+                                                    <div className='col-md-5'>
+                                                        <DatePicker
+                                                            name="From Date"
+                                                            selected={fromDate}
+                                                            onChange={(newValue) => setFromDate(newValue)}
+                                                            dateFormat={'dd/MM/yyyy'}
+                                                            placeholderText='DD/MM/YYYY'
+                                                            label={<contact_step_1 />}
+                                                        />
+                                                    </div>
+                                                    <div className='col-md-5'>
+                                                        <TimePicker onChange={(e) => onTimeChange(e)} value={time} />
+                                                    </div>
+                                                    <div className='col-md-2'>
+                                                        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+                                                            <Select
+                                                                labelId="demo-simple-select-standard-label"
+                                                                id="demo-simple-select-standard"
+                                                                name='ampm'
+                                                                value={ampm}
+                                                                onChange={handleChange}
+                                                            >
+                                                                <MenuItem value='PM'>PM</MenuItem>
+                                                                <MenuItem value='AM'>AM</MenuItem>
+                                                            </Select>
+                                                        </FormControl>
+                                                    </div>
                                                     <div className='col-md-12'>
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+                                                        <FormControlLabel control={<Checkbox value={checked} onChange={policyHandleChange} defaultChecked />} label="Label" />
+                                                        <a style={{ borderBottom: 'solid 1px blue' }} href='/policy' target='_blank'>Privacy Policy</a>
                                                     </div>
 
                                                     <div className='col-md-12'>
                                                         <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>Next </span>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
                                                                 <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
-                                                                    <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                                                    <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                                                                    <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                                    <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2" />
                                                                 </g>
                                                             </svg>
                                                         </a>
                                                     </div>
-                                                </div>                 
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='form-footer'>

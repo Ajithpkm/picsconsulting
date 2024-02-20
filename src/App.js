@@ -4,6 +4,7 @@ import Dashboard from './component/Dashboard';
 import About from './component/About';
 import Faq from './component/Faq';
 import Contact from './component/Contact';
+import PrivacyPolicy from './component/PrivacyPolicy';
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
-
+        <Route exact path="/policy" element={<PrivacyPolicy />}></Route>
       </Routes>
     </BrowserRouter>
   );
