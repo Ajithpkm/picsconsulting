@@ -2775,13 +2775,15 @@ a.logo:hover{
     position: relative;
     overflow: hidden;
     height: 100vh;
+    display: flex;
+    align-items: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .split-section-wrapper{
-    padding: 0 80px;
+    padding: 0 50px;
 }
 
 /*
@@ -4989,6 +4991,22 @@ section:hover .small-item-carousel .owl-next{
     height: 24px;
     z-index: 99;
 }
+.contact-section .timepicker fieldset {
+    border: none !important;
+}
+.contact-section .timepicker input {
+    border: none !important;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 6px  45px;
+    border-radius: 3px;
+    height: 28px;
+}
+.contact-section .timepicker .MuiButtonBase-root {
+    position: absolute;
+    left: 0;
+}
 .contact-section input {
     border: ṇone;
     border-bottom: 1px solid #ddd !important;
@@ -5029,9 +5047,10 @@ section:hover .small-item-carousel .owl-next{
 }
 .contact-section .terms-label .MuiFormControlLabel-root {
     margin-left: -20px;
+    align-items: flex-start;
 }
 .contact-section .terms-label .MuiCheckbox-root {
-    margin-top: -15px;
+    margin-top: -8px;
     align-items: flex-start;
 }
 .contact-section .terms-label .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root {

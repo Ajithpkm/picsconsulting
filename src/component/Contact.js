@@ -99,13 +99,13 @@ const Dashboard = () => {
                                 <section className="split-section contact-section">
                                     <div className="split-section-headings left">
                                         <div className="ssh-table">
-                                            <div className="ssh-cell page-section bg-scroll" style={{
+                                            <div className="ssh-cell bg-scroll" style={{
                                                 background: `url(${contact_step_1})`,
                                             }}></div>
                                         </div>
                                     </div>
 
-                                    <div className="split-section-content page-section">
+                                    <div className="split-section-content">
                                         <div className="split-section-wrapper">
                                             <div className="text align-left">
                                                 <div className='hs-line-7'>SET UP A FREE CONSULTATION</div>
@@ -206,10 +206,9 @@ const Dashboard = () => {
                                                             label={<contact_step_1 />}
                                                         />
                                                     </div>
-                                                    <div className='col-md-5'>
+                                                    <div className='col-md-5 timepicker'>
                                                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                             <TimePicker
-                                                                label="Time"
                                                                 value={time}
                                                                 onChange={(newValue) => setTime(newValue)}
                                                                 renderInput={(params) => <TextField {...params} />}
@@ -217,7 +216,7 @@ const Dashboard = () => {
                                                         </LocalizationProvider>
                                                     </div>
                                                     <div className='col-md-12'>
-                                                        <div className='terms-label mt-30 mb-30'>
+                                                        <div className='terms-label mt-30 mb-10'>
                                                             <FormControlLabel key='policy' control={<Checkbox key='policy' value={checked} onChange={policyHandleChange} defaultChecked />}
                                                                 label={
                                                                     articles[0].content.map(paragraph =>
