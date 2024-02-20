@@ -176,7 +176,7 @@ const Dashboard = () => {
                                                             onChange={handleChange}
                                                         />
                                                     </div>
-                                                    <div className='col-md-6 mb-30'>
+                                                    <div className='col-md-6 mb-30 selectBox'>
                                                         <FormControl className='form-control mt-10'
                                                             id="standard-basic" variant="standard">
                                                             <InputLabel id="demo-simple-select-standard-label">Study Destination</InputLabel>
