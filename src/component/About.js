@@ -176,7 +176,7 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-4'>
-                                                <div className='image-rounded wow fadeInDown' data-wow-delay="0.1s"><img src={vetri} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={vetri} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='inner-container'>
@@ -229,7 +229,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
                                             <div className='col-md-4'>
-                                                <div className='image-rounded wow fadeInDown' data-wow-delay="0.1s"><img src={andre} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={andre} alt="" className='img-fluid' /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -252,21 +252,21 @@ const Dashboard = () => {
                                                 <Box className="mt-10">
                                                     <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                         <Grid item xs={12} sm={4}>
-                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.1s">
+                                                            <div className="pics-values">
                                                                 <div className='icon'><img src={optimization} /></div>
                                                                 <h4>Speed</h4>
                                                                 <p>Communication is key. We aim to provide a tailored, dedicated consulting support and one of the main aspect is responding faster and ensuring the applicant is kept updated at all levels and times of this process.</p>
                                                             </div>
                                                         </Grid>
                                                         <Grid item xs={12} sm={4}>
-                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.2s">
+                                                            <div className="pics-values">
                                                                 <div className='icon'><img src={outsourcing} /></div>
                                                                 <h4>Lead Together</h4>
                                                                 <p>PICS employees and the applicants are the heart of the PICS operation. We strongly believe giving the right guidance to applicants and growing the team is key. We welcome new ideas and learn from each other and grow together.</p>
                                                             </div>
                                                         </Grid>
                                                         <Grid item xs={12} sm={4}>
-                                                            <div className="pics-values wow fadeInDown" data-wow-delay="0.3s">
+                                                            <div className="pics-values">
                                                                 <div className='icon'><img src={outline} /></div>
                                                                 <h4>Transparency</h4>
                                                                 <p>Transparency leads to Trust. At PICS we place value in doing things right, right things, establishing trust and enduring relationships with applicants, ensuring the trust is kept.</p>
@@ -286,7 +286,7 @@ const Dashboard = () => {
                             <footer className="small-section bg-gray-lighter footer pb-60">
                                 <div className="container">
                                     <div className="row">
-                                        <div className="col-md-3 text-center">
+                                        <div className="col-md-3 text-center m-center mb-xs-20">
                                             <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
@@ -301,29 +301,29 @@ const Dashboard = () => {
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
                                             </div> */}
-
-                                            <div className='row pt-40 pb-40'>
-                                                <div className='col-md-4'>
-                                                    <div className='footer-widget'>
-                                                        <div className='title'>PICS - Headquarters</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                            <div className='footer-widget'>
+                                                <div className='title'>PICS Offices</div>
+                                            </div>
+                                            <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='footer-widget '>
+                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        <div className='title'>india</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                                        India - Launching Soon
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
                                                                 <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
                                                                 <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href="#"><img src={whatsapp} /></a></li>
+                                                                <li><a href="https://api.whatsapp.com/send?phone=447510830896" target='_blank'><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>
                                                         @PICSConsultants
@@ -331,10 +331,11 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
-
-                                            <div className="footer-copy pt-20 pb-0">
-                                                Copyright@2024 Pappa International LTD t/a PICS | REG NO: 13199591
+                                            <div className='m-center'>
+                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+                                            </div>
+                                            <div className="footer-copy pt-20 pb-0 m-center">
+                                                Copyright@2024 Pappa International LTD. T/A PICS Consultants | REG NO: 13199591
                                             </div>
                                         </div>
                                     </div>

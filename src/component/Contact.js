@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { TextField, Checkbox, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
+import { TextField, Checkbox, FormControlLabel, FormControl } from '@mui/material';
 import contact_step_1 from '../images/contact-step-1.jpg';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -24,7 +24,23 @@ const Dashboard = () => {
     let [ampm, setampm] = React.useState('AM');
     let [phonecode, setPhonecode] = React.useState('+91');
     const [checked, setChecked] = React.useState(false);
-
+    function onCheck(event) {
+        console.log('onCheck: ', event); // always called
+      }
+      function onLinkClick(event) {
+        console.log('onLinkClick'); // never called
+      }
+      const label = (
+        <span>I have read and agree to the&nbsp;
+          <a
+            href="/terms_and_conditions"
+            target="_blank"
+            onClick={onLinkClick}
+          >
+            Terms and Conditions
+          </a>
+        </span>
+      )
     function policyHandleChange(e) {
         setChecked(e.target.checked);
     }
@@ -127,7 +143,7 @@ const Dashboard = () => {
                                                         />
                                                     </div>
                                                     <div className='col-md-2 mt-20'>
-                                                        <FormControl variant="standard" sx={{ m: 1, minWidth: 100 }}>
+                                                        <FormControl className='selectBox' variant="standard" sx={{ m: 1, minWidth: 100 }}>
                                                             <Select
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
@@ -163,15 +179,17 @@ const Dashboard = () => {
                                                                 value={studyDestination}
                                                                 onChange={handleChange}
                                                             >
-                                                                <MenuItem value={10}>Ten</MenuItem>
-                                                                <MenuItem value={20}>Twenty</MenuItem>
-                                                                <MenuItem value={30}>Thirty</MenuItem>
+                                                                <MenuItem value={10}>UK</MenuItem>
+                                                                <MenuItem value={20}>USA</MenuItem>
+                                                                <MenuItem value={30}>Canada</MenuItem>
+                                                                <MenuItem value={30}>Australia</MenuItem>
                                                             </Select>
                                                         </FormControl>
                                                     </div>
-                                                    <div className='hs-line-5 mb-20'>Preferred time to connect with you</div>
+                                                    <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
                                                     <div className='col-md-5'>
                                                         <DatePicker
+                                                            className='datepicker'
                                                             name="From Date"
                                                             selected={fromDate}
                                                             onChange={(newValue) => setFromDate(newValue)}
@@ -183,23 +201,10 @@ const Dashboard = () => {
                                                     <div className='col-md-5'>
                                                         <TimePicker onChange={(e) => onTimeChange(e)} value={time} />
                                                     </div>
-                                                    <div className='col-md-2'>
-                                                        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                                                            <Select
-                                                                labelId="demo-simple-select-standard-label"
-                                                                id="demo-simple-select-standard"
-                                                                name='ampm'
-                                                                value={ampm}
-                                                                onChange={handleChange}
-                                                            >
-                                                                <MenuItem value='PM'>PM</MenuItem>
-                                                                <MenuItem value='AM'>AM</MenuItem>
-                                                            </Select>
-                                                        </FormControl>
-                                                    </div>
                                                     <div className='col-md-12'>
-                                                        <FormControlLabel control={<Checkbox value={checked} onChange={policyHandleChange} defaultChecked />} label="Label" />
-                                                        <a style={{ borderBottom: 'solid 1px blue' }} href='/policy' target='_blank'>Privacy Policy</a>
+                                                        <div className='terms-label mt-30 mb-30'>
+                                                            <FormControlLabel control={<Checkbox value={checked} onChange={policyHandleChange} defaultChecked />} label="I consent to receive digital and telecommunications from PICS Consultants regarding our university application services. I understand I may change my preferences or opt out at any time using the unsubscribe link on all PICS Consultants emails." />  <span className='terms-link'>View <a href='/policy' target='_blank'>Privacy Policy</a></span>
+                                                        </div>
                                                     </div>
 
                                                     <div className='col-md-12'>

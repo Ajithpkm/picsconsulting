@@ -396,7 +396,7 @@ const Faq = () => {
                             <footer className="small-section bg-gray-lighter footer pb-60">
                                 <div className="container">
                                     <div className="row">
-                                        <div className="col-md-3 text-center">
+                                        <div className="col-md-3 text-center m-center mb-xs-20">
                                             <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
@@ -411,29 +411,29 @@ const Faq = () => {
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
                                             </div> */}
-
-                                            <div className='row pt-40 pb-40'>
-                                                <div className='col-md-4'>
-                                                    <div className='footer-widget'>
-                                                        <div className='title'>PICS - Headquarters</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                            <div className='footer-widget'>
+                                                <div className='title'>PICS Offices</div>
+                                            </div>
+                                            <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='footer-widget '>
+                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        <div className='title'>india</div>
-                                                        Head Quarters : 27, Duke Street, Chelmsford, England, CM1 1HT, UK
+                                                        India - Launching Soon
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4'>
+                                                <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
                                                                 <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
                                                                 <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href="#"><img src={whatsapp} /></a></li>
+                                                                <li><a href="https://api.whatsapp.com/send?phone=447510830896" target='_blank'><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>
                                                         @PICSConsultants
@@ -441,10 +441,11 @@ const Faq = () => {
                                                 </div>
                                             </div>
 
-                                            <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
-
-                                            <div className="footer-copy pt-20 pb-0">
-                                                Copyright@2024 Pappa International LTD t/a PICS | REG NO: 13199591
+                                            <div className='m-center'>
+                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+                                            </div>
+                                            <div className="footer-copy pt-20 pb-0 m-center">
+                                                Copyright@2024 Pappa International LTD. T/A PICS Consultants | REG NO: 13199591
                                             </div>
                                         </div>
                                     </div>
