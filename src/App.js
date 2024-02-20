@@ -5,6 +5,9 @@ import About from './component/About';
 import Faq from './component/Faq';
 import Contact from './component/Contact';
 import PrivacyPolicy from './component/PrivacyPolicy';
+import Step2 from './component/Step2';
+import Step3 from './component/Step3';
+import Step4 from './component/Step4';
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/policy" element={<PrivacyPolicy />}></Route>
+        <Route exact path="/step2" element={<Step2 />}></Route>
+        <Route exact path="/step3" element={<Step3 />}></Route>
+        <Route exact path="/step4" element={<Step4 />}></Route>
       </Routes>
     </BrowserRouter>
   );
