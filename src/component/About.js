@@ -132,10 +132,10 @@ const Dashboard = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            {/* <li className="active"><a href="/">study international</a></li>
+                                            <li className="active xs-hide"><a href="/">study international</a></li>
                                             <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li> */}
-                                            <li><button onClick={handleOpenContact} className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</button></li>
+                                            <li><a href="faq">FAQ</a></li>
+                                            <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@ const Dashboard = () => {
                                 <section className='small-section pt-0'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='image-rounded'><img src={aboutusdata?.section2?.image1} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
@@ -213,7 +213,7 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
 
-                                            <div className='col-md-8'>
+                                            <div className='col-md-8 xs-order-2'>
                                                 <div className='inner-container-right'>
                                                     <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
@@ -231,7 +231,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 xs-order-1 mb-xs-20'>
                                                 <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
                                             </div>
                                         </div>
@@ -305,7 +305,7 @@ const Dashboard = () => {
                                                 </ul>
                                             </div> */}
                                             <div className='footer-widget'>
-                                                <div className='title'>{headandfooterdata?.address_title}</div>
+                                                <div className='title m-center'>{headandfooterdata?.address_title}</div>
                                             </div>
                                             <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>

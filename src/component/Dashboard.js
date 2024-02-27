@@ -982,10 +982,10 @@ const Dashboard = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            <li className="active"><a href="/">study international</a></li>
+                                            <li className="active xs-hide"><a href="/">study international</a></li>
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
-                                            <li><button onClick={handleOpenContact} className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</button></li>
+                                            <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1352,7 +1352,7 @@ const Dashboard = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            {/* <div className="footer-menu">
+                                            <div className="footer-menu">
                                                 <ul className="clearlist">
                                                     <li><a href="#">Study International</a></li>
                                                     <li><a href="#">About</a></li>
@@ -1362,9 +1362,9 @@ const Dashboard = () => {
                                                     <li><a href="#">Privacy Policy</a></li>
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
-                                            </div> */}
+                                            </div>
                                             <div className='footer-widget'>
-                                                <div className='title'>{headandfooterdata?.address_title}</div>
+                                                <div className='title m-center'>{headandfooterdata?.address_title}</div>
                                             </div>
                                             <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>

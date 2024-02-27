@@ -136,10 +136,10 @@ const Faq = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            {/* <li className="active"><a href="/">study international</a></li>
+                                            <li className="active xs-hide"><a href="/">study international</a></li>
                                             <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li> */}
-                                            <li><button onClick={handleOpenContact} className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</button></li>
+                                            <li><a href="faq">FAQ</a></li>
+                                            <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -241,9 +241,10 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='col-md-2 mt-20'>
                                                         <ReactFlagsSelect
+                                                            className='countryflag'
                                                             selected={phonecode}
                                                             onSelect={(code) => setPhonecode(code)}
-                                                        />;
+                                                        />
                                                         {/* <FormControl className='selectBox' variant="standard" sx={{ m: 1, minWidth: 100 }}>
                                                             <Select
                                                                 labelId="demo-simple-select-standard-label"
@@ -293,7 +294,7 @@ const Dashboard = () => {
                                                         </FormControl>
                                                     </div>
                                                     <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
-                                                    <div className='col-md-5'>
+                                                    <div className='col-6 col-md-5 mb-xs-20'>
                                                         <DatePicker
                                                             className='datepicker'
                                                             minDate={new Date()}
@@ -310,7 +311,7 @@ const Dashboard = () => {
                                                         />
                                                         <span style={{ color: 'red' }}>{fromDateError ? 'This is required' : ''}</span>
                                                     </div>
-                                                    <div className='col-md-5 timepicker'>
+                                                    <div className='col-6 col-md-5 timepicker'>
                                                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                             <TimePicker
                                                                 value={time}

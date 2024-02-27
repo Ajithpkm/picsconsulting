@@ -4425,3 +4425,22 @@ section:hover .small-item-carousel .owl-next{
     border-radius: 12px;
     padding: 20px;
 }
+.countryflag button {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #ddd !important;
+    height: 47px;
+    border-radius: 0px;
+    font-family: "Lato", sans-serif;
+    padding: 5px 0px;
+    font-size: 14px;
+    position: relative;
+}
+.countryflag button span {
+    padding: 0;
+    margin: 2px 0;
+}
+.countryflag button span span {
+    padding-left: 4px;
+}

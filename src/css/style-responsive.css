@@ -69,7 +69,7 @@ Project: DT Skill
     }
     
     .split-section-wrapper {
-        padding: 0 50px;
+        padding: 40px;
     }
     
 }
@@ -237,7 +237,7 @@ Project: DT Skill
     }
     
     .hs-line-7 {
-        font-size: 50px;
+        font-size: 14px;
     }
     
     .page-section {
@@ -330,8 +330,37 @@ Project: DT Skill
         padding-top: 27px;
         padding-bottom: 33px;
     }
+    .search-form .search-btn {
+        padding: 2px 15px;
+        top: 9px;
+    }
     .nav-logo-wrap .logo {
         height: 75px;
+    }
+    .split-section-wrapper {
+        padding: 25px;
+    }
+    .contact-section .datepicker {
+        padding-right: 10px;
+    }
+    .split-section-content {
+        height: auto;
+    }
+    .split-section-content .btn-mod.btn-large{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+        justify-content: center;
+        font-size: 18px;
+    }
+    .form-footer {
+        bottom: 48px;
+        padding: 2px 0;
+    }
+    .contact-section .timepicker input {
+        padding-right: 10px;
     }
     .xs-order-1 {
         order: 1;
@@ -344,6 +373,9 @@ Project: DT Skill
     }
     .xs-order-4 {
         order: 4;
+    }
+    .ssh-cell {
+        height: 450px;
     }
     .hs-line-1 {
         font-size: 28px;
@@ -368,6 +400,10 @@ Project: DT Skill
     }
     .inner-nav ul li {
         padding: 0;
+        margin-left: 15px;
+    }
+    .inner-nav ul li .btn-mod.btn-medium {
+        padding: 4px 15px;
     }
     .loader { 
         left: 45%;
@@ -408,7 +444,7 @@ Project: DT Skill
         font-size: 16px;
     }
     .hs-line-7{
-        font-size: 32px;
+        font-size: 14px;
     }
     
     .hs-line-9{
@@ -662,10 +698,10 @@ Project: DT Skill
         font-size: 15px;
     }
     .hs-line-7 {
-        font-size: 28px;
+        font-size: 14px;
     }
     .hs-line-8 {
-        font-size: 12px;
+        font-size: 20px;
     } 
     .hs-line-9 {
         font-size: 42px;
