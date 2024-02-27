@@ -79,7 +79,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='form-footer'>
+                                        <div className='form-footer push-bottom'>
                                             <ul>
                                                 <li><span className='dot active'></span></li>
                                                 <li><span className='dot active'></span></li>

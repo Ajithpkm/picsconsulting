@@ -338,7 +338,7 @@ Project: DT Skill
         height: 75px;
     }
     .split-section-wrapper {
-        padding: 25px;
+        padding: 25px 25px 95px 25px;
     }
     .contact-section .datepicker {
         padding-right: 10px;
@@ -354,10 +354,14 @@ Project: DT Skill
         border-radius: 0;
         justify-content: center;
         font-size: 18px;
+        z-index: 99;
     }
     .form-footer {
         bottom: 48px;
         padding: 2px 0;
+    }
+    .form-footer.push-bottom {
+        bottom: 0;
     }
     .contact-section .timepicker input {
         padding-right: 10px;
