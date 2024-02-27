@@ -19,36 +19,6 @@ import icon_01 from '../images/university-offer.svg';
 import icon_02 from '../images/dedicated-pics-consultant.svg';
 import icon_03 from '../images/professional-service.svg';
 import university_list from '../images/university-list.jpg';
-import uk_01 from '../images/uk1.jpg';
-import uk_02 from '../images/uk2.jpg';
-import uk_03 from '../images/uk3.jpg';
-import uk_04 from '../images/uk4.jpg';
-import uk_05 from '../images/uk5.jpg';
-import uk_06 from '../images/uk6.jpg';
-import uk_07 from '../images/uk7.jpg';
-import uk_08 from '../images/uk8.jpg';
-import uk_09 from '../images/uk9.jpg';
-import uk_10 from '../images/uk10.jpg';
-import usa_01 from '../images/usa1.jpg';
-import usa_02 from '../images/usa2.jpg';
-import usa_03 from '../images/usa3.jpg';
-import usa_04 from '../images/usa4.jpg';
-import usa_05 from '../images/usa5.jpg';
-import usa_06 from '../images/usa6.jpg';
-import usa_07 from '../images/usa7.jpg';
-import usa_08 from '../images/usa8.jpg';
-import usa_09 from '../images/usa9.jpg';
-import usa_10 from '../images/usa10.jpg';
-import canada_01 from '../images/canada1.jpg';
-import canada_02 from '../images/canada2.jpg';
-import canada_03 from '../images/canada3.jpg';
-import canada_04 from '../images/canada4.jpg';
-import canada_05 from '../images/canada5.jpg';
-import canada_06 from '../images/canada6.jpg';
-import canada_07 from '../images/canada7.jpg';
-import canada_08 from '../images/canada8.jpg';
-import canada_09 from '../images/canada9.jpg';
-import canada_10 from '../images/canada10.jpg';
 import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -57,6 +27,9 @@ import './style.css';
 import '../css/verticals.min.css';
 import '../css/style-responsive.css';
 import { Height } from '@material-ui/icons';
+import { gethomedata, getheaderandfooterdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
+import { useDispatch, useSelector } from "react-redux";
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -108,7 +81,14 @@ const Dashboard = () => {
     const [canadaModelopen, setcanadaModelopen] = React.useState(false);
     const [contactopen, setContactOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
-    const handleUkOpen = () => setukModelopen(true);
+    const [selectedUniversity, setSelectedUniversity] = React.useState(false);
+
+    const handleUkOpen = (val) => {
+        setukModelopen(true);
+        setSelectedUniversity(val);
+        dispatch(getcountrydata(val));
+    }
+
     const handleUkClose = () => setukModelopen(false);
     const handleUsaOpen = () => setusaModelopen(true);
     const handleUsaClose = () => setusaModelopen(false);
@@ -121,25 +101,40 @@ const Dashboard = () => {
         setValue(newValue);
     };
 
+    const headandfooterdata = useSelector((state) => state?.Pics?.headandfooterdata?.data);
+    const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
+    const homedata = useSelector((state) => state?.Pics?.homedata?.data);
+    const countrydata = useSelector((state) => state?.Pics?.countrydata?.data);
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrollValueMoreThanHeaderHeight(window.scrollY > 96);
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        dispatch(gethomedata());
+        dispatch(getheaderandfooterdata());
+        dispatch(getuniversitydata());
+        dispatch(getcountrydata());
+    }, []);
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
         }, 1000);
-    }, [])
+    }, []);
 
     return (
         <>
             <div>
                 {loading === false ?
                     <div className='page-loader'>
-                        <span class="loader"></span>
+                        <span className="loader"></span>
                     </div> :
                     <div>
                         <Modal
@@ -156,427 +151,30 @@ const Dashboard = () => {
                                             <img src={university_01} alt="" />
                                         </div>
                                         <div className='col-10 col-md-10'>
-                                            <div className='country-name font-alt'>UK<br />University list</div>
+                                            <div className='country-name font-alt'>
+                                                {selectedUniversity == 1 ? 'UK' : selectedUniversity == 2 ? 'USA' :
+                                                    selectedUniversity == 3 ? 'CANADA' : 'AUSTRALIA'}<br />University list</div>
                                         </div>
                                     </div>
                                 </Typography>
                                 <SimpleBar id="RSC-Example" style={{ height: 450 }}>
                                     <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
-                                        <div className='font-alt hs-line-5'>A</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Aberdeen University</li>
-                                                        <li>Abertay Dundee University</li>
-                                                        <li>Aberystwyth University of Wales</li>
-                                                        <li>Anglia Ruskin University</li>
-                                                        <li>Arts University Bournemouth</li>
-                                                        <li>Ashridge</li>
-                                                        <li>Aston University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>B</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>BANGOR BUSINESS SCHOOL Bangor University</li>
-                                                        <li>Bangor University</li>
-                                                        <li>Bath Spa University</li>
-                                                        <li>Bedfordshire University</li>
-                                                        <li>Birkbeck University of London</li>
-                                                        <li>Birmingham City University</li>
-                                                        <li>Bolton University</li>
-                                                        <li>Bournemouth University</li>
-                                                        <li>Bradford University</li>
-                                                        <li>Brighton University</li>
-                                                        <li>Bristol University</li>
-                                                        <li>Brunel University</li>
-                                                        <li>Buckingham University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>C</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Cambridge Education Group (All Centres)</li>
-                                                        <li>Canterbury Christ Church University</li>
-                                                        <li>Cardiff Metropolitan University</li>
-                                                        <li>Cardiff University</li>
-                                                        <li>Central Lancashire University</li>
-                                                        <li>Chester University of</li>
-                                                        <li>Chichester University</li>
-                                                        <li>Coventry University</li>
-                                                        <li>Coventry University - London Campus</li>
-                                                        <li>Cranfield University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>D</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>De Montfort University</li>
-                                                        <li>Derby University</li>
-                                                        <li>Dundee University</li>
-                                                        <li>Durham University</li>
-                                                        <li>Durham University English Language Centre</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>E</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>East Anglia University</li>
-                                                        <li>East London University</li>
-                                                        <li>Edge Hill University</li>
-                                                        <li>Edinburgh Business School</li>
-                                                        <li>Edinburgh Napier University</li>
-                                                        <li>Edinburgh University</li>
-                                                        <li>Essex University</li>
-                                                        <li>Exeter University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>F</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Falmouth University</li>
-                                                        <li>Falmouth University of Arts</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>G</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Glasgow  University</li>
-                                                        <li>Glasgow Caledonian London Campus</li>
-                                                        <li>Glasgow Caledonian University</li>
-                                                        <li>Glasgow School of Art</li>
-                                                        <li>Gloucestershire University</li>
-                                                        <li>Glyndwr University</li>
-                                                        <li>Goldsmiths University of London</li>
-                                                        <li>Greenwich University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>H</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Heriot-Watt University</li>
-                                                        <li>Hertfordshire University</li>
-                                                        <li>Huddersfield University</li>
-                                                        <li>Hull University</li>
-                                                        <li>Hult International Business School AG</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>I</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>INTO University Partnerships (All Centres)</li>
-                                                        <li>Istituto Marangoni</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>K</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Kaplan (All Centres)</li>
-                                                        <li>Kaplan Open Learning</li>
-                                                        <li>Keele University</li>
-                                                        <li>Kent University</li>
-                                                        <li>King's College London (KCL)</li>
-                                                        <li>Kingston University</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>L</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Lancaster University</li>
-                                                        <li>LCA Business School London</li>
-                                                        <li>Leeds Beckett University</li>
-                                                        <li>Leeds Trinity University
-                                                        </li>
-                                                        <li>Leeds University
-                                                        </li>
-                                                        <li>Leicester University
-                                                        </li>
-                                                        <li>Lincoln University
-                                                        </li>
-                                                        <li>Liverpool Hope University
-                                                        </li>
-                                                        <li>Liverpool John Moores University
-                                                        </li>
-                                                        <li>Liverpool University
-                                                        </li>
-                                                        <li>Liverpool University (London Campus)
-                                                        </li>
-                                                        <li>London College of Communication (Univ of the Arts)
-                                                        </li>
-                                                        <li>London College of Contemporary Arts
-                                                        </li>
-                                                        <li>London Metropolitan University
-                                                        </li>
-                                                        <li>London South Bank University
-                                                        </li>
-                                                        <li>Loughborough University
-                                                        </li>
-                                                        <li>Loughborough University - London Campus
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>M</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Manchester Metropolitan University
-                                                        </li>
-                                                        <li>Middlesex University
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>N</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Navitas Parent
-                                                        </li>
-                                                        <li>Newcastle University
-                                                        </li>
-                                                        <li>Northampton University
-                                                        </li>
-                                                        <li>Northumbria University
-                                                        </li>
-                                                        <li>Norwich University Of The Arts
-                                                        </li>
-                                                        <li>Nottingham Trent University
-                                                        </li>
-                                                        <li>Nottingham University
-                                                        </li>
-                                                        <li>Nottingham University Ningbo China
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>O</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Oxford Brookes University
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>P</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Plymouth University
-                                                        </li>
-                                                        <li>Portsmouth University
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>Q</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>QA Higher Education (Roehampton/Northumbria Lon campus/Ulster University)
-                                                        </li>
-                                                        <li>Queen Margaret University
-                                                        </li>
-                                                        <li>Queen Mary University of London
-                                                        </li>
-                                                        <li>Queen's University Belfast
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>R</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Ravensbourne</li>
-                                                        <li>Reading University
-                                                        </li>
-                                                        <li>Regents University London
-                                                        </li>
-                                                        <li>Richmond The American International University in London
-                                                        </li>
-                                                        <li>Robert Gordon University
-                                                        </li>
-                                                        <li>Roehampton University
-                                                        </li>
-                                                        <li>Royal Agricultural University
-                                                        </li>
-                                                        <li>Royal Holloway University of London
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div> <div className='font-alt hs-line-5'>S</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Salford University
-                                                        </li>
-                                                        <li>School of Oriental and African Studies London (SOAS)
-                                                        </li>
-                                                        <li>Sheffield Hallam University
-                                                        </li>
-                                                        <li>Sheffield University
-                                                        </li>
-                                                        <li>Southampton Solent University
-                                                        </li>
-                                                        <li>Southampton University
-                                                        </li>
-                                                        <li>St Mary's University Twickenham
-                                                        </li>
-                                                        <li>Staffordshire University
-                                                        </li>
-                                                        <li>Stirling University
-                                                        </li>
-                                                        <li>Strathclyde University
-                                                        </li>
-                                                        <li>Study Group/International Study Centres (All Centres)
-                                                        </li>
-                                                        <li>Sunderland University
-                                                        </li>
-                                                        <li>Sunderland University - London Campus
-                                                        </li>
-                                                        <li>Surrey University
-                                                        </li>
-                                                        <li>Sussex University
-                                                        </li>
-                                                        <li>Swansea University of Wales
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div> <div className='font-alt hs-line-5'>T</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Teesside University
-                                                        </li>
-                                                        <li>Trinity Laban Conservatoire of Music & Dance
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div> <div className='font-alt hs-line-5'>U</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>Ulster University (London and Birmingham Campuses QA)
-                                                        </li>
-                                                        <li>Ulster University Coleraine Campus
-                                                        </li>
-                                                        <li>University College Birmingham
-                                                        </li>
-                                                        <li>University for the Creative Arts
-                                                        </li>
-                                                        <li>University of Bath
-                                                        </li>
-                                                        <li>University of Birmingham
-                                                        </li>
-                                                        <li>University of Law London Bloomsbury
-                                                        </li>
-                                                        <li>University of Manchester
-                                                        </li>
-                                                        <li>University of South Wales
-                                                        </li>
-                                                        <li>University of Suffolk
-                                                        </li>
-                                                        <li>University of the Highlands and Islands
-                                                        </li>
-                                                        <li>University of Wales Trinity Saint David
-                                                        </li>
-                                                        <li>University of Warwick & WMG
-                                                        </li>
-                                                        <li>University of West London
-                                                        </li>
-                                                        <li>University of West of Scotland(London Campus)
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>W</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>West of England University (Bristol)
-                                                        </li>
-                                                        <li>Westminster University
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='font-alt hs-line-5'>Y</div>
-                                        <div className='desc mb-20'>
-                                            <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <ul>
-                                                        <li>York University
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {
+                                            countrydata?.length > 0 && countrydata?.map((x, i) => (
+                                                <>
+                                                    <div className='font-alt hs-line-5'>{x?.name}</div>
+                                                    <div className='row'>
+                                                        <div className='col-md-6'>
+                                                            <ul>
+                                                                {x?.list?.length > 0 && x?.list?.map((v) => (
+                                                                    <li>{v?.name}</li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </>
+                                            ))
+                                        }
                                     </Typography>
                                 </SimpleBar>
                             </Box>
@@ -1394,19 +992,19 @@ const Dashboard = () => {
                             </nav>
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
-                                    <section className="home-section bg-scroll fixed-height-medium" style={{
-                                        background: `url(${slider_01})`,
-                                    }}>
+                                    <section className="home-section bg-scroll fixed-height-medium"
+                                        style={{ background: `url(${homedata?.section1?.image})` }}
+                                    >
                                         <div className="js-height-parent container-1400">
                                             <div className="home-content">
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                PICS<br />Your pathway to STUDY in <br />UK, USA,Canada & Australia
+                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section1?.title }}></span>
                                                             </div>
                                                             <div className="hs-line-2 text-center">
-                                                                Includes admissions to top institutions like Oxford, Cambridge <br />and 225+ Universities across the globe
+                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section1?.description }}></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1421,19 +1019,19 @@ const Dashboard = () => {
                                         <div className="row d-flex justify-content-between">
                                             <div className='col-md-5 mb-xs-20'>
                                                 <h2 className="banner-title mb-0 mb-xs-0">
-                                                    Degree Programs include
+                                                    {homedata?.section2?.title}
                                                 </h2>
                                                 <div className="banner-desc">
-                                                    UG, PG, PHD, Foundation <br />Engineering, Management, Medicine, <br />Law, Arts & Science & English programs
+                                                    <span dangerouslySetInnerHTML={{ __html: homedata?.section2?.description }}></span>
                                                 </div>
                                             </div>
                                             <div className='col-md-6'>
                                                 <div className='universities'>
                                                     <ul>
-                                                        <li><img src={university_01} alt="" /></li>
-                                                        <li><img src={university_02} alt="" /></li>
-                                                        <li><img src={university_03} alt="" /></li>
-                                                        <li><img src={university_04} alt="" /></li>
+                                                        <li><img src={homedata?.section2?.image1} alt="" /></li>
+                                                        <li><img src={homedata?.section2?.image2} alt="" /></li>
+                                                        <li><img src={homedata?.section2?.image3} alt="" /></li>
+                                                        <li><img src={homedata?.section2?.image4} alt="" /></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1445,40 +1043,39 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-7 mb-xs-20'>
-                                                <div className='image-rounded'><img src={pics_consultants} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={homedata?.section2?.large_image} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
                                                     <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
-                                                        PICS Consultants
+                                                        {homedata?.section2?.title1}
                                                     </div>
                                                     <div className='section-text'>
-                                                        We take a <b>student-centred approach (P-I-C-S)</b> by having an open, honest and transparent discussion. Our mission is to identify your requirements, use our knowledge and provide you with a list of universities that are matched. So, you can take your first step closer to your aspiration of having an international degree.
+                                                        <span dangerouslySetInnerHTML={{ __html: homedata?.section2?.description1 }}></span>
                                                     </div>
-
                                                     <div className='pics-abbr mt-30'>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>P</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>Prepare for the meeting</div>
+                                                                <div className='desc-btn'>{homedata?.section2?.list1}</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>I</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>Identify your Requirement</div>
+                                                                <div className='desc-btn'>{homedata?.section2?.list2}</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>C</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>Choose the University</div>
+                                                                <div className='desc-btn'>{homedata?.section2?.list3}</div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>S</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>Submit the application</div>
+                                                                <div className='desc-btn'>{homedata?.section2?.list4}</div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1499,16 +1096,16 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className='image-rounded pull-top'>
-                                                    <img src={unversity_bg} alt='' />
+                                                    <img src={homedata?.section3?.image} alt='' />
                                                 </div>
                                                 <div className='mt-30'>
                                                     <div className="hs-line-3 white text-center font-alt mb-20 mb-xs-10">
-                                                        PICS FREE University Application Service
+                                                        {homedata?.section3?.title}
                                                     </div>
                                                     <div className='row d-flex justify-content-center mb-40'>
                                                         <div className='col-md-9'>
                                                             <div className='section-text text-center white'>
-                                                                Applying to an university can be time-consuming and challenging for an international student. That is why the PICS FREE University Application Service does the hard work for you with offerings like;
+                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section3?.description }}></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1516,23 +1113,23 @@ const Dashboard = () => {
                                                         <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={icon_01} /></div>
-                                                                    <h4>100% PICS Guaranteed University offer</h4>
-                                                                    <p>PICS will provide you with an offer from an university when eligibility criteria are met.</p>
+                                                                    <div className='icon'><img src={homedata?.section3?.box1_image} /></div>
+                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box1_title }}></h4>
+                                                                    <p>{homedata?.section3?.box1_desc}</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={icon_02} /></div>
-                                                                    <h4>Your dedicated PICS<br />Consultant</h4>
-                                                                    <p>From first contact to admission, your PICS consultant will work with you through all the processes.</p>
+                                                                    <div className='icon'><img src={homedata?.section3?.box2_image} /></div>
+                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box2_title }}></h4>
+                                                                    <p>{homedata?.section3?.box2_desc}</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={icon_03} /></div>
-                                                                    <h4>Reliable & Professional<br />Service</h4>
-                                                                    <p>From writing personal statements to understanding eligibility criteria, we will strive to provide the best result.</p>
+                                                                    <div className='icon'><img src={homedata?.section3?.box3_image} /></div>
+                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box3_title }}></h4>
+                                                                    <p>{homedata?.section3?.box3_desc}</p>
                                                                 </div>
                                                             </Grid>
                                                         </Grid>
@@ -1540,12 +1137,6 @@ const Dashboard = () => {
                                                     <div className='mt-40 mb-20 text-center'>
                                                         <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
                                                     </div>
-                                                    {/* <Card className='cardinfo' sx={{ minWidth: 275 }} >
-                                                <CardContent className='listrdo mb-listrdo' >
-                                                    <h4 className='title-head'> Which fuel does it use?</h4>
-                                                    
-                                                </CardContent>
-                                            </Card> */}
                                                 </div>
                                             </div>
                                         </div>
@@ -1559,12 +1150,12 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
-                                                    PICS Global University List
+                                                    {homedata?.section4?.title}
                                                 </div>
                                                 <div className='row d-flex justify-content-center mb-0'>
                                                     <div className='col-md-8'>
                                                         <div className='section-text text-center mb-30'>
-                                                            PICS can help students in gaining entry to some of world’s leading universities. Students success is our success and we want the best outcomes for them
+                                                            <span dangerouslySetInnerHTML={{ __html: homedata?.section4?.description }}></span>
                                                         </div>
 
                                                         <div className='hs-line-4 mb-0'>
@@ -1584,57 +1175,34 @@ const Dashboard = () => {
                                             className='pics-tabs'
                                             aria-label="horizontal tabs example"
                                         >
-                                            <Tab className='tab-single uk' label="UK" {...a11yProps(0)} />
-                                            <Tab className='tab-single usa' label="USA" {...a11yProps(1)} />
-                                            <Tab className='tab-single canada' label="Canada" {...a11yProps(2)} />
-                                            <Tab className='tab-single australia' label="Australia" {...a11yProps(3)} />
+                                            {
+                                                universitydata?.length > 0 && universitydata?.map((x, i) => (
+                                                    <Tab className={`tab-single ${(x?.name?.toLowerCase())}`} label={x?.name} {...a11yProps(i)} />
+                                                ))
+                                            }
                                         </Tabs>
                                         <TabPanel value={value} index={0}>
                                             <Box className='mt-10 xs-padding-12'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={uk_01} /></div>
-                                                        <h4>University of Bristol</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={uk_02} /></div>
-                                                        <h4>University of Cambridge</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={uk_03} /></div>
-                                                        <h4>University of Edinburgh</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={uk_04} /></div>
-                                                        <h4>University of Glasgow</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_05} /></div>
-                                                        <h4>Imperial College London</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_06} /></div>
-                                                        <h4>King's College London</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_07} /></div>
-                                                        <h4>University of Manchester</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_08} /></div>
-                                                        <h4>University of Oxford</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_09} /></div>
-                                                        <h4>University College London</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={uk_10} /></div>
-                                                        <h4>University of Warwick</h4>
-                                                    </Grid>
+                                                    {universitydata?.[0]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[0]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <p>UK data coming soon...</p>
+                                                        </>
+                                                    }
+
                                                 </Grid>
                                             </Box>
-                                            <div className='mt-20 text-center'><Button onClick={handleUkOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(1)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
                                                 <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
@@ -1642,49 +1210,25 @@ const Dashboard = () => {
                                         <TabPanel value={value} index={1}>
                                             <Box className='mt-10'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={usa_01} /></div>
-                                                        <h4>Adelphi University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={usa_02} /></div>
-                                                        <h4>University at Buffalo</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={usa_03} /></div>
-                                                        <h4>University of Dayton</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={usa_04} /></div>
-                                                        <h4>Gonzaga University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_05} /></div>
-                                                        <h4>University of Illinois at Chicago</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_06} /></div>
-                                                        <h4>University of Illinois Springfield</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_07} /></div>
-                                                        <h4>Johns Hopkins University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_08} /></div>
-                                                        <h4>University of Kansas</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_09} /></div>
-                                                        <h4>University of the Pacific</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={usa_10} /></div>
-                                                        <h4>University of Utah</h4>
-                                                    </Grid>
+                                                    {universitydata?.[1]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[1]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <p>USA data coming soon...</p>
+                                                        </>
+                                                    }
+
                                                 </Grid>
                                             </Box>
-                                            <div className='mt-20 text-center'><Button onClick={handleUsaOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(2)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
                                                 <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
@@ -1692,55 +1236,50 @@ const Dashboard = () => {
                                         <TabPanel value={value} index={2}>
                                             <Box className='mt-10'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={canada_01} /></div>
-                                                        <h4>University of Alberta</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={canada_02} /></div>
-                                                        <h4>Algoma University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={canada_03} /></div>
-                                                        <h4>Lakehead University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box">
-                                                        <div className='icon'><img src={canada_04} /></div>
-                                                        <h4>Laurentian University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_05} /></div>
-                                                        <h4>Memorial Uni of NewFoundland</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_06} /></div>
-                                                        <h4>Niagara University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_07} /></div>
-                                                        <h4>Royal Road University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_08} /></div>
-                                                        <h4>Thompson River University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_09} /></div>
-                                                        <h4>Toronto Metropolitan University</h4>
-                                                    </Grid>
-                                                    <Grid item className="univ-box xs-hide">
-                                                        <div className='icon'><img src={canada_10} /></div>
-                                                        <h4>University of Victoria</h4>
-                                                    </Grid>
+                                                    {universitydata?.[2]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[2]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <p>CANADA data coming soon...</p>
+                                                        </>
+                                                    }
+
                                                 </Grid>
                                             </Box>
-                                            <div className='mt-20 text-center'><Button onClick={handleCanadaOpen} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(3)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
                                                 <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </TabPanel>
                                         <TabPanel value={value} index={3}>
-                                            <div className='mt-20 text-center'><p>Coming Soon for Australia</p></div>
+                                            <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    {universitydata?.[3]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[3]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <p>CANADA data coming soon...</p>
+                                                        </>
+                                                    }
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(4)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
                                                 <a href='javascript:;' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
@@ -1755,7 +1294,7 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
-                                                    Steps to a FREE PICS Consultation
+                                                    {homedata?.section5?.title}
                                                 </div>
                                             </div>
                                         </div>
@@ -1765,8 +1304,8 @@ const Dashboard = () => {
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>01</div>
                                                     <div className='description'>
-                                                        <h4>Prepare for the meeting</h4>
-                                                        <p>Just click Get in Touch button and submit the form and your dedicated PICS consultant will contact you soon</p>
+                                                        <h4>{homedata?.section5?.title1}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc1 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1774,8 +1313,8 @@ const Dashboard = () => {
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>03</div>
                                                     <div className='description'>
-                                                        <h4>Choose the university</h4>
-                                                        <p>Your PICS consultants will match your requirements and will provide a list of university for you to choose and make a life time decision</p>
+                                                        <h4>{homedata?.section5?.title2}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1783,8 +1322,8 @@ const Dashboard = () => {
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>02</div>
                                                     <div className='description'>
-                                                        <h4>Identify your university requirements</h4>
-                                                        <p>Your PICS consultant will identify and understand your requirements like  degree, country, financials & more</p>
+                                                        <h4>{homedata?.section5?.title3}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1792,8 +1331,8 @@ const Dashboard = () => {
                                                 <div className='step-container'>
                                                     <div className='count font-alt'>04</div>
                                                     <div className='description'>
-                                                        <h4>Submit the application</h4>
-                                                        <p>Submit the application for an university offer</p>
+                                                        <h4>{homedata?.section5?.title4}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1810,7 +1349,7 @@ const Dashboard = () => {
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             {/* <div className="footer-menu">
@@ -1825,18 +1364,19 @@ const Dashboard = () => {
                                                 </ul>
                                             </div> */}
                                             <div className='footer-widget'>
-                                                <div className='title'>PICS Offices</div>
+                                                <div className='title'>{headandfooterdata?.address_title}</div>
                                             </div>
                                             <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget '>
-                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
+                                                        {headandfooterdata?.address}
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        India - Launching Soon
+                                                        {headandfooterdata?.country}
+
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
@@ -1844,9 +1384,9 @@ const Dashboard = () => {
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
-                                                                <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
-                                                                <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href="https://api.whatsapp.com/send?phone=447510830896" target='_blank'><img src={whatsapp} /></a></li>
+                                                                <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>
                                                         @PICSConsultants
@@ -1855,10 +1395,10 @@ const Dashboard = () => {
                                             </div>
 
                                             <div className='m-center'>
-                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                             </div>
                                             <div className="footer-copy pt-20 pb-0 m-center">
-                                                Copyright@2024 Pappa International LTD. T/A PICS Consultants | REG NO: 13199591
+                                                {headandfooterdata?.copyright}
                                             </div>
                                         </div>
                                     </div>

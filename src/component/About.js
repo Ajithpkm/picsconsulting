@@ -22,6 +22,9 @@ import SimpleBar from 'react-custom-scrollbars';
 import './style.css';
 import '../css/verticals.min.css';
 import { Height } from '@material-ui/icons';
+import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
+import { useDispatch, useSelector } from "react-redux";
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -38,7 +41,6 @@ interface TabPanelProps {
     index: number;
     value: number;
 }
-
 
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
@@ -82,19 +84,25 @@ const Dashboard = () => {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+    const dispatch = useDispatch();
+    const aboutusdata = useSelector((state) => state?.Pics?.aboutusdata?.data);
+    const headandfooterdata = useSelector((state) => state?.Pics?.headandfooterdata?.data);
 
     useEffect(() => {
+        dispatch(getaboutusdata());
+        dispatch(getheaderandfooterdata());
+
+        setTimeout(() => {
+            setLoading(true);
+        }, 800);
+
         const handleScroll = () => {
             setIsScrollValueMoreThanHeaderHeight(window.scrollY > 96);
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(true);
-        }, 800);
-    }, [])
+
+    }, []);
 
     new WOW.WOW({
         live: false
@@ -143,10 +151,10 @@ const Dashboard = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                About Us
+                                                                {aboutusdata?.section1?.title}
                                                             </div>
                                                             <div className="hs-line-2 text-center">
-                                                                We have walked this path many times before<br />and we are here to help you find your path
+                                                                <span dangerouslySetInnerHTML={{ __html: aboutusdata?.section1?.description }}></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -161,11 +169,10 @@ const Dashboard = () => {
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
-                                                    Our Mission
+                                                    {aboutusdata?.section2?.title}
                                                 </div>
                                                 <div className='section-text'>
-                                                    <p>PICS mission is to provide Personalized, Transparent and Dedicated consulting service that helps you make the make right decision which empowers you to reach your full potential and meet your needs. <b>AT PICS we want the best outcomes for ALL.</b></p>
-                                                    <p>Whether the student wanted to attend a top university in UK, USA, Canada or Australia, our PICS Consultant is here to support each student with a tailored approach and highest standard of educational consultation service. <b>A service that helps you make a lifetime decision.</b></p>
+                                                    <span dangerouslySetInnerHTML={{ __html: aboutusdata?.section2?.description }}></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -176,20 +183,17 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-4'>
-                                                <div className='image-rounded'><img src={vetri} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image1} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='inner-container'>
-                                                    <div className='hs-line-7'>Meet the Founder</div>
+                                                    <div className='hs-line-7'> {aboutusdata?.section2?.title1}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        Vetri Pappa MSc (UK), B.Tech (India)
+                                                        {aboutusdata?.section1?.subtitle1}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p>Vetri is from India and founded PICS ( Pappa International Consultants) a pathway to International Study & Work Consultancy. Pappa is a family name , Pappa is an informal term for a father in India.</p>
-                                                        <p>Vetri, after completing his Bachelors in India and travelled to UK in 2007 for his master’s degree in business management and graduated from Heriot-Watt University . From being a student to Founder & Director at PICS , Pappa groups Ltd (Management & IT Consultants) , lives and resides in UK over 15 years , Married, Father of one , Homeowner in UK and also recently elected City Councilor. <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? '' : 'Read more'}</a>
-                                                        </p>
-
-                                                        {vertriPapaReadMore && <div className='additonal-content'>
+                                                        <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section1?.description1 }}></p>
+                                                        {/* {vertriPapaReadMore && <div className='additonal-content'>
                                                             <p><b>“As an international student who came for a UK degree program, I truly understand how beneficial and life-changing it can be to receive a support from an educational consultant in making a lifetime decision to choose an International university to study or even an International country to work” </b></p>
 
                                                             <p>Vetri Co-founded PICS with Andre and handful of his other contacts who he built life-long relationships with, in the belief that together they could positively impact students all over the world.</p>
@@ -197,7 +201,7 @@ const Dashboard = () => {
                                                             <p>Our PICS Consultants is a team of experts who have experience in helping applicants achieving their long-term goals is the most effective approach in helping them be successful. Vetri’s international experience continues to be motivation behind providing the highest standard of educational services and advice to students around the world, sharing the knowledge and support he was so grateful to have received himself. <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? 'Read less' : ''}</a>
                                                             </p>
                                                         </div>
-                                                        }
+                                                        } */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,25 +215,24 @@ const Dashboard = () => {
 
                                             <div className='col-md-8'>
                                                 <div className='inner-container-right'>
-                                                    <div className='hs-line-7'>Meet the co-Founder</div>
+                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        Andre Ribeiro
+                                                        {aboutusdata?.section2?.subtitle2}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p>Born in Portugal, an Economics Student that had to move over to Uk in the search of an opportunity and a better life, Andre spent the last decade, since moving to the Uk in 2002, working in the hospitality industry.</p>  
-                                                        <p>Recruitment, Training, Developing and Mentoring a wide range of diversified teams, all over the UK, are the strongest skills set that he adds to PICS. He is focused on people and ensuring that everyone has the opportunity to excel and follow their dreams and ambitions. <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? '' : 'Read more'}</a></p>
+                                                        <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section2?.description2 }}></p>
 
-                                                        {andreReadMore && <div className='additonal-content'>
+                                                        {/* {andreReadMore && <div className='additonal-content'>
                                                             <p><b>"PICS allows us to provide opportunities for all the students across the world that want to have access to the best education systems. These students will be able to go out there and make a life for themselves. We want to be remembered as the ones who helped them to do so. We want to provide them with their life changing opportunity and help them all along the way."</b></p>
 
                                                             <p>Vetri and Andre crossed paths in 2023 and soon after they're first encounter, they understood that together they would be able to build something big, PICS. Join us in our mission today and let us guide you on this life changing pathway. <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? 'Read less' : ''}</a>
                                                             </p>
-                                                        </div>}
+                                                        </div>} */}
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-4'>
-                                                <div className='image-rounded'><img src={andre} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -242,7 +245,7 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color-2 text-center font-alt mb-20 mb-xs-10">
-                                                    PICS Values
+                                                    {aboutusdata?.section3?.title}
                                                 </div>
                                             </div>
                                         </div>
@@ -253,23 +256,23 @@ const Dashboard = () => {
                                                     <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                         <Grid item xs={12} sm={4}>
                                                             <div className="pics-values">
-                                                                <div className='icon'><img src={optimization} /></div>
-                                                                <h4>Speed</h4>
-                                                                <p>Communication is key. We aim to provide a tailored, dedicated consulting support and one of the main aspect is responding faster and ensuring the applicant is kept updated at all levels and times of this process.</p>
+                                                                <div className='icon'><img src={aboutusdata?.section3?.box1_image} /></div>
+                                                                <h4>{aboutusdata?.section3?.box1_title}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section3?.box1_desc }}></p>
                                                             </div>
                                                         </Grid>
                                                         <Grid item xs={12} sm={4}>
                                                             <div className="pics-values">
-                                                                <div className='icon'><img src={outsourcing} /></div>
-                                                                <h4>Lead Together</h4>
-                                                                <p>PICS employees and the applicants are the heart of the PICS operation. We strongly believe giving the right guidance to applicants and growing the team is key. We welcome new ideas and learn from each other and grow together.</p>
+                                                                <div className='icon'><img src={aboutusdata?.section3?.box2_image} /></div>
+                                                                <h4>{aboutusdata?.section3?.box2_title}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section3?.box2_desc }}></p>
                                                             </div>
                                                         </Grid>
                                                         <Grid item xs={12} sm={4}>
                                                             <div className="pics-values">
-                                                                <div className='icon'><img src={outline} /></div>
-                                                                <h4>Transparency</h4>
-                                                                <p>Transparency leads to Trust. At PICS we place value in doing things right, right things, establishing trust and enduring relationships with applicants, ensuring the trust is kept.</p>
+                                                                <div className='icon'><img src={aboutusdata?.section3?.box3_image} /></div>
+                                                                <h4>{aboutusdata?.section3?.box3_title}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section3?.box3_desc }}></p>
                                                             </div>
                                                         </Grid>
                                                     </Grid>
@@ -287,7 +290,7 @@ const Dashboard = () => {
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={footer_logo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             {/* <div className="footer-menu">
@@ -302,18 +305,19 @@ const Dashboard = () => {
                                                 </ul>
                                             </div> */}
                                             <div className='footer-widget'>
-                                                <div className='title'>PICS Offices</div>
+                                                <div className='title'>{headandfooterdata?.address_title}</div>
                                             </div>
                                             <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget '>
-                                                        UK - 27 Duke St, Vision Offices, <br />Chelmsford, CM1 1HT
+                                                        {headandfooterdata?.address}
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
                                                 <div className='col-md-4 m-center mb-xs-20'>
                                                     <div className='footer-widget'>
-                                                        India - Launching Soon
+                                                        {headandfooterdata?.country}
+
                                                         {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                     </div>
                                                 </div>
@@ -321,9 +325,9 @@ const Dashboard = () => {
                                                     <div className='footer-widget'>
                                                         <div className="social-icons mb-10">
                                                             <ul>
-                                                                <li><a href="https://www.facebook.com/pappaconsultants" target='_blank'><img src={facebook} /></a></li>
-                                                                <li><a href="https://www.instagram.com/picsconsultants/" target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href="https://api.whatsapp.com/send?phone=447510830896" target='_blank'><img src={whatsapp} /></a></li>
+                                                                <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
                                                             </ul>
                                                         </div>
                                                         @PICSConsultants
@@ -332,10 +336,10 @@ const Dashboard = () => {
                                             </div>
 
                                             <div className='m-center'>
-                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>contact@pics.global</button>
+                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                             </div>
                                             <div className="footer-copy pt-20 pb-0 m-center">
-                                                Copyright@2024 Pappa International LTD. T/A PICS Consultants | REG NO: 13199591
+                                                {headandfooterdata?.copyright}
                                             </div>
                                         </div>
                                     </div>

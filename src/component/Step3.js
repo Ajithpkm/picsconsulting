@@ -2,36 +2,14 @@ import React, { useEffect } from 'react';
 import contact_step_3 from '../images/contact-step-3.jpg';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
+import { useHistory, useNavigate, useLocation } from "react-router-dom";
 import './style.css';
 import '../css/verticals.min.css';
 
 const Dashboard = () => {
 
     let [loading, setLoading] = React.useState(false);
-    let [firstName, setFirstName] = React.useState('');
-    let [lastName, setLastName] = React.useState('');
-    let [email, setEmail] = React.useState('');
-    let [phonecode, setPhonecode] = React.useState('+91');
-    let [phoneNumber, setPhoneNumber] = React.useState('');
-    let [studyDestination, setStudyDestination] = React.useState('');
-
-    const handleChange = (event) => {
-        if (event.target.name === 'firstName') setFirstName(event.target.value);
-        else if (event.target.name === 'lastName') setLastName(event.target.value);
-        else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
-        else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
-        else if (event.target.name === 'phonecode') setPhonecode(event.target.value);
-    }
-
-    const emailHandleChange = (e) => {
-        // const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        // if (e.target?.value && e.target.value.match(isValidEmail)) {
-        // showNoValidEmail(false);
-        setEmail(e.target.value);
-        // } else {
-        // showNoValidEmail(true);
-        // }
-    }
+    const location = useLocation();
 
     useEffect(() => {
         setTimeout(() => {
@@ -74,10 +52,10 @@ const Dashboard = () => {
                                         <div className="split-section-wrapper">
                                             <div className="text align-left">
                                                 <div className="hs-line-3 color font-alt mb-10 mb-xs-10">
-                                                    Thanks Praveen!
+                                                    Thanks {location?.state?.firstName}!
                                                 </div>
                                                 <div className='mb-10 black'>We are happy to serve your interest to study abroad.<br />One of our PICS consultants will get in touch with you shortly.</div>
-                                                <div className='fs-18 black fw-600'>Your PICS reference ID is <span className='color-2'>PICSUSA</span><span className='color'>2024001</span></div>
+                                                <div className='fs-18 black fw-600'>Your PICS reference ID is <span className='color-2'></span><span className='color'>{location?.state?.unique_id}</span></div>
                                                 <div className='mb-20'>
                                                     A copy of your submission with reference ID is sent to your mail. <br />Check your spam folder as well.
                                                 </div>

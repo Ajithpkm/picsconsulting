@@ -12,9 +12,12 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import './style.css';
 import '../css/verticals.min.css';
+import { getuniversitydata } from '../Actions/Pics';
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
-
+    const location = useLocation();
     let [loading, setLoading] = React.useState(false);
     let [firstName, setFirstName] = React.useState('');
     let [lastName, setLastName] = React.useState('');
@@ -23,8 +26,18 @@ const Dashboard = () => {
     let [phoneNumber, setPhoneNumber] = React.useState('');
     let [studyDestination, setStudyDestination] = React.useState('');
     let [fromDate, setFromDate] = React.useState(null);
-    let [time, setTime] = React.useState(dayjs('2022-04-17T00:00'));
+    let [time, setTime] = React.useState(dayjs(new Date('2024-02-01T12:00')));
     let [checked, setChecked] = React.useState(true);
+
+    useEffect(() => {
+        setFirstName(location?.state?.firstName);
+        setLastName(location?.state?.lastName);
+        setEmail(location?.state?.email);
+        setPhoneNumber(location?.state?.phoneNumber);
+        setStudyDestination(location?.state?.studyDestination);
+        setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
+        // setTime(dayjs(new Date(`2024-02-01T03.00`)));
+    }, [])
 
     function onCheck(event) {
         console.log('onCheck: ', event); // always called
@@ -58,6 +71,70 @@ const Dashboard = () => {
         else if (event.target.name === 'phonecode') setPhonecode(event.target.value);
     }
 
+    let [firstNameError, setfirstNameError] = React.useState(false);
+    let [lastNameError, setlastNameError] = React.useState(false);
+    let [emailError, setemailError] = React.useState(false);
+    let [phoneNumberError, setphoneNumberError] = React.useState(false);
+    let [studyDestinationError, setstudyDestinationError] = React.useState(false);
+    let [fromDateError, setfromDateError] = React.useState(false);
+    const navigate = useNavigate();
+
+    const step1NextButtonClick = () => {
+        if (!firstName) {
+            setfirstNameError(true);
+            return null;
+        }
+        else {
+            setfirstNameError(false);
+        }
+        if (!lastName) {
+            setlastNameError(true);
+            return null;
+        }
+        else {
+            setlastNameError(false);
+        }
+        if (!email) {
+            setemailError(true);
+            return null;
+        }
+        else {
+            setemailError(false);
+        }
+        if (!phoneNumber) {
+            setphoneNumberError(true);
+            return null;
+        }
+        else {
+            setphoneNumberError(false);
+        }
+        if (!studyDestination) {
+            setstudyDestinationError(true);
+            return null;
+        } else {
+            setstudyDestinationError(false);
+        }
+        if (!fromDate) {
+            setfromDateError(true);
+            return null;
+        }
+        else {
+            setfromDateError(false);
+        }
+        navigate('/step2', {
+            replace: true, state: {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                phoneNumber: phoneNumber,
+                studyDestination: studyDestination,
+                fromDate: (`${fromDate.getFullYear()}-${fromDate.getMonth() + 1}-${fromDate.getDate()}`),
+                time: new Date(time).toLocaleTimeString()
+            }
+        });
+        return true
+    }
+
     const emailHandleChange = (e) => {
         // const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         // if (e.target?.value && e.target.value.match(isValidEmail)) {
@@ -67,8 +144,11 @@ const Dashboard = () => {
         // showNoValidEmail(true);
         // }
     }
+    const dispatch = useDispatch();
+    const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
 
     useEffect(() => {
+        dispatch(getuniversitydata());
         setTimeout(() => {
             setLoading(true);
         }, 800);
@@ -116,6 +196,8 @@ const Dashboard = () => {
                                                     <div className='col-md-6'>
                                                         <TextField
                                                             fullWidth
+                                                            error={firstNameError}
+                                                            // helperText={firstNameError ? 'This is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="First Name*"
@@ -128,6 +210,8 @@ const Dashboard = () => {
                                                     <div className='col-md-6'>
                                                         <TextField
                                                             fullWidth
+                                                            error={lastNameError}
+                                                            // helperText={lastNameError ? 'This is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Last Name*"
@@ -140,6 +224,8 @@ const Dashboard = () => {
                                                     <div className='col-md-12'>
                                                         <TextField
                                                             fullWidth
+                                                            error={emailError}
+                                                            // helperText={emailError ? 'This is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Email Address*"
@@ -166,6 +252,8 @@ const Dashboard = () => {
                                                     <div className='col-md-4'>
                                                         <TextField
                                                             fullWidth
+                                                            error={phoneNumberError}
+                                                            // helperText={phoneNumberError ? 'This is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Phone Number*"
@@ -179,18 +267,21 @@ const Dashboard = () => {
                                                     <div className='col-md-6 mb-30 selectBox'>
                                                         <FormControl className='form-control mt-10'
                                                             id="standard-basic" variant="standard">
-                                                            <InputLabel id="demo-simple-select-standard-label">Study Destination</InputLabel>
+                                                            <InputLabel id="demo-simple-select-standard-label">Study Destination*</InputLabel>
                                                             <Select
+                                                                error={studyDestinationError}
+                                                                // helperText={studyDestinationError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='studyDestination'
                                                                 value={studyDestination}
                                                                 onChange={handleChange}
                                                             >
-                                                                <MenuItem value={10}>UK</MenuItem>
-                                                                <MenuItem value={20}>USA</MenuItem>
-                                                                <MenuItem value={30}>Canada</MenuItem>
-                                                                <MenuItem value={30}>Australia</MenuItem>
+                                                                {
+                                                                    universitydata?.length > 0 && universitydata?.map((x) => (
+                                                                        <MenuItem value={x?.id}>{x?.name}</MenuItem>
+                                                                    ))
+                                                                }
                                                             </Select>
                                                         </FormControl>
                                                     </div>
@@ -198,20 +289,28 @@ const Dashboard = () => {
                                                     <div className='col-md-5'>
                                                         <DatePicker
                                                             className='datepicker'
+                                                            minDate={new Date()}
+                                                            value={fromDate}
                                                             name="From Date"
                                                             selected={fromDate}
-                                                            onChange={(newValue) => setFromDate(newValue)}
+                                                            onChange={(newValue) => {
+                                                                setFromDate(newValue);
+                                                                setfromDateError(false);
+                                                            }}
                                                             dateFormat={'dd/MM/yyyy'}
                                                             placeholderText='DD/MM/YYYY'
                                                             label={<contact_step_1 />}
                                                         />
+                                                        <span style={{ color: 'red' }}>{fromDateError ? 'This is required' : ''}</span>
                                                     </div>
                                                     <div className='col-md-5 timepicker'>
                                                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                             <TimePicker
                                                                 value={time}
-                                                                onChange={(newValue) => setTime(newValue)}
-                                                                renderInput={(params) => <TextField {...params} />}
+                                                                onChange={(newValue) => {
+                                                                    setTime(newValue);
+                                                                }}
+                                                                renderInput={(newValue) => <TextField {...newValue} />}
                                                             />
                                                         </LocalizationProvider>
                                                     </div>
@@ -227,7 +326,7 @@ const Dashboard = () => {
                                                     </div>
 
                                                     <div className='col-md-12'>
-                                                        <a href='./step2' className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>Next </span>
+                                                        <a onClick={step1NextButtonClick} className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>Next </span>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
                                                                 <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
                                                                     <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />

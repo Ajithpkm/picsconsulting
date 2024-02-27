@@ -1,1 +1,1 @@
-export const API = "https://portal.learnasyougo.org/api/v1";
+export const PICS_API = "https://picsadmin.8020.co.in/api/v1";

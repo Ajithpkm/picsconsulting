@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import Reports from './Reports';
+import Pics from './Pics';
 
 export default combineReducers({
-    Reports
+    Pics
 });
