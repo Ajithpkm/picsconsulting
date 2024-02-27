@@ -982,9 +982,9 @@ const Dashboard = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            {/* <li className="active"><a href="/">study international</a></li>
+                                            <li className="active"><a href="/">study international</a></li>
                                             <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li> */}
+                                            <li><a href="faq">FAQ</a></li>
                                             <li><button onClick={handleOpenContact} className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</button></li>
                                         </ul>
                                     </div>
@@ -1001,10 +1001,10 @@ const Dashboard = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section1?.title }}></span>
+                                                                <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.title }}></div>
                                                             </div>
                                                             <div className="hs-line-2 text-center">
-                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section1?.description }}></span>
+                                                                <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.description }}></div>
                                                             </div>
                                                         </div>
                                                     </div>
