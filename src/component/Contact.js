@@ -15,6 +15,7 @@ import '../css/verticals.min.css';
 import { getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
+import ReactFlagsSelect from "react-flags-select";
 
 const Dashboard = () => {
     const location = useLocation();
@@ -22,7 +23,7 @@ const Dashboard = () => {
     let [firstName, setFirstName] = React.useState('');
     let [lastName, setLastName] = React.useState('');
     let [email, setEmail] = React.useState('');
-    let [phonecode, setPhonecode] = React.useState('+91');
+    let [phonecode, setPhonecode] = React.useState('');
     let [phoneNumber, setPhoneNumber] = React.useState('');
     let [studyDestination, setStudyDestination] = React.useState('');
     let [fromDate, setFromDate] = React.useState(null);
@@ -34,6 +35,7 @@ const Dashboard = () => {
         setLastName(location?.state?.lastName);
         setEmail(location?.state?.email);
         setPhoneNumber(location?.state?.phoneNumber);
+        setPhonecode(location?.state?.phonecode);
         setStudyDestination(location?.state?.studyDestination);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
         // setTime(dayjs(new Date(`2024-02-01T03.00`)));
@@ -127,6 +129,7 @@ const Dashboard = () => {
                 lastName: lastName,
                 email: email,
                 phoneNumber: phoneNumber,
+                phonecode: phonecode,
                 studyDestination: studyDestination,
                 fromDate: (`${fromDate.getFullYear()}-${fromDate.getMonth() + 1}-${fromDate.getDate()}`),
                 time: new Date(time).toLocaleTimeString()
@@ -237,7 +240,11 @@ const Dashboard = () => {
                                                         />
                                                     </div>
                                                     <div className='col-md-2 mt-20'>
-                                                        <FormControl className='selectBox' variant="standard" sx={{ m: 1, minWidth: 100 }}>
+                                                        <ReactFlagsSelect
+                                                            selected={phonecode}
+                                                            onSelect={(code) => setPhonecode(code)}
+                                                        />;
+                                                        {/* <FormControl className='selectBox' variant="standard" sx={{ m: 1, minWidth: 100 }}>
                                                             <Select
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
@@ -247,7 +254,7 @@ const Dashboard = () => {
                                                             >
                                                                 <MenuItem value='+91'>+91</MenuItem>
                                                             </Select>
-                                                        </FormControl>
+                                                        </FormControl> */}
                                                     </div>
                                                     <div className='col-md-4'>
                                                         <TextField

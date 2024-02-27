@@ -204,7 +204,8 @@ const Step2 = () => {
                 phoneNumber: location?.state?.phoneNumber,
                 studyDestination: location?.state?.studyDestination,
                 fromDate: location?.state?.fromDate,
-                time: location?.state?.time
+                time: location?.state?.time,
+                phonecode: location?.state?.phonecode
             }
         });
         return true;
@@ -267,7 +268,8 @@ const Step2 = () => {
             first_name: location?.state?.firstName,
             last_name: location?.state?.lastName,
             email: location?.state?.email,
-            phone_number: 8825732125,
+            phone_number: location?.state?.phoneNumber,
+            phone_code: location?.state?.phonecode,
             destination: location?.state?.studyDestination,
             preferred_date: location?.state?.fromDate,
             preferred_time: location?.state?.time,
