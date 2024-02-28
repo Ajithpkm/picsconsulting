@@ -63,11 +63,14 @@ const Faq = () => {
         dispatch(getfaqdata());
         dispatch(getfaqcategorydata());
         dispatch(getfaqlistdata(selectedFAQItem, searchInput));
-        setSelectedFAQItem(faqcategorydata?.[0]?.id);
         setTimeout(() => {
             setLoading(true);
         }, 2000);
     }, []);
+
+    useEffect(()=>{
+        setSelectedFAQItem(faqcategorydata?.[0]?.id);
+    },[faqcategorydata]);
 
     const accordionHandleClick = (id) => {
         setSelectedItem(id);

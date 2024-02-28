@@ -70,6 +70,8 @@ function a11yProps(index: number) {
 }
 
 const Dashboard = () => {
+    const [showFullDescription, setFullDescription] = React.useState(false);
+    const [showFullDescription2, setFullDescription2] = React.useState(false);
     const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
     const [andreReadMore, setandreReadMore] = React.useState(false);
     const [value, setValue] = React.useState(0);
@@ -107,6 +109,21 @@ const Dashboard = () => {
     new WOW.WOW({
         live: false
     }).init();
+
+    const showFullDescriptionHandler = () => {
+        setFullDescription(!showFullDescription);
+    };
+
+    const showFullDescriptionHandler2 = () => {
+        setFullDescription2(!showFullDescription2);
+    };
+
+    const description = showFullDescription
+        ? aboutusdata?.section1?.description1
+        : aboutusdata?.section1?.description1?.slice(0, 598);
+        const description2 = showFullDescription2
+        ? aboutusdata?.section2?.description2
+        : aboutusdata?.section2?.description2?.slice(0, 500);
 
     return (
         <>
@@ -192,16 +209,10 @@ const Dashboard = () => {
                                                         {aboutusdata?.section1?.subtitle1}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section1?.description1 }}></p>
-                                                        {/* {vertriPapaReadMore && <div className='additonal-content'>
-                                                            <p><b>“As an international student who came for a UK degree program, I truly understand how beneficial and life-changing it can be to receive a support from an educational consultant in making a lifetime decision to choose an International university to study or even an International country to work” </b></p>
-
-                                                            <p>Vetri Co-founded PICS with Andre and handful of his other contacts who he built life-long relationships with, in the belief that together they could positively impact students all over the world.</p>
-
-                                                            <p>Our PICS Consultants is a team of experts who have experience in helping applicants achieving their long-term goals is the most effective approach in helping them be successful. Vetri’s international experience continues to be motivation behind providing the highest standard of educational services and advice to students around the world, sharing the knowledge and support he was so grateful to have received himself. <a onClick={() => setvertriPapaReadMore(!vertriPapaReadMore)} href='javascript:;' className='readmore'>{vertriPapaReadMore ? 'Read less' : ''}</a>
-                                                            </p>
-                                                        </div>
-                                                        } */}
+                                                        <p dangerouslySetInnerHTML={{ __html: description }}></p>
+                                                        <button onClick={showFullDescriptionHandler}>
+                                                            Read {showFullDescription ? "Less" : "More"}
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -220,14 +231,10 @@ const Dashboard = () => {
                                                         {aboutusdata?.section2?.subtitle2}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p dangerouslySetInnerHTML={{ __html: aboutusdata?.section2?.description2 }}></p>
-
-                                                        {/* {andreReadMore && <div className='additonal-content'>
-                                                            <p><b>"PICS allows us to provide opportunities for all the students across the world that want to have access to the best education systems. These students will be able to go out there and make a life for themselves. We want to be remembered as the ones who helped them to do so. We want to provide them with their life changing opportunity and help them all along the way."</b></p>
-
-                                                            <p>Vetri and Andre crossed paths in 2023 and soon after they're first encounter, they understood that together they would be able to build something big, PICS. Join us in our mission today and let us guide you on this life changing pathway. <a onClick={() => setandreReadMore(!andreReadMore)} href='javascript:;' className='readmore'>{andreReadMore ? 'Read less' : ''}</a>
-                                                            </p>
-                                                        </div>} */}
+                                                        <p dangerouslySetInnerHTML={{ __html: description2 }}></p>
+                                                        <button onClick={showFullDescriptionHandler2}>
+                                                            Read {showFullDescription2 ? "Less" : "More"}
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
