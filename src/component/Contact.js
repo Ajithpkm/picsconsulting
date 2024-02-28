@@ -16,6 +16,18 @@ import { getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import ReactFlagsSelect from "react-flags-select";
+import countriesCode from './PhoneCode.json';
+
+let countries = countriesCode?.map(x => x?.code);
+let customLabels = {}
+for (let index = 0; index < countriesCode.length; index++) {
+    const element = countriesCode[index];
+    let obj = {
+        [element?.code]:
+            { primary: element?.code, secondary: element?.dial_code }
+    }
+    Object?.assign(customLabels, obj);
+}
 
 const Dashboard = () => {
     const location = useLocation();
@@ -29,6 +41,7 @@ const Dashboard = () => {
     let [fromDate, setFromDate] = React.useState(null);
     let [time, setTime] = React.useState(dayjs(new Date('2024-02-01T12:00')));
     let [checked, setChecked] = React.useState(true);
+    let [dialCode, setDialCode] = React.useState('');
 
     useEffect(() => {
         setFirstName(location?.state?.firstName);
@@ -36,6 +49,7 @@ const Dashboard = () => {
         setEmail(location?.state?.email);
         setPhoneNumber(location?.state?.phoneNumber);
         setPhonecode(location?.state?.phonecode);
+        setDialCode(location?.state?.dialCode);
         setStudyDestination(location?.state?.studyDestination);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
         // setTime(dayjs(new Date(`2024-02-01T03.00`)));
@@ -130,6 +144,7 @@ const Dashboard = () => {
                 email: email,
                 phoneNumber: phoneNumber,
                 phonecode: phonecode,
+                dialCode: dialCode,
                 studyDestination: studyDestination,
                 fromDate: (`${fromDate.getFullYear()}-${fromDate.getMonth() + 1}-${fromDate.getDate()}`),
                 time: new Date(time).toLocaleTimeString()
@@ -166,6 +181,12 @@ const Dashboard = () => {
             ]
         }
     ];
+
+    const onSelectPhoneCode = (code) => {
+        let dialCode = countriesCode?.find((x) => x?.code == code)?.dial_code;
+        setPhonecode(code);
+        setDialCode(dialCode);
+    }
 
     return (
         <>
@@ -243,19 +264,14 @@ const Dashboard = () => {
                                                         <ReactFlagsSelect
                                                             className='countryflag'
                                                             selected={phonecode}
-                                                            onSelect={(code) => setPhonecode(code)}
+                                                            onSelect={onSelectPhoneCode}
+                                                            countries={countries}
+                                                            customLabels={customLabels}
+                                                            searchable
+                                                            searchPlaceholder='Search Countries'
+                                                            showOptionLabel={false}
+                                                            showSelectedLabel={false}
                                                         />
-                                                        {/* <FormControl className='selectBox' variant="standard" sx={{ m: 1, minWidth: 100 }}>
-                                                            <Select
-                                                                labelId="demo-simple-select-standard-label"
-                                                                id="demo-simple-select-standard"
-                                                                name='phonecode'
-                                                                value={phonecode}
-                                                                onChange={handleChange}
-                                                            >
-                                                                <MenuItem value='+91'>+91</MenuItem>
-                                                            </Select>
-                                                        </FormControl> */}
                                                     </div>
                                                     <div className='col-md-4'>
                                                         <TextField

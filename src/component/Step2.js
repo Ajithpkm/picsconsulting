@@ -194,7 +194,6 @@ const Step2 = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
     const backButtonClick = () => {
         navigate('/contact', {
             replace: true, state: {
@@ -205,7 +204,8 @@ const Step2 = () => {
                 studyDestination: location?.state?.studyDestination,
                 fromDate: location?.state?.fromDate,
                 time: location?.state?.time,
-                phonecode: location?.state?.phonecode
+                phonecode: location?.state?.phonecode,
+                dialCode: location?.state?.dialCode
             }
         });
         return true;
@@ -269,7 +269,7 @@ const Step2 = () => {
             last_name: location?.state?.lastName,
             email: location?.state?.email,
             phone_number: location?.state?.phoneNumber,
-            phone_code: location?.state?.phonecode,
+            phone_code: location?.state?.dialCode,
             destination: location?.state?.studyDestination,
             preferred_date: location?.state?.fromDate,
             preferred_time: location?.state?.time,
