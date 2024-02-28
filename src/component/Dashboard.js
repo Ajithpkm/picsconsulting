@@ -1274,7 +1274,7 @@ const Dashboard = () => {
                                                             }
                                                         </> :
                                                         <>
-                                                            <p>CANADA data coming soon...</p>
+                                                            <p>AUSTRALIA data coming soon...</p>
                                                         </>
                                                     }
                                                 </Grid>
