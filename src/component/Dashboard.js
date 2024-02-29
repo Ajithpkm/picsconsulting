@@ -164,7 +164,7 @@ const Dashboard = () => {
                                                 <>
                                                     <div className='font-alt hs-line-5'>{x?.name}</div>
                                                     <div className='row'>
-                                                        <div className='col-md-6'>
+                                                        <div className='col-md-8'>
                                                             <ul>
                                                                 {x?.list?.length > 0 && x?.list?.map((v) => (
                                                                     <li>{v?.name}</li>

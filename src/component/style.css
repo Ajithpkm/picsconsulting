@@ -4086,6 +4086,14 @@ section:hover .small-item-carousel .owl-next{
     line-height: 1.2;
     font-weight: 600;
 }
+.university-list-bx .modal-bx-body ul {
+    margin: 0;
+    padding: 0;
+}
+.university-list-bx .modal-bx-body ul li {
+    list-style: none;
+    font-family: "Lato", sans-serif;
+}
 .contactmodal-bx {
     background-color: #fff;
     border-radius: 15px;
