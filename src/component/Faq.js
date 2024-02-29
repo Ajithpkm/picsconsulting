@@ -171,7 +171,7 @@ const Faq = () => {
                                     </section>
                                 </div>
 
-                                <section className='small-section pb-40'>
+                                <section className='small-section pb-40 pb-xs-20'>
                                     <div className='container relative'>
                                         <div className="hs-line-3 text-center color font-alt mb-20 mb-xs-10">
                                             {faqdata?.section2?.title}
@@ -197,11 +197,11 @@ const Faq = () => {
                                         </div>
                                     </div>
                                 </section>
-                                <section className='small-section pt-0 pb-30'>
+                                <section className='small-section pt-0 pb-30 pb-xs-0'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-center'>
                                             <div className='col-md-12'>
-                                                <div className='d-flex'>
+                                                <div className='d-flex md-block faq-categories'>
                                                     <Button
                                                         onClick={() => {
                                                             handleHorizantalScroll(elementRef.current, 25, 100, -10);
@@ -211,7 +211,7 @@ const Faq = () => {
                                                         <ArrowBackIcon className='color' />
                                                     </Button>
                                                     <div className="img-container" ref={elementRef}>
-                                                        <div className='d-flex'>
+                                                        <div className='d-flex md-block2'>
                                                             {
                                                                 faqcategorydata?.length > 0 && faqcategorydata?.map((x, i) => (
                                                                     <div onClick={() => clickFAQItem(x?.id)} className={x?.id == selectedFAQItem ? "faq-filter active" : "faq-filter"} key={`faqcategory + ${i}`}>
@@ -288,7 +288,7 @@ const Faq = () => {
                                                 </ul>
                                             </div> */}
                                             <div className='footer-widget'>
-                                                <div className='title'>{headandfooterdata?.address_title}</div>
+                                                <div className='title m-center'>{headandfooterdata?.address_title}</div>
                                             </div>
                                             <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                 <div className='col-md-4 m-center mb-xs-20'>

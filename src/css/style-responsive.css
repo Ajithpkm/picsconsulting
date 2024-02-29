@@ -334,6 +334,37 @@ Project: DT Skill
         padding: 2px 15px;
         top: 9px;
     }
+    .md-block {
+        display: block !important
+    }
+    .md-block2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        gap: 10px;
+        grid-row-gap: 10px;
+        row-gap: 10px;
+    }
+    .img-container {
+        width: 100%;
+        display: block !important;
+        overflow: visible;
+    }
+    .faq-categories button {
+        display: none !important
+    }
+    .faq-filter {
+        width: 90%;
+        height: auto;
+        padding: 10px 12px !important;
+    }
+    .faq-filter h4 {
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .faq-filter .icon {
+        display: none
+    }
     .nav-logo-wrap .logo {
         height: 75px;
     }
