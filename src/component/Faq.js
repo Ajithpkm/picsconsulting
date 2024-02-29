@@ -216,7 +216,7 @@ const Faq = () => {
                                                                 faqcategorydata?.length > 0 && faqcategorydata?.map((x, i) => (
                                                                     <div onClick={() => clickFAQItem(x?.id)} className={x?.id == selectedFAQItem ? "faq-filter active" : "faq-filter"} key={`faqcategory + ${i}`}>
                                                                         <div className='icon'>
-                                                                            <img src={x?.icon} width="62" height="62" />
+                                                                              <span dangerouslySetInnerHTML={{ __html: x?.icon }}></span>
                                                                         </div>
                                                                         <h4>{x?.name}</h4>
                                                                     </div>
