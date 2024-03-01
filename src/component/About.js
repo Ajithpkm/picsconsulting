@@ -285,7 +285,7 @@ const Dashboard = () => {
                                                     </Grid>
                                                 </Box>
                                                 <div className='mt-30 mb-20 text-center'>
-                                                    <a href='javascript:;' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                    <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                                 </div>
                                             </div>
                                         </div>

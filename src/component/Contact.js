@@ -90,12 +90,15 @@ const Dashboard = () => {
     let [firstNameError, setfirstNameError] = React.useState(false);
     let [lastNameError, setlastNameError] = React.useState(false);
     let [emailError, setemailError] = React.useState(false);
+    let [emailValidationError, setEmailValidationError] = React.useState(false);
+    let [phoneCodeError, setphoneCodeError] = React.useState(false);
     let [phoneNumberError, setphoneNumberError] = React.useState(false);
     let [studyDestinationError, setstudyDestinationError] = React.useState(false);
     let [fromDateError, setfromDateError] = React.useState(false);
     const navigate = useNavigate();
 
     const step1NextButtonClick = () => {
+        const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if (!firstName) {
             setfirstNameError(true);
             return null;
@@ -116,6 +119,20 @@ const Dashboard = () => {
         }
         else {
             setemailError(false);
+        }
+        if (email && email?.match(isValidEmail)) {
+            setEmailValidationError(false);
+        }
+        else {
+            setEmailValidationError(true);
+            return null;
+        }
+        if (!phonecode) {
+            setphoneCodeError(true);
+            return null;
+        }
+        else {
+            setphoneCodeError(false);
         }
         if (!phoneNumber) {
             setphoneNumberError(true);
@@ -221,7 +238,7 @@ const Dashboard = () => {
                                                         <TextField
                                                             fullWidth
                                                             error={firstNameError}
-                                                            // helperText={firstNameError ? 'This is required' : ''}
+                                                            helperText={firstNameError ? 'First Name is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="First Name*"
@@ -235,7 +252,7 @@ const Dashboard = () => {
                                                         <TextField
                                                             fullWidth
                                                             error={lastNameError}
-                                                            // helperText={lastNameError ? 'This is required' : ''}
+                                                            helperText={lastNameError ? 'Last Name is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Last Name*"
@@ -248,8 +265,8 @@ const Dashboard = () => {
                                                     <div className='col-md-12'>
                                                         <TextField
                                                             fullWidth
-                                                            error={emailError}
-                                                            // helperText={emailError ? 'This is required' : ''}
+                                                            error={emailError || emailValidationError}
+                                                            helperText={emailError ? 'Email is required' : emailValidationError ? 'Invalid email address' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Email Address*"
@@ -262,6 +279,7 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='col-md-2 mt-20'>
                                                         <ReactFlagsSelect
+                                                            placeholder='Country Code*'
                                                             className='countryflag'
                                                             selected={phonecode}
                                                             onSelect={onSelectPhoneCode}
@@ -272,12 +290,13 @@ const Dashboard = () => {
                                                             showOptionLabel={false}
                                                             showSelectedLabel={false}
                                                         />
+                                                        {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                     </div>
                                                     <div className='col-md-4'>
                                                         <TextField
                                                             fullWidth
                                                             error={phoneNumberError}
-                                                            // helperText={phoneNumberError ? 'This is required' : ''}
+                                                            helperText={phoneNumberError ? 'Phone Number is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
                                                             label="Phone Number*"
@@ -293,8 +312,6 @@ const Dashboard = () => {
                                                             id="standard-basic" variant="standard">
                                                             <InputLabel id="demo-simple-select-standard-label">Study Destination*</InputLabel>
                                                             <Select
-                                                                error={studyDestinationError}
-                                                                // helperText={studyDestinationError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='studyDestination'
@@ -307,6 +324,7 @@ const Dashboard = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {studyDestinationError && <span style={{ color: 'red', fontSize: '12px' }}>Study Destination is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
@@ -325,7 +343,7 @@ const Dashboard = () => {
                                                             placeholderText='DD/MM/YYYY'
                                                             label={<contact_step_1 />}
                                                         />
-                                                        <span style={{ color: 'red' }}>{fromDateError ? 'This is required' : ''}</span>
+                                                        <span style={{ color: 'red', fontSize: '12px' }}>{fromDateError ? 'Date is required' : ''}</span>
                                                     </div>
                                                     <div className='col-6 col-md-5 timepicker'>
                                                         <LocalizationProvider dateAdapter={AdapterDayjs}>

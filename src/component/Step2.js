@@ -368,7 +368,7 @@ const Step2 = () => {
                                                             <InputLabel id="demo-simple-select-standard-label">Type of Study *</InputLabel>
                                                             <Select
                                                                 error={typeofstudyError}
-                                                                helperText={typeofstudyError ? 'This is required' : ''}
+                                                                // helperText={typeofstudyError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='typeofstudy'
@@ -381,6 +381,7 @@ const Step2 = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {typeofstudyError && <span style={{ color: 'red', fontSize: '12px' }}>Type of Study is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='col-md-6 selectBox'>
@@ -389,7 +390,7 @@ const Step2 = () => {
                                                             <InputLabel id="demo-simple-select-standard-label">Year of Study *</InputLabel>
                                                             <Select
                                                                 error={yearofstudyError}
-                                                                helperText={yearofstudyError ? 'This is required' : ''}
+                                                                // helperText={yearofstudyError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='yearofstudy'
@@ -402,6 +403,7 @@ const Step2 = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {yearofstudyError && <span style={{ color: 'red', fontSize: '12px' }}>Year of Study is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='col-md-6 selectBox'>
@@ -410,7 +412,7 @@ const Step2 = () => {
                                                             <InputLabel id="demo-simple-select-standard-label">Subject interested *</InputLabel>
                                                             <Select
                                                                 error={subjectError}
-                                                                helperText={subjectError ? 'This is required' : ''}
+                                                                // helperText={subjectError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='subject'
@@ -423,6 +425,7 @@ const Step2 = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {subjectError && <span style={{ color: 'red', fontSize: '12px' }}>Subject interested is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='col-md-6 selectBox'>
@@ -431,7 +434,7 @@ const Step2 = () => {
                                                             <InputLabel id="demo-simple-select-standard-label">How did you hear about PICS? *</InputLabel>
                                                             <Select
                                                                 error={howdidhearError}
-                                                                helperText={howdidhearError ? 'This is required' : ''}
+                                                                // helperText={howdidhearError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='howdidhear'
@@ -444,6 +447,7 @@ const Step2 = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {howdidhearError && <span style={{ color: 'red', fontSize: '12px' }}>How did you hear about PICS is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='col-md-12 selectBox'>
@@ -452,7 +456,7 @@ const Step2 = () => {
                                                             <InputLabel id="demo-simple-select-standard-label">Appointment Location *</InputLabel>
                                                             <Select
                                                                 error={appointmentlocationError}
-                                                                helperText={appointmentlocationError ? 'This is required' : ''}
+                                                                // helperText={appointmentlocationError ? 'This is required' : ''}
                                                                 labelId="demo-simple-select-standard-label"
                                                                 id="demo-simple-select-standard"
                                                                 name='appointmentlocation'
@@ -465,6 +469,7 @@ const Step2 = () => {
                                                                     ))
                                                                 }
                                                             </Select>
+                                                            {appointmentlocationError && <span style={{ color: 'red', fontSize: '12px' }}>Appointment Location is required</span>}
                                                         </FormControl>
                                                     </div>
                                                     <div className='col-md-12'>
