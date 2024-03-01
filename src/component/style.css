@@ -4262,6 +4262,18 @@ section:hover .small-item-carousel .owl-next{
     position: absolute;
     left: 0;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+.MuiSelect-select:-webkit-autofill,
+.MuiSelect-select:-webkit-autofill:hover,
+.MuiSelect-select:-webkit-autofill:focus,
+.MuiSelect-select:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
 .contact-section input {
     border: ṇone;
     border-bottom: 1px solid #ddd !important;
@@ -4451,4 +4463,24 @@ section:hover .small-item-carousel .owl-next{
 }
 .countryflag button span span {
     padding-left: 4px;
+}
+.countryflag ul {
+    overflow-x: hidden;
+}
+.countryflag ul input {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #ddd !important;
+    margin: 0 4px;
+    padding: 0 5px;
+    font-size: 12px;
+    width: 100%;
+}
+.countryflag ul div {
+    padding-top: 0;
+}
+.countryflag ul li {
+    padding: 0 5px;
+    font-size: 14px;
 }

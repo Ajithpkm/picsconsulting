@@ -279,14 +279,14 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='col-md-2 mt-20'>
                                                         <ReactFlagsSelect
-                                                            placeholder='Country Code*'
+                                                            placeholder='Code*'
                                                             className='countryflag'
                                                             selected={phonecode}
                                                             onSelect={onSelectPhoneCode}
                                                             countries={countries}
                                                             customLabels={customLabels}
                                                             searchable
-                                                            searchPlaceholder='Search Countries'
+                                                            searchPlaceholder='Search'
                                                             showOptionLabel={false}
                                                             showSelectedLabel={false}
                                                         />
