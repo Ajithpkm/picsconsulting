@@ -40,7 +40,7 @@ const Dashboard = () => {
     let [studyDestination, setStudyDestination] = React.useState('');
     let [fromDate, setFromDate] = React.useState(null);
     let [time, setTime] = React.useState(dayjs(new Date('2024-02-01T12:00')));
-    let [checked, setChecked] = React.useState(true);
+    let [checked, setChecked] = React.useState(false);
     let [dialCode, setDialCode] = React.useState('');
 
     useEffect(() => {
@@ -52,6 +52,7 @@ const Dashboard = () => {
         setDialCode(location?.state?.dialCode);
         setStudyDestination(location?.state?.studyDestination);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
+        setChecked(location?.state?.checked);
         // setTime(dayjs(new Date(`2024-02-01T03.00`)));
     }, [])
 
@@ -95,6 +96,7 @@ const Dashboard = () => {
     let [phoneNumberError, setphoneNumberError] = React.useState(false);
     let [studyDestinationError, setstudyDestinationError] = React.useState(false);
     let [fromDateError, setfromDateError] = React.useState(false);
+    let [checkboxError, setCheckboxError] = React.useState(false);
     const navigate = useNavigate();
 
     const step1NextButtonClick = () => {
@@ -154,6 +156,13 @@ const Dashboard = () => {
         else {
             setfromDateError(false);
         }
+        if (!checked) {
+            setCheckboxError(true);
+            return null;
+        }
+        else {
+            setCheckboxError(false);
+        }
         navigate('/step2', {
             replace: true, state: {
                 firstName: firstName,
@@ -163,21 +172,16 @@ const Dashboard = () => {
                 phonecode: phonecode,
                 dialCode: dialCode,
                 studyDestination: studyDestination,
-                fromDate: (`${fromDate.getFullYear()}-${fromDate.getMonth() + 1}-${fromDate.getDate()}`),
-                time: new Date(time).toLocaleTimeString()
+                fromDate: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
+                time: new Date(time)?.toLocaleTimeString(),
+                checked: checked
             }
         });
         return true
     }
 
     const emailHandleChange = (e) => {
-        // const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        // if (e.target?.value && e.target.value.match(isValidEmail)) {
-        // showNoValidEmail(false);
         setEmail(e.target.value);
-        // } else {
-        // showNoValidEmail(true);
-        // }
     }
     const dispatch = useDispatch();
     const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
@@ -358,12 +362,13 @@ const Dashboard = () => {
                                                     </div>
                                                     <div className='col-md-12'>
                                                         <div className='terms-label mt-30 mb-10'>
-                                                            <FormControlLabel key='policy' control={<Checkbox key='policy' value={checked} onChange={policyHandleChange} defaultChecked />}
+                                                            <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
                                                                 label={
                                                                     articles[0].content.map(paragraph =>
                                                                         (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
                                                                     )
                                                                 } />
+                                                            <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
                                                         </div>
                                                     </div>
 

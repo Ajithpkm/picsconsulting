@@ -205,7 +205,8 @@ const Step2 = () => {
                 fromDate: location?.state?.fromDate,
                 time: location?.state?.time,
                 phonecode: location?.state?.phonecode,
-                dialCode: location?.state?.dialCode
+                dialCode: location?.state?.dialCode,
+                checked: location?.state?.checked
             }
         });
         return true;
