@@ -4274,6 +4274,15 @@ input:-webkit-autofill:active {
 .MuiSelect-select:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
+.split-section-wrapper .MuiSelect-standard {
+    width: 100%;
+    min-width: 100% !important;
+    padding-right: 0 !important;
+}
+.split-section-wrapper .MuiSelect-standard:focus {
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
 .contact-section input {
     border: ṇone;
     border-bottom: 1px solid #ddd !important;
@@ -4298,6 +4307,10 @@ input:-webkit-autofill:active {
 .contact-section .MuiInputLabel-root {
     font-family: "Lato", sans-serif;
     top: 10px;
+}
+.contact-section .selectBox .MuiInputLabel-root {
+    font-family: "Lato", sans-serif;
+    top: 0px;
 }
 .contact-section .selectBox .MuiInput-underline {
     font-family: "Lato", sans-serif;
@@ -4394,14 +4407,8 @@ input:-webkit-autofill:active {
     margin-top: 5px;
     margin-bottom: 0px;
 }
-.faq-filter.active .icon svg path {
-    stroke: #fff;
-}
 .faq-filter.active {
-    background-color: #B9943C;
-}
-.faq-filter.active .icon svg ellipse {
-    stroke: #fff;
+    background-color: #192f45;
 }
 .faq-filter.active h4 {
     color: #fff;

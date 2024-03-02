@@ -54,7 +54,7 @@ const Dashboard = () => {
                                                 <div className="hs-line-3 color font-alt mb-10 mb-xs-10">
                                                     Thanks {location?.state?.firstName}!
                                                 </div>
-                                                <div className='mb-10 black'>We are happy to serve your interest to study abroad.<br />One of our PICS consultants will get in touch with you shortly.</div>
+                                                <div className='mb-10 black'>We are happy to serve your interest to study international.<br />One of our PICS consultants will get in touch with you shortly.</div>
                                                 <div className='fs-18 black fw-600'>Your PICS reference ID is <span className='color-2'></span><span className='color'>{location?.state?.unique_id}</span></div>
                                                 <div className='mb-20'>
                                                     A copy of your submission with reference ID is sent to your mail. <br />Check your spam folder as well.
