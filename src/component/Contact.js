@@ -39,10 +39,11 @@ const Dashboard = () => {
     let [phoneNumber, setPhoneNumber] = React.useState('');
     let [studyDestination, setStudyDestination] = React.useState('');
     let [fromDate, setFromDate] = React.useState(null);
-    let [time, setTime] = React.useState(dayjs(new Date('2024-02-01T12:00')));
+    let [time, setTime] = React.useState('');
     let [checked, setChecked] = React.useState(false);
     let [dialCode, setDialCode] = React.useState('');
-
+    const defaultTime = dayjs()?.set('hour', 12)?.startOf('hour');
+    
     useEffect(() => {
         setFirstName(location?.state?.firstName);
         setLastName(location?.state?.lastName);
@@ -53,8 +54,12 @@ const Dashboard = () => {
         setStudyDestination(location?.state?.studyDestination);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
         setChecked(location?.state?.checked);
-        // setTime(dayjs(new Date(`2024-02-01T03.00`)));
-    }, [])
+        let hours = location?.state?.time?.substring(0, location?.state?.time?.indexOf(":"));
+        let minutes = location?.state?.time?.substring(2, location?.state?.time?.lastIndexOf(":"))?.replaceAll(':', '');
+        let times = dayjs()?.set('hour', hours)?.startOf('hour')?.set('minute', minutes)?.startOf('minute');
+        let ampm = location?.state?.time?.replace(/[^A-Za-z]/g, '');
+        setTime(location?.state?.time ? dayjs(`${times?.toDate()}${ampm}`) : defaultTime);
+    }, []);
 
     function onCheck(event) {
         console.log('onCheck: ', event); // always called
