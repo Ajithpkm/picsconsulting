@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
                             <span className="loader"></span>
                         </div> :
                         <div>
-                            <title>Privacy Policy</title>
+                            <p>Privacy Policy</p>
                         </div>
                 }
             </div>
