@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import WOW from 'wowjs';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
-import vetri from '../images/vetri.jpg';
+import sunil from '../images/sunil.jpg';
 import footer_logo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
@@ -209,8 +209,8 @@ const Dashboard = () => {
                                                         {aboutusdata?.section1?.subtitle1}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p dangerouslySetInnerHTML={{ __html: description }}></p>
-                                                        <button onClick={showFullDescriptionHandler}>
+                                                        <div dangerouslySetInnerHTML={{ __html: description }}></div>
+                                                        <button className='readmore' onClick={showFullDescriptionHandler}>
                                                             Read {showFullDescription ? "Less" : "More"}
                                                         </button>
                                                     </div>
@@ -226,20 +226,49 @@ const Dashboard = () => {
 
                                             <div className='col-md-8 xs-order-2'>
                                                 <div className='inner-container-right'>
-                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
+                                                    <div className='hs-line-7'>Meet the Founder</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        {aboutusdata?.section2?.subtitle2}
+                                                        Sunil Kumar GR, PICS Director, Chennai, INDIA 
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p dangerouslySetInnerHTML={{ __html: description2 }}></p>
-                                                        <button onClick={showFullDescriptionHandler2}>
+                                                        <p>Sunil GR is an accomplished Overseas Education Consultant with over 15 years of experience in
+                                                        Information Technology and Psychology. Holding a Master's degree in IT from NIT Warangal and a background in Psychology, Sunil brings a multidisciplinary approach to his counseling practice.</p>
+
+                                                        <p>His extensive professional background includes roles in IT, cloud computing, and e-commerce, with notable collaborations with the Government of India's Ministry of Commerce on the GeM project and Jiomart's marketplace model.</p>
+
+                                                        <p>Sunil's academic prowess and practical expertise uniquely position him to provide comprehensive guidance to students seeking to pursue their academic aspirations abroad. With a commitment to excellence and a passion for helping others succeed, Sunil GR is a trusted advisor, helping students to study internationally.</p> 
+                                                        <button className='readmore' onClick={showFullDescriptionHandler2}>
                                                             Read {showFullDescription2 ? "Less" : "More"}
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-4 xs-order-1 mb-xs-20'>
-                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={sunil} alt="" className='img-fluid' /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section pt-0'>
+                                    <div className='container relative'>
+                                        <div className='row d-flex justify-content-between'>
+                                            <div className='col-md-4 mb-xs-20'>
+                                            <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
+                                            </div>
+                                            <div className='col-md-8'>
+                                                <div className='inner-container'>
+                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
+                                                    <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
+                                                        {aboutusdata?.section2?.subtitle2}
+                                                    </div>
+                                                    <div className='section-text'>
+                                                        <div dangerouslySetInnerHTML={{ __html: description2 }}></div>
+                                                        <button className='readmore' onClick={showFullDescriptionHandler2}>
+                                                            Read {showFullDescription2 ? "Less" : "More"}
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -300,7 +329,7 @@ const Dashboard = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            {/* <div className="footer-menu">
+                                            {/* <div className="footer-menu mb-30 mb-xs-20">
                                                 <ul className="clearlist">
                                                     <li><a href="#">Study International</a></li>
                                                     <li><a href="#">About</a></li>

@@ -1770,7 +1770,7 @@ a.logo:hover{
     background-position: top right !important;
 }
 .small-section{
-    padding: 70px 0;
+    padding: 55px 0;
 }
 .small-title{
     padding: 0;
@@ -4030,11 +4030,11 @@ section:hover .small-item-carousel .owl-next{
 .step-container {
     background-color: #fff;
     border-radius: 15px;
-    padding: 0 40px;
+    padding: 30px 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     align-items: center;
-    min-height: 210px;
+    min-height: 140px;
     margin-bottom: 25px;
 }
 .step-container .description {
@@ -4042,13 +4042,7 @@ section:hover .small-item-carousel .owl-next{
     font-size: 15px;
     font-weight: 500;
     line-height: 1.5;
-    padding-left: 30px;
-    border-left: 2px solid #B9943C;
-    min-height: 150px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
+    padding-left: 0px;
 }
 .step-container .description p {
     margin-bottom: 0;
@@ -4143,6 +4137,10 @@ section:hover .small-item-carousel .owl-next{
 .readmore {
     font-size: 14px;
     color: #B9943C;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;;
+    padding: 5px 15px;
     font-weight: 600;
 }
 .pics-values {

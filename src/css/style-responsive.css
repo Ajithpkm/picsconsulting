@@ -337,6 +337,10 @@ Project: DT Skill
     .md-block {
         display: block !important
     }
+    .footer-menu ul li {
+        display: block;
+        padding: 0;
+    }
     .md-block2 {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr);
@@ -454,7 +458,7 @@ Project: DT Skill
         height: 130px;
     }
     .step-container {
-        min-height: 215px;
+        min-height: auto;
     }
     .step-container h4 {
         font-size: 16px;

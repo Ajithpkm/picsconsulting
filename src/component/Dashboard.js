@@ -1302,36 +1302,32 @@ const Dashboard = () => {
                                         <div className='row'>
                                             <div className='col-md-6 xs-order-1'>
                                                 <div className='step-container'>
-                                                    <div className='count font-alt'>01</div>
                                                     <div className='description'>
-                                                        <h4>{homedata?.section5?.title1}</h4>
+                                                        <h4>01. {homedata?.section5?.title1}</h4>
                                                         <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc1 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-6 xs-order-3'>
                                                 <div className='step-container'>
-                                                    <div className='count font-alt'>03</div>
                                                     <div className='description'>
-                                                        <h4>{homedata?.section5?.title2}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
+                                                        <h4>03. {homedata?.section5?.title3}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-6 xs-order-2'>
                                                 <div className='step-container'>
-                                                    <div className='count font-alt'>02</div>
                                                     <div className='description'>
-                                                        <h4>{homedata?.section5?.title3}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
+                                                        <h4>02. {homedata?.section5?.title2}</h4>
+                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-6 xs-order-4'>
                                                 <div className='step-container'>
-                                                    <div className='count font-alt'>04</div>
                                                     <div className='description'>
-                                                        <h4>{homedata?.section5?.title4}</h4>
+                                                        <h4>04. {homedata?.section5?.title4}</h4>
                                                         <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
                                                     </div>
                                                 </div>
@@ -1352,7 +1348,7 @@ const Dashboard = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            <div className="footer-menu">
+                                            <div className="footer-menu mb-30 mb-xs-20">
                                                 <ul className="clearlist">
                                                     <li><a href="#">Study International</a></li>
                                                     <li><a href="#">About</a></li>
