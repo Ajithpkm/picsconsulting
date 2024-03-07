@@ -276,17 +276,17 @@ const Faq = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            {/* <div className="footer-menu mb-30 mb-xs-20">
+                                            <div className="footer-menu mb-30 mb-xs-20">
                                                 <ul className="clearlist">
-                                                    <li><a href="#">Study International</a></li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">FAQ</a></li>
-                                                    <li><a href="#">Contact</a></li>
+                                                    <li><a href="/">Study International</a></li>
+                                                    <li><a href="/about">About</a></li>
+                                                    <li><a href="/faq">FAQ</a></li>
+                                                    <li><a href="/contact">Contact</a></li>
                                                     <li><a href="#">Terms & conditions</a></li>
-                                                    <li><a href="#">Privacy Policy</a></li>
+                                                    <li><a href="/policy">Privacy Policy</a></li>
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
-                                            </div> */}
+                                            </div>
                                             <div className='footer-widget'>
                                                 <div className='title m-center'>{headandfooterdata?.address_title}</div>
                                             </div>
