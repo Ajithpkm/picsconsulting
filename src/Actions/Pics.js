@@ -34,6 +34,28 @@ export const getaboutusdata = () => {
    }
 }
 
+export const getprivacypolicydata = () => {
+   return async dispatch => {
+      const response = await API.getprivacypolicydata();
+      const payload = { "PRIVACYPICSDATA": response.data || [] };
+      return dispatch({
+         type: Constants.PRIVACYPICSDATA,
+         payload
+      })
+   }
+}
+
+export const gettermsandconditiondata = () => {
+   return async dispatch => {
+      const response = await API.gettermsandconditiondata();
+      const payload = { "TERMSPICSDATA": response.data || [] };
+      return dispatch({
+         type: Constants.TERMSPICSDATA,
+         payload
+      })
+   }
+}
+
 export const getuniversitydata = () => {
    return async dispatch => {
       const response = await API.getuniversitydata();

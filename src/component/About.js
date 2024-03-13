@@ -72,6 +72,7 @@ function a11yProps(index: number) {
 const Dashboard = () => {
     const [showFullDescription, setFullDescription] = React.useState(false);
     const [showFullDescription2, setFullDescription2] = React.useState(false);
+    const [showFullDescription3, setFullDescription3] = React.useState(false);
     const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
     const [andreReadMore, setandreReadMore] = React.useState(false);
     const [value, setValue] = React.useState(0);
@@ -118,12 +119,19 @@ const Dashboard = () => {
         setFullDescription2(!showFullDescription2);
     };
 
+    const showFullDescriptionHandler3 = () => {
+        setFullDescription2(!showFullDescription3);
+    };
+
     const description = showFullDescription
-        ? aboutusdata?.section1?.description1
-        : aboutusdata?.section1?.description1?.slice(0, 598);
+        ? aboutusdata?.section2?.description1
+        : aboutusdata?.section2?.description1?.slice(0, 598);
         const description2 = showFullDescription2
         ? aboutusdata?.section2?.description2
         : aboutusdata?.section2?.description2?.slice(0, 500);
+        const description3 = showFullDescription3
+        ? aboutusdata?.section2?.description3
+        : aboutusdata?.section2?.description3?.slice(0, 500);
 
     return (
         <>
@@ -206,7 +214,7 @@ const Dashboard = () => {
                                                 <div className='inner-container'>
                                                     <div className='hs-line-7'> {aboutusdata?.section2?.title1}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        {aboutusdata?.section1?.subtitle1}
+                                                        {aboutusdata?.section2?.subtitle1}
                                                     </div>
                                                     <div className='section-text'>
                                                         <div dangerouslySetInnerHTML={{ __html: description }}></div>
@@ -249,23 +257,18 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-4 mb-xs-20'>
-                                                <div className='image-rounded'><img src={sunil} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image3} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='inner-container'>
-                                                    <div className='hs-line-7'>Meet the Founder</div>
+                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title3}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        Sunil Kumar GR, PICS Director, Chennai, INDIA 
+                                                    {aboutusdata?.section2?.subtitle3}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <p>Sunil GR is an accomplished Overseas Education Consultant with over 15 years of experience in
-                                                        Information Technology and Psychology. Holding a Master's degree in IT from NIT Warangal and a background in Psychology, Sunil brings a multidisciplinary approach to his counseling practice.</p>
-
-                                                        <p>His extensive professional background includes roles in IT, cloud computing, and e-commerce, with notable collaborations with the Government of India's Ministry of Commerce on the GeM project and Jiomart's marketplace model.</p>
-
-                                                        <p>Sunil's academic prowess and practical expertise uniquely position him to provide comprehensive guidance to students seeking to pursue their academic aspirations abroad. With a commitment to excellence and a passion for helping others succeed, Sunil GR is a trusted advisor, helping students to study internationally.</p> 
-                                                        <button className='readmore' onClick={showFullDescriptionHandler2}>
-                                                            Read {showFullDescription2 ? "Less" : "More"}
+                                                    <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
+                                                        <button className='readmore' onClick={showFullDescriptionHandler3}>
+                                                            Read {showFullDescription3? "Less" : "More"}
                                                         </button>
                                                     </div>
                                                 </div>
@@ -335,7 +338,7 @@ const Dashboard = () => {
                                                     <li><a href="/about">About</a></li>
                                                     <li><a href="/faq">FAQ</a></li>
                                                     <li><a href="/contact">Contact</a></li>
-                                                    <li><a href="#">Terms & conditions</a></li>
+                                                    <li><a href="/term-condition">Terms & conditions</a></li>
                                                     <li><a href="/policy">Privacy Policy</a></li>
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>

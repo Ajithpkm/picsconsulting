@@ -22,6 +22,18 @@ export const Pics = {
       return response;
    },
 
+   async getprivacypolicydata() {
+      const url = `${Constants.PICS_API}/cms/privacypolicy`;
+      const response = axios.get(url);
+      return response;
+   },
+
+   async gettermsandconditiondata() {
+      const url = `${Constants.PICS_API}/cms/termsandcondition`;
+      const response = axios.get(url);
+      return response;
+   },
+
    async getuniversitydata() {
       const url = `${Constants.PICS_API}/home/university`;
       const response = axios.get(url);

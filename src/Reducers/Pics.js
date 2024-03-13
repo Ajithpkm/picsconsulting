@@ -10,7 +10,9 @@ const INITIAL_STATE = {
     faqdata: {},
     faqcategorydata: [],
     faqlistdata: [],
-    contactdata: {}
+    contactdata: {},
+    termsdata: {},
+    privacydata: {}
 };
 
 //to assign action object to store variable
@@ -34,6 +36,10 @@ const reducer = (state = INITIAL_STATE, action) => {
             return { ...state, faqcategorydata: action.payload.FAQCATEGORYPICSDATA }
         case Constants.FAQLISTPICSDATA:
             return { ...state, faqlistdata: action.payload.FAQLISTPICSDATA }
+        case Constants.TERMSPICSDATA:
+            return { ...state, termsdata: action.payload.TERMSPICSDATA }
+        case Constants.PRIVACYPICSDATA:
+            return { ...state, privacydata: action.payload.PRIVACYPICSDATA }
         default:
             return state
     }
