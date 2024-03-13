@@ -69,7 +69,7 @@ function a11yProps(index: number) {
     };
 }
 
-const PrivacyPolicy = () => {
+const TermCondition = () => {
     const [showFullDescription, setFullDescription] = React.useState(false);
     const [showFullDescription2, setFullDescription2] = React.useState(false);
     const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
@@ -168,7 +168,7 @@ const PrivacyPolicy = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Privacy Policy
+                                                            Terms & conditions
                                                             </div>
                                                             <div className="hs-line-2 text-center">
                                                                 {/* <span dangerouslySetInnerHTML={{ __html: aboutusdata?.section1?.description }}></span> */}
@@ -250,4 +250,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-export default PrivacyPolicy;
+export default TermCondition;

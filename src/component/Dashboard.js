@@ -1354,7 +1354,7 @@ const Dashboard = () => {
                                                     <li><a href="/about">About</a></li>
                                                     <li><a href="/faq">FAQ</a></li>
                                                     <li><a href="/contact">Contact</a></li>
-                                                    <li><a href="#">Terms & conditions</a></li>
+                                                    <li><a href="/term-condition">Terms & conditions</a></li>
                                                     <li><a href="/policy">Privacy Policy</a></li>
                                                     <li><a href="#">Cookie Policy</a></li>
                                                 </ul>
