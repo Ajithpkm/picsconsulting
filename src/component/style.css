@@ -773,6 +773,9 @@ a.btn-mod:focus{
 .js-height-full {
     height: 100vh;
 }
+.js-height-parent-text {
+    height: 450px;
+}
 .hs-wrap-1{
     max-width: 350px;
     margin: 0 auto;
@@ -1872,6 +1875,16 @@ a.logo:hover{
 .section-text blockquote{
     margin-top: -5px;
 }
+.terms-text {
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+    color: #313131;
+    line-height: 1.7;
+}
+.terms-text p {
+    margin-bottom: 15px;
+}
 .section-bot-image{
     margin: 140px 0 -140px;
     text-align: center;
@@ -1944,7 +1957,7 @@ a.logo:hover{
     min-height: 760px;
 }
 .fixed-height-small{
-    min-height: 550px;
+    min-height: 450px;
 }
 .leftContent {
     position: absolute;
