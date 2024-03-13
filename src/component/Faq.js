@@ -139,7 +139,7 @@ const Faq = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            <li className="active xs-hide"><a href="/">study international</a></li>
+                                            <li className="active xs-hide"><a href="/">Home</a></li>
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
@@ -278,7 +278,7 @@ const Faq = () => {
                                         <div className="col-md-9">
                                             <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
                                                 <ul className="clearlist">
-                                                    <li><a href="/">Study International</a></li>
+                                                    <li><a href="/">Home</a></li>
                                                     <li><a href="/about">About</a></li>
                                                     <li><a href="/faq">FAQ</a></li>
                                                     <li><a href="/contact">Contact</a></li>
