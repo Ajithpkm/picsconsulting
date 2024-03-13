@@ -276,7 +276,7 @@ const Faq = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            <div className="footer-menu mb-30 mb-xs-20">
+                                            <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
                                                 <ul className="clearlist">
                                                     <li><a href="/">Study International</a></li>
                                                     <li><a href="/about">About</a></li>
