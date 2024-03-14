@@ -120,7 +120,7 @@ const Dashboard = () => {
     };
 
     const showFullDescriptionHandler3 = () => {
-        setFullDescription2(!showFullDescription3);
+        setFullDescription3(!showFullDescription3);
     };
 
     const description = showFullDescription
