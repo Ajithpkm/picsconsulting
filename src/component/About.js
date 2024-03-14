@@ -234,20 +234,20 @@ const Dashboard = () => {
 
                                             <div className='col-md-8 xs-order-2'>
                                                 <div className='inner-container-right'>
-                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
+                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title3}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                        {aboutusdata?.section2?.subtitle2}
+                                                    {aboutusdata?.section2?.subtitle3}
                                                     </div>
                                                     <div className='section-text'>
-                                                        <div dangerouslySetInnerHTML={{ __html: description2 }}></div>
-                                                        <button className='readmore' onClick={showFullDescriptionHandler2}>
-                                                            Read {showFullDescription2 ? "Less" : "More"}
+                                                    <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
+                                                        <button className='readmore' onClick={showFullDescriptionHandler3}>
+                                                            Read {showFullDescription3? "Less" : "More"}
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className='col-md-4 xs-order-1 mb-xs-20'>
-                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image3} alt="" className='img-fluid' /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -257,18 +257,18 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-4 mb-xs-20'>
-                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image3} alt="" className='img-fluid' /></div>
+                                                <div className='image-rounded'><img src={aboutusdata?.section2?.image2} alt="" className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='inner-container'>
-                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title3}</div>
+                                                    <div className='hs-line-7'>{aboutusdata?.section2?.title2}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                    {aboutusdata?.section2?.subtitle3}
+                                                        {aboutusdata?.section2?.subtitle2}
                                                     </div>
                                                     <div className='section-text'>
-                                                    <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
-                                                        <button className='readmore' onClick={showFullDescriptionHandler3}>
-                                                            Read {showFullDescription3? "Less" : "More"}
+                                                        <div dangerouslySetInnerHTML={{ __html: description2 }}></div>
+                                                        <button className='readmore' onClick={showFullDescriptionHandler2}>
+                                                            Read {showFullDescription2 ? "Less" : "More"}
                                                         </button>
                                                     </div>
                                                 </div>
