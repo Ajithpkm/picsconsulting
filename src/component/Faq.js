@@ -25,6 +25,7 @@ import '../css/verticals.min.css';
 import { useDispatch, useSelector } from "react-redux";
 import { getfaqdata, getfaqcategorydata, getfaqlistdata, getheaderandfooterdata } from '../Actions/Pics';
 import SvgIcon from '@mui/material/SvgIcon';
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 const Faq = () => {
 
@@ -118,6 +119,41 @@ const Faq = () => {
     return (
         <>
             <div>
+                {faqdata && <CookieConsent
+                    // acceptOnScroll={true}
+                    // acceptOnScrollPercentage={50}
+                    // onAccept={(byScroll) => {
+                    //     alert(`consent given. \n\n By scrolling? ${byScroll}`);
+                    // }}
+                    // flipButtons 
+                    // overlay
+                    buttonText="Accept All"
+                    declineButtonText="Decline"
+                    location="bottom"
+                    cookieName="myAwesomeCookieName3"
+                    enableDeclineButton
+                    expires={999}
+                    style={{ display: 'grid', width: '50%', left: '50%' }}
+                    buttonStyle={{ float: 'right' }}
+                    declineButtonStyle={{ float: 'right' }}
+                >
+                    <span>GENERAL USE </span>
+                    <p>
+                        We use cookies, tracking pixels and related technologies on our website.
+                        Cookies are small data logs that are served by our platform and stored on your device.
+                        Our site uses cookies for a variety of purposes including to operate and personalise the website.
+                        We also use cookies to provide us with aggregate data about site traffic and site interaction.
+                    </p>
+                    <span>THIRD PARTY</span>
+                    <p>
+                        Our website employs the use of various third-party services. Through the use of our website,
+                        these services may place anonymous cookies on the Visitor's browser and may send their own cookies to the Visitor's cookie file.
+                        Some of these services include but are not limited to: Google Analytics, Google Ads, Hubspot, analytics companies and service providers.
+                        We may contract with third parties to assist us in gathering data, however,
+                        they are not permitted to use information collected except to help Path/PathUK conduct and improve its business.
+                    </p>
+                </CookieConsent>
+                }
                 {loading === false ?
                     <div className='page-loader'>
                         <span className="loader"></span>
@@ -216,7 +252,7 @@ const Faq = () => {
                                                                 faqcategorydata?.length > 0 && faqcategorydata?.map((x, i) => (
                                                                     <div onClick={() => clickFAQItem(x?.id)} className={x?.id == selectedFAQItem ? "faq-filter active" : "faq-filter"} key={`faqcategory + ${i}`}>
                                                                         <div className='icon'>
-                                                                              <span dangerouslySetInnerHTML={{ __html: x?.icon }}></span>
+                                                                            <span dangerouslySetInnerHTML={{ __html: x?.icon }}></span>
                                                                         </div>
                                                                         <h4>{x?.name}</h4>
                                                                     </div>

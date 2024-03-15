@@ -24,6 +24,7 @@ import '../css/verticals.min.css';
 import { Height } from '@material-ui/icons';
 import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 const style = {
     position: 'absolute',
@@ -126,16 +127,51 @@ const Dashboard = () => {
     const description = showFullDescription
         ? aboutusdata?.section2?.description1
         : aboutusdata?.section2?.description1?.slice(0, 598);
-        const description2 = showFullDescription2
+    const description2 = showFullDescription2
         ? aboutusdata?.section2?.description2
         : aboutusdata?.section2?.description2?.slice(0, 500);
-        const description3 = showFullDescription3
+    const description3 = showFullDescription3
         ? aboutusdata?.section2?.description3
         : aboutusdata?.section2?.description3?.slice(0, 500);
 
     return (
         <>
             <div>
+                {aboutusdata && <CookieConsent
+                    // acceptOnScroll={true}
+                    // acceptOnScrollPercentage={50}
+                    // onAccept={(byScroll) => {
+                    //     alert(`consent given. \n\n By scrolling? ${byScroll}`);
+                    // }}
+                    // flipButtons 
+                    // overlay
+                    buttonText="Accept All"
+                    declineButtonText="Decline"
+                    location="bottom"
+                    cookieName="myAwesomeCookieName3"
+                    enableDeclineButton
+                    expires={999}
+                    style={{ display: 'grid', width: '50%', left: '50%' }}
+                    buttonStyle={{ float: 'right' }}
+                    declineButtonStyle={{ float: 'right' }}
+                >
+                    <span>GENERAL USE </span>
+                    <p>
+                        We use cookies, tracking pixels and related technologies on our website.
+                        Cookies are small data logs that are served by our platform and stored on your device.
+                        Our site uses cookies for a variety of purposes including to operate and personalise the website.
+                        We also use cookies to provide us with aggregate data about site traffic and site interaction.
+                    </p>
+                    <span>THIRD PARTY</span>
+                    <p>
+                        Our website employs the use of various third-party services. Through the use of our website,
+                        these services may place anonymous cookies on the Visitor's browser and may send their own cookies to the Visitor's cookie file.
+                        Some of these services include but are not limited to: Google Analytics, Google Ads, Hubspot, analytics companies and service providers.
+                        We may contract with third parties to assist us in gathering data, however,
+                        they are not permitted to use information collected except to help Path/PathUK conduct and improve its business.
+                    </p>
+                </CookieConsent>
+                }
                 {loading === false ?
                     <div className='page-loader'>
                         <span className="loader"></span>
@@ -236,12 +272,12 @@ const Dashboard = () => {
                                                 <div className='inner-container-right'>
                                                     <div className='hs-line-7'>{aboutusdata?.section2?.title3}</div>
                                                     <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
-                                                    {aboutusdata?.section2?.subtitle3}
+                                                        {aboutusdata?.section2?.subtitle3}
                                                     </div>
                                                     <div className='section-text'>
-                                                    <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
+                                                        <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
                                                         <button className='readmore' onClick={showFullDescriptionHandler3}>
-                                                            Read {showFullDescription3? "Less" : "More"}
+                                                            Read {showFullDescription3 ? "Less" : "More"}
                                                         </button>
                                                     </div>
                                                 </div>
