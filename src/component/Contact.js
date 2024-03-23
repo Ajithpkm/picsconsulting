@@ -24,7 +24,7 @@ for (let index = 0; index < countriesCode.length; index++) {
     const element = countriesCode[index];
     let obj = {
         [element?.code]:
-            { primary: element?.code, secondary: element?.dial_code }
+            { primary: element?.name, secondary: element?.dial_code }
     }
     Object?.assign(customLabels, obj);
 }
@@ -46,14 +46,14 @@ const Dashboard = () => {
     
     useEffect(() => {
         setFirstName(location?.state?.firstName);
-        setLastName(location?.state?.lastName);
+        // setLastName(location?.state?.lastName);
         setEmail(location?.state?.email);
         setPhoneNumber(location?.state?.phoneNumber);
         setPhonecode(location?.state?.phonecode);
         setDialCode(location?.state?.dialCode);
         setStudyDestination(location?.state?.studyDestination);
-        setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
         setChecked(location?.state?.checked);
+        setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
         let hours = location?.state?.time?.substring(0, location?.state?.time?.indexOf(":"));
         let minutes = location?.state?.time?.substring(2, location?.state?.time?.lastIndexOf(":"))?.replaceAll(':', '');
         let times = dayjs()?.set('hour', hours)?.startOf('hour')?.set('minute', minutes)?.startOf('minute');
@@ -87,7 +87,7 @@ const Dashboard = () => {
 
     const handleChange = (event) => {
         if (event.target.name === 'firstName') setFirstName(event.target.value);
-        else if (event.target.name === 'lastName') setLastName(event.target.value);
+        // else if (event.target.name === 'lastName') setLastName(event.target.value);
         else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
         else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
         else if (event.target.name === 'phonecode') setPhonecode(event.target.value);
@@ -113,13 +113,13 @@ const Dashboard = () => {
         else {
             setfirstNameError(false);
         }
-        if (!lastName) {
-            setlastNameError(true);
-            return null;
-        }
-        else {
-            setlastNameError(false);
-        }
+        // if (!lastName) {
+        //     setlastNameError(true);
+        //     return null;
+        // }
+        // else {
+        //     setlastNameError(false);
+        // }
         if (!email) {
             setemailError(true);
             return null;
@@ -154,13 +154,13 @@ const Dashboard = () => {
         } else {
             setstudyDestinationError(false);
         }
-        if (!fromDate) {
-            setfromDateError(true);
-            return null;
-        }
-        else {
-            setfromDateError(false);
-        }
+        // if (!fromDate) {
+        //     setfromDateError(true);
+        //     return null;
+        // }
+        // else {
+        //     setfromDateError(false);
+        // }
         if (!checked) {
             setCheckboxError(true);
             return null;
@@ -171,14 +171,14 @@ const Dashboard = () => {
         navigate('/step2', {
             replace: true, state: {
                 firstName: firstName,
-                lastName: lastName,
+                // lastName: lastName,
                 email: email,
-                phoneNumber: phoneNumber,
                 phonecode: phonecode,
+                phoneNumber: phoneNumber,
                 dialCode: dialCode,
                 studyDestination: studyDestination,
-                fromDate: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
-                time: new Date(time)?.toLocaleTimeString(),
+                // fromDate: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
+                // time: new Date(time)?.toLocaleTimeString(),
                 checked: checked
             }
         });
@@ -247,10 +247,10 @@ const Dashboard = () => {
                                                         <TextField
                                                             fullWidth
                                                             error={firstNameError}
-                                                            helperText={firstNameError ? 'First Name is required' : ''}
+                                                            helperText={firstNameError ? 'Full Name is required' : ''}
                                                             className='form-control'
                                                             id="standard-basic"
-                                                            label="First Name*"
+                                                            label="Full Name*"
                                                             variant="standard"
                                                             name='firstName'
                                                             value={firstName}
@@ -258,20 +258,6 @@ const Dashboard = () => {
                                                         />
                                                     </div>
                                                     <div className='col-md-6'>
-                                                        <TextField
-                                                            fullWidth
-                                                            error={lastNameError}
-                                                            helperText={lastNameError ? 'Last Name is required' : ''}
-                                                            className='form-control'
-                                                            id="standard-basic"
-                                                            label="Last Name*"
-                                                            variant="standard"
-                                                            name='lastName'
-                                                            value={lastName}
-                                                            onChange={handleChange}
-                                                        />
-                                                    </div>
-                                                    <div className='col-md-12'>
                                                         <TextField
                                                             fullWidth
                                                             error={emailError || emailValidationError}
@@ -285,7 +271,34 @@ const Dashboard = () => {
                                                             value={email}
                                                             onChange={emailHandleChange}
                                                         />
+                                                        {/* <TextField
+                                                            fullWidth
+                                                            error={lastNameError}
+                                                            helperText={lastNameError ? 'Last Name is required' : ''}
+                                                            className='form-control'
+                                                            id="standard-basic"
+                                                            label="Last Name*"
+                                                            variant="standard"
+                                                            name='lastName'
+                                                            value={lastName}
+                                                            onChange={handleChange}
+                                                        /> */}
                                                     </div>
+                                                    {/* <div className='col-md-12'>
+                                                        <TextField
+                                                            fullWidth
+                                                            error={emailError || emailValidationError}
+                                                            helperText={emailError ? 'Email is required' : emailValidationError ? 'Invalid email address' : ''}
+                                                            className='form-control'
+                                                            id="standard-basic"
+                                                            label="Email Address*"
+                                                            variant="standard"
+                                                            type="email"
+                                                            name='email'
+                                                            value={email}
+                                                            onChange={emailHandleChange}
+                                                        />
+                                                    </div> */}
                                                     <div className='col-md-2 mt-20'>
                                                         <ReactFlagsSelect
                                                             placeholder='Code*'
@@ -296,7 +309,7 @@ const Dashboard = () => {
                                                             customLabels={customLabels}
                                                             searchable
                                                             searchPlaceholder='Search'
-                                                            showOptionLabel={false}
+                                                            // showOptionLabel={false}
                                                             showSelectedLabel={false}
                                                         />
                                                         {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
@@ -336,7 +349,7 @@ const Dashboard = () => {
                                                             {studyDestinationError && <span style={{ color: 'red', fontSize: '12px' }}>Study Destination is required</span>}
                                                         </FormControl>
                                                     </div>
-                                                    <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
+                                                    {/* <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
                                                     <div className='col-6 col-md-5 mb-xs-20'>
                                                         <DatePicker
                                                             className='datepicker'
@@ -364,7 +377,7 @@ const Dashboard = () => {
                                                                 renderInput={(newValue) => <TextField {...newValue} />}
                                                             />
                                                         </LocalizationProvider>
-                                                    </div>
+                                                    </div> */}
                                                     <div className='col-md-12'>
                                                         <div className='terms-label mt-30 mb-10'>
                                                             <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}

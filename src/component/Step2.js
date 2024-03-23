@@ -8,12 +8,18 @@ import { useHistory, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { postcontactdata } from '../Actions/Pics';
 import Alert from '@mui/material/Alert';
+import dayjs, { Dayjs } from 'dayjs';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import './style.css';
 import '../css/verticals.min.css';
 
 const type_of_stydy_options = [
-    'Undergraduate',
-    'Postgraduate',
+    'Undergraduate (UG)',
+    'Postgraduate (PG)',
     'PHD',
     'Foundation',
     'A-Level',
@@ -45,7 +51,7 @@ const how_did_hear_options = [
     'Facebook',
     'Instagram',
     'Word of mouth',
-    'PICS Consultant',
+    'PICS Consultants',
     'PICS Students',
     'Walk-in',
     'College',
@@ -53,36 +59,39 @@ const how_did_hear_options = [
 ];
 
 const appointment_location_options = [
-    'New Delhi -CP',
-    'New Delhi - Nehru Place',
-    'Ahmedabad',
-    'Bangalore',
-    'Chandigarh',
-    'Ludhiana',
-    'Chennai',
-    'Coimbatore',
-    'Gurugram',
-    'Hyderabad',
-    'Indore',
-    'Jaipur',
-    'Kochi',
-    'Calicut (Kozhikode)',
-    'Mysore',
-    'Kolkata',
-    'Lucknow',
-    'Mumbai',
-    'Mumbai - Andheri',
-    'Calicut (Kozhikode)',
-    'Mysore',
-    'Kolkata',
-    'Lucknow',
-    'Mumbai',
-    'Mumbai - Andheri',
-    'Nagpur',
-    'Pune',
-    'Thane',
-    'Vijayawada',
-    'Vadodara',
+    // 'New Delhi -CP',
+    // 'New Delhi - Nehru Place',
+    // 'Ahmedabad',
+    // 'Bangalore',
+    // 'Chandigarh',
+    // 'Ludhiana',
+    // 'Chennai',
+    // 'Coimbatore',
+    // 'Gurugram',
+    // 'Hyderabad',
+    // 'Indore',
+    // 'Jaipur',
+    // 'Kochi',
+    // 'Calicut (Kozhikode)',
+    // 'Mysore',
+    // 'Kolkata',
+    // 'Lucknow',
+    // 'Mumbai',
+    // 'Mumbai - Andheri',
+    // 'Calicut (Kozhikode)',
+    // 'Mysore',
+    // 'Kolkata',
+    // 'Lucknow',
+    // 'Mumbai',
+    // 'Mumbai - Andheri',
+    // 'Nagpur',
+    // 'Pune',
+    // 'Thane',
+    // 'Vijayawada',
+    // 'Vadodara',
+    "UK, Chelmsford",
+    "India, Chennai",
+    "Tele Call"
 ];
 
 const subject_options = [
@@ -190,6 +199,12 @@ const Step2 = () => {
     let [apiErrorMessage, setApiErrorMessage] = React.useState('');
     const contactdata = useSelector((state) => state?.Pics?.contactdata);
     const [searchButtonLoading, setSearchButtonLoading] = React.useState(false);
+    let [fromDate, setFromDate] = React.useState(null);
+    let [time, setTime] = React.useState('');
+    let [fromDateError, setfromDateError] = React.useState(false);
+    let [otherOption, setOtherOption] = React.useState(false);
+    let [otherOptionValue, setOtherOptionValue] = React.useState('');
+    const defaultTime = dayjs()?.set('hour', 12)?.startOf('hour');
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -198,12 +213,12 @@ const Step2 = () => {
         navigate('/contact', {
             replace: true, state: {
                 firstName: location?.state?.firstName,
-                lastName: location?.state?.lastName,
+                // lastName: location?.state?.lastName,
                 email: location?.state?.email,
                 phoneNumber: location?.state?.phoneNumber,
                 studyDestination: location?.state?.studyDestination,
-                fromDate: location?.state?.fromDate,
-                time: location?.state?.time,
+                // fromDate: location?.state?.fromDate,
+                // time: location?.state?.time,
                 phonecode: location?.state?.phonecode,
                 dialCode: location?.state?.dialCode,
                 checked: location?.state?.checked
@@ -216,7 +231,16 @@ const Step2 = () => {
         if (event.target.name === 'typeofstudy') setTypeofstudy(event.target.value);
         else if (event.target.name === 'yearofstudy') setYearofstudy(event.target.value);
         else if (event.target.name === 'subject') setSubject(event.target.value);
-        else if (event.target.name === 'howdidhear') setHowdidhear(event.target.value);
+        else if (event.target.name === 'howdidhear') {
+            if (event.target.value == 'Other please mention') {
+                setOtherOption(true);
+            }
+            else {
+                setOtherOption(false);
+            }
+            setHowdidhear(event.target.value);
+        }
+        else if (event.target.name == 'otherOptionValue') setOtherOptionValue(event.target.value);
         else if (event.target.name === 'appointmentlocation') setAppointmentlocation(event.target.value);
         else if (event.target.name === 'notes') setNotes(event.target.value);
     }
@@ -263,28 +287,35 @@ const Step2 = () => {
         else {
             setAppointmentlocationError(false);
         }
+        if (!fromDate) {
+            setfromDateError(true);
+            return null;
+        }
+        else {
+            setfromDateError(false);
+        }
 
         setSearchButtonLoading(true);
         const payload = {
             first_name: location?.state?.firstName,
-            last_name: location?.state?.lastName,
+            last_name: location?.state?.firstName,
             email: location?.state?.email,
             phone_number: location?.state?.phoneNumber,
             phone_code: location?.state?.dialCode,
             destination: location?.state?.studyDestination,
-            preferred_date: location?.state?.fromDate,
-            preferred_time: location?.state?.time,
+            preferred_date: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
+            preferred_time: new Date(time)?.toLocaleTimeString(),
             type_of_study: typeofstudy,
             year_of_study: yearofstudy,
             subject: subject,
-            how_did_you_hear: howdidhear,
+            how_did_you_hear: otherOption ? otherOptionValue : howdidhear,
             notes: notes,
             appointment_location: appointmentlocation
         }
         dispatch(postcontactdata(payload));
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         setTimeout(() => {
             if (contactdata?.status == 'success') {
                 navigate('/step3', {
@@ -308,7 +339,7 @@ const Step2 = () => {
                 setApiErrorMessage(contactdata?.message);
             }
         }, 1000);
-    },[contactdata])
+    }, [contactdata])
 
     useEffect(() => {
         setTimeout(() => {
@@ -321,6 +352,14 @@ const Step2 = () => {
         setTimeout(() => {
             setLoading(true);
         }, 800);
+
+        setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
+        let hours = location?.state?.time?.substring(0, location?.state?.time?.indexOf(":"));
+        let minutes = location?.state?.time?.substring(2, location?.state?.time?.lastIndexOf(":"))?.replaceAll(':', '');
+        let times = dayjs()?.set('hour', hours)?.startOf('hour')?.set('minute', minutes)?.startOf('minute');
+        let ampm = location?.state?.time?.replace(/[^A-Za-z]/g, '');
+        setTime(location?.state?.time ? dayjs(`${times?.toDate()}${ampm}`) : defaultTime);
+
     }, []);
 
     return (
@@ -451,6 +490,20 @@ const Step2 = () => {
                                                             {howdidhearError && <span style={{ color: 'red', fontSize: '12px' }}>How did you hear about PICS is required</span>}
                                                         </FormControl>
                                                     </div>
+                                                    <div className='col-md-6'>
+                                                        { otherOption &&
+                                                            <TextField
+                                                                fullWidth
+                                                                className='form-control'
+                                                                id="standard-basic"
+                                                                label="Other Option"
+                                                                variant="standard"
+                                                                name='otherOptionValue'
+                                                                value={otherOptionValue}
+                                                                onChange={handleChange}
+                                                            />
+                                                        }
+                                                    </div>
                                                     <div className='col-md-12 selectBox'>
                                                         <FormControl className='form-control mt-10'
                                                             id="standard-basic" variant="standard">
@@ -484,6 +537,36 @@ const Step2 = () => {
                                                             value={notes}
                                                             onChange={handleChange}
                                                         />
+                                                    </div>
+
+                                                    <div className='section-title-alt text-gray mb-10'>Preferred time to connect with you</div>
+                                                    <div className='col-6 col-md-5 mb-xs-20'>
+                                                        <DatePicker
+                                                            className='datepicker'
+                                                            minDate={new Date()}
+                                                            value={fromDate}
+                                                            name="From Date"
+                                                            selected={fromDate}
+                                                            onChange={(newValue) => {
+                                                                setFromDate(newValue);
+                                                                setfromDateError(false);
+                                                            }}
+                                                            dateFormat={'dd/MM/yyyy'}
+                                                            placeholderText='DD/MM/YYYY'
+                                                            label={<contact_step_1 />}
+                                                        />
+                                                        <span style={{ color: 'red', fontSize: '12px' }}>{fromDateError ? 'Date is required' : ''}</span>
+                                                    </div>
+                                                    <div className='col-6 col-md-5 timepicker'>
+                                                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                                            <TimePicker
+                                                                value={time}
+                                                                onChange={(newValue) => {
+                                                                    setTime(newValue);
+                                                                }}
+                                                                renderInput={(newValue) => <TextField {...newValue} />}
+                                                            />
+                                                        </LocalizationProvider>
                                                     </div>
 
                                                     <div className='col-md-12 mt-30'>
