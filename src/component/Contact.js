@@ -299,7 +299,7 @@ const Dashboard = () => {
                                                             onChange={emailHandleChange}
                                                         />
                                                     </div> */}
-                                                    <div className='col-md-2 mt-20'>
+                                                    <div className='col-md-3 mt-20'>
                                                         <ReactFlagsSelect
                                                             placeholder='Code*'
                                                             className='countryflag'
@@ -314,7 +314,7 @@ const Dashboard = () => {
                                                         />
                                                         {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                     </div>
-                                                    <div className='col-md-4'>
+                                                    <div className='col-md-5 mt-t4'>
                                                         <TextField
                                                             fullWidth
                                                             error={phoneNumberError}
@@ -329,7 +329,7 @@ const Dashboard = () => {
                                                             onChange={handleChange}
                                                         />
                                                     </div>
-                                                    <div className='col-md-6 mb-30 selectBox'>
+                                                    <div className='col-md-4 mb-30 selectBox'>
                                                         <FormControl className='form-control mt-10'
                                                             id="standard-basic" variant="standard">
                                                             <InputLabel id="demo-simple-select-standard-label">Study Destination*</InputLabel>
@@ -379,7 +379,7 @@ const Dashboard = () => {
                                                         </LocalizationProvider>
                                                     </div> */}
                                                     <div className='col-md-12'>
-                                                        <div className='terms-label mt-30 mb-10'>
+                                                        <div className='terms-label mt-10 mb-10'>
                                                             <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
                                                                 label={
                                                                     articles[0].content.map(paragraph =>
@@ -406,7 +406,6 @@ const Dashboard = () => {
                                         <div className='form-footer'>
                                             <ul>
                                                 <li><span className='dot active'></span></li>
-                                                <li><span className='dot'></span></li>
                                                 <li><span className='dot'></span></li>
                                                 <li><span className='dot'></span></li>
                                             </ul>

@@ -526,7 +526,7 @@ const Step2 = () => {
                                                             {appointmentlocationError && <span style={{ color: 'red', fontSize: '12px' }}>Appointment Location is required</span>}
                                                         </FormControl>
                                                     </div>
-                                                    <div className='col-md-12'>
+                                                    <div className='col-md-12 mb-20'>
                                                         <TextField
                                                             fullWidth
                                                             className='form-control'
@@ -580,7 +580,6 @@ const Step2 = () => {
                                             <ul>
                                                 <li><span className='dot active'></span></li>
                                                 <li><span className='dot active'></span></li>
-                                                <li><span className='dot'></span></li>
                                                 <li><span className='dot'></span></li>
                                             </ul>
                                         </div>

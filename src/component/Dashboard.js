@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Tooltip from "./Tooltip";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
@@ -25,6 +26,7 @@ import unversity_bg from '../images/university-bg.jpg';
 import icon_01 from '../images/university-offer.svg';
 import icon_02 from '../images/dedicated-pics-consultant.svg';
 import icon_03 from '../images/professional-service.svg';
+import infoicon from '../images/info.png';
 import university_list from '../images/university-list.jpg';
 import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
@@ -167,8 +169,6 @@ const Dashboard = () => {
                     Our website employs the use of various third-party services. Through the use of our website,
                     these services may place anonymous cookies on the Visitor's browser and may send their own cookies to the Visitor's cookie file.
                     Some of these services include but are not limited to: Google Analytics, Google Ads, Hubspot, analytics companies and service providers.
-                    We may contract with third parties to assist us in gathering data, however,
-                    they are not permitted to use information collected except to help Path/PathUK conduct and improve its business.
                 </p>
             </CookieConsent>
             }
@@ -234,22 +234,13 @@ const Dashboard = () => {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style} className='university-list-bx'>
-                                <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
-                                <div onClick={handleUsaClose} className='closemodal'><CloseIcon /></div>
-                                    <div className='row d-flex align-items-center'>
-                                        <div className='col-10 col-md-10'>
-                                            <div className='country-name font-alt'>New Modal</div>
-                                        </div>
-                                    </div>
+                            <Box sx={style} className='university-list-bx nobg-shadow'>
+                                <Typography className='modal-bx-body p-0' id="modal-modal-description" sx={{ mt: 2 }}>
+                                    <div onClick={handleUsaClose} className='closemodal'><CloseIcon /></div>
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/yAoLSRbwxL8?si=wbjPEPasNR1YK5uq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    
+                                    
                                 </Typography>
-                                <SimpleBar id="RSC-Example" style={{ height: 450 }}>
-                                    <Typography className='modal-bx-body' id="modal-modal-description" sx={{ mt: 2 }}>
-                                        
-                                      
-                                      
-                                    </Typography>
-                                </SimpleBar>
                             </Box>
                         </Modal>
 
@@ -344,7 +335,7 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </section>
-
+                                
                                 <section className='small-section pb-250 pt-xs-30 pb-xs-120'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
@@ -353,6 +344,7 @@ const Dashboard = () => {
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
+                                                
                                                     <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
                                                         {homedata?.section2?.title1}
                                                     </div>
@@ -363,25 +355,54 @@ const Dashboard = () => {
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>P</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>{homedata?.section2?.list1}</div>
+                                                                <div className='desc-btn'>
+                                                                    {homedata?.section2?.list1}
+                                                                    <div className='desc-info'>
+                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
+                                                                            <img src={infoicon} />
+                                                                        </Tooltip>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>I</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>{homedata?.section2?.list2}</div>
+                                                                <div className='desc-btn'>
+                                                                    {homedata?.section2?.list2}
+                                                                    <div className='desc-info'>
+                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
+                                                                            <img src={infoicon} />
+                                                                        </Tooltip>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>C</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>{homedata?.section2?.list3}</div>
+                                                                <div className='desc-btn'>
+                                                                    {homedata?.section2?.list3}
+                                                                    <div className='desc-info'>
+                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
+                                                                            <img src={infoicon} />
+                                                                        </Tooltip>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>S</div>
                                                             <div className='desc'>
-                                                                <div className='desc-btn'>{homedata?.section2?.list4}</div>
+                                                                <div className='desc-btn'>
+                                                                    {homedata?.section2?.list4}
+                                                                    <div className='desc-info'>
+                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
+                                                                            <img src={infoicon} />
+                                                                        </Tooltip>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

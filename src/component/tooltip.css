@@ -1,0 +1,22 @@
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    visibility: hidden;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 1;
+    display: inline-block;
+    width: 225px;
+    right: -90px;
+    top: -120px;
+  }
+  .tooltip-arrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent;
+  }
+  

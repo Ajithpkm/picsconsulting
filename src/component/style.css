@@ -977,15 +977,39 @@ a.btn-mod:focus{
     min-width: 50px;
     text-align: center;
 }
+.pics-abbr .desc {
+    position: relative;
+}
 .pics-abbr .desc-btn {
     background-color: #B9943C;
     color: #fff;
     font-size: 13px;
     font-weight: 600;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
+    position: relative;
 }
-
+.pics-abbr .desc-btn::after {
+    background-color: #E4E4E4;
+    padding: 6px 15px;
+    z-index: -1;
+    width: 150px;
+    position: absolute;
+    content: "";
+    right: -50px;
+    top: 0;
+    height: 41px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.desc-info {
+    position: absolute;
+    right: -35px;
+    top: 8px;
+}
+.desc-info img {
+    max-width: 25px;
+}
 /* Logo (in navigation panel)*/
 
 .nav-logo-wrap{
@@ -4098,7 +4122,12 @@ section:hover .small-item-carousel .owl-next{
         height: 30px;
         text-align: center;
         line-height: 30px;
+        cursor: pointer;
     }
+}
+.university-list-bx.nobg-shadow {
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 .university-list-bx .modal-bx-header {
     background-color: #B9943C;
@@ -4142,6 +4171,9 @@ section:hover .small-item-carousel .owl-next{
 .modal-bx-body {
     padding: 30px;
     margin-top: 0 !important;
+}
+.modal-bx-body.p-0 {
+    padding: 0 !important;
 }
 .modal-bx-body .content {
     font-family: "Lato", sans-serif;
@@ -4264,6 +4296,7 @@ section:hover .small-item-carousel .owl-next{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 6px  50px;
     border-radius: 3px;
+    height: 40px;
 }
 .contact-section .react-datepicker__input-container::before {
     background-image: url('../images/calendar.png');
@@ -4308,18 +4341,19 @@ input:-webkit-autofill:active {
     width: 100%;
     min-width: 100% !important;
     padding-right: 0 !important;
+    padding-left: 20px;
+    height: 30px !important;
 }
 .split-section-wrapper .MuiSelect-standard:focus {
     background-color: transparent !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 .contact-section input {
-    border: ṇone;
-    border-bottom: 1px solid #ddd !important;
-    height: 40px;
+    border: 1px solid #8F8F8F !important;
+    height: 34px;
     border-radius: 0px;
     font-family: "Lato", sans-serif;
-    padding: 5px 0px;
+    padding: 5px 10px;
     font-size: 14px;
     position: relative;
 }
@@ -4336,7 +4370,8 @@ input:-webkit-autofill:active {
 }
 .contact-section .MuiInputLabel-root {
     font-family: "Lato", sans-serif;
-    top: 10px;
+    top: 5px;
+    left: 20px;
 }
 .contact-section .selectBox .MuiInputLabel-root {
     font-family: "Lato", sans-serif;
@@ -4346,14 +4381,16 @@ input:-webkit-autofill:active {
     font-family: "Lato", sans-serif;
 }
 .contact-section .selectBox .MuiInput-underline::before  {
-    border-bottom: 1px solid #ddd !important;
-    bottom: 1px;
+    border: 1px solid #8F8F8F !important;
+    height: 45px;
 }
 .contact-section .selectBox .MuiSvgIcon-root {
     right: 10px;
+    top: 0;
 }
-.contact-section .MuiInputLabel-root.Mui-focused {
-    color: #B9943C
+.contact-section .MuiInputLabel-root.Mui-focused,
+.contact-section .MuiFormLabel-filled {
+    display: none !important
 }
 .contact-section .MuiInput-underline::after {
     border-bottom: 2px solid #B9943C;
@@ -4381,7 +4418,16 @@ input:-webkit-autofill:active {
 }
 .contact-section .terms-link a {
     color: #182E46;
-    text-decoration: underline;
+    text-decoration: underline !important;
+}
+.terms-label {
+    font-size: 13px;
+    color: #5f5f5f;
+    font-family: "Lato", sans-serif;
+}
+.terms-label a {
+    color: #182E46;
+    text-decoration: underline !important;
 }
 .form-footer {
     background-color: #162C5F;
@@ -4483,16 +4529,28 @@ input:-webkit-autofill:active {
     padding: 20px;
 }
 .countryflag button {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: 1px solid #ddd !important;
+    border: 1px solid #8F8F8F !important;
     height: 47px;
     border-radius: 0px;
     font-family: "Lato", sans-serif;
-    padding: 5px 0px;
+    padding: 5px 20px;
     font-size: 14px;
     position: relative;
+}
+.countryflag ul::-webkit-scrollbar {
+  width: 12px;
+}
+.countryflag ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+.countryflag ul::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+.countryflag ul::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
 }
 .countryflag button span {
     padding: 0;
@@ -4505,10 +4563,7 @@ input:-webkit-autofill:active {
     overflow-x: hidden;
 }
 .countryflag ul input {
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: 1px solid #ddd !important;
+    border: none !important;
     margin: 0 4px;
     padding: 0 5px;
     font-size: 12px;
@@ -4520,4 +4575,7 @@ input:-webkit-autofill:active {
 .countryflag ul li {
     padding: 0 5px;
     font-size: 14px;
+}
+.mt-t4 {
+    margin-top: 4px;
 }

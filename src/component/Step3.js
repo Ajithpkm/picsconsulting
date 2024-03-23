@@ -72,9 +72,8 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className='box-one'>
-                                                    <div className='fs-24 lh-2 black fw-700 mb-10'>You can now pre-book your FREE consultation</div>
-                                                    <button className='btn btn-mod btn-color btn-round btn-medium'>book appointment</button>
+                                                <div className='mt-5'>
+                                                    <button className='btn btn-mod btn-color btn-round btn-medium'>GO TO HOME</button>
                                                     <div className='mt-10'>Refer the <a href='/faq' className='color-2 underline' target='_blank'>FAQs section</a> for more information.</div>
                                                 </div>
                                             </div>
@@ -84,7 +83,6 @@ const Dashboard = () => {
                                                 <li><span className='dot active'></span></li>
                                                 <li><span className='dot active'></span></li>
                                                 <li><span className='dot active'></span></li>
-                                                <li><span className='dot'></span></li>
                                             </ul>
                                         </div>
                                     </div>
