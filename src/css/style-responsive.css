@@ -324,11 +324,56 @@ Project: DT Skill
 }
 
 @media only screen and (max-width: 767px) {
-    
+    .nav-logo-wrap {
+        margin-right: 10px;
+    }
+    .dblock {
+        display: none;
+    }
+    .mblock {
+        display: block
+    }
+    .mblock .footer-widget {
+        font-size: 13px;
+    }
+    .footer-widget .title {
+        color: #B9943C;
+    }
+    .mblock .footer-widget h4 {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    .footer-menu ul li a {
+        letter-spacing: 0;
+        font-weight: 600;
+    }
+    .footer-copy {
+        color: #182E46;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: none;
+        letter-spacing: 0;
+    }
     .hs-wrap {
         max-width: 320px;
         padding-top: 27px;
         padding-bottom: 33px;
+    }
+    .inner-nav ul {
+        font-size: 13px;
+    }
+    .pics-service {
+        min-height: auto;
+    }
+    .pics-service h2 {
+        font-size: 20px;
+        padding: 0;
+        margin-top: 15px;
+    }
+    .pics-service h2 br {
+        display: none;
     }
     .search-form .search-btn {
         padding: 2px 15px;
@@ -442,7 +487,11 @@ Project: DT Skill
         margin-left: 15px;
     }
     .inner-nav ul li .btn-mod.btn-medium {
-        padding: 4px 15px;
+        padding: 3px 12px;
+        font-size: 12px;
+    }
+    .whatsapp-icon {
+        margin-left: 8px;
     }
     .loader { 
         left: 45%;
@@ -466,13 +515,15 @@ Project: DT Skill
         display: none;
     }
     .step-container {
-        min-height: auto;
+        min-height: 126px;
+        padding: 12px;
     }
     .step-container h4 {
         font-size: 16px;
     }
-    .step-container .description {
-        font-size: 14px;
+    .step-container .description img {
+        max-width: 50px;
+        margin: 0 auto;
     }
     .step-container .count {
         font-size: 48px;

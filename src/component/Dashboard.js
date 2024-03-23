@@ -12,7 +12,14 @@ import footer_logo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
-import slider_01 from '../images/home-bg.jpg';
+import whatsappwhite from '../images/whatsapp-w.png';
+import statement from '../images/statement.png';
+import letter from '../images/letter.png';
+import student from '../images/student.png';
+import admission from '../images/admission.png';
+import studentcv from '../images/studentcv.png';
+import englishtest from '../images/englishtest.png';
+import preloader from '../images/preloader.gif';
 import application_service_bg from '../images/application-service-bg.jpg';
 import unversity_bg from '../images/university-bg.jpg';
 import icon_01 from '../images/university-offer.svg';
@@ -23,6 +30,7 @@ import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import SimpleBar from 'react-custom-scrollbars';
+import CloseIcon from '@mui/icons-material/Close';
 import './style.css';
 import '../css/verticals.min.css';
 import '../css/style-responsive.css';
@@ -145,7 +153,7 @@ const Dashboard = () => {
                 location="bottom"
                 cookieName="myAwesomeCookieName3"
                 enableDeclineButton
-                expires={999}
+                expires={99}
                 style={{ display: 'grid', width: '50%', left: '50%' }}
                 buttonStyle={{ float: 'right' }}
                 declineButtonStyle={{ float: 'right' }}
@@ -170,7 +178,9 @@ const Dashboard = () => {
             <div>
                 {loading === false ?
                     <div className='page-loader'>
-                        <span className="loader"></span>
+                        <span className="loader">
+                            <img src={preloader} alt="PICS Consultants" />
+                        </span>
                     </div> :
                     <div>
                         <Modal
@@ -182,14 +192,18 @@ const Dashboard = () => {
                         >
                             <Box sx={style} className='university-list-bx'>
                                 <Typography className='modal-bx-header' id="modal-modal-title" variant="h6" component="h2">
+                                    <div className='closemodal'><CloseIcon /></div>
                                     <div className='row d-flex align-items-center'>
                                         <div className='col-2 col-md-2'>
                                             <img src={university_01} alt="" />
                                         </div>
-                                        <div className='col-10 col-md-10'>
+                                        <div className='col-6 col-md-6'>
                                             <div className='country-name font-alt'>
                                                 {selectedUniversity == 1 ? 'UK' : selectedUniversity == 2 ? 'USA' :
                                                     selectedUniversity == 3 ? 'CANADA' : 'AUSTRALIA'}<br />University list</div>
+                                        </div>
+                                        <div className='col-4 col-md-4'>
+                                            <div className='text-center'><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></div>
                                         </div>
                                     </div>
                                 </Typography>
@@ -1022,6 +1036,9 @@ const Dashboard = () => {
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
+                                            <div class="whatsapp-icon">
+                                                <a href="https://api.whatsapp.com/send?phone=919840109987" target="_blank"><img src={whatsappwhite} /></a>
+                                            </div>
                                         </ul>
                                     </div>
                                 </div>
@@ -1150,21 +1167,21 @@ const Dashboard = () => {
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
                                                                     <div className='icon'><img src={homedata?.section3?.box1_image} /></div>
-                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box1_title }}></h4>
+                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box1_title }}></h2>
                                                                     <p>{homedata?.section3?.box1_desc}</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
                                                                     <div className='icon'><img src={homedata?.section3?.box2_image} /></div>
-                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box2_title }}></h4>
+                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box2_title }}></h2>
                                                                     <p>{homedata?.section3?.box2_desc}</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
                                                                     <div className='icon'><img src={homedata?.section3?.box3_image} /></div>
-                                                                    <h4 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box3_title }}></h4>
+                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box3_title }}></h2>
                                                                     <p>{homedata?.section3?.box3_desc}</p>
                                                                 </div>
                                                             </Grid>
@@ -1329,49 +1346,89 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
+                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
                                                     {homedata?.section5?.title}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className='row'>
-                                            <div className='col-md-6 xs-order-1'>
-                                                <div className='step-container'>
-                                                    <div className='description'>
-                                                        <h4>01. {homedata?.section5?.title1}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc1 }}></p>
+                                        <div className='row d-flex justify-content-center'>
+                                            <div className='col-md-8'>
+                                                <div className='row d-flex justify-content-center'>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={statement} />
+                                                                <p>Statement of<br/>Purpose</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={letter} />
+                                                                <p>Letter of<br/>Recommendation</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={student} />
+                                                                <p>student visa</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={admission} />
+                                                                <p>admission essayS</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={studentcv} />
+                                                                <p>student cV</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={englishtest} />
+                                                                <p>English test</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {/* <div className='col-md-6 xs-order-3'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>03. {homedata?.section5?.title3}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-6 xs-order-2'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>02. {homedata?.section5?.title2}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-6 xs-order-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>04. {homedata?.section5?.title4}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
-                                            <div className='col-md-6 xs-order-3'>
-                                                <div className='step-container'>
-                                                    <div className='description'>
-                                                        <h4>03. {homedata?.section5?.title3}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 xs-order-2'>
-                                                <div className='step-container'>
-                                                    <div className='description'>
-                                                        <h4>02. {homedata?.section5?.title2}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='col-md-6 xs-order-4'>
-                                                <div className='step-container'>
-                                                    <div className='description'>
-                                                        <h4>04. {homedata?.section5?.title4}</h4>
-                                                        <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className='mt-40 mb-0 mt-xs-20 text-center'>
-                                            <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                         </div>
                                     </div>
                                 </section>
@@ -1384,51 +1441,118 @@ const Dashboard = () => {
                                             <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
-                                            <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
-                                                <ul className="clearlist">
-                                                    <li><a href="/">Home</a></li>
-                                                    <li><a href="/about">About</a></li>
-                                                    <li><a href="/faq">FAQ</a></li>
-                                                    <li><a href="/contact">Contact</a></li>
-                                                    <li><a href="/term-condition">Terms & conditions</a></li>
-                                                    <li><a href="/policy">Privacy Policy</a></li>
-                                                    <li><a href="#">Cookie Policy</a></li>
-                                                </ul>
-                                            </div>
-                                            <div className='footer-widget'>
-                                                <div className='title m-center'>{headandfooterdata?.address_title}</div>
-                                            </div>
-                                            <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                <div className='col-md-4 m-center mb-xs-20'>
-                                                    <div className='footer-widget '>
-                                                        {headandfooterdata?.address}
-                                                        {/* <button className='map-link' onClick=''>Get Directions</button> */}
-                                                    </div>
+                                            <div className='dblock'>
+                                                <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
+                                                    <ul className="clearlist">
+                                                        <li><a href="/">Home</a></li>
+                                                        <li><a href="/about">About</a></li>
+                                                        <li><a href="/faq">FAQ</a></li>
+                                                        <li><a href="/contact">Contact</a></li>
+                                                        <li><a href="/term-condition">Terms & conditions</a></li>
+                                                        <li><a href="/policy">Privacy Policy</a></li>
+                                                        <li><a href="#">Cookie Policy</a></li>
+                                                    </ul>
                                                 </div>
-                                                <div className='col-md-4 m-center mb-xs-20'>
-                                                    <div className='footer-widget'>
-                                                        {headandfooterdata?.country}
 
-                                                        {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                <div className='footer-widget'>
+                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
+                                                </div>
+                                                <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                        <div className='footer-widget '>
+                                                            {headandfooterdata?.address}
+                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            {headandfooterdata?.country}
+
+                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            <div className="social-icons mb-10">
+                                                                <ul>
+                                                                    <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                    <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                    <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            @PICSConsultants
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div className='col-md-4 m-center mb-xs-20'>
-                                                    <div className='footer-widget'>
-                                                        <div className="social-icons mb-10">
-                                                            <ul>
-                                                                <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
-                                                                <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
-                                                                <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+
+                                                <div className='m-center'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
+                                                </div>
+                                            </div>
+
+                                            <div className='mblock'>
+                                                <div className='footer-widget xs-order-1'>
+                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
+                                                </div>
+
+                                                <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
+                                                        <div className='footer-widget '>
+                                                            <h4>UNITED KINGDOM</h4>
+                                                            {headandfooterdata?.address}
+                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            <h4>India</h4>
+                                                            {headandfooterdata?.country}
+
+                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className='row pt-0 pb-10 pt-xs-0 pb-xs-0'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            <div className="social-icons mb-10">
+                                                                <ul>
+                                                                    <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                    <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                    <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            @PICSConsultants
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className='m-center'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
+                                                </div>
+
+                                                <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
+                                                    <div className='row'>
+                                                        <div className='col-6 col-md-6'>
+                                                            <ul className="clearlist">
+                                                                <li><a href="/">Home</a></li>
+                                                                <li><a href="/about">About</a></li>
+                                                                <li><a href="/faq">FAQ</a></li>
+                                                                <li><a href="/contact">Contact</a></li>
                                                             </ul>
                                                         </div>
-                                                        @PICSConsultants
+                                                        <div className='col-6 col-md-6'>
+                                                            <ul className="clearlist">
+                                                                <li><a href="/term-condition">Terms & conditions</a></li>
+                                                                <li><a href="/policy">Privacy Policy</a></li>
+                                                                <li><a href="#">Cookie Policy</a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className='m-center'>
-                                                <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
-                                            </div>
                                             <div className="footer-copy pt-20 pb-0 m-center">
                                                 {headandfooterdata?.copyright}
                                             </div>
