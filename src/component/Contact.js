@@ -239,7 +239,7 @@ const Dashboard = () => {
                                         <div className="split-section-wrapper">
                                             <div className="text align-left">
                                                 <div className='d-flex justify-content-between align-items-center'>
-                                                    <a href="" className='go-back'>
+                                                    <a href="/" className='go-back'>
                                                         <svg className='me-2' xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
                                                             <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
                                                                 <path id="Path_11813" data-name="Path 11813" d="M6159.906,809.385l-6.065,6.066,6.065,6.066" transform="translate(-6153.839 -809.385)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -247,10 +247,8 @@ const Dashboard = () => {
                                                             </g>
                                                         </svg>
                                                         <span>Back</span>
-
                                                     </a>
-
-                                                    <a href="" className='go-back'>
+                                                    <a href="/" className='go-back'>
                                                         <span>Close</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="15.505" height="15.505" viewBox="0 0 15.505 15.505">
                                                                 <path id="Union_1" data-name="Union 1" d="M-5744.248,37.752-5751,44.5l6.752-6.753L-5751,31l6.752,6.753L-5737.5,31l-6.752,6.753,6.752,6.753Z" transform="translate(5752 -29.999)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
