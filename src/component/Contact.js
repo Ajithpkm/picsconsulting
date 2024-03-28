@@ -238,6 +238,25 @@ const Dashboard = () => {
                                     <div className="split-section-content">
                                         <div className="split-section-wrapper">
                                             <div className="text align-left">
+                                                <div className='d-flex justify-content-between align-items-center'>
+                                                    <a href="" className='go-back'>
+                                                        <svg className='me-2' xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
+                                                            <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
+                                                                <path id="Path_11813" data-name="Path 11813" d="M6159.906,809.385l-6.065,6.066,6.065,6.066" transform="translate(-6153.839 -809.385)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                                <path id="Path_11814" data-name="Path 11814" d="M6106.431,839.186h28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-width="2" />
+                                                            </g>
+                                                        </svg>
+                                                        <span>Back</span>
+
+                                                    </a>
+
+                                                    <a href="" className='go-back'>
+                                                        <span>Close</span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="15.505" height="15.505" viewBox="0 0 15.505 15.505">
+                                                                <path id="Union_1" data-name="Union 1" d="M-5744.248,37.752-5751,44.5l6.752-6.753L-5751,31l6.752,6.753L-5737.5,31l-6.752,6.753,6.752,6.753Z" transform="translate(5752 -29.999)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                                 <div className='hs-line-7'>SET UP A FREE CONSULTATION</div>
                                                 <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
                                                     We’d love to speak to you!
@@ -299,7 +318,7 @@ const Dashboard = () => {
                                                             onChange={emailHandleChange}
                                                         />
                                                     </div> */}
-                                                    <div className='col-md-3 mt-20'>
+                                                    <div className='col-md-3 mt-20 pr-0'>
                                                         <ReactFlagsSelect
                                                             placeholder='Code*'
                                                             className='countryflag'
@@ -314,7 +333,7 @@ const Dashboard = () => {
                                                         />
                                                         {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                     </div>
-                                                    <div className='col-md-5 mt-t4'>
+                                                    <div className='col-md-5 pl-0 mt-t4'>
                                                         <TextField
                                                             fullWidth
                                                             error={phoneNumberError}

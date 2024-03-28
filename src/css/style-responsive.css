@@ -362,7 +362,7 @@ Project: DT Skill
         padding-bottom: 33px;
     }
     .inner-nav ul {
-        font-size: 13px;
+        font-size: 12px;
     }
     .pics-service {
         min-height: auto;
@@ -484,14 +484,17 @@ Project: DT Skill
     }
     .inner-nav ul li {
         padding: 0;
-        margin-left: 15px;
+        margin-left: 12px;
     }
     .inner-nav ul li .btn-mod.btn-medium {
         padding: 3px 12px;
         font-size: 12px;
     }
     .whatsapp-icon {
-        margin-left: 8px;
+        margin-left: 0px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
     }
     .loader { 
         left: 45%;

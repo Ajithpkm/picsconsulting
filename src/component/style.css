@@ -988,15 +988,16 @@ a.btn-mod:focus{
     padding: 10px 20px;
     border-radius: 10px;
     position: relative;
+    min-width: 200px
 }
 .pics-abbr .desc-btn::after {
     background-color: #E4E4E4;
     padding: 6px 15px;
     z-index: -1;
-    width: 150px;
+    width: 170px;
     position: absolute;
     content: "";
-    right: -50px;
+    right: -115px;
     top: 0;
     height: 41px;
     border-top-right-radius: 10px;
@@ -1004,11 +1005,14 @@ a.btn-mod:focus{
 }
 .desc-info {
     position: absolute;
-    right: -35px;
-    top: 8px;
+    right: -100px;
+    top: 8px;    
+    font-size: 12px;
+    color: #5d5d5d;
 }
 .desc-info img {
     max-width: 25px;
+    margin-right: 5px;
 }
 /* Logo (in navigation panel)*/
 
@@ -3281,7 +3285,12 @@ section:hover .small-item-carousel .owl-next{
 /* ==============================
    Morphext
    ============================== */
-
+.pr-0 {
+    padding-right: 0 !important;
+}
+.pl-0 {
+    padding-left: 0 !important;
+}
 .morphext > .animated {
     display: inline-block;
     -webkit-animation-duration: 1s;
@@ -3315,7 +3324,7 @@ section:hover .small-item-carousel .owl-next{
 .footer-widget .title {
     font-size: 17px;
     font-weight: 700;
-    color: #182E46;
+    color: #B9943C;
     text-transform: uppercase;
 }
 .footer-widget .map-link {
@@ -3323,6 +3332,13 @@ section:hover .small-item-carousel .owl-next{
     border: none;
     background-color: transparent;
     padding: 0;
+}
+.footer-widget h5 {
+    font-size: 14px;
+    color: #182E46;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
 }
 .buttonlink {
     border: none;
@@ -4366,7 +4382,11 @@ input:-webkit-autofill:active {
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    font-size: 14px;
     margin-bottom: 15px;
+}
+.go-back span {
+    padding: 0 5px;
 }
 .contact-section .MuiInputLabel-root {
     font-family: "Lato", sans-serif;
@@ -4530,12 +4550,14 @@ input:-webkit-autofill:active {
 }
 .countryflag button {
     border: 1px solid #8F8F8F !important;
-    height: 47px;
+    border-right: none !important;
+    height: 46px;
     border-radius: 0px;
     font-family: "Lato", sans-serif;
     padding: 5px 20px;
     font-size: 14px;
     position: relative;
+    background: rgba(0,0,0,.05);
 }
 .countryflag ul::-webkit-scrollbar {
   width: 12px;
@@ -4557,10 +4579,12 @@ input:-webkit-autofill:active {
     margin: 2px 0;
 }
 .countryflag button span span {
-    padding-left: 4px;
+    padding-right: 8px;
 }
 .countryflag ul {
     overflow-x: hidden;
+    min-width: 200px;
+    margin-top: 0;
 }
 .countryflag ul input {
     border: none !important;

@@ -276,12 +276,12 @@ const Dashboard = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            <li className="active xs-hide"><a href="/">Home</a></li>
+                                            <li className="active"><a href="/">Home</a></li>
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
                                             <div class="whatsapp-icon">
-                                                <a href="https://api.whatsapp.com/send?phone=919840109987" target="_blank"><img src={whatsappwhite} /></a>
+                                                <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
                                             </div>
                                         </ul>
                                     </div>
@@ -358,8 +358,8 @@ const Dashboard = () => {
                                                                 <div className='desc-btn'>
                                                                     {homedata?.section2?.list1}
                                                                     <div className='desc-info'>
-                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
-                                                                            <img src={infoicon} />
+                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultant will contact you soon">
+                                                                            <img src={infoicon} /> Read more
                                                                         </Tooltip>
                                                                     </div>
                                                                 </div>
@@ -372,8 +372,8 @@ const Dashboard = () => {
                                                                 <div className='desc-btn'>
                                                                     {homedata?.section2?.list2}
                                                                     <div className='desc-info'>
-                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
-                                                                            <img src={infoicon} />
+                                                                        <Tooltip text="Your PICS consultant will identify and understand your requirements like  degree, country, financials & more">
+                                                                            <img src={infoicon} /> Read more
                                                                         </Tooltip>
                                                                     </div>
                                                                 </div>
@@ -385,8 +385,8 @@ const Dashboard = () => {
                                                                 <div className='desc-btn'>
                                                                     {homedata?.section2?.list3}
                                                                     <div className='desc-info'>
-                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
-                                                                            <img src={infoicon} />
+                                                                        <Tooltip text="Your PICS consultants will match your requirements and will provide a list of university for you to choose and make a life time decision">
+                                                                            <img src={infoicon} /> Read more
                                                                         </Tooltip>
                                                                     </div>
                                                                 </div>
@@ -398,8 +398,8 @@ const Dashboard = () => {
                                                                 <div className='desc-btn'>
                                                                     {homedata?.section2?.list4}
                                                                     <div className='desc-info'>
-                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultaant willl contact you soon">
-                                                                            <img src={infoicon} />
+                                                                        <Tooltip text="Submit the application for an university offer">
+                                                                            <img src={infoicon} /> Read more
                                                                         </Tooltip>
                                                                     </div>
                                                                 </div>
@@ -728,19 +728,25 @@ const Dashboard = () => {
                                                     </ul>
                                                 </div>
 
-                                                <div className='footer-widget'>
+                                                <div className='footer-widget mb-3'>
                                                     <div className='title m-center'>{headandfooterdata?.address_title}</div>
                                                 </div>
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
                                                     <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
-                                                            {headandfooterdata?.address}
+                                                            <h5>United Kingdom (Headquarters)</h5>
+                                                            {/* {headandfooterdata?.address} */}
+                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
+                                                            <b>Call & WhatsApp</b> +44 7510 830896
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
                                                     <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
-                                                            {headandfooterdata?.country}
+                                                            <h5>India</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR<br/>Chennai 603 103, India<br/>
+                                                            <b>Call & WhatsApp</b> +91 94440 94442
+                                                            {/* {headandfooterdata?.country} */}
 
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
@@ -759,7 +765,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
 
-                                                <div className='m-center'>
+                                                <div className='m-center mt-30'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
                                             </div>
@@ -773,15 +779,16 @@ const Dashboard = () => {
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h4>UNITED KINGDOM</h4>
-                                                            {headandfooterdata?.address}
+                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
+                                                            <b>Call & WhatsApp</b><br/>+44 7510 830896
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h4>India</h4>
-                                                            {headandfooterdata?.country}
-
+                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br/>
+                                                            <b>Call & WhatsApp</b><br/>+91 94440 94442
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
