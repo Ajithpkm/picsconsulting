@@ -316,7 +316,7 @@ const Dashboard = () => {
                                                             onChange={emailHandleChange}
                                                         />
                                                     </div> */}
-                                                    <div className='col-md-3 mt-20 pr-0'>
+                                                    <div className='col-4 col-md-3 mt-20 pr-0'>
                                                         <ReactFlagsSelect
                                                             placeholder='Code*'
                                                             className='countryflag'
@@ -331,7 +331,7 @@ const Dashboard = () => {
                                                         />
                                                         {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                     </div>
-                                                    <div className='col-md-5 pl-0 mt-t4'>
+                                                    <div className='col-8 col-md-5 pl-0 mt-t4'>
                                                         <TextField
                                                             fullWidth
                                                             error={phoneNumberError}

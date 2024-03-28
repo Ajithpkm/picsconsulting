@@ -327,6 +327,9 @@ Project: DT Skill
     .nav-logo-wrap {
         margin-right: 10px;
     }
+    .loader {
+        margin-left: 20px;
+      }
     .dblock {
         display: none;
     }
@@ -418,7 +421,7 @@ Project: DT Skill
         height: 75px;
     }
     .split-section-wrapper {
-        padding: 25px 25px 95px 25px;
+        padding: 0px 25px 95px 25px;
     }
     .contact-section .datepicker {
         padding-right: 10px;
@@ -487,14 +490,11 @@ Project: DT Skill
         margin-left: 12px;
     }
     .inner-nav ul li .btn-mod.btn-medium {
-        padding: 3px 12px;
+        padding: 3px 8px;
         font-size: 12px;
     }
     .whatsapp-icon {
-        margin-left: 0px;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
+        margin-left: 8px;
     }
     .loader { 
         left: 45%;
@@ -754,6 +754,10 @@ Project: DT Skill
     }
     .pics-tabs, .pics-tabs .MuiTabs-flexContainer {
         display: inline-block !important;
+        text-align: center;
+    }
+    .tooltip {
+        right: -20px;
     }
     .pics-tabs .MuiTabs-scroller {
         display: inline-block !important;

@@ -407,8 +407,8 @@ const Dashboard = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className='mt-40 mb-0'>
-                                                        <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                    <div className='m-center mt-40 mb-0'>
+                                                        <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -462,7 +462,7 @@ const Dashboard = () => {
                                                         </Grid>
                                                     </Box>
                                                     <div className='mt-40 mb-20 text-center'>
-                                                        <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                                        <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -531,7 +531,7 @@ const Dashboard = () => {
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(1)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </TabPanel>
                                         <TabPanel value={value} index={1}>
@@ -608,7 +608,7 @@ const Dashboard = () => {
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(4)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
                                             </div>
                                         </TabPanel>
                                     </div>
