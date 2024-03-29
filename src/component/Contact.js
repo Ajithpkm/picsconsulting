@@ -49,8 +49,8 @@ const Dashboard = () => {
         // setLastName(location?.state?.lastName);
         setEmail(location?.state?.email);
         setPhoneNumber(location?.state?.phoneNumber);
-        setPhonecode(location?.state?.phonecode);
-        setDialCode(location?.state?.dialCode);
+        setPhonecode(location?.state?.phonecode ? location?.state?.phonecode : "IN" );
+        setDialCode(location?.state?.dialCode ? location?.state?.dialCode : "+91");
         setStudyDestination(location?.state?.studyDestination);
         setChecked(location?.state?.checked);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
