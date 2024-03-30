@@ -220,7 +220,6 @@ const Step2 = () => {
                 // fromDate: location?.state?.fromDate,
                 // time: location?.state?.time,
                 phonecode: location?.state?.phonecode,
-                dialCode: location?.state?.dialCode,
                 checked: location?.state?.checked
             }
         });
@@ -301,7 +300,7 @@ const Step2 = () => {
             last_name: location?.state?.firstName,
             email: location?.state?.email,
             phone_number: location?.state?.phoneNumber,
-            phone_code: location?.state?.dialCode,
+            phone_code: location?.state?.phonecode,
             destination: location?.state?.studyDestination,
             preferred_date: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
             preferred_time: new Date(time)?.toLocaleTimeString(),

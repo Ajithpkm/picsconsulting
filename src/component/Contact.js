@@ -15,8 +15,10 @@ import '../css/verticals.min.css';
 import { getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
-import ReactFlagsSelect from "react-flags-select";
 import countriesCode from './PhoneCode.json';
+
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 let countries = countriesCode?.map(x => x?.code);
 let customLabels = {}
@@ -41,16 +43,14 @@ const Dashboard = () => {
     let [fromDate, setFromDate] = React.useState(null);
     let [time, setTime] = React.useState('');
     let [checked, setChecked] = React.useState(false);
-    let [dialCode, setDialCode] = React.useState('');
     const defaultTime = dayjs()?.set('hour', 12)?.startOf('hour');
-    
+
     useEffect(() => {
         setFirstName(location?.state?.firstName);
         // setLastName(location?.state?.lastName);
         setEmail(location?.state?.email);
         setPhoneNumber(location?.state?.phoneNumber);
-        setPhonecode(location?.state?.phonecode ? location?.state?.phonecode : "IN" );
-        setDialCode(location?.state?.dialCode ? location?.state?.dialCode : "+91");
+        setPhonecode(location?.state?.phonecode ? location?.state?.phonecode : '91');
         setStudyDestination(location?.state?.studyDestination);
         setChecked(location?.state?.checked);
         setFromDate(location?.state?.fromDate ? new Date(location?.state?.fromDate) : null);
@@ -90,7 +90,6 @@ const Dashboard = () => {
         // else if (event.target.name === 'lastName') setLastName(event.target.value);
         else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
         else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
-        else if (event.target.name === 'phonecode') setPhonecode(event.target.value);
     }
 
     let [firstNameError, setfirstNameError] = React.useState(false);
@@ -175,7 +174,6 @@ const Dashboard = () => {
                 email: email,
                 phonecode: phonecode,
                 phoneNumber: phoneNumber,
-                dialCode: dialCode,
                 studyDestination: studyDestination,
                 // fromDate: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
                 // time: new Date(time)?.toLocaleTimeString(),
@@ -207,12 +205,6 @@ const Dashboard = () => {
             ]
         }
     ];
-
-    const onSelectPhoneCode = (code) => {
-        let dialCode = countriesCode?.find((x) => x?.code == code)?.dial_code;
-        setPhonecode(code);
-        setDialCode(dialCode);
-    }
 
     return (
         <>
@@ -251,7 +243,7 @@ const Dashboard = () => {
                                                     <a href="/" className='go-back'>
                                                         <span>Close</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="15.505" height="15.505" viewBox="0 0 15.505 15.505">
-                                                                <path id="Union_1" data-name="Union 1" d="M-5744.248,37.752-5751,44.5l6.752-6.753L-5751,31l6.752,6.753L-5737.5,31l-6.752,6.753,6.752,6.753Z" transform="translate(5752 -29.999)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                            <path id="Union_1" data-name="Union 1" d="M-5744.248,37.752-5751,44.5l6.752-6.753L-5751,31l6.752,6.753L-5737.5,31l-6.752,6.753,6.752,6.753Z" transform="translate(5752 -29.999)" fill="none" stroke="#8f8f8f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                                                         </svg>
                                                     </a>
                                                 </div>
@@ -317,17 +309,10 @@ const Dashboard = () => {
                                                         />
                                                     </div> */}
                                                     <div className='col-4 col-md-3 mt-20 pr-0'>
-                                                        <ReactFlagsSelect
-                                                            placeholder='Code*'
-                                                            className='countryflag'
-                                                            selected={phonecode}
-                                                            onSelect={onSelectPhoneCode}
-                                                            countries={countries}
-                                                            customLabels={customLabels}
-                                                            searchable
-                                                            searchPlaceholder='Search'
-                                                            // showOptionLabel={false}
-                                                            showSelectedLabel={false}
+                                                        <PhoneInput
+                                                            country={'us'}
+                                                            value={phonecode}
+                                                            onChange={phone => setPhonecode(phone)}
                                                         />
                                                         {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                     </div>
