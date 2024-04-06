@@ -203,10 +203,10 @@ const Dashboard = () => {
         }
     ];
 
-    let universityLogo1 = (universitydata?.[0]?.university?.slice(0, 5));
-    let universityLogo2 = (universitydata?.[1]?.university?.slice(0, 5));
-    let universityLogo3 = (universitydata?.[2]?.university?.slice(0, 5));
-    let universityLogo4 = [...universityLogo1, ...universityLogo2, ...universityLogo3];
+    let universityLogo1 = universitydata && (universitydata?.[0]?.university?.slice(0, 5));
+    let universityLogo2 = universitydata && (universitydata?.[1]?.university?.slice(0, 5));
+    let universityLogo3 = universitydata && (universitydata?.[2]?.university?.slice(0, 5));
+    let universityLogo4 = universitydata && [...universityLogo1, ...universityLogo2, ...universityLogo3];
 
     return (
         <>
