@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import countriesCode from './PhoneCode.json';
 
-import PhoneInput from 'react-phone-input-2'
+import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'
 
 let countries = countriesCode?.map(x => x?.code);

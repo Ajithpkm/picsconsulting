@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import WOW from 'wowjs';
-import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, TextField, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
+import { Checkbox, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, TextField, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
 import Logo from '../images/logo.png';
 import homebg from '../images/home-bg.jpg';
 import footer_logo from '../images/footer-logo.png';
@@ -40,74 +40,124 @@ import SimpleBar from 'react-custom-scrollbars';
 import './style.css';
 import '../css/verticals.min.css';
 import { Height } from '@material-ui/icons';
-import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
+import { gethomedata, getheaderandfooterdata, getaboutusdata, getfaqcategorydata, getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
-
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-}
-
-function TabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
-    );
-}
-
-function a11yProps(index: number) {
-    return {
-        id: `vertical-tab-${index}`,
-        'aria-controls': `vertical-tabpanel-${index}`,
-    };
-}
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 
 const Dashboard = () => {
-    const [showFullDescription, setFullDescription] = React.useState(false);
-    const [showFullDescription2, setFullDescription2] = React.useState(false);
-    const [showFullDescription3, setFullDescription3] = React.useState(false);
-    const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
-    const [andreReadMore, setandreReadMore] = React.useState(false);
-    const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
-    const [contactopen, setContactOpen] = React.useState(false);
+
+    let [firstName, setFirstName] = React.useState('');
+    let [email, setEmail] = React.useState('');
+    let [phonecode, setPhonecode] = React.useState('91');
+    let [phoneNumber, setPhoneNumber] = React.useState('');
+    let [studyDestination, setStudyDestination] = React.useState('');
     const [loading, setLoading] = React.useState(false);
     const elementRef = useRef(null);
     const [arrowDisable, setArrowDisable] = React.useState(true);
-    const [selectedItem, setSelectedItem] = React.useState();
     const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
+    let [checked, setChecked] = React.useState(false);
+
+
+    let [firstNameError, setfirstNameError] = React.useState(false);
+    let [emailError, setemailError] = React.useState(false);
+    let [emailValidationError, setEmailValidationError] = React.useState(false);
+    let [phoneCodeError, setphoneCodeError] = React.useState(false);
+    let [phoneNumberError, setphoneNumberError] = React.useState(false);
+    let [studyDestinationError, setstudyDestinationError] = React.useState(false);
+    let [checkboxError, setCheckboxError] = React.useState(false);
+
+    const handleChange = (event) => {
+        if (event.target.name === 'firstName') setFirstName(event.target.value);
+        else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
+        else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
+    }
+
+
+    const submitButton = () => {
+        const isValidEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+        if (!firstName) {
+            setfirstNameError(true);
+            return null;
+        }
+        else {
+            setfirstNameError(false);
+        }
+        if (!email) {
+            setemailError(true);
+            return null;
+        }
+        else {
+            setemailError(false);
+        }
+        if (email && email?.match(isValidEmail)) {
+            setEmailValidationError(false);
+        }
+        else {
+            setEmailValidationError(true);
+            return null;
+        }
+        if (!phonecode) {
+            setphoneCodeError(true);
+            return null;
+        }
+        else {
+            setphoneCodeError(false);
+        }
+        if (!phoneNumber) {
+            setphoneNumberError(true);
+            return null;
+        }
+        else {
+            setphoneNumberError(false);
+        }
+        if (!studyDestination) {
+            setstudyDestinationError(true);
+            return null;
+        } else {
+            setstudyDestinationError(false);
+        }
+        if (!checked) {
+            setCheckboxError(true);
+            return null;
+        }
+        else {
+            setCheckboxError(false);
+        }
+        let payload = {
+            firstName: firstName,
+            email: email,
+            phonecode: phonecode,
+            phoneNumber: phoneNumber,
+            studyDestination: studyDestination,
+            checked: checked
+        }
+        console.log(payload, 'payload')
+    }
+
+    const emailHandleChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const policyHandleChange = (e) => {
+        setChecked(e.target.checked);
+    }
+
+    useEffect(() => {
+        dispatch(getuniversitydata());
+        setTimeout(() => {
+            setLoading(true);
+        }, 800);
+    }, []);
+
+
     const dispatch = useDispatch();
-    const aboutusdata = useSelector((state) => state?.Pics?.aboutusdata?.data);
     const headandfooterdata = useSelector((state) => state?.Pics?.headandfooterdata?.data);
+    const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
 
     useEffect(() => {
         dispatch(getaboutusdata());
@@ -144,6 +194,19 @@ const Dashboard = () => {
     new WOW.WOW({
         live: false
     }).init();
+
+    const articles = [
+        {
+            content: [
+                `I have read and agree to Term and Conditions`,
+            ]
+        }
+    ];
+
+    let universityLogo1 = (universitydata?.[0]?.university?.slice(0, 5));
+    let universityLogo2 = (universitydata?.[1]?.university?.slice(0, 5));
+    let universityLogo3 = (universitydata?.[2]?.university?.slice(0, 5));
+    let universityLogo4 = [...universityLogo1, ...universityLogo2, ...universityLogo3];
 
     return (
         <>
@@ -249,16 +312,95 @@ const Dashboard = () => {
                                                         <div className='col-md-5'>
                                                             <div className='contactForm'>
                                                                 <div className='row'>
-                                                                    <div className='col-md-12'>
-                                                                        <TextField
-                                                                            fullWidth
-                                                                            className='form-control'
-                                                                            id="standard-basic"
-                                                                            label="Full Name*"
-                                                                            variant="standard"
-                                                                            name='firstName'
-                                                                        />
-                                                                    </div>
+                                                                    <TextField
+                                                                        fullWidth
+                                                                        error={firstNameError}
+                                                                        helperText={firstNameError ? 'Full Name is required' : ''}
+                                                                        className='form-control'
+                                                                        id="standard-basic"
+                                                                        label="Full Name*"
+                                                                        variant="standard"
+                                                                        name='firstName'
+                                                                        value={firstName}
+                                                                        onChange={handleChange}
+                                                                    />
+                                                                </div>
+                                                                <div className='row'>
+                                                                    <TextField
+                                                                        fullWidth
+                                                                        error={emailError || emailValidationError}
+                                                                        helperText={emailError ? 'Email is required' : emailValidationError ? 'Invalid email address' : ''}
+                                                                        className='form-control'
+                                                                        id="standard-basic"
+                                                                        label="Email Address*"
+                                                                        variant="standard"
+                                                                        type="email"
+                                                                        name='email'
+                                                                        value={email}
+                                                                        onChange={emailHandleChange}
+                                                                    />
+                                                                </div>
+                                                                <div className='row'>
+                                                                    <PhoneInput
+                                                                        country={'us'}
+                                                                        value={phonecode}
+                                                                        onChange={phone => setPhonecode(phone)}
+                                                                    />
+                                                                    {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
+                                                                </div>
+                                                                <div className='row'>
+                                                                    <TextField
+                                                                        fullWidth
+                                                                        error={phoneNumberError}
+                                                                        helperText={phoneNumberError ? 'Phone Number is required' : ''}
+                                                                        className='form-control'
+                                                                        id="standard-basic"
+                                                                        label="Phone Number*"
+                                                                        variant="standard"
+                                                                        type='number'
+                                                                        name='phoneNumber'
+                                                                        value={phoneNumber}
+                                                                        onChange={handleChange}
+                                                                    />
+                                                                </div>
+                                                                <div className='row'>
+                                                                    <FormControl className='form-control mt-10'
+                                                                        id="standard-basic" variant="standard">
+                                                                        <InputLabel id="demo-simple-select-standard-label">Study Destination*</InputLabel>
+                                                                        <Select
+                                                                            labelId="demo-simple-select-standard-label"
+                                                                            id="demo-simple-select-standard"
+                                                                            name='studyDestination'
+                                                                            value={studyDestination}
+                                                                            onChange={handleChange}
+                                                                        >
+                                                                            {
+                                                                                universitydata?.length > 0 && universitydata?.map((x) => (
+                                                                                    <MenuItem value={x?.id}>{x?.name}</MenuItem>
+                                                                                ))
+                                                                            }
+                                                                        </Select>
+                                                                        {studyDestinationError && <span style={{ color: 'red', fontSize: '12px' }}>Study Destination is required</span>}
+                                                                    </FormControl>
+                                                                </div>
+                                                                <div className='row'>
+                                                                    <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
+                                                                        label={
+                                                                            articles[0].content.map(paragraph =>
+                                                                                (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
+                                                                            )
+                                                                        } />
+                                                                    <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
+                                                                </div>
+                                                                <div className='col-md-12'>
+                                                                    <a onClick={submitButton} className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>BOOK YOUR FREE CONSULTATION </span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
+                                                                            <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
+                                                                                <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                                                                <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2" />
+                                                                            </g>
+                                                                        </svg>
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -361,7 +503,7 @@ const Dashboard = () => {
                                                         <div className='additional-services'>
                                                             <div className='description'>
                                                                 <img src={statement} />
-                                                                <p>Statement of<br/>Purpose</p>
+                                                                <p>Statement of<br />Purpose</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -369,7 +511,7 @@ const Dashboard = () => {
                                                         <div className='additional-services'>
                                                             <div className='description'>
                                                                 <img src={letter} />
-                                                                <p>Letter of<br/>Recommendation</p>
+                                                                <p>Letter of<br />Recommendation</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -413,7 +555,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section'>
+                                <section className='small-section pt-0 pb-30 pb-xs-0'>
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
@@ -433,19 +575,22 @@ const Dashboard = () => {
                                                     >
                                                         <ArrowBackIcon className='color' />
                                                     </Button>
-                                                    <div className="img-container">
+                                                    <div className="img-container" ref={elementRef}>
                                                         <div className='d-flex md-block2'>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
-                                                            <div className='univ_logo'><img src={university_icon_01} /></div>
+                                                            {universityLogo4?.length > 0 &&
+                                                                <>
+                                                                    {
+                                                                        (universityLogo4)?.map((x) => (
+                                                                            <Grid item className="univ-box">
+                                                                                <div className='icon'><img src={x?.image} /></div>
+                                                                                <h4>{x?.name}</h4>
+                                                                            </Grid>
+                                                                        ))
+                                                                    }
+                                                                </>
+                                                            }
                                                         </div>
                                                     </div>
-                                                    
                                                     <Button
                                                         onClick={() => {
                                                             handleHorizantalScroll(elementRef.current, 25, 100, 10);
@@ -473,14 +618,14 @@ const Dashboard = () => {
                                                     <div className='col-md-4 text-center m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h5>United Kingdom (Headquarters)</h5>
-                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
+                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
                                                             <b>Call & WhatsApp</b> +44 7510 830896
                                                         </div>
                                                     </div>
                                                     <div className='col-md-4 text-center m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h5>India</h5>
-                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR<br/>Chennai 603 103, India<br/>
+                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR<br />Chennai 603 103, India<br />
                                                             <b>Call & WhatsApp</b> +91 94440 94442
                                                         </div>
                                                     </div>
