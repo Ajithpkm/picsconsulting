@@ -268,8 +268,31 @@ img:not([draggable]), embed, object, video{
       transform: rotate(360deg);
     }
   } 
-
-
+  .react-tel-input .form-control {
+    width: 100% !important;
+    height: 46px !important;
+    outline: none;
+    border-radius: 0 !important;
+    border-right: none !important;
+    background: #f5f5f5 !important;
+    border-left: none !important;
+    padding-left: 60px !important;
+  }
+  .react-tel-input .flag-dropdown {
+    border: 1px solid #8F8F8F !important;
+    border-right:  none !important;
+  }
+  .react-tel-input .selected-flag {
+    outline: none;
+    position: relative;
+    width: 55px !important;
+    height: 100%;
+    padding: 0 0 0 15px !important;
+    border-radius: 0px !important;
+}
+.react-tel-input .selected-flag .arrow {
+    left: 30px !important;
+}
 /* ==============================
    Typography
    ============================== */
@@ -461,6 +484,11 @@ a.btn-mod:focus{
     height: auto;
     padding: 10px 22px;
     font-size: 15px;
+} 
+.btn-mod.btn-large-lg{
+    height: auto;
+    padding: 6px 45px;
+    font-size: 14px;
 } 
 .btn-mod.inline-flex {
     display: inline-flex;
@@ -770,6 +798,9 @@ a.btn-mod:focus{
 .js-height-parent-text {
     height: 450px;
 }
+.js-height-parent-book {
+    height: 650px;
+}
 .hs-wrap-1{
     max-width: 350px;
     margin: 0 auto;
@@ -1076,9 +1107,23 @@ a.logo:hover{
     transition: height 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
 }
 
-
+.menu-bg {
+    background-color: #182E46 !important;
+    height: 90px !important;
+}
+.menu-bg .inner-nav {
+    margin-top: 25px;
+}
+.menu-bg .nav-logo-wrap .logo {
+    height: 75px !important;
+}
 .small-height{
     height: 55px !important;
+}
+.menu-item {
+    color: #fff;
+    padding-right: 15px;
+    font-size: 13px;
 }
 .small-height .inner-nav ul li a{
     height: 55px !important;
@@ -1824,6 +1869,7 @@ a.logo:hover{
     background-repeat: repeat;
     background-size: auto;
 }
+.bg-footer {background-color: #ECECEC;}
 .bg-orange{ background-color: #f47631 !important; }
 .bg-yellow{  background-color: #ffce02 !important; }
 .bg-cyan{ background-color: #27c5c3 !important; }
@@ -1979,7 +2025,7 @@ a.logo:hover{
     min-height: 760px;
 }
 .fixed-height-small{
-    min-height: 450px;
+    min-height: 650px;
 }
 .leftContent {
     position: absolute;
@@ -4602,4 +4648,109 @@ input:-webkit-autofill:active {
 }
 .mt-t4 {
     margin-top: 4px;
+}
+.home-banner {
+    text-align: center;
+    margin: 0 15px;
+    h3 {
+        font-size: 13px;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+}
+.headerlist {
+    display: flex;
+    align-items: center;
+    h4 {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: #fff;
+    }
+}
+.why-choose {
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #8F8F8F;
+    padding: 20px;
+    text-align: center;
+    min-height: 250px;
+    h4 {
+        color: #B9943C;
+        font-size: 18px;
+        margin-top: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+    p {
+        font-size: 16px;
+        color: #313131;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+}
+.additional-services {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    min-height: 155px;
+    margin-bottom: 0px;
+    p {
+        font-size: 13px;
+        color: #8F8F8F;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+}
+.additional-services .description {
+    color: #313131;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding-left: 0px;
+    img {
+        max-width: 60px;
+    }
+}
+.additional-services .description p {
+    margin-bottom: 0;
+}
+.additional-services .count {
+    color: #182E46;
+    font-size: 65px;
+    font-weight: 700;
+    padding-right: 30px;
+}
+.additional-services h4 {
+    color: #B9943C;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+}
+.univ_logo {
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 10px !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.contactForm {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

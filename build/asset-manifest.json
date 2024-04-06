@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1aef1b20.chunk.css",
-    "main.js": "/static/js/main.7bc40bcd.chunk.js",
-    "main.js.map": "/static/js/main.7bc40bcd.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.18785c24.js",
-    "runtime-main.js.map": "/static/js/runtime-main.18785c24.js.map",
-    "static/css/2.622f0484.chunk.css": "/static/css/2.622f0484.chunk.css",
-    "static/js/2.441467f1.chunk.js": "/static/js/2.441467f1.chunk.js",
-    "static/js/2.441467f1.chunk.js.map": "/static/js/2.441467f1.chunk.js.map",
-    "static/js/3.45c936af.chunk.js": "/static/js/3.45c936af.chunk.js",
-    "static/js/3.45c936af.chunk.js.map": "/static/js/3.45c936af.chunk.js.map",
+    "main.css": "/static/css/main.b383d404.chunk.css",
+    "main.js": "/static/js/main.290b439f.chunk.js",
+    "main.js.map": "/static/js/main.290b439f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83c3cf07.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83c3cf07.js.map",
+    "static/css/2.9bed00a1.chunk.css": "/static/css/2.9bed00a1.chunk.css",
+    "static/js/2.aa058112.chunk.js": "/static/js/2.aa058112.chunk.js",
+    "static/js/2.aa058112.chunk.js.map": "/static/js/2.aa058112.chunk.js.map",
+    "static/js/3.00dfe578.chunk.js": "/static/js/3.00dfe578.chunk.js",
+    "static/js/3.00dfe578.chunk.js.map": "/static/js/3.00dfe578.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.622f0484.chunk.css.map": "/static/css/2.622f0484.chunk.css.map",
-    "static/css/main.1aef1b20.chunk.css.map": "/static/css/main.1aef1b20.chunk.css.map",
-    "static/js/2.441467f1.chunk.js.LICENSE.txt": "/static/js/2.441467f1.chunk.js.LICENSE.txt",
+    "static/css/2.9bed00a1.chunk.css.map": "/static/css/2.9bed00a1.chunk.css.map",
+    "static/css/main.b383d404.chunk.css.map": "/static/css/main.b383d404.chunk.css.map",
+    "static/js/2.aa058112.chunk.js.LICENSE.txt": "/static/js/2.aa058112.chunk.js.LICENSE.txt",
     "static/media/about-bg.70233ade.jpg": "/static/media/about-bg.70233ade.jpg",
     "static/media/andre.3fb86310.jpg": "/static/media/andre.3fb86310.jpg",
     "static/media/application-service-bg.1eaacd9b.jpg": "/static/media/application-service-bg.1eaacd9b.jpg",
@@ -43,10 +43,10 @@
     "static/media/university-offer.f72b8bb5.svg": "/static/media/university-offer.f72b8bb5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.18785c24.js",
-    "static/css/2.622f0484.chunk.css",
-    "static/js/2.441467f1.chunk.js",
-    "static/css/main.1aef1b20.chunk.css",
-    "static/js/main.7bc40bcd.chunk.js"
+    "static/js/runtime-main.83c3cf07.js",
+    "static/css/2.9bed00a1.chunk.css",
+    "static/js/2.aa058112.chunk.js",
+    "static/css/main.b383d404.chunk.css",
+    "static/js/main.290b439f.chunk.js"
   ]
 }
