@@ -243,75 +243,75 @@ const Dashboard = () => {
                                 </div>
                             </nav>
                             <main id="main">
-                                <div className="home-section">
-                                    <section className="home-section bg-scroll fixed-height-small" style={{
-                                        backgroundImage: `url(${homebg})`
-                                    }}>
-                                        <div className="js-height-parent-book container-1400">
-                                            <div className="home-content">
-                                                <div className="home-text">
-                                                    <div className="row d-flex align-items-center justify-content-between">
-                                                        <div className="col-md-6">
-                                                            <div className="hs-line-1 text-left no-transp font-alt mt-30 mb-20 mb-xs-10">
-                                                                Study abroad with PICS
+                                <section className="home-section bg-scroll fixed-height-small overflowz99" style={{
+                                    backgroundImage: `url(${homebg})`
+                                }}>
+                                    <div className="js-height-parent-book container-1400">
+                                        <div className="home-content">
+                                            <div className="home-text">
+                                                <div className="row d-flex align-items-center justify-content-between pt-xs-80">
+                                                    <div className="col-md-6">
+                                                        <div className="hs-line-1 text-left m-center no-transp font-alt mt-30 mb-20 mb-xs-10">
+                                                            Study abroad with PICS
+                                                        </div>
+                                                        <div className='m-center d-flex mt-20 mb-10 m-justifyy-center'>
+                                                            <div className='home-banner'>
+                                                                <div><img src={university_01} /></div>
+                                                                <h3>UK</h3>
                                                             </div>
-                                                            <div className='d-flex mt-20 mb-10'>
-                                                                <div className='home-banner'>
-                                                                    <div><img src={university_01} /></div>
-                                                                    <h3>UK</h3>
-                                                                </div>
-                                                                <div className='home-banner'>
-                                                                    <div><img src={university_02} /></div>
-                                                                    <h3>US</h3>
-                                                                </div>
-                                                                <div className='home-banner'>
-                                                                    <div><img src={university_03} /></div>
-                                                                    <h3>Canada</h3>
-                                                                </div>
-                                                                <div className='home-banner'>
-                                                                    <div><img src={university_04} /></div>
-                                                                    <h3>Australia</h3>
+                                                            <div className='home-banner'>
+                                                                <div><img src={university_02} /></div>
+                                                                <h3>US</h3>
+                                                            </div>
+                                                            <div className='home-banner'>
+                                                                <div><img src={university_03} /></div>
+                                                                <h3>Canada</h3>
+                                                            </div>
+                                                            <div className='home-banner'>
+                                                                <div><img src={university_04} /></div>
+                                                                <h3>Australia</h3>
+                                                            </div>
+                                                        </div>
+                                                        <div className='m-center banner-desc white mb-20'>
+                                                            UG, PG, PHD, FOUNDATION<br />
+                                                            ENGINEERING, MANAGEMENT, MEDICINE,<br />
+                                                            LAW, ARTS & SCIENCE & ENGLISH PROGRAMS
+                                                        </div>
+
+                                                        <div className='row mt-30 mb-xs-20'>
+                                                            <div className='col-6 col-md-6'>
+                                                                <div className='headerlist mb-30'>
+                                                                    <div className='me-3'><img src={admission} /></div>
+                                                                    <h4>University Admissions</h4>
                                                                 </div>
                                                             </div>
-                                                            <div className='banner-desc white mb-20'>
-                                                                UG, PG, PHD, FOUNDATION<br />
-                                                                ENGINEERING, MANAGEMENT, MEDICINE,<br />
-                                                                LAW, ARTS & SCIENCE & ENGLISH PROGRAMS
+
+                                                            <div className='col-6 col-md-6'>
+                                                                <div className='headerlist mb-30'>
+                                                                    <div className='me-3'><img src={application} /></div>
+                                                                    <h4>Application Service</h4>
+                                                                </div>
                                                             </div>
 
-                                                            <div className='row mt-30'>
-                                                                <div className='col-md-6'>
-                                                                    <div className='headerlist mb-30'>
-                                                                        <div className='me-3'><img src={admission} /></div>
-                                                                        <h4>University Admissions</h4>
-                                                                    </div>
+                                                            <div className='col-6 col-md-6'>
+                                                                <div className='headerlist'>
+                                                                    <div className='me-3'><img src={ielts} /></div>
+                                                                    <h4>IELTS Prep</h4>
                                                                 </div>
+                                                            </div>
 
-                                                                <div className='col-md-6'>
-                                                                    <div className='headerlist mb-30'>
-                                                                        <div className='me-3'><img src={application} /></div>
-                                                                        <h4>Application Service</h4>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className='col-md-6'>
-                                                                    <div className='headerlist'>
-                                                                        <div className='me-3'><img src={ielts} /></div>
-                                                                        <h4>IELTS Prep</h4>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div className='col-md-6'>
-                                                                    <div className='headerlist'>
-                                                                        <div className='me-3'><img src={scholarships} /></div>
-                                                                        <h4>Scholarships</h4>
-                                                                    </div>
+                                                            <div className='col-6 col-md-6'>
+                                                                <div className='headerlist'>
+                                                                    <div className='me-3'><img src={scholarships} /></div>
+                                                                    <h4>Scholarships</h4>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='col-md-5'>
-                                                            <div className='contactForm'>
-                                                                <div className='row'>
+                                                    </div>
+                                                    <div className='col-md-5'>
+                                                        <div className='contactForm'>
+                                                            <div className='row'>
+                                                                <div className='col-md-12'>
                                                                     <TextField
                                                                         fullWidth
                                                                         error={firstNameError}
@@ -325,7 +325,7 @@ const Dashboard = () => {
                                                                         onChange={handleChange}
                                                                     />
                                                                 </div>
-                                                                <div className='row'>
+                                                                <div className='col-md-12'>
                                                                     <TextField
                                                                         fullWidth
                                                                         error={emailError || emailValidationError}
@@ -340,7 +340,7 @@ const Dashboard = () => {
                                                                         onChange={emailHandleChange}
                                                                     />
                                                                 </div>
-                                                                <div className='row'>
+                                                                <div className='col-4 col-md-4 pr-0'>
                                                                     <PhoneInput
                                                                         country={'us'}
                                                                         value={phonecode}
@@ -348,7 +348,7 @@ const Dashboard = () => {
                                                                     />
                                                                     {phoneCodeError && <span style={{ color: 'red', fontSize: '10px' }}>Country is required</span>}
                                                                 </div>
-                                                                <div className='row'>
+                                                                <div className='col-8 col-md-8 pl-0'>
                                                                     <TextField
                                                                         fullWidth
                                                                         error={phoneNumberError}
@@ -363,7 +363,7 @@ const Dashboard = () => {
                                                                         onChange={handleChange}
                                                                     />
                                                                 </div>
-                                                                <div className='row'>
+                                                                <div className='col-md-12 mb-30 selectBox'>
                                                                     <FormControl className='form-control mt-10'
                                                                         id="standard-basic" variant="standard">
                                                                         <InputLabel id="demo-simple-select-standard-label">Study Destination*</InputLabel>
@@ -383,23 +383,19 @@ const Dashboard = () => {
                                                                         {studyDestinationError && <span style={{ color: 'red', fontSize: '12px' }}>Study Destination is required</span>}
                                                                     </FormControl>
                                                                 </div>
-                                                                <div className='row'>
-                                                                    <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
-                                                                        label={
-                                                                            articles[0].content.map(paragraph =>
-                                                                                (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
-                                                                            )
-                                                                        } />
-                                                                    <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
+                                                                <div className='col-md-12'>
+                                                                    <div className='terms-label mt-0 mb-10'>
+                                                                        <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
+                                                                            label={
+                                                                                articles[0].content.map(paragraph =>
+                                                                                    (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
+                                                                                )
+                                                                            } />
+                                                                        <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
+                                                                    </div>
                                                                 </div>
                                                                 <div className='col-md-12'>
-                                                                    <a onClick={submitButton} className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>BOOK YOUR FREE CONSULTATION </span>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
-                                                                            <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
-                                                                                <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                                                                                <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="2" />
-                                                                            </g>
-                                                                        </svg>
+                                                                    <a onClick={submitButton} className='btn btn-mod btn-color btn-round btn-large  w-100'><span>BOOK YOUR FREE CONSULTATION </span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -408,10 +404,10 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </section>
-                                </div>
+                                    </div>
+                                </section>
 
-                                <section className='small-section bg-scroll bg-pos-center' style={{
+                                <section className='small-section bg-scroll bg-pos-center m-push-xs-top' style={{
                                     backgroundImage: `url(${whychoose})`
                                 }}>
                                     <div className='container relative'>
@@ -555,8 +551,8 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section pt-0 pb-30 pb-xs-0'>
-                                    <div className='container relative'>
+                                <section className='small-section'>
+                                    <div className='container-1400 relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
                                                 <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
@@ -566,7 +562,7 @@ const Dashboard = () => {
                                         </div>
                                         <div className='row d-flex justify-content-center'>
                                             <div className='col-md-12'>
-                                                <div className='d-flex md-block faq-categories'>
+                                                <div className='d-flex md-block faq-categories booknow-section'>
                                                     <Button
                                                         onClick={() => {
                                                             handleHorizantalScroll(elementRef.current, 25, 100, -10);
@@ -581,9 +577,8 @@ const Dashboard = () => {
                                                                 <>
                                                                     {
                                                                         (universityLogo4)?.map((x) => (
-                                                                            <Grid item className="univ-box">
+                                                                            <Grid item className="univ_logo">
                                                                                 <div className='icon'><img src={x?.image} /></div>
-                                                                                <h4>{x?.name}</h4>
                                                                             </Grid>
                                                                         ))
                                                                     }
@@ -609,9 +604,9 @@ const Dashboard = () => {
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-md-12">
-                                            <div className='dblock'>
+                                            <div className='m-center'>
 
-                                                <div className='footer-widget mb-4'>
+                                                <div className='footer-widget mb-4 mb-xs-20'>
                                                     <div className='title text-center m-center'>{headandfooterdata?.address_title}</div>
                                                 </div>
                                                 <div className='row d-flex justify-content-center pt-0 pb-10 pt-xs-20 pb-xs-10'>
@@ -632,7 +627,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy text-center pt-40 pb-0 m-center">
+                                            <div className="footer-copy text-center pt-40 pb-0 pt-xs-20 m-center">
                                                 {headandfooterdata?.copyright}
                                             </div>
                                         </div>

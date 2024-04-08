@@ -325,7 +325,7 @@ Project: DT Skill
 
 @media only screen and (max-width: 767px) {
     .nav-logo-wrap {
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .loader {
         margin-left: 20px;
@@ -439,8 +439,18 @@ Project: DT Skill
         font-size: 18px;
         z-index: 99;
     }
+    .ssh-table {
+        display: none;
+    }
+    .CookieConsent {
+        padding: 10px;
+        width: 90% !important;
+        font-size: 11px !important;
+        left: 0 !important;
+    }
     .form-footer {
-        bottom: 48px;
+        bottom: auto;
+        top: 0;
         padding: 2px 0;
     }
     .form-footer.push-bottom {
@@ -485,16 +495,22 @@ Project: DT Skill
     .m-center {
         text-align: center !important;
     }
+    .m-justifyy-center {
+        justify-content:center !important;
+    }
     .inner-nav ul li {
         padding: 0;
-        margin-left: 12px;
+        margin-left: 9px;
     }
     .inner-nav ul li .btn-mod.btn-medium {
-        padding: 3px 8px;
-        font-size: 12px;
+        padding: 2px 6px;
+        font-size: 11px;
     }
     .whatsapp-icon {
         margin-left: 8px;
+    }
+    .whatsapp-icon img {
+        max-width: 30px;
     }
     .loader { 
         left: 45%;
@@ -502,12 +518,78 @@ Project: DT Skill
     .university-list-bx {
         width: 100% !important;
     }
+    .menu-bg {
+        height: 70px !important;
+    }
+    .menu-bg .inner-nav {
+        margin-top: 15px;
+    }
+    .menu-bg .nav-logo-wrap .logo {
+        height: 55px !important;
+    }
+    .headerlist {
+        display: block;
+        text-align: center;
+    }
+    .headerlist .me-3 {
+        margin-right: 0 !important;
+    }
+    .headerlist img {
+        max-width: 40px;
+        margin: 0 auto 5px;
+    }
+    .headerlist h4 {
+        font-size: 13px;
+    }
+    .home-banner img {
+        max-width: 50px;
+        margin: 0 auto 5px;
+    }
     .university-list-bx .modal-bx-header .country-name {
         font-size: 18px;
+    }
+    .why-choose {
+        padding: 12px;
+        min-height: 185px;
+        margin-bottom: 20px;
+        .description img {
+            max-width: 50px;
+            margin: 0 auto;
+        }
+        h4 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+    .contactForm {
+        margin-top: 10px;
+    }
+    .m-push-xs-top {
+        padding-top: 340px !important;
     }
     .univ-box {
         width: 160px;
         height: 130px;
+    }
+    .univ_logo {
+        width: 100px;
+        height: 80px;
+    }
+    .additional-services {
+        margin-bottom: 20px;
+    }
+    .booknow-section .md-block2 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .booknow-section .md-block2 .icon{ 
+        width: 90px;
+    }
+    .booknow-section .md-block2 .icon img {
+        max-width: 80px;
+        margin: 0 auto;
     }
     .univ-box:nth-child(5),
     .univ-box:nth-child(6),

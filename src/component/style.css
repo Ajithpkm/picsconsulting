@@ -26,6 +26,7 @@ Project: DT Skill
 .text-gray {color: #8F8F8F !important;}
 .glass{ opacity: .5; }
 .overflow {overflow: visible !important;}
+.overflowz99 {overflow: visible !important; z-index: 99;}
 .underline {text-decoration: underline;}
 .fs-12 {font-size: 12px;}
 .fs-13 {font-size: 13px;}
@@ -4751,6 +4752,84 @@ input:-webkit-autofill:active {
 .contactForm {
     background-color: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 20px 30px 30px 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contactForm input {
+    border: 1px solid #e7e7e7 !important;
+    height: 34px;
+    border-radius: 0px;
+    font-family: "Lato", sans-serif;
+    padding: 5px 10px;
+    font-size: 14px;
+    position: relative;
+}
+.contactForm .MuiInputLabel-root {
+    font-family: "Lato", sans-serif;
+    top: 5px;
+    left: 20px;
+}
+
+.contactForm .react-tel-input .form-control {
+    margin-top: 16px !important;
+}
+.contactForm .react-tel-input .flag-dropdown {
+    border: 1px solid #e7e7e7 !important;
+    border-right: none !important
+}
+.contactForm .selectBox .MuiInputLabel-root {
+    font-family: "Lato", sans-serif;
+    top: -6px;
+}
+.contactForm .selectBox .MuiInput-underline {
+    font-family: "Lato", sans-serif;
+}
+.contactForm .selectBox .MuiInput-underline::before  {
+    border: 1px solid #e7e7e7 !important;
+    height: 45px;
+}
+.contactForm .selectBox .MuiSvgIcon-root {
+    right: 10px;
+    top: 0;
+}
+.contactForm .MuiInputLabel-root.Mui-focused,
+.contactForm .MuiFormLabel-filled {
+    display: none !important
+}
+.contactForm .MuiInput-underline::after {
+    border-bottom: 2px solid #B9943C;
+}
+.contactForm .terms-label .MuiFormControlLabel-label {
+    font-size: 13px;
+    font-family: "Lato", sans-serif;
+}
+.contactForm .terms-label .MuiFormControlLabel-root {
+    margin-left: -20px;
+    align-items: flex-start;
+}
+.contactForm .terms-label .MuiCheckbox-root {
+    margin-top: -12px;
+    align-items: flex-start;
+}
+.contactForm .terms-label .MuiCheckbox-root.Mui-checked .MuiSvgIcon-root {
+    fill: #182E46;
+}
+.contactForm .terms-link  {
+    font-size: 13px;
+    margin-left: 35px;
+    color: #5f5f5f;
+    font-family: "Lato", sans-serif;
+}
+.contactForm .terms-link a {
+    color: #182E46;
+    text-decoration: underline !important;
+}
+.terms-label {
+    font-size: 13px;
+    color: #5f5f5f;
+    font-family: "Lato", sans-serif;
+}
+.terms-label a {
+    color: #182E46;
+    text-decoration: underline !important;
 }
