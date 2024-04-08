@@ -204,7 +204,8 @@ const Step2 = () => {
     let [fromDateError, setfromDateError] = React.useState(false);
     let [otherOption, setOtherOption] = React.useState(false);
     let [otherOptionValue, setOtherOptionValue] = React.useState('');
-    const defaultTime = dayjs()?.set('hour', 12)?.startOf('hour');
+    const defaultTime = '';
+    // dayjs()?.set('hour', 12)?.startOf('hour');
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -286,13 +287,13 @@ const Step2 = () => {
         else {
             setAppointmentlocationError(false);
         }
-        if (!fromDate) {
-            setfromDateError(true);
-            return null;
-        }
-        else {
-            setfromDateError(false);
-        }
+        // if (!fromDate) {
+        //     setfromDateError(true);
+        //     return null;
+        // }
+        // else {
+        //     setfromDateError(false);
+        // }
 
         setSearchButtonLoading(true);
         const payload = {
@@ -302,14 +303,15 @@ const Step2 = () => {
             phone_number: location?.state?.phoneNumber,
             phone_code: location?.state?.phonecode,
             destination: location?.state?.studyDestination,
-            preferred_date: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
-            preferred_time: new Date(time)?.toLocaleTimeString(),
+            preferred_date: fromDate ? (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`) : '',
+            preferred_time: time ? new Date(time)?.toLocaleTimeString() : '',
             type_of_study: typeofstudy,
             year_of_study: yearofstudy,
             subject: subject,
             how_did_you_hear: otherOption ? otherOptionValue : howdidhear,
             notes: notes,
-            appointment_location: appointmentlocation
+            appointment_location: appointmentlocation,
+            module: 'contact'
         }
         dispatch(postcontactdata(payload));
     }
@@ -338,7 +340,7 @@ const Step2 = () => {
                 setApiErrorMessage(contactdata?.message);
             }
         }, 1000);
-    }, [contactdata])
+    }, [contactdata]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -576,10 +578,10 @@ const Step2 = () => {
                                                         </LocalizationProvider>
                                                     </div>
 
+                                                    {apiErrorFlag && <Alert severity="error">{apiErrorMessage}</Alert>}
                                                     <div className='col-md-12 mt-30'>
                                                         <a onClick={submit} className='btn btn-mod btn-color btn-round btn-large'>{searchButtonLoading ? 'Processing...' : 'Submit'}</a>
                                                     </div>
-                                                    {apiErrorFlag && <Alert severity="error">{apiErrorMessage}</Alert>}
                                                 </div>
                                             </div>
                                         </div>

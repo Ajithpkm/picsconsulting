@@ -48,6 +48,8 @@ import 'react-phone-input-2/lib/style.css'
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
+import { postcontactdata } from '../Actions/Pics';
+import Alert from '@mui/material/Alert';
 
 const Dashboard = () => {
 
@@ -61,6 +63,7 @@ const Dashboard = () => {
     const [arrowDisable, setArrowDisable] = React.useState(true);
     const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
     let [checked, setChecked] = React.useState(false);
+    const [searchButtonLoading, setSearchButtonLoading] = React.useState(false);
 
 
     let [firstNameError, setfirstNameError] = React.useState(false);
@@ -128,16 +131,56 @@ const Dashboard = () => {
         else {
             setCheckboxError(false);
         }
+        setSearchButtonLoading(true);
         let payload = {
-            firstName: firstName,
+            first_name: firstName,
+            last_name: firstName,
             email: email,
-            phonecode: phonecode,
-            phoneNumber: phoneNumber,
-            studyDestination: studyDestination,
-            checked: checked
+            phone_code: phonecode,
+            phone_number: phoneNumber,
+            destination: studyDestination,
+            checked: checked,
+            module: 'book'
         }
-        console.log(payload, 'payload')
+        dispatch(postcontactdata(payload));
     }
+    const contactdata = useSelector((state) => state?.Pics?.contactdata);
+    let [apiErrorFlag, setApiErrorFlag] = React.useState(false);
+    let [apiSuccessFlag, setApiSuccessFlag] = React.useState(false);
+    let [apiErrorMessage, setApiErrorMessage] = React.useState('');
+
+    useEffect(() => {
+        setSearchButtonLoading(false);
+        setTimeout(() => {
+            if (contactdata?.status == 'success') {
+                setApiSuccessFlag(true);
+                setApiErrorMessage('Your contact details have been saved.');
+                setFirstName('');
+                setEmail('');
+                setPhoneNumber('');
+                setStudyDestination('');
+                setChecked(false);
+            }
+            else if (contactdata?.status == "validation") {
+                setApiErrorFlag(true);
+                setApiSuccessFlag(false);
+                setApiErrorMessage(contactdata?.validation);
+            }
+            else if (contactdata?.status == "error") {
+                setApiErrorFlag(true);
+                setApiSuccessFlag(false);
+                setApiErrorMessage(contactdata?.message);
+            }
+        }, 1000);
+    }, [contactdata]);
+
+    useEffect(() => {
+        setSearchButtonLoading(false);
+        setTimeout(() => {
+            setApiSuccessFlag(false);
+            setApiErrorFlag(false);
+        }, 1000);
+    }, [apiSuccessFlag, apiErrorFlag]);
 
     const emailHandleChange = (e) => {
         setEmail(e.target.value);
@@ -394,8 +437,10 @@ const Dashboard = () => {
                                                                         <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
                                                                     </div>
                                                                 </div>
+                                                                {apiErrorFlag && <Alert severity='error'>{apiErrorMessage}</Alert>}
+                                                                {apiSuccessFlag && <Alert severity='success'>{apiErrorMessage}</Alert>}
                                                                 <div className='col-md-12'>
-                                                                    <a onClick={submitButton} className='btn btn-mod btn-color btn-round btn-large  w-100'><span>BOOK YOUR FREE CONSULTATION </span>
+                                                                    <a onClick={submitButton} className='btn btn-mod btn-color btn-round btn-large  w-100'><span>{searchButtonLoading ? 'Processing...' : 'BOOK YOUR FREE CONSULTATION'} </span>
                                                                     </a>
                                                                 </div>
                                                             </div>
