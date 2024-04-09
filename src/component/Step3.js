@@ -73,7 +73,7 @@ const Dashboard = () => {
                                                 </div>
 
                                                 <div className='mt-5'>
-                                                    <button className='btn btn-mod btn-color btn-round btn-medium'>GO TO HOME</button>
+                                                    <a href='/' className='btn btn-mod btn-color btn-round btn-medium'>GO TO HOME</a>
                                                     <div className='mt-10'>Refer the <a href='/faq' className='color-2 underline' target='_blank'>FAQs section</a> for more information.</div>
                                                 </div>
                                             </div>

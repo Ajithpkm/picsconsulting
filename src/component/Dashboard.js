@@ -471,6 +471,102 @@ const Dashboard = () => {
                                 </section>
 
                                 <section className='small-section bg-scroll bg-pos-center' style={{
+                                    background: `url(${free_consultation})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
+                                                    {homedata?.section5?.title}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='row d-flex justify-content-center'>
+                                            <div className='col-md-8'>
+                                                <div className='row d-flex justify-content-center'>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={statement} />
+                                                                <p>Statement of<br/>Purpose</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={letter} />
+                                                                <p>Letter of<br/>Recommendation</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={student} />
+                                                                <p>student visa</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={admission} />
+                                                                <p>admission essayS</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={studentcv} />
+                                                                <p>student cV</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={englishtest} />
+                                                                <p>English test</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {/* <div className='col-md-6 xs-order-3'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>03. {homedata?.section5?.title3}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-6 xs-order-2'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>02. {homedata?.section5?.title2}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-6 xs-order-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <h4>04. {homedata?.section5?.title4}</h4>
+                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
+                                                            </div>
+                                                        </div>
+                                                    </div> */}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='mt-40 mb-20 text-center'>
+                                            <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-scroll bg-pos-center' style={{
                                     background: `url(${university_list})`,
                                 }}>
                                     <div className='container relative'>
@@ -613,102 +709,6 @@ const Dashboard = () => {
                                         </TabPanel>
                                     </div>
                                 </section>
-
-                                <section className='small-section bg-scroll bg-pos-center' style={{
-                                    background: `url(${free_consultation})`,
-                                }}>
-                                    <div className='container relative'>
-                                        <div className='row'>
-                                            <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
-                                                    {homedata?.section5?.title}
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className='row d-flex justify-content-center'>
-                                            <div className='col-md-8'>
-                                                <div className='row d-flex justify-content-center'>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={statement} />
-                                                                <p>Statement of<br/>Purpose</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={letter} />
-                                                                <p>Letter of<br/>Recommendation</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={student} />
-                                                                <p>student visa</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={admission} />
-                                                                <p>admission essayS</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={studentcv} />
-                                                                <p>student cV</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={englishtest} />
-                                                                <p>English test</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {/* <div className='col-md-6 xs-order-3'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>03. {homedata?.section5?.title3}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-6 xs-order-2'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>02. {homedata?.section5?.title2}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-6 xs-order-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>04. {homedata?.section5?.title4}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div> */}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='mt-40 mb-20 text-center'>
-                                            <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
-                                        </div>
-                                    </div>
-                                </section>
                             </main>
 
                             <footer className="small-section bg-gray-lighter footer pb-60">
@@ -740,7 +740,7 @@ const Dashboard = () => {
                                                             <h5>United Kingdom (Headquarters)</h5>
                                                             {/* {headandfooterdata?.address} */}
                                                             27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
-                                                            <b>Call & WhatsApp</b> +44 7510 830896
+                                                            <b>Call & WhatsApp</b> <a href='tel:+447510830896'>+44 7510 830896</a>
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
@@ -748,7 +748,7 @@ const Dashboard = () => {
                                                         <div className='footer-widget'>
                                                             <h5>India</h5>
                                                             1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR<br/>Chennai 603 103, India<br/>
-                                                            <b>Call & WhatsApp</b> +91 94440 94442
+                                                            <b>Call & WhatsApp</b> <a href='tel:+919444094442'>+91 94440 94442</a>
                                                             {/* {headandfooterdata?.country} */}
 
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}

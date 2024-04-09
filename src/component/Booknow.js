@@ -286,7 +286,7 @@ const Dashboard = () => {
                                 </div>
                             </nav>
                             <main id="main">
-                                <section className="home-section bg-scroll fixed-height-small overflowz99" style={{
+                                <section className="home-section bg-scroll fixed-height-small overflowz99" id='home' style={{
                                     backgroundImage: `url(${homebg})`
                                 }}>
                                     <div className="js-height-parent-book container-1400">
@@ -507,7 +507,7 @@ const Dashboard = () => {
                                             </div>
                                         </div>
 
-                                        <div class="mt-50 mb-0 mt-xs-20 text-center"><a href="contact" class="btn btn-mod btn-color btn-round btn-large-lg">enquire</a></div>
+                                        <div class="mt-50 mb-0 mt-xs-20 text-center"><a href="#home" class="btn btn-mod btn-color btn-round btn-large-lg">enquire</a></div>
                                     </div>
                                 </section>
 
@@ -592,7 +592,7 @@ const Dashboard = () => {
                                             </div>
                                         </div>
 
-                                        <div class="mt-50 mb-0 mt-xs-20 text-center"><a href="contact" class="btn btn-mod btn-color btn-round btn-large-lg">enquire</a></div>
+                                        <div class="mt-50 mb-0 mt-xs-20 text-center"><a href="#home" class="btn btn-mod btn-color btn-round btn-large-lg">enquire</a></div>
                                     </div>
                                 </section>
 
