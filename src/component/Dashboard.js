@@ -88,7 +88,7 @@ function a11yProps(index: number) {
 const Dashboard = () => {
     const [value, setValue] = React.useState(0);
     const [ukModelopen, setukModelopen] = React.useState(false);
-    const [usaModelopen, setusaModelopen] = React.useState(true);
+    const [usaModelopen, setusaModelopen] = React.useState(false);
     const [contactopen, setContactOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
     const [selectedUniversity, setSelectedUniversity] = React.useState(false);
@@ -135,6 +135,9 @@ const Dashboard = () => {
         setTimeout(() => {
             setLoading(true);
         }, 1000);
+        setTimeout(() => {
+            setusaModelopen(true);
+        }, 7000);
     }, []);
 
     return (
