@@ -208,7 +208,7 @@ const Dashboard = () => {
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
                                     <section className="home-section bg-scroll fixed-height-medium" style={{
-                                        background: `url(${about_bg})`,
+                                        background: `url(${!aboutusdata?.section1?.image ? about_bg : aboutusdata?.section1?.image})`,
                                     }}>
                                         <div className="js-height-parent container-1400">
                                             <div className="home-content">
@@ -393,7 +393,7 @@ const Dashboard = () => {
                                                         <div className='footer-widget '>
                                                             <h5>United Kingdom (Headquarters)</h5>
                                                             {/* {headandfooterdata?.address} */}
-                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
+                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
                                                             <b>Call & WhatsApp</b> +44 7510 830896
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
@@ -401,7 +401,7 @@ const Dashboard = () => {
                                                     <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h5>India</h5>
-                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR<br/>Chennai 603 103, India<br/>
+                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR<br />Chennai 603 103, India<br />
                                                             <b>Call & WhatsApp</b> +91 94440 94442
                                                             {/* {headandfooterdata?.country} */}
 
@@ -436,16 +436,16 @@ const Dashboard = () => {
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h4>UNITED KINGDOM</h4>
-                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
-                                                            <b>Call & WhatsApp</b><br/>+44 7510 830896
+                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
+                                                            <b>Call & WhatsApp</b><br />+44 7510 830896
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h4>India</h4>
-                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br/>
-                                                            <b>Call & WhatsApp</b><br/>+91 94440 94442
+                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br />
+                                                            <b>Call & WhatsApp</b><br />+91 94440 94442
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>

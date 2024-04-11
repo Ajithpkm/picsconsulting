@@ -22,7 +22,7 @@ import studentcv from '../images/studentcv.png';
 import englishtest from '../images/englishtest.png';
 import preloader from '../images/preloader.gif';
 import application_service_bg from '../images/application-service-bg.jpg';
-import unversity_bg from '../images/university-bg.jpg';
+import home_bg from '../images/home-bg.jpg';
 import icon_01 from '../images/university-offer.svg';
 import icon_02 from '../images/dedicated-pics-consultant.svg';
 import icon_03 from '../images/professional-service.svg';
@@ -291,7 +291,7 @@ const Dashboard = () => {
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
                                     <section className="home-section bg-scroll fixed-height-medium"
-                                        style={{ background: `url(${homedata?.section1?.image})` }}
+                                        style={{ background: `url(${!homedata?.section1?.image ? home_bg : homedata?.section1?.image})` }}
                                     >
                                         <div className="js-height-parent container-1400">
                                             <div className="home-content">
@@ -336,7 +336,7 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </section>
-                                
+
                                 <section className='small-section pb-250 pt-xs-30 pb-xs-120'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
@@ -345,7 +345,7 @@ const Dashboard = () => {
                                             </div>
                                             <div className='col-md-5'>
                                                 <div className='inner-container'>
-                                                
+
                                                     <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
                                                         {homedata?.section2?.title1}
                                                     </div>
@@ -364,7 +364,7 @@ const Dashboard = () => {
                                                                         </Tooltip>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                         <div className='d-flex align-items-center mb-1'>
@@ -490,7 +490,7 @@ const Dashboard = () => {
                                                         <div className='step-container'>
                                                             <div className='description'>
                                                                 <img src={statement} />
-                                                                <p>Statement of<br/>Purpose</p>
+                                                                <p>Statement of<br />Purpose</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -498,7 +498,7 @@ const Dashboard = () => {
                                                         <div className='step-container'>
                                                             <div className='description'>
                                                                 <img src={letter} />
-                                                                <p>Letter of<br/>Recommendation</p>
+                                                                <p>Letter of<br />Recommendation</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -740,7 +740,7 @@ const Dashboard = () => {
                                                         <div className='footer-widget '>
                                                             <h5>United Kingdom (Headquarters)</h5>
                                                             {/* {headandfooterdata?.address} */}
-                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
+                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
                                                             <b>Call & WhatsApp</b> <a href='tel:+447510830896'>+44 7510 830896</a>
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
@@ -748,7 +748,7 @@ const Dashboard = () => {
                                                     <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h5>India</h5>
-                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR<br/>Chennai 603 103, India<br/>
+                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR<br />Chennai 603 103, India<br />
                                                             <b>Call & WhatsApp</b> <a href='tel:+919444094442'>+91 94440 94442</a>
                                                             {/* {headandfooterdata?.country} */}
 
@@ -783,16 +783,16 @@ const Dashboard = () => {
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h4>UNITED KINGDOM</h4>
-                                                            27 Duke St, Vision Offices,<br/>Chelmsford, CM1 1HT<br/><br/>
-                                                            <b>Call & WhatsApp</b><br/>+44 7510 830896
+                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
+                                                            <b>Call & WhatsApp</b><br />+44 7510 830896
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-6 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <h4>India</h4>
-                                                            1st Floor, Elsa Plaza, No 2,<br/>Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br/>
-                                                            <b>Call & WhatsApp</b><br/>+91 94440 94442
+                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br />
+                                                            <b>Call & WhatsApp</b><br />+91 94440 94442
                                                             {/* <button className='map-link' onClick=''>Get Directions</button> */}
                                                         </div>
                                                     </div>
