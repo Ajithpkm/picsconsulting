@@ -104,7 +104,7 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const step1NextButtonClick = () => {
-        const isValidEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+        const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if (!firstName) {
             setfirstNameError(true);
             return null;
