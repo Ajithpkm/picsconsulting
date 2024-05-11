@@ -52,6 +52,12 @@ export const Pics = {
       return response;
    },
 
+   async postupdatecontactData(payload) {
+      const url = `${Constants.PICS_API}/updatecontact`;
+      const response = axios.post(url, payload);
+      return response;
+   },
+
    async getfaqdata() {
       const url = `${Constants.PICS_API}/cms/faq`;
       const response = axios.get(url);

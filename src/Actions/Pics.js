@@ -89,6 +89,17 @@ export const postcontactdata = (data) => {
    }
 }
 
+export const postupdatecontactData = (data) => {
+   return async dispatch => {
+      const response = await API.postupdatecontactData(data);
+      const payload = { "UPDATECONTACTPICSDATA": response.data };
+      return dispatch({
+         type: Constants.UPDATECONTACTPICSDATA,
+         payload
+      })
+   }
+}
+
 export const getfaqdata = () => {
    return async dispatch => {
       const response = await API.getfaqdata();

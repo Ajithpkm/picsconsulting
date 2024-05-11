@@ -11,6 +11,7 @@ const INITIAL_STATE = {
     faqcategorydata: [],
     faqlistdata: [],
     contactdata: {},
+    updatecontactdata: {},
     termsdata: {},
     privacydata: {}
 };
@@ -30,6 +31,8 @@ const reducer = (state = INITIAL_STATE, action) => {
             return { ...state, countrydata: action.payload.COUNTRYPICSDATA }
         case Constants.CONTACTPICSDATA:
             return { ...state, contactdata: action.payload.CONTACTPICSDATA }
+        case Constants.UPDATECONTACTPICSDATA:
+            return { ...state, updatecontactdata: action.payload.UPDATECONTACTPICSDATA }
         case Constants.FAQPICSDATA:
             return { ...state, faqdata: action.payload.FAQPICSDATA }
         case Constants.FAQCATEGORYPICSDATA:

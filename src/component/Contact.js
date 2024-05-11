@@ -12,12 +12,12 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import './style.css';
 import '../css/verticals.min.css';
-import { getuniversitydata } from '../Actions/Pics';
+import { getuniversitydata, postcontactdata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import countriesCode from './PhoneCode.json';
-
 import PhoneInput from 'react-phone-input-2';
+import Alert from '@mui/material/Alert';
 import 'react-phone-input-2/lib/style.css'
 
 let countries = countriesCode?.map(x => x?.code);
@@ -33,6 +33,7 @@ for (let index = 0; index < countriesCode.length; index++) {
 
 const Dashboard = () => {
     const location = useLocation();
+    const dispatch = useDispatch();
     let [loading, setLoading] = React.useState(false);
     let [firstName, setFirstName] = React.useState('');
     let [lastName, setLastName] = React.useState('');
@@ -44,6 +45,8 @@ const Dashboard = () => {
     let [time, setTime] = React.useState('');
     let [checked, setChecked] = React.useState(false);
     const defaultTime = dayjs()?.set('hour', 12)?.startOf('hour');
+    const contactdata = useSelector((state) => state?.Pics?.contactdata);
+    const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
 
     useEffect(() => {
         setFirstName(location?.state?.firstName);
@@ -101,6 +104,10 @@ const Dashboard = () => {
     let [studyDestinationError, setstudyDestinationError] = React.useState(false);
     let [fromDateError, setfromDateError] = React.useState(false);
     let [checkboxError, setCheckboxError] = React.useState(false);
+    const [searchButtonLoading, setSearchButtonLoading] = React.useState(false);
+    let [apiErrorFlag, setApiErrorFlag] = React.useState(false);
+    let [apiErrorMessage, setApiErrorMessage] = React.useState('');
+
     const navigate = useNavigate();
 
     const step1NextButtonClick = () => {
@@ -167,27 +174,52 @@ const Dashboard = () => {
         else {
             setCheckboxError(false);
         }
-        navigate('/step2', {
-            replace: true, state: {
-                firstName: firstName,
-                // lastName: lastName,
-                email: email,
-                phonecode: phonecode,
-                phoneNumber: phoneNumber,
-                studyDestination: studyDestination,
-                // fromDate: (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`),
-                // time: new Date(time)?.toLocaleTimeString(),
-                checked: checked
-            }
-        });
-        return true
+        let payload = {
+            first_name: firstName,
+            last_name: firstName,
+            email: email,
+            phone_code: phonecode,
+            phone_number: phoneNumber,
+            destination: studyDestination,
+        }
+        setSearchButtonLoading(true);
+        dispatch(postcontactdata(payload));
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (contactdata?.status == 'success') {
+                navigate('/step2', {
+                    replace: true, state: {
+                        firstName: firstName,
+                        email: email,
+                        phonecode: phonecode,
+                        phoneNumber: phoneNumber,
+                        studyDestination: studyDestination,
+                        checked: checked
+                    }
+                });
+                setApiErrorFlag(false);
+                setApiErrorMessage('');
+                setSearchButtonLoading(false);
+                return true;
+            }
+            else if (contactdata?.status == "validation") {
+                setSearchButtonLoading(false);
+                setApiErrorFlag(true);
+                setApiErrorMessage(contactdata?.validation);
+            }
+            else if (contactdata?.status == "error") {
+                setSearchButtonLoading(false);
+                setApiErrorFlag(true);
+                setApiErrorMessage(contactdata?.message);
+            }
+        }, 1000);
+    }, [contactdata]);
 
     const emailHandleChange = (e) => {
         setEmail(e.target.value);
     }
-    const dispatch = useDispatch();
-    const universitydata = useSelector((state) => state?.Pics?.universitydata?.data);
 
     useEffect(() => {
         dispatch(getuniversitydata());
@@ -391,9 +423,9 @@ const Dashboard = () => {
                                                             <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
                                                         </div>
                                                     </div>
-
+                                                    {apiErrorFlag && <Alert severity="error">{apiErrorMessage}</Alert>}
                                                     <div className='col-md-12'>
-                                                        <a onClick={step1NextButtonClick} className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>Next </span>
+                                                        <a onClick={step1NextButtonClick} className='btn btn-mod btn-color btn-round btn-large inline-flex'><span>{searchButtonLoading ? 'Processing...' : 'Next'} </span>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
                                                                 <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
                                                                     <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />

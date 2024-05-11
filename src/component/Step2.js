@@ -6,7 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useHistory, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { postcontactdata } from '../Actions/Pics';
+import { postupdatecontactData } from '../Actions/Pics';
 import Alert from '@mui/material/Alert';
 import dayjs, { Dayjs } from 'dayjs';
 import DatePicker from "react-datepicker";
@@ -197,6 +197,7 @@ const Step2 = () => {
     let [notes, setNotes] = React.useState('');
     let [apiErrorFlag, setApiErrorFlag] = React.useState(false);
     let [apiErrorMessage, setApiErrorMessage] = React.useState('');
+    const updatecontactdata = useSelector((state) => state?.Pics?.updatecontactdata);
     const contactdata = useSelector((state) => state?.Pics?.contactdata);
     const [searchButtonLoading, setSearchButtonLoading] = React.useState(false);
     let [fromDate, setFromDate] = React.useState(null);
@@ -297,12 +298,7 @@ const Step2 = () => {
 
         setSearchButtonLoading(true);
         const payload = {
-            first_name: location?.state?.firstName,
-            last_name: location?.state?.firstName,
-            email: location?.state?.email,
-            phone_number: location?.state?.phoneNumber,
-            phone_code: location?.state?.phonecode,
-            destination: location?.state?.studyDestination,
+            id: contactdata?.id,
             preferred_date: fromDate ? (`${fromDate?.getFullYear()}-${fromDate?.getMonth() + 1}-${fromDate?.getDate()}`) : '',
             preferred_time: time ? new Date(time)?.toLocaleTimeString() : '',
             type_of_study: typeofstudy,
@@ -313,15 +309,15 @@ const Step2 = () => {
             appointment_location: appointmentlocation,
             module: 'contact'
         }
-        dispatch(postcontactdata(payload));
+        dispatch(postupdatecontactData(payload));
     }
 
     useEffect(() => {
         setTimeout(() => {
-            if (contactdata?.status == 'success') {
+            if (updatecontactdata?.status == 'success') {
                 navigate('/step3', {
                     replace: true, state: {
-                        unique_id: contactdata.unique_id,
+                        unique_id: updatecontactdata.unique_id,
                         firstName: location?.state?.firstName
                     }
                 });
@@ -329,18 +325,18 @@ const Step2 = () => {
                 setApiErrorMessage('');
                 setSearchButtonLoading(false);
             }
-            else if (contactdata?.status == "validation") {
+            else if (updatecontactdata?.status == "validation") {
                 setSearchButtonLoading(false);
                 setApiErrorFlag(true);
-                setApiErrorMessage(contactdata?.validation);
+                setApiErrorMessage(updatecontactdata?.validation);
             }
-            else if (contactdata?.status == "error") {
+            else if (updatecontactdata?.status == "error") {
                 setSearchButtonLoading(false);
                 setApiErrorFlag(true);
-                setApiErrorMessage(contactdata?.message);
+                setApiErrorMessage(updatecontactdata?.message);
             }
         }, 1000);
-    }, [contactdata]);
+    }, [updatecontactdata]);
 
     useEffect(() => {
         setTimeout(() => {
