@@ -562,7 +562,7 @@ const Dashboard = () => {
                                             </div>
                                         </div>
                                         <div className='mt-40 mb-20 text-center'>
-                                            <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                            <a href='faq' className='btn btn-mod btn-w btn-round btn-medium'>FAQ</a>
                                         </div>
                                     </div>
                                 </section>
