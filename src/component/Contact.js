@@ -133,7 +133,7 @@ const Dashboard = () => {
         else {
             setemailError(false);
         }
-        if (email && email?.match(isValidEmail)) {
+        if (email && email?.includes('@')) {
             setEmailValidationError(false);
         }
         else {
