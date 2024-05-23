@@ -197,12 +197,12 @@ const Faq = () => {
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
-                                                            <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
+                                                            <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
                                                                 {faqdata?.section1?.title}
-                                                            </div>
-                                                            <div className="hs-line-2 text-center">
+                                                            </h1>
+                                                            <h2 className="hs-line-2 text-center">
                                                                 {faqdata?.section1?.description}
-                                                            </div>
+                                                            </h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -213,9 +213,9 @@ const Faq = () => {
 
                                 <section className='small-section pb-40 pb-xs-20'>
                                     <div className='container relative'>
-                                        <div className="hs-line-3 text-center color font-alt mb-20 mb-xs-10">
+                                        <h3 className="hs-line-3 text-center color font-alt mb-20 mb-xs-10">
                                             {faqdata?.section2?.title}
-                                        </div>
+                                        </h3>
                                         <div className='row d-flex justify-content-center'>
                                             <div className='col-md-9'>
                                                 <div className='search-form'>
