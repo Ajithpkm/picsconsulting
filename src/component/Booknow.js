@@ -297,9 +297,9 @@ const Dashboard = () => {
                                             <div className="home-text">
                                                 <div className="row d-flex align-items-center justify-content-between pt-xs-80">
                                                     <div className="col-md-6">
-                                                        <div className="hs-line-1 text-left m-center no-transp font-alt mt-30 mb-20 mb-xs-10">
+                                                        <h1 className="hs-line-1 text-left m-center no-transp font-alt mt-30 mb-20 mb-xs-10">
                                                             Study abroad with PICS
-                                                        </div>
+                                                        </h1>
                                                         <div className='m-center d-flex mt-20 mb-10 m-justifyy-center'>
                                                             <div className='home-banner'>
                                                                 <div><img src={university_01} /></div>
@@ -461,9 +461,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                                <h2 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
                                                     Why choose PICS?
-                                                </div>
+                                                </h2>
                                             </div>
                                         </div>
 
@@ -520,9 +520,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 white text-center font-alt mb-0 mb-xs-0">
+                                                <h3 className="hs-line-3 white text-center font-alt mb-0 mb-xs-0">
                                                     We offer 100% guaranteed Admission
-                                                </div>
+                                                </h3>
                                             </div>
                                         </div>
                                     </div>
@@ -534,9 +534,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
+                                                <h4 className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
                                                     Additional PICS Services
-                                                </div>
+                                                </h4>
                                             </div>
                                         </div>
 
@@ -603,9 +603,9 @@ const Dashboard = () => {
                                     <div className='container-1400 relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
+                                                <h5 className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
                                                     225+ Global University Partners
-                                                </div>
+                                                </h5>
                                             </div>
                                         </div>
                                         <div className='row d-flex justify-content-center'>

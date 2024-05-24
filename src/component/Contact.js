@@ -279,10 +279,10 @@ const Dashboard = () => {
                                                         </svg>
                                                     </a>
                                                 </div>
-                                                <div className='hs-line-7'>SET UP A FREE CONSULTATION</div>
-                                                <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
+                                                <h1 className='hs-line-7 mb-0'>SET UP A FREE CONSULTATION</h1>
+                                                <h2 className="hs-line-3 color font-alt mb-20 mb-xs-10">
                                                     We’d love to speak to you!
-                                                </div>
+                                                </h2>
                                                 <div className='row'>
                                                     <div className='col-md-6'>
                                                         <TextField

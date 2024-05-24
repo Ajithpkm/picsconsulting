@@ -298,9 +298,9 @@ const Dashboard = () => {
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
-                                                            <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
+                                                            <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
                                                                 <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.title }}></div>
-                                                            </div>
+                                                            </h1>
                                                             <div className="hs-line-2 text-center">
                                                                 <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.description }}></div>
                                                             </div>
@@ -427,9 +427,9 @@ const Dashboard = () => {
                                                     <img src={homedata?.section3?.image} alt='' />
                                                 </div>
                                                 <div className='mt-30'>
-                                                    <div className="hs-line-3 white text-center font-alt mb-20 mb-xs-10">
+                                                    <h3 className="hs-line-3 white text-center font-alt mb-20 mb-xs-10">
                                                         {homedata?.section3?.title}
-                                                    </div>
+                                                    </h3>
                                                     <div className='row d-flex justify-content-center mb-40'>
                                                         <div className='col-md-9'>
                                                             <div className='section-text text-center white'>
@@ -477,9 +477,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
+                                                <h4 className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
                                                     {homedata?.section5?.title}
-                                                </div>
+                                                </h4>
                                             </div>
                                         </div>
 
@@ -573,18 +573,18 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                                <h5 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
                                                     {homedata?.section4?.title}
-                                                </div>
+                                                </h5>
                                                 <div className='row d-flex justify-content-center mb-0'>
                                                     <div className='col-md-8'>
                                                         <div className='section-text text-center mb-30'>
                                                             <span dangerouslySetInnerHTML={{ __html: homedata?.section4?.description }}></span>
                                                         </div>
 
-                                                        <div className='hs-line-4 mb-0'>
+                                                        <h6 className='hs-line-4 mb-0'>
                                                             <b>Click to view Universities by Country</b>
-                                                        </div>
+                                                        </h6>
                                                     </div>
                                                 </div>
                                             </div>

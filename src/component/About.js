@@ -215,12 +215,12 @@ const Dashboard = () => {
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
-                                                            <div className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
+                                                            <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
                                                                 {aboutusdata?.section1?.title}
-                                                            </div>
-                                                            <div className="hs-line-2 text-center">
+                                                            </h1>
+                                                            <h2 className="hs-line-2 text-center">
                                                                 <span dangerouslySetInnerHTML={{ __html: aboutusdata?.section1?.description }}></span>
-                                                            </div>
+                                                            </h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -233,9 +233,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
+                                                <h3 className="hs-line-3 color font-alt mb-20 mb-xs-10">
                                                     {aboutusdata?.section2?.title}
-                                                </div>
+                                                </h3>
                                                 <div className='section-text'>
                                                     <span dangerouslySetInnerHTML={{ __html: aboutusdata?.section2?.description }}></span>
                                                 </div>
@@ -253,9 +253,9 @@ const Dashboard = () => {
                                             <div className='col-md-8'>
                                                 <div className='inner-container'>
                                                     <div className='hs-line-7'> {aboutusdata?.section2?.title1}</div>
-                                                    <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
+                                                    <h4 className="hs-line-8 color font-alt mb-20 mb-xs-10">
                                                         {aboutusdata?.section2?.subtitle1}
-                                                    </div>
+                                                    </h4>
                                                     <div className='section-text'>
                                                         <div dangerouslySetInnerHTML={{ __html: description }}></div>
                                                         <button className='readmore' onClick={showFullDescriptionHandler}>
@@ -275,9 +275,9 @@ const Dashboard = () => {
                                             <div className='col-md-8 xs-order-2'>
                                                 <div className='inner-container-right'>
                                                     <div className='hs-line-7'>{aboutusdata?.section2?.title3}</div>
-                                                    <div className="hs-line-8 color font-alt mb-20 mb-xs-10">
+                                                    <h5 className="hs-line-8 color font-alt mb-20 mb-xs-10">
                                                         {aboutusdata?.section2?.subtitle3}
-                                                    </div>
+                                                    </h5>
                                                     <div className='section-text'>
                                                         <div dangerouslySetInnerHTML={{ __html: description3 }}></div>
                                                         <button className='readmore' onClick={showFullDescriptionHandler3}>
@@ -323,9 +323,9 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <div className="hs-line-3 color-2 text-center font-alt mb-20 mb-xs-10">
+                                                <h6 className="hs-line-3 color-2 text-center font-alt mb-20 mb-xs-10">
                                                     {aboutusdata?.section3?.title}
-                                                </div>
+                                                </h6>
                                             </div>
                                         </div>
 
