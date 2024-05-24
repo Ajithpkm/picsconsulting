@@ -2901,7 +2901,12 @@ section:hover .small-item-carousel .owl-next{
     color: #182E46;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 14px;;
+    font-size: 14px;
+}
+.succcess-msg {
+    color: #182E46;
+    font-weight: 600;
+    font-size: 24px;
 }
 .universities ul {
     margin: 0;

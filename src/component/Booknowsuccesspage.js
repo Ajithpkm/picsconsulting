@@ -9,13 +9,7 @@ import footer_logo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
-import about_bg from '../images/about-bg.jpg';
-import andre from '../images/andre.jpg';
-import unversity_bg from '../images/university-bg.jpg';
-import optimization from '../images/optimization.svg';
-import outsourcing from '../images/outsourcing.svg';
-import outline from '../images/outline.svg';
-import university_list from '../images/university-list.jpg';
+import successicon from '../images/success.png';
 import whatsappwhite from '../images/whatsapp-w.png';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -93,7 +87,13 @@ const Booknowsuccesspage = () => {
                                         <div className="js-height-parent container-1400">
                                             <div className="home-content">
                                                 <div className="home-text text-center font-alt">
-                                                    Your contact details have been saved.
+                                                    <div className='mb-20'><img src={successicon} /></div>
+                                                    <h1 className='hs-line-3 color font-alt mb-20 mb-xs-10'>Thank you</h1>
+                                                    <div className='m-center succcess-msg mb-20'>Our team will get back to you shortly</div>
+
+                                                    <div className='mt-40'>
+                                                        <a href='/' className='btn btn-mod btn-color btn-round btn-large'>Back to Home</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
