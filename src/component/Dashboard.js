@@ -195,7 +195,8 @@ const Dashboard = () => {
                                     <div onClick={handleUkClose} className='closemodal'><CloseIcon /></div>
                                     <div className='row d-flex align-items-center'>
                                         <div className='col-2 col-md-2'>
-                                            <img src={university_01} alt="" />
+                                            <img src={selectedUniversity == 1 ? university_01 : selectedUniversity == 2 ? university_02 :
+                                                selectedUniversity == 3 ? university_03 : university_04} alt="" />
                                         </div>
                                         <div className='col-6 col-md-6'>
                                             <div className='country-name font-alt'>
