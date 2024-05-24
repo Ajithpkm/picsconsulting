@@ -10,7 +10,7 @@ import Step2 from './component/Step2';
 import Step3 from './component/Step3';
 import Step4 from './component/Step4';
 import Booknow from './component/Booknow';
-import Booknowsuccesspage from './component/Booknowsuccesspage';
+import Booknowthankyou from './component/Booknowthankyou';
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
         <Route exact path="/step3" element={<Step3 />}></Route>
         <Route exact path="/step4" element={<Step4 />}></Route>
         <Route exact path="/booknow" element={<Booknow />}></Route>
-        <Route exact path="/booknowsuccesspage" element={<Booknowsuccesspage />}></Route>
+        <Route exact path="/booknow-thankyou" element={<Booknowthankyou />}></Route>
       </Routes>
     </BrowserRouter>
   );

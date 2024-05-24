@@ -57,8 +57,8 @@ const Booknowsuccesspage = () => {
                         <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
-                            <nav className={"main-nav stick-fixed sticky-header"}>
-                                <div className="container relative clearfix">
+                            <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav menu-bg stick-fixed"}>
+                                <div className="container-1400 relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
                                         <a href="/" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
@@ -70,12 +70,11 @@ const Booknowsuccesspage = () => {
                                     </div>
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
-                                            <li className="active xs-hide"><a href="/">Home</a></li>
-                                            <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li>
-                                            <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
                                             <div class="whatsapp-icon">
-                                                <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
+                                                <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank">
+                                                    <span className='menu-item'>connect on whatsapp</span>
+                                                    <img src={whatsappwhite} />
+                                                </a>
                                             </div>
                                         </ul>
                                     </div>

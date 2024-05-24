@@ -162,7 +162,7 @@ const Dashboard = () => {
                 setPhoneNumber('');
                 setStudyDestination('');
                 setChecked(false);
-                navigate('/booknowsuccesspage');
+                navigate('/booknow-thankyou');
             }
             else if (contactdata?.status == "validation") {
                 setApiErrorFlag(true);
