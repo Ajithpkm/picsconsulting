@@ -50,9 +50,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import { postcontactdata } from '../Actions/Pics';
 import Alert from '@mui/material/Alert';
+import { useHistory, useNavigate, useLocation } from "react-router-dom";
 
 const Dashboard = () => {
 
+    const navigate = useNavigate();
     let [firstName, setFirstName] = React.useState('');
     let [email, setEmail] = React.useState('');
     let [phonecode, setPhonecode] = React.useState('91');
@@ -160,6 +162,7 @@ const Dashboard = () => {
                 setPhoneNumber('');
                 setStudyDestination('');
                 setChecked(false);
+                navigate('/booknowsuccesspage');
             }
             else if (contactdata?.status == "validation") {
                 setApiErrorFlag(true);
