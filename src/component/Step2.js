@@ -309,7 +309,7 @@ const Step2 = () => {
             appointment_location: appointmentlocation,
             module: 'contact'
         }
-        dispatch(postupdatecontactData(payload));
+        if (!searchButtonLoading) dispatch(postupdatecontactData(payload));
     }
 
     useEffect(() => {

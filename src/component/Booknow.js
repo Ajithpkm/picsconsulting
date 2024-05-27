@@ -144,7 +144,7 @@ const Dashboard = () => {
             checked: checked,
             module: 'book'
         }
-        dispatch(postcontactdata(payload));
+        if (!searchButtonLoading) dispatch(postcontactdata(payload));
     }
     const contactdata = useSelector((state) => state?.Pics?.contactdata);
     let [apiErrorFlag, setApiErrorFlag] = React.useState(false);

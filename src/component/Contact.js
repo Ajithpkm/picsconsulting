@@ -183,7 +183,7 @@ const Dashboard = () => {
             destination: studyDestination,
         }
         setSearchButtonLoading(true);
-        dispatch(postcontactdata(payload));
+        if (!searchButtonLoading) dispatch(postcontactdata(payload));
     }
 
     useEffect(() => {
