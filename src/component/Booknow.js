@@ -69,10 +69,15 @@ const Dashboard = () => {
 
 
     let [firstNameError, setfirstNameError] = React.useState(false);
+    let [firstNameValidationError, setfirstNameValidationError] = React.useState(false);
+
     let [emailError, setemailError] = React.useState(false);
     let [emailValidationError, setEmailValidationError] = React.useState(false);
+
     let [phoneCodeError, setphoneCodeError] = React.useState(false);
     let [phoneNumberError, setphoneNumberError] = React.useState(false);
+    let [phoneLengthError, setphoneLengthError] = React.useState(false);
+
     let [studyDestinationError, setstudyDestinationError] = React.useState(false);
     let [checkboxError, setCheckboxError] = React.useState(false);
 
@@ -81,16 +86,28 @@ const Dashboard = () => {
         else if (event.target.name === 'phoneNumber') setPhoneNumber(event.target.value);
         else if (event.target.name === 'studyDestination') setStudyDestination(event.target.value);
     }
-
+    
 
     const submitButton = () => {
         const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        
+        const name_valid = /^[A-Za-z]+$/;
+        const phone_valid = /^[0-9\b]+$/;
+
+
         if (!firstName) {
             setfirstNameError(true);
             return null;
         }
         else {
             setfirstNameError(false);
+        }
+        if(firstName && name_valid.test(firstName)){
+            setfirstNameValidationError(false);
+        }
+        else{
+            setfirstNameValidationError(true);
+            return null
         }
         if (!email) {
             setemailError(true);
@@ -120,7 +137,16 @@ const Dashboard = () => {
         else {
             setphoneNumberError(false);
         }
+        if (phoneNumber && phoneNumber.length == 10 && phone_valid.test(phoneNumber)) {
+            setphoneLengthError(false);
+        }
+        else {
+            setphoneLengthError(true);
+            return null;
+        }
+        
         if (!studyDestination) {
+
             setstudyDestinationError(true);
             return null;
         } else {
@@ -133,6 +159,7 @@ const Dashboard = () => {
         else {
             setCheckboxError(false);
         }
+        
         setSearchButtonLoading(true);
         let payload = {
             first_name: firstName,
@@ -360,12 +387,14 @@ const Dashboard = () => {
                                                                 <div className='col-md-12'>
                                                                     <TextField
                                                                         fullWidth
-                                                                        error={firstNameError}
-                                                                        helperText={firstNameError ? 'Full Name is required' : ''}
+                                                                        error={firstNameError || firstNameValidationError}
+                                                                        helperText={firstNameError ? 'Full Name is required' : firstNameValidationError ? 'Invalid Name.Only Letters Allowed' : ''}
+
                                                                         className='form-control'
                                                                         id="standard-basic"
                                                                         label="Full Name*"
                                                                         variant="standard"
+                                                                        type="text"
                                                                         name='firstName'
                                                                         value={firstName}
                                                                         onChange={handleChange}
@@ -397,8 +426,8 @@ const Dashboard = () => {
                                                                 <div className='col-8 col-md-8 pl-0'>
                                                                     <TextField
                                                                         fullWidth
-                                                                        error={phoneNumberError}
-                                                                        helperText={phoneNumberError ? 'Phone Number is required' : ''}
+                                                                        error={phoneNumberError || phoneLengthError}
+                                                                        helperText={phoneNumberError ? 'Phone Number is required' : phoneLengthError ? 'Invalid phone address' : ''}
                                                                         className='form-control'
                                                                         id="standard-basic"
                                                                         label="Phone Number*"
@@ -408,6 +437,8 @@ const Dashboard = () => {
                                                                         value={phoneNumber}
                                                                         onChange={handleChange}
                                                                     />
+                                                                   
+
                                                                 </div>
                                                                 <div className='col-md-12 mb-30 selectBox'>
                                                                     <FormControl className='form-control mt-10'
@@ -431,14 +462,16 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <div className='col-md-12'>
                                                                     <div className='terms-label mt-0 mb-10'>
-                                                                        <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
+                                                                   {  /*   <FormControlLabel key='policy' control={<Checkbox key='policy' checked={checked} onChange={policyHandleChange} />}
                                                                             label={
                                                                                 articles[0].content.map(paragraph =>
                                                                                     (<p dangerouslySetInnerHTML={{ __html: paragraph }} />)
                                                                                 )
                                                                             } />
                                                                         <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
-                                                                    </div>
+                                                                   */}
+                                                                   <p>By submitting your agreement to our terms and conditions</p>
+                                                                        </div>
                                                                 </div>
                                                                 {apiErrorFlag && <Alert severity='error'>{apiErrorMessage}</Alert>}
                                                                 {apiSuccessFlag && <Alert severity='success'>{apiErrorMessage}</Alert>}
