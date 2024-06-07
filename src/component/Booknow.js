@@ -427,7 +427,7 @@ const Dashboard = () => {
                                                                     <TextField
                                                                         fullWidth
                                                                         error={phoneNumberError || phoneLengthError}
-                                                                        helperText={phoneNumberError ? 'Phone Number is required' : phoneLengthError ? 'Invalid phone address' : ''}
+                                                                        helperText={phoneNumberError ? 'Phone Number is required' : phoneLengthError ? 'Invalid phone number' : ''}
                                                                         className='form-control'
                                                                         id="standard-basic"
                                                                         label="Phone Number*"
