@@ -152,14 +152,14 @@ const Dashboard = () => {
         } else {
             setstudyDestinationError(false);
         }
-        if (!checked) {
+      {/*  if (!checked) {
             setCheckboxError(true);
             return null;
         }
         else {
             setCheckboxError(false);
         }
-        
+        */}
         setSearchButtonLoading(true);
         let payload = {
             first_name: firstName,
@@ -178,6 +178,7 @@ const Dashboard = () => {
     let [apiSuccessFlag, setApiSuccessFlag] = React.useState(false);
     let [apiErrorMessage, setApiErrorMessage] = React.useState('');
 
+
     useEffect(() => {
         setSearchButtonLoading(false);
         setTimeout(() => {
@@ -195,6 +196,7 @@ const Dashboard = () => {
                 setApiErrorFlag(true);
                 setApiSuccessFlag(false);
                 setApiErrorMessage(contactdata?.validation);
+                
             }
             else if (contactdata?.status == "error") {
                 setApiErrorFlag(true);
