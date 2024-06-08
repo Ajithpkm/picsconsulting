@@ -4780,7 +4780,7 @@ input:-webkit-autofill:active {
 }
 .contactForm .selectBox .MuiInputLabel-root {
     font-family: "Lato", sans-serif;
-    top: -6px;
+    top: -1px;
 }
 .contactForm .selectBox .MuiInput-underline {
     font-family: "Lato", sans-serif;

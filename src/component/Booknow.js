@@ -316,14 +316,14 @@ const Dashboard = () => {
                                 </div>
                             </nav>
                             <main id="main">
-                                <section className="home-section bg-scroll fixed-height-small overflowz99" id='home' style={{
+                                <section className="home-section bg-scroll fixed-height-small fixed-height-small-m overflowz99" id='home' style={{
                                     backgroundImage: `url(${homebg})`
                                 }}>
                                     <div className="js-height-parent-book container-1400">
                                         <div className="home-content">
                                             <div className="home-text">
                                                 <div className="row d-flex align-items-center justify-content-between pt-xs-80">
-                                                    <div className="col-md-6">
+                                                    <div className="col-md-6 xs-order-2">
                                                         <h1 className="hs-line-1 text-left m-center no-transp font-alt mt-30 mb-20 mb-xs-10">
                                                             Study abroad with PICS
                                                         </h1>
@@ -381,7 +381,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-5'>
+                                                    <div className='col-md-5 xs-order-1'>
                                                         <div className='contactForm'>
                                                             <div className='row'>
                                                                 <div className='col-md-12'>
@@ -470,7 +470,7 @@ const Dashboard = () => {
                                                                             } />
                                                                         <span style={{ color: 'red', fontSize: '12px' }}>{checkboxError ? 'Select the consent form checkbox' : ''}</span>
                                                                    */}
-                                                                   <p>By submitting your agreement to our terms and conditions</p>
+                                                                   <p>By submitting the form you agree to our <a href='/term-condition' target='_blank'>Terms</a> & <a href='/policy' target='_blank'>Privacy Policies</a></p>
                                                                         </div>
                                                                 </div>
                                                                 {apiErrorFlag && <Alert severity='error'>{apiErrorMessage}</Alert>}
@@ -488,7 +488,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section bg-scroll bg-pos-center m-push-xs-top' style={{
+                                <section className='small-section bg-scroll bg-pos-center' style={{
                                     backgroundImage: `url(${whychoose})`
                                 }}>
                                     <div className='container relative'>
