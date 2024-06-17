@@ -91,7 +91,7 @@ const Dashboard = () => {
     const submitButton = () => {
         const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         
-        const name_valid = /^[A-Za-z]+$/;
+        const name_valid = /^[\sA-Za-z]+$/;
         const phone_valid = /^[0-9\b]+$/;
 
 
