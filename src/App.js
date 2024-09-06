@@ -11,6 +11,7 @@ import Step3 from './component/Step3';
 import Step4 from './component/Step4';
 import Booknow from './component/Booknow';
 import Booknowthankyou from './component/Booknowthankyou';
+import StudyAbroadUSA from './component/StudyAbroadUSA';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Dashboard />}></Route>
         <Route exact path="/about" element={<About />}></Route>
+        <Route exact path="/study-abroad-usa" element={<StudyAbroadUSA />}></Route>
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/policy" element={<PrivacyPolicy />}></Route>
