@@ -172,7 +172,6 @@ html{
     scroll-behavior: smooth !important;
 }
 html, body{
-    height: 100%;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth !important;
 }
@@ -1087,7 +1086,7 @@ a.logo:hover{
 .main-nav{
     width: 100%;
     height: 75px !important;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     text-align: left;
@@ -1873,7 +1872,7 @@ a.logo:hover{
 .bg-yellow{  background-color: #ffce02 !important; }
 .bg-cyan{ background-color: #27c5c3 !important; }
 .bg-green{ background-color: #58bf44 !important; }
-.bg-blue{ background-color: #43a5de !important; }
+.bg-blue{ background-color: #182E46 !important; }
 .bg-purple{ background-color: #375acc !important; }
 .bg-red{ background-color: #e13939 !important; }
 .bg-light-gray {background-color: #ECECEC !important;}
@@ -5181,4 +5180,43 @@ input:-webkit-autofill:active {
 }
 .nav-link:hover {
     color: #B9943C;
+}
+.addonMenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.addonMenu ul li {
+    display: inline-block;
+    padding: 0 30px;
+    list-style: none;
+}
+.addonMenu ul li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+.is-sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+  
+.customTabs .MuiTab-root {
+    border: 1px solid #182E46;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 5px 30px;
+    text-transform: none;
+}
+.customTabs .MuiTab-root.Mui-selected {
+    background-color: #182E46 !important;
+    color: #fff;
+}
+.PrivateTabIndicator-colorSecondary-3 {
+    background-color: transparent !important;
+    border: none !important;
 }
