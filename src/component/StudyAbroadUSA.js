@@ -6,6 +6,8 @@ import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import mail from '../images/mail.png';
+import call from '../images/call.png';
 import usa_bg from '../images/study-usa-bg.jpg';
 import highlights_bg from '../images/usa-bg.png';
 import whatsappwhite from '../images/whatsapp-w.png';
@@ -27,6 +29,23 @@ import highlight_icon_07 from '../images/icon-07.png';
 import admission_usa from '../images/admission-usa.jpg';
 import highlight_icon_08 from '../images/icon-08.png';
 import poststudy_usa from '../images/post-study-usa.jpg';
+import workopportunities_usa from '../images/work-opportunities-usa.png';
+import workopportunities_usa_02 from '../images/work-opportunities-usa-02.jpg';
+import getintouch_usa from '../images/getin-touch-usa.jpg';
+import opportunities_icon_01 from '../images/icon-09.png';
+import opportunities_icon_02 from '../images/icon-10.png';
+import opportunities_icon_03 from '../images/icon-11.png';
+import opportunities_icon_04 from '../images/icon-12.png';
+import opportunities_icon_05 from '../images/icon-13.png';
+import opportunities_icon_06 from '../images/icon-14.png';
+import map_usa from '../images/usa-map.png';
+import exam_01 from '../images/exam-01.png';
+import exam_02 from '../images/exam-02.png';
+import exam_03 from '../images/exam-03.png';
+import exam_04 from '../images/exam-04.png';
+import exam_05 from '../images/exam-05.png';
+import exam_06 from '../images/exam-06.png';
+import exam_07 from '../images/exam-07.png';
 import './style.css';
 import '../css/verticals.min.css';
 import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
@@ -350,7 +369,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section bg-pos-topcenter bg-scroll pb-40' style={{
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100' style={{
                                         background: `url(${highlights_bg})`,
                                 }}>
                                     <div className='container-1400 relative'>
@@ -578,10 +597,143 @@ const Dashboard = () => {
                                         </div>
                                     </div>
                                 </section>
+
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100' style={{
+                                        background: `url(${map_usa})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
+                                            Exams Required to Study in USA
+                                        </h3>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <div className='exam_list'>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_01} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_02} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_03} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_04} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_05} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_06} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_07} /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100' style={{
+                                        background: `url(${workopportunities_usa})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <div className='right-container-2'>
+                                            <div className='row g-0 d-flex align-items-center'>
+                                                <div className='col-md-4'>
+                                                    <div className='img-round'><img src={workopportunities_usa_02} className='img-fluid' /></div>
+                                                </div>
+                                                <div className='col-md-8'>
+                                                    <div className='inner-column'>
+                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-10">
+                                                            Work Opportunities in USA
+                                                        </h3>
+                                                        <div className='section-text mb-30'>
+                                                            Presently, there are 8.7 million jobs available in USA after closing of October 2023. Thus, there are ample job opportunities for Indian students in USA.
+                                                        </div>
+
+                                                        <h3 className='fw-700 italic mb-30'>Some of the most popular job sectors in USA for employment are</h3>
+
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <div className='icon-listing'>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_01} /></div>
+                                                                            <div>Science & Technology</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_02} /></div>
+                                                                            <div>Real Estate</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_03} /></div>
+                                                                            <div>Education</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='col-md-6'>
+                                                                <div className='icon-listing'>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_04} /></div>
+                                                                            <div>Medicine & Healthcare</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_05} /></div>
+                                                                            <div>Business  Development & Analytics</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_06} /></div>
+                                                                            <div>Retail</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section pt-20'>
+                                    <div className="container">
+                                        <div className='row g-0 d-flex align-items-end'>
+                                            <div className='col-md-4'>
+                                                <div className='img-round'><img src={getintouch_usa} className='img-fluid' /></div>
+                                            </div>
+                                            <div className='col-md-8'>
+                                                <div className='right-container'>
+                                                    <div className='row d-flex align-items-center'>
+                                                        <div className='col-md-8'>
+                                                            <h3 class="fw-700 italic mb-0">Get in Touch</h3>
+                                                            <p>For a more personalised consultation,<br/> get in touch with a PICS consultant today!</p>
+                                                        </div>
+                                                        <div className='col-md-4'>
+                                                            <a href="contact" class="btn btn-mod btn-color btn-round btn-medium">EXPLORE NOW <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
+                                                                <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
+                                                                    <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                                    <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                                                                </g>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </main>
 
                             <footer className="small-section bg-gray-lighter footer pb-60">
-                                <div className="container">
+                                <div className="container-1400">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
                                             <a href="#top"><img src={FooterLogo} alt="PICS Consultants" /></a>
@@ -591,6 +743,7 @@ const Dashboard = () => {
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
                                                     <ul className="clearlist">
                                                         <li><a href="/">Home</a></li>
+                                                        <li><a href="/about">Study Abroad</a></li>
                                                         <li><a href="/about">About</a></li>
                                                         <li><a href="/faq">FAQ</a></li>
                                                         <li><a href="/contact">Contact</a></li>
@@ -600,30 +753,45 @@ const Dashboard = () => {
                                                     </ul>
                                                 </div>
 
-                                                <div className='footer-widget mb-3'>
-                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
-                                                </div>
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
-                                                            <h5>United Kingdom (Headquarters)</h5>
-                                                            {/* {headandfooterdata?.address} */}
-                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
-                                                            <b>Call & WhatsApp</b> +44 7510 830896
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
-                                                        <div className='footer-widget'>
-                                                            <h5>India</h5>
-                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR<br />Chennai 603 103, India<br />
-                                                            <b>Call & WhatsApp</b> +91 94440 94442
-                                                            {/* {headandfooterdata?.country} */}
-
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Content to be provided<br/>  by the client <br/> <br/> 
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <div className="social-icons mb-10">
                                                                 <ul>
@@ -638,7 +806,21 @@ const Dashboard = () => {
                                                 </div>
 
                                                 <div className='m-center mt-30'>
-                                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink me-5' onClick={() => window.location = 'mailto:contact@pics.global'}>
+                                                                <img src={mail} className='img-fluid me-2' />
+                                                                {headandfooterdata?.email}
+                                                            </button>
+                                                        </div>
+
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                                <img src={call} className='img-fluid me-2' />
+                                                                +91 94440 94442
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -707,7 +889,7 @@ const Dashboard = () => {
                                             </div>
 
                                             <div className="footer-copy pt-20 pb-0 m-center">
-                                                {headandfooterdata?.copyright}
+                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
                                             </div>
                                         </div>
                                     </div>
