@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 import WOW from 'wowjs';
-import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { NavDropdown, Container, Navbar, Nav } from "react-bootstrap";
+import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import Logo from '../images/logo.png';
 import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
@@ -46,7 +52,10 @@ import exam_04 from '../images/exam-04.png';
 import exam_05 from '../images/exam-05.png';
 import exam_06 from '../images/exam-06.png';
 import exam_07 from '../images/exam-07.png';
+import visa_usa from '../images/visa-usa.png';
+import studentvisa_usa from '../images/student-visa.jpg';
 import './style.css';
+import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
 import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
@@ -68,21 +77,16 @@ const Dashboard = () => {
     const [showFullDescription, setFullDescription] = React.useState(false);
     const [showFullDescription2, setFullDescription2] = React.useState(false);
     const [showFullDescription3, setFullDescription3] = React.useState(false);
-    const [vertriPapaReadMore, setvertriPapaReadMore] = React.useState(false);
-    const [andreReadMore, setandreReadMore] = React.useState(false);
-    const [value, setValue] = React.useState(0);
-    const [open, setOpen] = React.useState(false);
-    const [contactopen, setContactOpen] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const handleOpenContact = () => setContactOpen(true);
-    const handleCloseContact = () => setContactOpen(false);
     const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
     const dispatch = useDispatch();
     const aboutusdata = useSelector((state) => state?.Pics?.aboutusdata?.data);
     const headandfooterdata = useSelector((state) => state?.Pics?.headandfooterdata?.data);
+    const [value, setValue] = React.useState('1');
 
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     useEffect(() => {
         dispatch(getaboutusdata());
         dispatch(getheaderandfooterdata());
@@ -171,7 +175,43 @@ const Dashboard = () => {
                         <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
-                            <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
+                            <Navbar expand="lg" className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
+                                <Container>
+                                    <Navbar.Brand>
+                                        <a href="/" className="logo">
+                                            <img src={Logo} alt="PICS Consultants" />
+                                        </a>
+                                    </Navbar.Brand>
+                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                    <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="menu-right">
+                                        <Nav.Link href="/">Home</Nav.Link>
+                                        <NavDropdownMenu
+                                            title="Study Abroad"
+                                            id="collasible-nav-dropdown"
+                                            alignRight
+                                            >
+                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                        </NavDropdownMenu>
+                                        
+                                        <Nav.Link href="about">About</Nav.Link>
+                                        <Nav.Link href="faq">FAQ</Nav.Link>
+                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</span></Nav.Link>
+                                        <Nav.Link>
+                                            <div class="whatsapp-icon">
+                                                <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
+                                            </div>
+                                        </Nav.Link>
+                                    </Nav>
+                                    </Navbar.Collapse>
+                                </Container>
+                            </Navbar>
+                            {/* <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
                                 <div className="container relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
                                         <a href="/" className="logo">
@@ -185,6 +225,10 @@ const Dashboard = () => {
                                     <div className="inner-nav desktop-nav">
                                         <ul className="clearlist">
                                             <li className="active xs-hide"><a href="/">Home</a></li>
+                                            <li>
+                                                <a href="about">About</a>
+                                                
+                                            </li>
                                             <li><a href="about">About</a></li>
                                             <li><a href="faq">FAQ</a></li>
                                             <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
@@ -194,7 +238,7 @@ const Dashboard = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </nav>
+                            </nav> */}
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
                                     <section className="home-section bg-scroll fixed-height-medium" style={{
@@ -598,6 +642,243 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
+                                <section className='page-section faqs pb-0'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-10">
+                                            Study in USA FAQs
+                                        </h3>
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <Accordion defaultExpanded>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel1-content"
+                                                    id="panel1-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>When can Indian students apply for admission to US universities?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel2-content"
+                                                    id="panel2-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Are all US universities test-optional for undergraduate admissions?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel3-content"
+                                                    id="panel3-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>How much is the acceptance rate for the top 10 US universities?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel4-content"
+                                                    id="panel4-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Which are some of the top paying jobs in USA?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel5-content"
+                                                    id="panel5-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>How to prepare F-1 interview for US student visa?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </section>
+
+                                <section className='page-section pt-70'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                            Intake in USA
+                                        </h3>
+                                        <div className='section-text text-center'>
+                                            Studying abroad is a huge decision that requires meticulous planning and organization. This guide will help you manoeuvre confusing timelines for fall and spring intakes in USA 2024. It will provide you with an overview of various dates so that you can start your study abroad journey as soon as possible. Also check out the entire timeline for the Fall 2024 US intake and Spring 2024 US intake, which includes when to apply and when to begin preparing for the intended intake as international students.
+                                        </div>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+
+                                                <div className='row mt-30 mb-50'>
+                                                    <div className='col-md-6'>
+                                                        <div className='pros'>
+                                                            <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+
+                                                            <div className='list-intake'>
+                                                                Wide range of programs and courses to choose from
+                                                            </div>
+                                                            <div className='list-intake'>
+                                                                Most number of scholarships and financial aid
+                                                            </div>
+                                                            <div className='list-intake'>
+                                                                Better possibilities of getting part-time jobs and internships during the break
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className='col-md-6'>
+                                                        <div className='cons'>
+                                                            <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+
+                                                            <div className='list-intake'>
+                                                                High competition, seats fill out fast
+                                                            </div>
+                                                            <div className='list-intake'>
+                                                                The cost of living may be higher
+                                                            </div>
+                                                            <div className='list-intake'>
+                                                                Difficult to get accommodation due to the high demand
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h3 className='fw-700 italic mb-10'>Fall Intake Timelines</h3>
+
+                                                <div className='timelines'>
+                                                    <ul className="timeline">
+                                                        <li className="timeline-item" data-date="APR – JUN">
+                                                            <div className='title'>Shortlist the universities based on preference</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Gather complete information on finances, loans, scholarships</li>
+                                                                    <li>Check for courses on offer</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="JUL – AUG">
+                                                            <div className='title'>Apply and appear for necessary exams</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Give standardized tests based on level of course admission</li>
+                                                                    <li>Also appear for ELP tests based on requirement</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="SEP – DEC">
+                                                            <div className='title'>Begin the application process</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Universities will begin accepting admission applications from applicants</li>
+                                                                    <li>Adhere to the deadlines</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="JAN – FEB">
+                                                            <div className='title'>Deadline for application and document uploading</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Document uploading deadlines close</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="FEB – APR">
+                                                            <div className='title'>Admission decisions from universities</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Accept admission offer</li>
+                                                                    <li>Prepare necessary documents for I-20 process</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="MAY – JUL">
+                                                            <div className='title'>Acceptance of I-20</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Apply for student visa for USA</li>
+                                                                    <li>Prepare for interviews</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+
+                                                        <li className="timeline-item" data-date="AUG">
+                                                            <div className='title'>Make travel plans</div>
+                                                            <div class="list-style-3">
+                                                                <ul>
+                                                                    <li>Get ready for departure</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section bg-pos-topcenter bg-scroll' style={{
+                                        background: `url(${studentvisa_usa})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <div className='row d-flex justify-content-end'>
+                                            <div className='col-md-5'>
+                                                <h3 className="hs-line-3 white text-left font-alt mb-20 mb-xs-10">
+                                                    Student Visa in USA
+                                                </h3>
+                                                <div className='section-text white'>
+                                                    There are different types of US student visas and the F1 visa is the most popular one. Students applying for a program that requires more than 18 hours of study in a week require an F1 visa. Those who are planning to take up their bachelor’s as well as master's in the USA require an F1 study visa. Apart from this, students going to vocational or technical students require an M1 visa.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section pb-0'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-10">
+                                            Documents Required for Visa Application
+                                        </h3>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <img src={visa_usa} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
                                 <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100' style={{
                                         background: `url(${map_usa})`,
                                 }}>
@@ -702,7 +983,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section pt-20'>
+                                <section className='page-section pt-20'>
                                     <div className="container">
                                         <div className='row g-0 d-flex align-items-end'>
                                             <div className='col-md-4'>
