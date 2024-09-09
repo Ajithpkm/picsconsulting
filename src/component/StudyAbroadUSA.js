@@ -1083,13 +1083,13 @@ const Dashboard = () => {
                                 <section className='page-section pt-20'>
                                     <div className="container">
                                         <div className='row g-0 d-flex align-items-end'>
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='img-round'><img src={getintouch_usa} className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='right-container'>
                                                     <div className='row d-flex align-items-center'>
-                                                        <div className='col-md-8'>
+                                                        <div className='col-md-8 mb-xs-10'>
                                                             <h3 class="fw-700 italic mb-0">Get in Touch</h3>
                                                             <p>For a more personalised consultation,<br/> get in touch with a PICS consultant today!</p>
                                                         </div>
@@ -1203,25 +1203,43 @@ const Dashboard = () => {
                                             </div>
 
                                             <div className='mblock'>
-                                                <div className='footer-widget xs-order-1'>
-                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
-                                                </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
-                                                            <h4>UNITED KINGDOM</h4>
-                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
-                                                            <b>Call & WhatsApp</b><br />+44 7510 830896
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
-                                                        <div className='footer-widget'>
-                                                            <h4>India</h4>
-                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br />
-                                                            <b>Call & WhatsApp</b><br />+91 94440 94442
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-12 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Content to be provided<br/>  by the client <br/> 
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1250,6 +1268,7 @@ const Dashboard = () => {
                                                         <div className='col-6 col-md-6'>
                                                             <ul className="clearlist">
                                                                 <li><a href="/">Home</a></li>
+                                                                <li><a href="/about">Study Abroad</a></li>
                                                                 <li><a href="/about">About</a></li>
                                                                 <li><a href="/faq">FAQ</a></li>
                                                                 <li><a href="/contact">Contact</a></li>
