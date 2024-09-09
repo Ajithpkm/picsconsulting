@@ -79,6 +79,7 @@ const style = {
 
 const Dashboard = () => {
     const [value, setValue] = React.useState('1');
+    const [menuValue, setMenuValue] = React.useState('');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -95,6 +96,10 @@ const Dashboard = () => {
             window.removeEventListener('scroll', isSticky);
         };
     });
+
+   const activeMenu = (str) => () => {
+    setMenuValue(str);
+  };
            
     const isSticky = (e) => {
         const header = document.querySelector('.stickymenu');
@@ -227,14 +232,14 @@ const Dashboard = () => {
                                     <div className='container-1400 relative'>
                                         <div className='addonMenu'>
                                             <ul>
-                                                <li><a href='#about-usa' className='active'>About USA</a></li>
-                                                <li><a href='#usa-highlights'>USA Highlights</a></li>
-                                                <li><a href='#education-system'>Education System</a></li>
-                                                <li><a href='#top-courses'>Top Courses</a></li>
-                                                <li><a href='#faqs'>FAQs</a></li>
-                                                <li><a href='#timelines'>Intake & Timelines</a></li>
-                                                <li><a href='#for-visa'>For Visa</a></li>
-                                                <li><a href='#work-opportunities'>Work Opportunities</a></li>
+                                                <li><a href='#about-usa' className={menuValue == "1"?'active':''} onClick={activeMenu("1")}>About USA</a></li>
+                                                <li><a href='#usa-highlights' className={menuValue == "2"?'active':''} onClick={activeMenu("2")}>USA Highlights</a></li>
+                                                <li><a href='#education-system' className={menuValue == "3"?'active':''} onClick={activeMenu("3")}>Education System</a></li>
+                                                <li><a href='#top-courses' className={menuValue == "4"?'active':''} onClick={activeMenu("4")}>Top Courses</a></li>
+                                                <li><a href='#faqs' className={menuValue == "5"?'active':''} onClick={activeMenu("5")}>FAQs</a></li>
+                                                <li><a href='#timelines' className={menuValue == "6"?'active':''} onClick={activeMenu("6")}>Intake & Timelines</a></li>
+                                                <li><a href='#for-visa' className={menuValue == "7"?'active':''} onClick={activeMenu("7")}>For Visa</a></li>
+                                                <li><a href='#work-opportunities' className={menuValue == "8"?'active':''} onClick={activeMenu("8")}>Work Opportunities</a></li>
 
                                             </ul>
                                         </div>
