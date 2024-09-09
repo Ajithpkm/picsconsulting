@@ -259,12 +259,12 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-7'>
+                                            <div className='col-md-7 mt-xs-20'>
                                                 <div className='inner-column'>
                                                     <h3 className='fw-700 italic mb-10'><b>Key Facts About USA</b></h3>
 
                                                     <div className='row mb-20'>
-                                                        <div className='col-md-4'>
+                                                        <div className='col-6 col-md-4'>
                                                             <div className='key-benefits mb-20'>
                                                                 <div className='count'>963+</div>
                                                                 <div className='divider'></div>
@@ -272,7 +272,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-6 col-md-4'>
                                                             <div className='key-benefits mb-20'>
                                                                 <div className='count'>4.66 L</div>
                                                                 <div className='divider'></div>
@@ -280,7 +280,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-6 col-md-4'>
                                                             <div className='key-benefits mb-20'>
                                                                 <div className='count'>20 Hrs</div>
                                                                 <div className='divider'></div>
@@ -288,7 +288,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-6 col-md-4'>
                                                             <div className='key-benefits mb-10'>
                                                                 <div className='count'>2%</div>
                                                                 <div className='divider'></div>
@@ -296,7 +296,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-6 col-md-4'>
                                                             <div className='key-benefits mb-10'>
                                                                 <div className='count'>334.23M</div>
                                                                 <div className='divider'></div>
@@ -306,7 +306,7 @@ const Dashboard = () => {
                                                     </div>
 
                                                     <div className='row'>
-                                                        <div className='col-md-4'>
+                                                        <div className='col-md-4 mb-xs-20'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={washington_icon} alt="WASHINGTON" />
                                                                 <div className='location'>WASHINGTON</div>
@@ -314,7 +314,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-md-4 mb-xs-20'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={months_icon} alt="12 MONTHS" />
                                                                 <div className='location'>12 MONTHS</div>
@@ -322,7 +322,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <div className='col-md-4'>
+                                                        <div className='col-md-4 mb-xs-0'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={english_icon} alt="ENGLISH" />
                                                                 <div className='location'>ENGLISH</div>
@@ -335,7 +335,7 @@ const Dashboard = () => {
                                         </div>
 
                                         <div className='row mt-30'>
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='key-benefits-3'>
                                                     <div className='alt-service-item mb-10'>
                                                         <div className='alt-service-icon'>
@@ -353,7 +353,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='key-benefits-3'>
                                                     <div className='alt-service-item mb-10'>
                                                         <div className='alt-service-icon'>
@@ -371,7 +371,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='key-benefits-3'>
                                                     <div className='alt-service-item mb-10'>
                                                         <div className='alt-service-icon'>
@@ -392,15 +392,15 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section bg-pos-topcenter bg-scroll pb-100' style={{
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pb-xs-50' style={{
                                         background: `url(${highlights_bg})`,
                                 }} id='usa-highlights'>
                                     <div className='container-1400 relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
                                             Study in USA Highlights
                                         </h3>
                                         <div className='row mb-80'>
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>Universities in<br/> the USA</div>
                                                     <div className='icon'><img src={highlight_icon_01} /></div>
@@ -408,7 +408,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>Average Living<br/> Expense</div>
                                                     <div className='icon'><img src={highlight_icon_02} /></div>
@@ -416,7 +416,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>Popular Courses<br /> in USA</div>
                                                     <div className='icon'><img src={highlight_icon_03} /></div>
@@ -424,7 +424,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>Part-Time Work <br/>Allowance</div>
                                                     <div className='icon'><img src={highlight_icon_04} /></div>
@@ -432,7 +432,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>Work Permit In<br/> USA Post-Study</div>
                                                     <div className='icon'><img src={highlight_icon_05} /></div>
@@ -440,7 +440,7 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className='col-md-2'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
                                                 <div className='highlights'>
                                                     <div className='desc'>USA Study Visa<br/>Cost</div>
                                                     <div className='icon'><img src={highlight_icon_06} /></div>
@@ -483,7 +483,7 @@ const Dashboard = () => {
 
                                             </div>
 
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mt-xs-20'>
                                                 <div className='img-round'><img src={education_system_usa} className='img-fluid' /></div>
                                             </div>
                                         </div>
@@ -500,7 +500,7 @@ const Dashboard = () => {
                                         </div>
 
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-6 mb-xs-20'>
                                                 <div className='img-round'><img src={popular_couses_usa} className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-6'>
@@ -556,7 +556,6 @@ const Dashboard = () => {
                                                     Admission requirements for a UG and PG program are different for US universities. Below we have mentioned the general admission requirements to study at USA universities.
                                                 </div>
 
-
                                                 <div className='row'>
                                                     <div className='col-md-6'>
                                                         <div className='list-style-3'>
@@ -583,7 +582,7 @@ const Dashboard = () => {
 
                                             </div>
 
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mt-xs-20'>
                                                 <div className='img-round'><img src={admission_usa} className='img-fluid' /></div>
                                             </div>
                                         </div>
@@ -606,7 +605,7 @@ const Dashboard = () => {
                                         </div>
 
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
-                                            <div className='col-md-4'>
+                                            <div className='col-md-4 mb-xs-20'>
                                                 <div className='img-round'><img src={poststudy_usa} className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
@@ -623,7 +622,7 @@ const Dashboard = () => {
 
                                 <section className='page-section faqs pb-0' id='faqs'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
                                             Study in USA FAQs
                                         </h3>
                                         <div className='row'>
@@ -703,9 +702,9 @@ const Dashboard = () => {
                                     </div>    
                                 </section>
 
-                                <section className='page-section pt-70' id='timelines'>
+                                <section className='page-section pt-70 pt-xs-40' id='timelines'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-30">
                                             Intake in USA
                                         </h3>
                                         <div className='section-text text-center mb-50'>
@@ -723,7 +722,7 @@ const Dashboard = () => {
                                                     </Box>
                                                     <TabPanel value="1">
                                                         <div className='row mb-50'>
-                                                            <div className='col-md-6'>
+                                                            <div className='col-md-6 mb-xs-20'>
                                                                 <div className='pros'>
                                                                     <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
 
@@ -756,7 +755,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <h3 className='fw-700 italic mb-10'>Fall Intake Timelines</h3>
+                                                        <h3 className='fw-700 italic mb-10 m-center'>Fall Intake Timelines</h3>
 
                                                         <div className='timelines'>
                                                             <ul className="timeline">
@@ -832,7 +831,7 @@ const Dashboard = () => {
                                                     </TabPanel>
                                                     <TabPanel value="2">
                                                     <div className='row mb-50'>
-                                                            <div className='col-md-6'>
+                                                            <div className='col-md-6 mb-xs-20'>
                                                                 <div className='pros'>
                                                                     <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
 
@@ -865,7 +864,7 @@ const Dashboard = () => {
                                                             </div>
                                                         </div>
 
-                                                        <h3 className='fw-700 italic mb-10'>Spring Intake Timelines</h3>
+                                                        <h3 className='fw-700 italic mb-10 m-center'>Spring Intake Timelines</h3>
 
                                                         <div className='timelines'>
                                                             <ul className="timeline">
@@ -965,7 +964,7 @@ const Dashboard = () => {
 
                                 <section className='page-section pb-0'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
                                             Documents Required for Visa Application
                                         </h3>
 
@@ -977,7 +976,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100' style={{
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
                                         background: `url(${map_usa})`,
                                 }}>
                                     <div className='container relative'>
@@ -1015,7 +1014,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section bg-pos-topcenter bg-scroll pb-100' style={{
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pt-xs-0' style={{
                                         background: `url(${workopportunities_usa})`,
                                 }} id='work-opportunities'>
                                     <div className='container relative'>
@@ -1026,7 +1025,7 @@ const Dashboard = () => {
                                                 </div>
                                                 <div className='col-md-8'>
                                                     <div className='inner-column'>
-                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-10">
+                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-30">
                                                             Work Opportunities in USA
                                                         </h3>
                                                         <div className='section-text mb-30'>

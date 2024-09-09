@@ -38,12 +38,8 @@ Project: DT Skill
         margin-top: -40px;
     } 
     .alt-service-item {
-        margin-top: 40px;
-        padding-left: 48px;
     }
     .alt-services-title{
-        font-size: 14px;
-        margin-bottom: 5px;
     }
     .alt-services-image{
         margin-top: 10px;
@@ -276,7 +272,7 @@ Project: DT Skill
     margin-top: -30px;
     }
     .alt-service-item {
-        margin-top: 30px;
+        margin-top: 0px;
     }
 
     .works-filter a{
@@ -326,6 +322,54 @@ Project: DT Skill
 @media only screen and (max-width: 767px) {
     .nav-logo-wrap {
         margin-right: 5px;
+    }
+    .highlights {
+        padding: 15px;
+        min-height: 200px;
+    }
+    .highlights-2 {
+        padding: 30px;
+    }
+    .customTabs .MuiTab-root {
+        border: 1px solid #182E46;
+        border-radius: 5px;
+        margin: 0px 5px;
+        padding: 2px 14px;
+        text-transform: none;
+        white-space: nowrap;
+        max-width: 180px;
+        font-size: 12px;
+        min-height: 30px;
+    }
+    .timeline {
+        left: 0px;
+        width: 100%;
+    }
+    .timeline-item::before {
+        left: -10px;
+        top: 20px;
+    }
+    .timeline-item::after {
+        content: attr(data-date);
+        position: absolute;
+        left: -75px;
+        top: 10px;
+        padding: 5px 4px;
+        font-size: 13px;
+        min-width: 75px;
+        text-align: center;
+    }
+    .list-style-3 ul li {
+        padding-left: 10px;
+    }
+    .exam_list {
+        gap: 10px;
+    }
+    .icon-listing ul li img {
+        max-width: 50px;
+    }
+    .right-container {
+        margin-left: 0px;
     }
     .fixed-height-small-m {
         min-height: 600px !important;
@@ -815,7 +859,24 @@ Project: DT Skill
         position: static;
         padding-bottom: 10px;
     }
-    
+    .logo img {
+        max-width: 150px;
+    }
+    .navbar-toggler {
+        border: 1px solid #fff;
+    }
+    .navbar-toggler-icon {
+        background-image: url('../images/menu.svg');
+    }
+    .stickymenu {
+        overflow: scroll;
+    }
+    .addonMenu ul li {
+        line-height: 1.2;
+    }
+    .inner-column {
+        padding-left: 0;
+    }
     .countdown > li{
         margin: 0 10px 20px;
     }
