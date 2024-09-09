@@ -5196,3 +5196,6 @@ input:-webkit-autofill:active {
     background-color: transparent !important;
     border: none !important;
 }
+.stickymenu ul li a.active {
+    color: #B9943C;
+}

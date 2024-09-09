@@ -227,7 +227,7 @@ const Dashboard = () => {
                                     <div className='container-1400 relative'>
                                         <div className='addonMenu'>
                                             <ul>
-                                                <li><a href='#about-usa'>About USA</a></li>
+                                                <li><a href='#about-usa' className='active'>About USA</a></li>
                                                 <li><a href='#usa-highlights'>USA Highlights</a></li>
                                                 <li><a href='#education-system'>Education System</a></li>
                                                 <li><a href='#top-courses'>Top Courses</a></li>
