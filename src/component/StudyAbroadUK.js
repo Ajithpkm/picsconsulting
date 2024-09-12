@@ -1,0 +1,1319 @@
+import React, { useEffect } from 'react';
+import WOW from 'wowjs';
+import { Box, Typography } from '@mui/material';
+import { NavDropdown, Container, Navbar, Nav } from "react-bootstrap";
+import { NavDropdownMenu } from "react-bootstrap-submenu";
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
+import Logo from '../images/logo.png';
+import FooterLogo from '../images/footer-logo.png';
+import facebook from '../images/facebook.png';
+import instagram from '../images/instagram.png';
+import whatsapp from '../images/whatsapp.png';
+import mail from '../images/mail.png';
+import call from '../images/call.png';
+import usa_bg from '../images/uk/banner-bg.jpg';
+import highlights_bg from '../images/usa-bg.png';
+import whatsappwhite from '../images/whatsapp-w.png';
+import washington_icon from '../images/washington.png';
+import months_icon from '../images/12-months.png';
+import english_icon from '../images/english.png';
+import topranker_icon from '../images/uk/higher-education.png';
+import campus_icon from '../images/campus-culture.png';
+import goodquality_icon from '../images/good-quality.png';
+import highlight_icon_01 from '../images/icon-01.png';
+import highlight_icon_02 from '../images/icon-02.png';
+import highlight_icon_uk from '../images/uk/cost-of-studying.png';
+import highlight_icon_03 from '../images/icon-03.png';
+import highlight_icon_04 from '../images/icon-04.png';
+import highlight_icon_05 from '../images/icon-05.png';
+import highlight_icon_06 from '../images/icon-06.png';
+import education_system_usa from '../images/uk/education-system.jpg';
+import admission_requirement from '../images/uk/admission-requirement.jpg';
+import highlight_icon_07 from '../images/uk/uk-scholarship.png';
+import admission_usa from '../images/admission-usa.jpg';
+import highlight_icon_08 from '../images/icon-08.png';
+import poststudy_usa from '../images/post-study-usa.jpg';
+import workopportunities_usa from '../images/work-opportunities-usa.png';
+import workopportunities_usa_02 from '../images/uk/workopportunities_uk.jpg';
+import getintouch_usa from '../images/getin-touch-usa.jpg';
+import opportunities_icon_01 from '../images/icon-09.png';
+import opportunities_icon_02 from '../images/icon-10.png';
+import opportunities_icon_03 from '../images/icon-11.png';
+import opportunities_icon_04 from '../images/icon-12.png';
+import opportunities_icon_05 from '../images/icon-13.png';
+import opportunities_icon_06 from '../images/icon-14.png';
+import opportunities_icon_07 from '../images/uk/icon-01.png';
+import opportunities_icon_08 from '../images/uk/icon-02.png';
+import opportunities_icon_09 from '../images/uk/icon-03.png';
+import opportunities_icon_10 from '../images/uk/icon-04.png';
+import opportunities_icon_11 from '../images/uk/icon-05.png';
+import map_usa from '../images/usa-map.png';
+import exam_01 from '../images/exam-01.png';
+import exam_02 from '../images/exam-02.png';
+import exam_03 from '../images/exam-03.png';
+import exam_04 from '../images/exam-04.png';
+import exam_05 from '../images/exam-05.png';
+import exam_06 from '../images/exam-06.png';
+import exam_07 from '../images/exam-07.png';
+import visa_uk from '../images/uk/document-required.png';
+import studentvisa_usa from '../images/uk/student-visa.jpg';
+import './style.css';
+import "react-bootstrap-submenu/dist/index.css";
+import '../css/verticals.min.css';
+import { getheaderandfooterdata, getaboutusdata} from '../Actions/Pics';
+import { useDispatch, useSelector } from "react-redux";
+import CookieConsent, { Cookies } from "react-cookie-consent";
+import Tab from '@material-ui/core/Tab';
+import TabContext from '@material-ui/lab/TabContext';
+import TabList from '@material-ui/lab/TabList';
+import TabPanel from '@material-ui/lab/TabPanel';
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
+const StudyAbroadUK = () => {
+    const [value, setValue] = React.useState('1');
+    const [menuValue, setMenuValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+    const [loading, setLoading] = React.useState(false);
+    const [isScrollValueMoreThanHeaderHeight, setIsScrollValueMoreThanHeaderHeight] = React.useState(false);
+    const dispatch = useDispatch();
+    const aboutusdata = useSelector((state) => state?.Pics?.aboutusdata?.data);
+    const headandfooterdata = useSelector((state) => state?.Pics?.headandfooterdata?.data);
+    
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+
+   const activeMenu = (str) => () => {
+    setMenuValue(str);
+  };
+           
+    const isSticky = (e) => {
+        const header = document.querySelector('.stickymenu');
+        const scrollTop = window.scrollY;
+        scrollTop >= 10 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+    };
+    useEffect(() => {
+        dispatch(getaboutusdata());
+        dispatch(getheaderandfooterdata());
+
+        setTimeout(() => {
+            setLoading(true);
+        }, 800);
+
+        const handleScroll = () => {
+            setIsScrollValueMoreThanHeaderHeight(window.scrollY > 96);
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll);
+
+    }, []);
+
+    return (
+        <>
+            <div>
+                {aboutusdata && <CookieConsent
+                    // acceptOnScroll={true}
+                    // acceptOnScrollPercentage={50}
+                    // onAccept={(byScroll) => {
+                    //     alert(`consent given. \n\n By scrolling? ${byScroll}`);
+                    // }}
+                    // flipButtons 
+                    // overlay
+                    buttonText="Accept All"
+                    declineButtonText="Decline"
+                    location="bottom"
+                    cookieName="myAwesomeCookieName3"
+                    enableDeclineButton
+                    expires={999}
+                    style={{ display: 'grid', width: '50%', left: '50%' }}
+                    buttonStyle={{ float: 'right' }}
+                    declineButtonStyle={{ float: 'right' }}
+                >
+                    <span>GENERAL USE </span>
+                    <p>
+                        We use cookies, tracking pixels and related technologies on our website.
+                        Cookies are small data logs that are served by our platform and stored on your device.
+                        Our site uses cookies for a variety of purposes including to operate and personalise the website.
+                        We also use cookies to provide us with aggregate data about site traffic and site interaction.
+                    </p>
+                    <span>THIRD PARTY</span>
+                    <p>
+                        Our website employs the use of various third-party services. Through the use of our website,
+                        these services may place anonymous cookies on the Visitor's browser and may send their own cookies to the Visitor's cookie file.
+                        Some of these services include but are not limited to: Google Analytics, Google Ads, Hubspot, analytics companies and service providers.
+                        We may contract with third parties to assist us in gathering data, however,
+                        they are not permitted to use information collected except to help Path/PathUK conduct and improve its business.
+                    </p>
+                </CookieConsent>
+                }
+                {loading === false ?
+                    <div className='page-loader'>
+                        <span className="loader"></span>
+                    </div> :
+                    <div>
+                        <title>PICS Consultants</title>
+                        <a href="#main" className="btn skip-to-content">Skip to Content</a>
+                        <div className="page" id="top">
+                            <Navbar expand="lg" className="main-nav">
+                                <Container>
+                                    <Navbar.Brand>
+                                        <a href="/" className="logo">
+                                            <img src={Logo} alt="PICS Consultants" />
+                                        </a>
+                                    </Navbar.Brand>
+                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                    <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="menu-right">
+                                        <Nav.Link href="/">Home</Nav.Link>
+                                        <NavDropdownMenu
+                                            title="Study Abroad"
+                                            id="collasible-nav-dropdown"
+                                            alignRight
+                                            >
+                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                        </NavDropdownMenu>
+                                        
+                                        <Nav.Link href="about">About</Nav.Link>
+                                        <Nav.Link href="faq">FAQ</Nav.Link>
+                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</span></Nav.Link>
+                                        <Nav.Link>
+                                            <div class="whatsapp-icon">
+                                                <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
+                                            </div>
+                                        </Nav.Link>
+                                    </Nav>
+                                    </Navbar.Collapse>
+                                </Container>
+                            </Navbar>
+                            <main id="main">
+                                <div className="home-section fullwidth-slider" id="home">
+                                    <section className="home-section bg-scroll fixed-height-medium" style={{
+                                        background: `url(${usa_bg})`,
+                                    }}>
+                                        <div className="js-height-parent container-1400">
+                                            <div className="home-content">
+                                                <div className="home-text">
+                                                    <div className="row d-flex align-items-center justify-content-center">
+                                                        <div className="col-md-8">
+                                                            <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
+                                                                Study Abroad USA
+                                                            </h1>
+                                                            <h2 className="hs-line-2 text-center">
+                                                                United Kingdom
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                                <section className='bg-blue pt-20 pb-20 stickymenu'>
+                                    <div className='container-1400 relative'>
+                                        <div className='addonMenu'>
+                                            <ul>
+                                                <li><a href='#about-uk' className={menuValue == "1"?'active':''} onClick={activeMenu("1")}>About UK</a></li>
+                                                <li><a href='#uk-highlights' className={menuValue == "2"?'active':''} onClick={activeMenu("2")}>UK Highlights</a></li>
+                                                <li><a href='#education-system' className={menuValue == "3"?'active':''} onClick={activeMenu("3")}>Education System</a></li>
+                                                <li><a href='#top-courses' className={menuValue == "4"?'active':''} onClick={activeMenu("4")}>Top Courses</a></li>
+                                                <li><a href='#faqs' className={menuValue == "5"?'active':''} onClick={activeMenu("5")}>FAQs</a></li>
+                                                <li><a href='#timelines' className={menuValue == "6"?'active':''} onClick={activeMenu("6")}>Intake & Timelines</a></li>
+                                                <li><a href='#for-visa' className={menuValue == "7"?'active':''} onClick={activeMenu("7")}>For Visa</a></li>
+                                                <li><a href='#work-opportunities' className={menuValue == "8"?'active':''} onClick={activeMenu("8")}>Work Opportunities</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section pb-40' id='about-uk'>
+                                    <div className='container relative'>
+                                    
+                                        <div className='row d-flex justify-content-between'>
+                                            <div className='col-md-5'>
+                                                <h3 className="hs-line-3 color font-alt mb-20 mb-xs-10">
+                                                    About UK
+                                                </h3>
+                                                <div className='section-text mb-20'>
+                                                    The UK offers an excellent academic experience for students who are looking to learn in some of the world-leading Universities that are known for high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, there were 55,465 Indian students studying in the UK in 2022. The statistics reveal that the UK is becoming a popular destination for international students. Some of the Universities in the UK such as Imperial College London, University College London, etc. have had academic and research ties with Indian Universities since a long period of time. Universities in the UK have recorded an excellent career outcome rate. 
+                                                </div>
+
+                                                <div className='section-text'>
+                                                    As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%
+                                                </div>
+                                            </div>
+
+                                            <div className='col-md-7 mt-xs-20'>
+                                                <div className='inner-column'>
+                                                    <h3 className='fw-700 italic mb-10'><b>Key Facts About UK</b></h3>
+
+                                                    <div className='row mb-20'>
+                                                        <div className='col-6 col-md-4'>
+                                                            <div className='key-benefits mb-20'>
+                                                                <div className='count'>167+ </div>
+                                                                <div className='divider'></div>
+                                                                <div className='desc'>Universities &<br/> Colleges</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-6 col-md-4'>
+                                                            <div className='key-benefits mb-20'>
+                                                                <div className='count'>55.47K</div>
+                                                                <div className='divider'></div>
+                                                                <div className='desc'>Indian Students<br/> at 2022</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-6 col-md-4'>
+                                                            <div className='key-benefits mb-20'>
+                                                                <div className='count'>20 Hrs/Week</div>
+                                                                <div className='divider'></div>
+                                                                <div className='desc'>Week Port Time<br/> Work Permit</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-6 col-md-4'>
+                                                            <div className='key-benefits mb-10'>
+                                                                <div className='count'>1%</div>
+                                                                <div className='divider'></div>
+                                                                <div className='desc'>Economic Growth<br/> Rate at 2023</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-6 col-md-4'>
+                                                            <div className='key-benefits mb-10'>
+                                                                <div className='count'>67.03M</div>
+                                                                <div className='divider'></div>
+                                                                <div className='desc'>Total Population<br/> at 2023</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className='row'>
+                                                        <div className='col-md-4 mb-xs-20'>
+                                                            <div className='key-benefits-2'>
+                                                                <img src={washington_icon} alt="LONDON" />
+                                                                <div className='location'>LONDON</div>
+                                                                <div className='white'>Capital</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-md-4 mb-xs-20'>
+                                                            <div className='key-benefits-2'>
+                                                                <img src={months_icon} alt="2 Years" />
+                                                                <div className='location'>2 Years</div>
+                                                                <div className='white'>Post Study Work Permit</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className='col-md-4 mb-xs-0'>
+                                                            <div className='key-benefits-2'>
+                                                                <img src={english_icon} alt="ENGLISH" />
+                                                                <div className='location'>ENGLISH</div>
+                                                                <div className='white'>Primary Language</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='row mt-30'>
+                                            <div className='col-md-4 mb-xs-20'>
+                                                <div className='key-benefits-3'>
+                                                    <div className='alt-service-item mb-10'>
+                                                        <div className='alt-service-icon'>
+                                                            <img src={topranker_icon} alt="Reputed Higher Education" />
+                                                        </div>
+                                                        <h3 className='alt-services-title'>Reputed Higher<br/> Education</h3>
+                                                    </div>
+                                                    
+                                                    <div className='list-style-2'>
+                                                        <ul>
+                                                            <li>Globally recognized degrees and top ranking colleges</li>
+                                                            <li>Cutting-edge research opportunitios with good number of course options</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-md-4 mb-xs-20'>
+                                                <div className='key-benefits-3'>
+                                                    <div className='alt-service-item mb-10'>
+                                                        <div className='alt-service-icon'>
+                                                            <img src={campus_icon} alt="Campus Culture Safety" />
+                                                        </div>
+                                                        <h3 className='alt-services-title'>Campus Culture<br/> Safety</h3>
+                                                    </div>
+                                                    
+                                                    <div className='list-style-2'>
+                                                        <ul>
+                                                            <li>Robust Safety Measures</li>
+                                                            <li>Vibrant Student life and inclusive Environment</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-md-4 mb-xs-20'>
+                                                <div className='key-benefits-3'>
+                                                    <div className='alt-service-item mb-10'>
+                                                        <div className='alt-service-icon'>
+                                                            <img src={goodquality_icon} alt="Better Quality of Life" />
+                                                        </div>
+                                                        <h3 className='alt-services-title'>Better Quality of<br/> Life</h3>
+                                                    </div>
+                                                    
+                                                    <div className='list-style-2'>
+                                                        <ul>
+                                                            <li>Accessible healthcare and public services in UK for students.</li>
+                                                            <li>Abundont cultural experiences enhance overall lifestyle for indians</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pb-xs-50' style={{
+                                        background: `url(${highlights_bg})`,
+                                }} id='uk-highlights'>
+                                    <div className='container-1400 relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                            Study in UK Highlights
+                                        </h3>
+                                        <div className='row mb-80'>
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Universities in<br/> the UK</div>
+                                                    <div className='icon'><img src={highlight_icon_01} /></div>
+                                                    <div className='desc'>160+</div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Cost of Studying<br/> in the UK</div>
+                                                    <div className='icon'><img src={highlight_icon_uk} /></div>
+                                                    <div className='desc'>£8,000 To £38,000<br/> (Per Year)</div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Average Living<br/> Expense</div>
+                                                    <div className='icon'><img src={highlight_icon_02} /></div>
+                                                    <div className='desc'>£1,000 To £1,800<br/> (Per annum) </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Top 5 Universities<br/> (QS)</div>
+                                                    <div className='icon'><img src={highlight_icon_03} /></div>
+                                                    <div className='desc'>Cambridge, Oxford,<br/> Harvard , Stanford</div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Part-Time<br/> Work Allowance</div>
+                                                    <div className='icon'><img src={highlight_icon_04} /></div>
+                                                    <div className='desc'>20 Hours/Week</div>
+                                                </div>
+                                            </div>
+
+                                            <div className='col-6 col-md-2 mb-xs-10'>
+                                                <div className='highlights'>
+                                                    <div className='desc'>Post-study Work Visa (PSW UK or Graduate Route Visa)</div>
+                                                    <div className='icon'><img src={highlight_icon_06} /></div>
+                                                    <div className='desc'>2 Yrs (3 Yrs In Case Of Doctoral Qualification)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className='container'>
+                                        <div className='row d-flex align-items-center'>
+                                            <div className='col-md-8'>
+                                                <h3 className="hs-line-3 color text-left font-alt mb-10 mb-xs-10">
+                                                    Education System in UK
+                                                </h3>
+                                                
+                                                <h3 className='fw-600 italic mb-20'>Education system in the UK comprises of five stages that include:</h3>
+                                                <div className='section-text mb-30'>
+                                                    Early Years: Students up to 5 years of age can avail early years education and childcare in various state nursery schools, nursery classes and reception classes within primary schools. Primary Education: It covers children from the age of 5 years to 11 years. This is further divided into two Key Stages. Key Stage 1 comprises of children from 5 years to 7 years of age and Key Stage 2 comprises of children from 7 years to 11 years of age. Secondary Education: It covers students from the age of 11 years to 16 years. This is further divided into two Key Stages. Key Stage
+                                                </div>
+
+                                            </div>
+
+                                            <div className='col-md-4 mt-xs-20'>
+                                                <div className='img-round'><img src={education_system_usa} className='img-fluid' /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-light-gray' id='top-courses'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                            Top Courses in UK
+                                        </h3>
+                                        <div className='section-text text-center mb-40'>
+                                            Universities in the UK offer a wide range of courses that cover every available academic discipline.<br/> However, certain courses are very popular amongst students. The table given below provides a list of<br/> popular academic disciplines and various courses that are offered under those disciplines:
+                                        </div>
+
+                                        <div className='row mb-60 mb-xs-20'>
+                                            <div className='col-md-12 mb-xs-20'>
+                                                <div className='custom-table'>
+                                                    <table>
+                                                        <tr>
+                                                            <th>Business & Administrative  studies</th>
+                                                            <td>Economics</td>
+                                                            <td>Finance & Accountancy</td>
+                                                            <td>Business & Management Studies</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Engineering, Technology &  Mathematics</th>
+                                                            <td>Computer 
+                                                            Science</td>
+                                                            <td>Mathematics</td>
+                                                            <td>Civil Engineering</td>
+                                                            <td>Electrical & Electronic Engineering</td>
+                                                            <td>Mechanical Engineering</td>
+                                                            <td>Chemical Engineering</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Humanities</th>
+                                                            <td>History</td>
+                                                            <td>Languages</td>
+                                                            <td>Philosophy</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Natural Science</th>
+                                                            <td>Biology</td>
+                                                            <td>Physics</td>
+                                                            <td>Chemistry</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Social Science</th>
+                                                            <td>Sociology</td>
+                                                            <td>Law</td>
+                                                            <td>Politics</td>
+                                                            <td>Education</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Creative Arts</th>
+                                                            <td>Art and Design</td>
+                                                            <td>Media</td>
+                                                            <td>Performing Arts</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='row d-flex align-items-center mb-60 mb-xs-20'>
+                                            <div className='col-md-8 mb-xs-20'>
+                                                <h3 className='fw-600 italic mb-20'>Admission Requirements to Study in UK Universities</h3>
+                                                <div className='section-text mb-30 mb-xs-20'>
+                                                    Admission requirements to study in UK Universities vary depending on the course and academic level of the students. However, the following points will provide you an overview of requirements to study in the UK: Academic Transcripts
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='col-md-6'>
+                                                        <div className='list-style-3'>
+                                                            <ul>
+                                                                <li>Formal Schooling</li>
+                                                                <li>Graduate/ Postgraduate Degree (if application)</li>
+                                                                <li>Academic Transcripts</li>
+                                                                <li>Test Score of SAT/ GMAT/ GRE (as per the course)</li>
+                                                                <li>English proficiency test scores of IELTS/ TOEFL/ PTE/ Other (as per the course)</li>
+                                                                <li>Personal Statement (UCAS Personal Statement in case of undergraduate applicants)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-6'>
+                                                        <div className='list-style-3'>
+                                                            <ul>
+                                                                <li>Essays</li>
+                                                                <li>Resume</li>
+                                                                <li>Letters of Recommendation</li>
+                                                                <li>Portfolio (in case of creative courses)</li>
+                                                                <li>ID Proofs</li>
+                                                                <li>Financial Proofs</li>
+                                                                <li>Medical Proofs</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div className='col-md-4'>
+                                                <div className='inner-column'>
+                                                    <div className='img-round'><img src={admission_requirement} className='img-fluid' /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='row mb-60 mb-xs-20'>
+                                            <div className='col-md-12'>
+                                                <div className='highlights-2'>
+                                                    <div className='d-flex align-items-center justify-content-center mb-20'>
+                                                        <div className='me-4'>
+                                                            <img src={highlight_icon_07} alt="Scholarships to Study in UK" />
+                                                        </div>
+                                                        <h3 className='alt-services-title'>Scholarships to Study in UK</h3>
+                                                    </div>
+
+                                                    <div className='section-text'>
+                                                        Scholarships are a great way to reduce your cost of studying abroad. In addition, they are a recognition of your academic and/ or extracurricular talent as well. Students can apply for a number of scholarships in the UK. Some of the scholarships are offered by the Universities, while others are offered by organizations. Some of the top scholarships to study in UK include.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='row d-flex align-items-center mb-60 mb-xs-20'>
+                                            <div className='col-md-4 mb-xs-20'>
+                                                <div className='img-round'><img src={poststudy_usa} className='img-fluid' /></div>
+                                            </div>
+                                            <div className='col-md-8'>
+                                                <div className='inner-column'>
+                                                    <h3 className='fw-600 italic mb-20'>Post-Study Work Permit in UK</h3>
+                                                    <div className='section-text'>
+                                                        International students, after completing their undergraduate or postgraduate degree course, can apply for the UK Graduate Route Visa or PSW UK. PSW UK or UK Graduate Visa allows a student to stay back and work for 2 years after completion of his/ her degree. The duration is 3 years in case of Doctoral students. In order to apply for post study work permit in UK, students need to pay an application fee of £715 and an annual healthcare surcharge of £624. After the expiry of UK post study work visa, students can apply for skilled work visa or general work visa (Tier 2 visa) or any other relevant visa.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section faqs pb-0' id='faqs'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                            Study in UK FAQs
+                                        </h3>
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <Accordion defaultExpanded>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel1-content"
+                                                    id="panel1-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Is UK good for studies?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        UK to study abroad is one of the most sought-after destinations for pursuing academics and research. UK universities have been well-received by various ranking indices such as QS World University Rankings and Times Higher Education Rankings. 4 Universities have made it to the top 10 list on the QS rankings. In addition, UK universities have performed very well on Research Excellence Framework for their research quality and output. As a destination, UK consists of more than 55,000 Indian students and more than 605,000 international students. It is a multicultural country that has rich heritage and leisure and travel options. Students, who wish to study abroad, can definitely consider the UK as an option.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel2-content"
+                                                    id="panel2-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Can you give me a brief on UK student visa?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel3-content"
+                                                    id="panel3-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>How can I stay back in the UK after completing my academics?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel4-content"
+                                                    id="panel4-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Which are the top Universities in the UK?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel5-content"
+                                                    id="panel5-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>What is the approximate cost of living in the UK for international students?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </section>
+
+                                <section className='page-section pt-70 pt-xs-40' id='timelines'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-30">
+                                            Intake in UK
+                                        </h3>
+                                        <div className='section-text text-center mb-50'>
+                                            Overseas students wishing to apply for higher education in the UK should note that there are generally three available intakes - Fall or September intake, Winter or January intake, and Summer or May intake. The article explains the step-by-step procedure that prospective applicants should follow before applying for a university/college in the UK.
+                                        </div>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <TabContext value={value}>
+                                                    <Box className='customTabs d-flex justify-content-center'>
+                                                    <TabList onChange={handleChange} aria-label="lab API tabs example">
+                                                        <Tab label="Fall Intake & Timeline" value="1" />
+                                                        <Tab label="Winter Intake &  Timeline" value="2" />
+                                                    </TabList>
+                                                    </Box>
+                                                    <TabPanel value="1">
+                                                        <div className='row mb-50'>
+                                                            <div className='col-md-6 mb-xs-20'>
+                                                                <div className='pros'>
+                                                                    <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+
+                                                                    <div className='list-intake'>
+                                                                        September is the primary intake of UK
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        Maximum enrollments happen during this time in UK
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='col-md-6'>
+                                                                <div className='cons'>
+                                                                    <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+
+                                                                    <div className='list-intake'>
+                                                                        High competition because maximum applicants apply this time
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        Admission chances are lower due to high competition
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <h3 className='fw-700 italic mb-10 m-center'>Fall Intake Timelines</h3>
+
+                                                        <div className='timelines'>
+                                                            <ul className="timeline">
+                                                                <li className="timeline-item" data-date="APR – MAY">
+                                                                    <div className='title'>Begin shortlisting UK universities and courses</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Check the deadlines for the university and course of study</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="JUN - DEC">
+                                                                    <div className='title'>Begin preparing for ELP and standardized tests</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Appear for these exams based on university requirement</li>
+                                                                            <li>Prepare for admission documents during this time</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="OCT – DEC">
+                                                                    <div className='title'>Applications submission time</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Deadline for conservatoire music applications</li>
+                                                                            <li>Deadline for applications to the universities of Oxford and Cambridge</li>
+                                                                            <li>Also for most courses in medicine, dentistry, and veterinary medicine and science</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="MAR - JUL">
+                                                                    <div className='title'>tick to the deadlines and apply for the courses</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Wait for universities to revert on admission decision</li>
+                                                                            <li>Look out for education loans and scholarships to fund education</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="JUN - AUG">
+                                                                    <div className='title'>Accept or defer offers, complete other formalities</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Submit student visa applications</li>
+                                                                            <li>Appear for the student visa interview</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li className="timeline-item" data-date="AUG">
+                                                                    <div className='title'>Receive your student visa application</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Plan your travel and stay in UK</li>
+                                                                            <li>Fly to UK upon formalities completion for admission and visa</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </TabPanel>
+                                                    <TabPanel value="2">
+                                                    <div className='row mb-50'>
+                                                            <div className='col-md-6 mb-xs-20'>
+                                                                <div className='pros'>
+                                                                    <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+
+                                                                    <div className='list-intake'>
+                                                                        Wide range of programs and courses to choose from
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        Most number of scholarships and financial aid
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        Better possibilities of getting part-time jobs and internships during the break
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='col-md-6'>
+                                                                <div className='cons'>
+                                                                    <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+
+                                                                    <div className='list-intake'>
+                                                                        High competition, seats fill out fast
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        The cost of living may be higher
+                                                                    </div>
+                                                                    <div className='list-intake'>
+                                                                        Difficult to get accommodation due to the high demand
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <h3 className='fw-700 italic mb-10 m-center'>Spring Intake Timelines</h3>
+
+                                                        <div className='timelines'>
+                                                            <ul className="timeline">
+                                                                <li className="timeline-item" data-date="APR – JUN">
+                                                                    <div className='title'>Shortlist the universities based on preference</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Gather complete information on finances, loans, scholarships</li>
+                                                                            <li>Check for courses on offer</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="JUL – AUG">
+                                                                    <div className='title'>Apply and appear for necessary exams</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Give standardized tests based on level of course admission</li>
+                                                                            <li>Also appear for ELP tests based on requirement</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="SEP – DEC">
+                                                                    <div className='title'>Begin the application process</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Universities will begin accepting admission applications from applicants</li>
+                                                                            <li>Adhere to the deadlines</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="JAN – FEB">
+                                                                    <div className='title'>Deadline for application and document uploading</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Document uploading deadlines close</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="FEB – APR">
+                                                                    <div className='title'>Admission decisions from universities</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Accept admission offer</li>
+                                                                            <li>Prepare necessary documents for I-20 process</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="MAY – JUL">
+                                                                    <div className='title'>Acceptance of I-20</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Apply for student visa for USA</li>
+                                                                            <li>Prepare for interviews</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+
+                                                                <li className="timeline-item" data-date="AUG">
+                                                                    <div className='title'>Make travel plans</div>
+                                                                    <div class="list-style-3">
+                                                                        <ul>
+                                                                            <li>Get ready for departure</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </TabPanel>
+                                                </TabContext>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section bg-pos-topcenter bg-scroll' style={{
+                                        background: `url(${studentvisa_usa})`,
+                                }} id='for-visa'>
+                                    <div className='container relative'>
+                                        <div className='row d-flex justify-content-end'>
+                                            <div className='col-md-5'>
+                                                <h3 className="hs-line-3 white text-left font-alt mb-20 mb-xs-10">
+                                                    Student Visa in UK
+                                                </h3>
+                                                <div className='section-text white'>
+                                                    UK Student visa was two student categories under Tier 4 of the points-based system: Tier 4 (General) student and Tier 4 (Child) student. Formerly called as Tier 4 (General) Student Visa or Tier 4 Student Visa, is applicable for those who want to pursue higher education in the UK. Students can apply for UK Student Visa 6 months before the commencement of their course, and not before that. Students can expect to receive a decision within 3 weeks of application. On the UK Student Visa, students can stay in the UK for up to 5 years if their course is at degree level. If a student is applying from outside the UK, he/ she needs to pay a visa processing fee of £490. Moreover, students are also required to a healthcare surcharge.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section pb-0'>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                            Documents Required for Visa Application
+                                        </h3>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <img src={visa_uk} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
+                                        background: `url(${map_usa})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <h3 className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
+                                            Exams Required to Study in UK
+                                        </h3>
+
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <div className='exam_list'>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_01} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_02} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_03} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_04} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_05} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_06} /></div>
+                                                    </div>
+                                                    <div className='exam_nam'>
+                                                        <div><img src={exam_07} /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pt-xs-0' style={{
+                                        background: `url(${workopportunities_usa})`,
+                                }} id='work-opportunities'>
+                                    <div className='container relative'>
+                                        <div className='right-container-2'>
+                                            <div className='row g-0 d-flex align-items-center'>
+                                                <div className='col-md-4'>
+                                                    <div className='img-round'><img src={workopportunities_usa_02} className='img-fluid' /></div>
+                                                </div>
+                                                <div className='col-md-8'>
+                                                    <div className='inner-column'>
+                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-30">
+                                                            Work Opportunities in UK
+                                                        </h3>
+                                                        <div className='section-text mb-30'>
+                                                            Students, who have completed their education from UK Universities, were placed in different sectors on the basis of their course, major, electives, previous work experience, etc.
+                                                        </div>
+
+                                                        <h3 className='fw-700 italic mb-30'>Some of the most popular job sectors in UK for employment are:</h3>
+
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <div className='icon-listing'>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_01} /></div>
+                                                                            <div>Science and Research</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_02} /></div>
+                                                                            <div>Engineering & Building</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_03} /></div>
+                                                                            <div>Education & Teaching</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_07} /></div>
+                                                                            <div>Arts, Design & Media</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_08} /></div>
+                                                                            <div>Technology & Telecommunications</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className='col-md-6'>
+                                                                <div className='icon-listing'>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_04} /></div>
+                                                                            <div>Medicine & Healthcare</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_05} /></div>
+                                                                            <div>Business  Development & Analytics</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div className='d-flex align-items-center me-4'>
+                                                                                <div><img src={opportunities_icon_06} /></div>
+                                                                                <div>Retail</div>
+                                                                            </div>
+                                                                            <div className='d-flex align-items-center'>
+                                                                                <div><img src={opportunities_icon_11} /></div>
+                                                                                <div>Legal</div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_09} /></div>
+                                                                            <div>Social Welfare</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div><img src={opportunities_icon_10} /></div>
+                                                                            <div>Government</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='page-section pt-20'>
+                                    <div className="container">
+                                        <div className='row g-0 d-flex align-items-end'>
+                                            <div className='col-md-4 mb-xs-20'>
+                                                <div className='img-round'><img src={getintouch_usa} className='img-fluid' /></div>
+                                            </div>
+                                            <div className='col-md-8'>
+                                                <div className='right-container'>
+                                                    <div className='row d-flex align-items-center'>
+                                                        <div className='col-md-8 mb-xs-10'>
+                                                            <h3 class="fw-700 italic mb-0">Get in Touch</h3>
+                                                            <p>For a more personalised consultation,<br/> get in touch with a PICS consultant today!</p>
+                                                        </div>
+                                                        <div className='col-md-4'>
+                                                            <a href="contact" class="btn btn-mod btn-color btn-round btn-medium">EXPLORE NOW <svg xmlns="http://www.w3.org/2000/svg" width="30.229" height="14.961" viewBox="0 0 30.229 14.961">
+                                                                <g id="Group_356" data-name="Group 356" transform="translate(1 1.414)">
+                                                                    <path id="Path_11813" data-name="Path 11813" d="M6153.84,809.385l6.065,6.066-6.065,6.066" transform="translate(-6131.677 -809.385)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                                                    <path id="Path_11814" data-name="Path 11814" d="M6134.66,839.186h-28.229" transform="translate(-6106.431 -833.12)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                                                                </g>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
+
+                            <footer className="small-section bg-gray-lighter footer pb-60">
+                                <div className="container-1400">
+                                    <div className="row">
+                                        <div className="col-md-3 text-center m-center mb-xs-20">
+                                            <a href="#top"><img src={FooterLogo} alt="PICS Consultants" /></a>
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className='dblock'>
+                                                <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
+                                                    <ul className="clearlist">
+                                                        <li><a href="/">Home</a></li>
+                                                        <li><a href="/about">Study Abroad</a></li>
+                                                        <li><a href="/about">About</a></li>
+                                                        <li><a href="/faq">FAQ</a></li>
+                                                        <li><a href="/contact">Contact</a></li>
+                                                        <li><a href="/term-condition">Terms & conditions</a></li>
+                                                        <li><a href="/policy">Privacy Policy</a></li>
+                                                        <li><a href="#">Cookie Policy</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '>
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Content to be provided<br/>  by the client <br/> <br/> 
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            <div className="social-icons mb-10">
+                                                                <ul>
+                                                                    <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                    <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                    <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            @PICSConsultants
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className='m-center mt-30'>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink me-5' onClick={() => window.location = 'mailto:contact@pics.global'}>
+                                                                <img src={mail} className='img-fluid me-2' />
+                                                                {headandfooterdata?.email}
+                                                            </button>
+                                                        </div>
+
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                                <img src={call} className='img-fluid me-2' />
+                                                                +91 94440 94442
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='mblock'>
+
+                                                <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '>
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-12 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Content to be provided<br/>  by the client <br/> 
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className='row pt-0 pb-10 pt-xs-0 pb-xs-0'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                        <div className='footer-widget'>
+                                                            <div className="social-icons mb-10">
+                                                                <ul>
+                                                                    <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
+                                                                    <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
+                                                                    <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            @PICSConsultants
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className='m-center'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
+                                                </div>
+
+                                                <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
+                                                    <div className='row'>
+                                                        <div className='col-6 col-md-6'>
+                                                            <ul className="clearlist">
+                                                                <li><a href="/">Home</a></li>
+                                                                <li><a href="/about">Study Abroad</a></li>
+                                                                <li><a href="/about">About</a></li>
+                                                                <li><a href="/faq">FAQ</a></li>
+                                                                <li><a href="/contact">Contact</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className='col-6 col-md-6'>
+                                                            <ul className="clearlist">
+                                                                <li><a href="/term-condition">Terms & conditions</a></li>
+                                                                <li><a href="/policy">Privacy Policy</a></li>
+                                                                <li><a href="#">Cookie Policy</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="footer-copy pt-20 pb-0 m-center">
+                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                }
+            </div>
+        </>
+    );
+};
+
+export default StudyAbroadUK;
