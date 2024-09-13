@@ -70,20 +70,24 @@ import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
+import Modal from '@mui/material/Modal';
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 800,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: '2px solid #ddd',
     boxShadow: 24,
-    p: 4,
+    p: 3,
 };
 
 const StudyAbroadUK = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const [value, setValue] = React.useState('1');
     const [menuValue, setMenuValue] = React.useState('');
 
@@ -191,7 +195,7 @@ const StudyAbroadUK = () => {
                                             alignRight
                                             >
                                             <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Ireland</NavDropdown.Item>
@@ -221,7 +225,7 @@ const StudyAbroadUK = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad USA
+                                                                Study Abroad UK
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
                                                                 United Kingdom
@@ -266,7 +270,39 @@ const StudyAbroadUK = () => {
 
                                                 <div className='section-text'>
                                                     As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%
+                                                    <div><a href='javascript:;' className='read-more' onClick={handleOpen}>Read more</a></div>
                                                 </div>
+
+                                                <Modal
+                                                    open={open}
+                                                    onClose={handleClose}
+                                                    aria-labelledby="modal-modal-title"
+                                                    aria-describedby="modal-modal-description"
+                                                    >
+                                                    <Box sx={style}>
+                                                        <Typography className='modal-bx-body-2' id="modal-modal-description" sx={{ mt: 2 }}>
+                                                        <div className='section-text'>
+                                                        <p>The UK offers an excellent academic experience for students who are looking to learn in some of the world-leading Universities that are known for high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, there were 55,465 Indian students studying in the UK in 2022. The statistics reveal that the UK is becoming a popular destination for international students. Some of the Universities in the UK such as Imperial College London, University College London, etc. have had academic and research ties with Indian Universities since a long period of time. Universities in the UK have recorded an excellent career outcome rate.</p> 
+
+                                                        <p>As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%...    Read more
+                                                        were involved in other activities, and 5.9% were unemployed or were due to start work. Thus, international students can opt for UK to study abroad. Top Reasons to Study in the UK Studying abroad is a life changing decision for every students. Students need compelling reasons to finalize a study destination and academic institution out of a number of choices. Below are a few reasons why you can think of choosing the UK to study abroad:</p>
+                                                        
+                                                        <h3 className='fw-700 italic mb-10'><b>Top Reasons to Study in the UK</b></h3>
+                                                        <p>Studying abroad is a life changing decision for every students. Students need compelling reasons to finalize a study destination and academic institution out of a number of choices. Below are a few reasons why you can think of choosing the UK to study abroad:</p>
+
+                                                        <p>Academic Quality: According to the QS World University Rankings 2023, 4 Universities in the UK come under top 10 ranks. These include University of Cambridge, University of Oxford, Imperial College London, and University College London. According to the Times World University Rankings 2023 University of Oxford is at 1st position. The rankings of these Universities are a testament to their high quality of academics and research.</p>
+
+                                                        <p>Research Quality: The latest Research Excellence Framework 2021 assessed research work of 157 UK universities. The overall quality of research submissions was noted as world-leading (41%), internationally excellent (43%), internationally recognized (14%), and nationally recognized (2%). UK universities have produced excellent research and students, who are willing to pursue research, can definitely think of the UK as an option.</p>
+
+                                                        <p>Student-friendly Destination: In the academic year 2020-21, nearly 605,000 international students, both EU and non-EU, were studying in UK higher education institutions. Nearly 16% (approximately 55,000) of all new enrollments come from India. Increasing number of international students in the UK show its increasing popularity as a study abroad destination. </p>
+
+                                                        <p>Scholarships: Students have access to excellent scholarships in the UK Universities. Some of these include International Scholarships Award, Commonwealth Scholarship and Fellowship, Chevening Scholarships, GREAT Scholarships, Charles Wallace India Trust Scholarships, just to name a few.</p> 
+
+                                                        <p>Leisure and Travel: The UK is an interesting place when it comes to exploring the historical places, music concerts, cuisines, and various other cultural festivals. Universities in the UK have a long history associated with them, and studying in those Universities gives you an opportunity to be a part of that heritage.</p>
+                                                        </div>
+                                                        </Typography>
+                                                    </Box>
+                                                </Modal>
                                             </div>
 
                                             <div className='col-md-7 mt-xs-20'>
@@ -469,9 +505,38 @@ const StudyAbroadUK = () => {
                                                 
                                                 <h3 className='fw-600 italic mb-20'>Education system in the UK comprises of five stages that include:</h3>
                                                 <div className='section-text mb-30'>
-                                                    Early Years: Students up to 5 years of age can avail early years education and childcare in various state nursery schools, nursery classes and reception classes within primary schools. Primary Education: It covers children from the age of 5 years to 11 years. This is further divided into two Key Stages. Key Stage 1 comprises of children from 5 years to 7 years of age and Key Stage 2 comprises of children from 7 years to 11 years of age. Secondary Education: It covers students from the age of 11 years to 16 years. This is further divided into two Key Stages. Key Stage
-                                                </div>
+                                                    <p className='mb-10'><b>Education system in the UK comprises of five stages that include:</b><br/>
+                                                    <b>Early Years:</b> Students up to 5 years of age can avail early years
+                                                    education and childcare in various state nursery schools,
+                                                    nursery classes and reception classes within primary schools.</p>
+                                                    
+                                                    <p className='mb-10'><b>Primary Education:</b> It covers children from the age of 5 years to 11
+                                                    years. This is further divided into two Key Stages. Key Stage 1
+                                                    comprises of children from 5 years to 7 years of age and Key
+                                                    Stage 2 comprises of children from 7 years to 11 years of age.</p>
 
+                                                    <p className='mb-10'><b>Secondary Education:</b> It covers students from the age of 11 years
+                                                    to 16 years. This is further divided into two Key Stages. Key Stage
+                                                    3 comprises of students from 11 years to 14 years of age and Key
+                                                    Stage 4 comprises of students from 14 years to 16 years of age.
+                                                    At the end of this education, students usually take external
+                                                    examinations such as GCSE (General Certificate of Secondary
+                                                    Education) in England, Wales and Northern Ireland and Standard
+                                                    Grades in Scotland.</p>
+
+                                                    <p className='mb-10'><b>Further Education:</b> It consists of students from 16 year to 18 years
+                                                    of age. It is post-compulsory education and covers nonadvanced courses. These might include skill development,
+                                                    higher vocational education such as City and Guilds or
+                                                    Foundation Degree. This does not include university education.
+                                                    Higher Education: Higher education is provided in colleges and
+                                                    universities and includes undergraduate and postgraduate
+                                                    degrees (includes Doctoral programmes).</p>
+                                                    
+                                                    <p className='mb-10'>The education system of UK is somewhat similar to that of India.
+                                                    Thus, international students who choose UK to study abroad will
+                                                    not have a major adjustment issue.</p>
+                                                    
+                                                </div>
                                             </div>
 
                                             <div className='col-md-4 mt-xs-20'>
@@ -483,10 +548,10 @@ const StudyAbroadUK = () => {
 
                                 <section className='small-section bg-light-gray' id='top-courses'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center m-left font-alt mb-20 mb-xs-10">
                                             Top Courses in UK
                                         </h3>
-                                        <div className='section-text text-center mb-40'>
+                                        <div className='section-text text-center m-left mb-40 mb-xs-20'>
                                             Universities in the UK offer a wide range of courses that cover every available academic discipline.<br/> However, certain courses are very popular amongst students. The table given below provides a list of<br/> popular academic disciplines and various courses that are offered under those disciplines:
                                         </div>
 
@@ -631,7 +696,7 @@ const StudyAbroadUK = () => {
 
                                 <section className='page-section faqs pb-0' id='faqs'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                        <h3 className="hs-line-3 color text-center m-left font-alt mb-40 mb-xs-30">
                                             Study in UK FAQs
                                         </h3>
                                         <div className='row'>
@@ -660,7 +725,15 @@ const StudyAbroadUK = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        UK student visa allows a student to stay in the UK and
+                                                        pursue an academic course for up to 5 years. In order to
+                                                        apply for UK student visa, a student needs to have an
+                                                        unconditional offer to pursue a course with a licensed
+                                                        student sponsor. For this purpose, he/ she needs to
+                                                        provide Confirmation of Acceptance for Studies (CAS).
+                                                        Other conditions include proficiency in English, medical
+                                                        tests, financial proof, etc. UK student visa fee stands at
+                                                        £363, if a student is applying from outside the UK.
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -674,7 +747,15 @@ const StudyAbroadUK = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        Students, who wish to stay back in the UK after completion of
+                                                        their course, need to apply for UK post study work visa (PSW
+                                                        UK) or UK Graduate Visa. With the UK Graduate Visa, students
+                                                        can stay back in the UK for 2 years (3 years in case if they
+                                                        have completed a Doctoral qualification) and work.
+                                                        Application fee for UK Graduate Visa is £715. In addition, you
+                                                        are required to pay an annual healthcare surcharge of £624.
+                                                        After the expiry of the Graduate Visa, you can apply for other
+                                                        relevant visa such as Tier-2 visa.
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -688,7 +769,16 @@ const StudyAbroadUK = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        As per the QS World University Rankings and Times Higher
+                                                        Education Rankings, following are the top universities in the
+                                                        UK: University of Cambridge, University of Oxford, Imperial
+                                                        College London, University College London, University of
+                                                        Edinburgh, University of Manchester, King’s College London,
+                                                        London School of Economics, University of Bristol, and
+                                                        University of Warwick. All these Universities have performed
+                                                        well on academics and research. In addition to academics,
+                                                        Universities in the UK offer various facilities such as labs,
+                                                        accommodation, sports and recreation facilities, etc.
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -701,9 +791,17 @@ const StudyAbroadUK = () => {
                                                     <Typography className='Lato faq-question'>What is the approximate cost of living in the UK for international students?</Typography>
                                                     </AccordionSummary>
                                                     <AccordionDetails>
-                                                    <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
-                                                    </Typography>
+                                                        <Typography className='Lato faq-answer'>
+                                                                International students choosing UK to study abroad can expect
+                                                                to spend anywhere between £1,000 and £1,800 per month
+                                                                depending on their location, type of accommodation, dietary
+                                                                habits, lifestyle, course requirements, University fees (such as
+                                                                library fees, gym fees, etc.), leisure activities, travel, etc.
+                                                                Students can apply for scholarships and/ or work part-time in
+                                                                order to reduce their cost of living in the UK. Students must note
+                                                                that they are allowed to work for a maximum of 20 hours per
+                                                                week when their classes are in session.
+                                                        </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
                                             </div>
@@ -716,7 +814,7 @@ const StudyAbroadUK = () => {
                                         <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-30">
                                             Intake in UK
                                         </h3>
-                                        <div className='section-text text-center mb-50'>
+                                        <div className='section-text text-center mb-50 mb-xs-30'>
                                             Overseas students wishing to apply for higher education in the UK should note that there are generally three available intakes - Fall or September intake, Winter or January intake, and Summer or May intake. The article explains the step-by-step procedure that prospective applicants should follow before applying for a university/college in the UK.
                                         </div>
 
@@ -725,7 +823,7 @@ const StudyAbroadUK = () => {
                                                 <TabContext value={value}>
                                                     <Box className='customTabs d-flex justify-content-center'>
                                                     <TabList onChange={handleChange} aria-label="lab API tabs example">
-                                                        <Tab label="Fall Intake & Timeline" value="1" />
+                                                        <Tab label="September Intake & Timeline" value="1" />
                                                         <Tab label="Winter Intake &  Timeline" value="2" />
                                                     </TabList>
                                                     </Box>
@@ -733,7 +831,7 @@ const StudyAbroadUK = () => {
                                                         <div className='row mb-50'>
                                                             <div className='col-md-6 mb-xs-20'>
                                                                 <div className='pros'>
-                                                                    <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>PROS OF SEPTEMBER INTAKE</b></p>
 
                                                                     <div className='list-intake'>
                                                                         September is the primary intake of UK
@@ -746,7 +844,7 @@ const StudyAbroadUK = () => {
 
                                                             <div className='col-md-6'>
                                                                 <div className='cons'>
-                                                                    <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>CONS OF SEPTEMBER INTAKE</b></p>
 
                                                                     <div className='list-intake'>
                                                                         High competition because maximum applicants apply this time
@@ -758,7 +856,7 @@ const StudyAbroadUK = () => {
                                                             </div>
                                                         </div>
 
-                                                        <h3 className='fw-700 italic mb-10 m-center'>Fall Intake Timelines</h3>
+                                                        <h3 className='fw-700 italic mb-10 m-center'>September Intake Timelines</h3>
 
                                                         <div className='timelines'>
                                                             <ul className="timeline">
@@ -827,105 +925,89 @@ const StudyAbroadUK = () => {
                                                     <div className='row mb-50'>
                                                             <div className='col-md-6 mb-xs-20'>
                                                                 <div className='pros'>
-                                                                    <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>PROS OF WINTER INTAKE</b></p>
 
                                                                     <div className='list-intake'>
-                                                                        Wide range of programs and courses to choose from
+                                                                        Shorter and faster application filing and processing
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        Most number of scholarships and financial aid
-                                                                    </div>
-                                                                    <div className='list-intake'>
-                                                                        Better possibilities of getting part-time jobs and internships during the break
+                                                                        Those who missed applying for September intake can aim for this intake
                                                                     </div>
                                                                 </div>
                                                             </div>
 
                                                             <div className='col-md-6'>
                                                                 <div className='cons'>
-                                                                    <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>CONS OF WINTER INTAKE</b></p>
 
                                                                     <div className='list-intake'>
-                                                                        High competition, seats fill out fast
+                                                                            This is not the primary intake of UK
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        The cost of living may be higher
-                                                                    </div>
-                                                                    <div className='list-intake'>
-                                                                        Difficult to get accommodation due to the high demand
+                                                                        A limited number of courses are available for admission
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <h3 className='fw-700 italic mb-10 m-center'>Spring Intake Timelines</h3>
+                                                        <h3 className='fw-700 italic mb-10 m-center'>Winter Intake Timelines</h3>
 
                                                         <div className='timelines'>
                                                             <ul className="timeline">
-                                                                <li className="timeline-item" data-date="APR – JUN">
-                                                                    <div className='title'>Shortlist the universities based on preference</div>
+                                                                <li className="timeline-item" data-date="APR – AUG">
+                                                                    <div className='title'>Applicants can begin shortlisting universities</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Gather complete information on finances, loans, scholarships</li>
-                                                                            <li>Check for courses on offer</li>
+                                                                            <li>Gather relevant information about university deadlines and requirements.</li>
+                                                                            <li>Select desirable courses to apply to</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="JUL – AUG">
-                                                                    <div className='title'>Apply and appear for necessary exams</div>
+                                                                <li className="timeline-item" data-date="JUN - SEP">
+                                                                    <div className='title'>Prepare for exams and admission documents</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Give standardized tests based on level of course admission</li>
-                                                                            <li>Also appear for ELP tests based on requirement</li>
+                                                                            <li>Appear for ELP and standardized tests</li>
+                                                                            <li>Begin writing your admission essays for submission</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="SEP – DEC">
-                                                                    <div className='title'>Begin the application process</div>
+                                                                <li className="timeline-item" data-date="JUL – SEP">
+                                                                    <div className='title'>Start filling your applications</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Universities will begin accepting admission applications from applicants</li>
-                                                                            <li>Adhere to the deadlines</li>
+                                                                            <li>Submit the applications to universities well within the set deadlines</li>
+                                                                            <li>Also send the required documents per the university guidelines</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="JAN – FEB">
-                                                                    <div className='title'>Deadline for application and document uploading</div>
+                                                                <li className="timeline-item" data-date="OCT - NOV">
+                                                                    <div className='title'>Post application submission formalities</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Document uploading deadlines close</li>
+                                                                            <li>Ensure to reply to the emails before the deadline and participate in the selection process.</li>
+                                                                            <li>Upon receiving an offer from the university, either accept or reject the offer.</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="FEB – APR">
-                                                                    <div className='title'>Admission decisions from universities</div>
+                                                                <li className="timeline-item" data-date="OCT - DEC">
+                                                                    <div className='title'>Apply for funding like for loans or scholarships</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Accept admission offer</li>
-                                                                            <li>Prepare necessary documents for I-20 process</li>
+                                                                            <li>Apply for student visa and appear for interview if called</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="MAY – JUL">
-                                                                    <div className='title'>Acceptance of I-20</div>
+                                                                <li className="timeline-item" data-date="DEC – JAN">
+                                                                    <div className='title'>Plan your travel to UK</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Apply for student visa for USA</li>
-                                                                            <li>Prepare for interviews</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-
-                                                                <li className="timeline-item" data-date="AUG">
-                                                                    <div className='title'>Make travel plans</div>
-                                                                    <div class="list-style-3">
-                                                                        <ul>
-                                                                            <li>Get ready for departure</li>
+                                                                            <li>• Prepare all your documents and plan for accommodation</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
@@ -939,7 +1021,7 @@ const StudyAbroadUK = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter bg-scroll' style={{
+                                <section className='page-section bg-pos-topcenter bg-dark-alfa bg-scroll' style={{
                                         background: `url(${studentvisa_usa})`,
                                 }} id='for-visa'>
                                     <div className='container relative'>
@@ -1008,7 +1090,7 @@ const StudyAbroadUK = () => {
                                     </div>
                                 </section>
 
-                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pt-xs-0' style={{
+                                <section className='small-section bg-pos-topcenter bg-scroll pb-100 pt-xs-0 pb-xs-50' style={{
                                         background: `url(${workopportunities_usa})`,
                                 }} id='work-opportunities'>
                                     <div className='container relative'>
@@ -1019,10 +1101,10 @@ const StudyAbroadUK = () => {
                                                 </div>
                                                 <div className='col-md-8'>
                                                     <div className='inner-column'>
-                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-30">
+                                                        <h3 className="hs-line-3 color text-left font-alt mb-20 mb-xs-20">
                                                             Work Opportunities in UK
                                                         </h3>
-                                                        <div className='section-text mb-30'>
+                                                        <div className='section-text mb-30 mb-xs-20'>
                                                             Students, who have completed their education from UK Universities, were placed in different sectors on the basis of their course, major, electives, previous work experience, etc.
                                                         </div>
 

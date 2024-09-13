@@ -185,7 +185,7 @@ const Dashboard = () => {
                                             alignRight
                                             >
                                             <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Ireland</NavDropdown.Item>
@@ -497,10 +497,10 @@ const Dashboard = () => {
 
                                 <section className='small-section bg-light-gray' id='top-courses'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-10">
+                                        <h3 className="hs-line-3 color text-center m-left font-alt mb-20 mb-xs-10">
                                             Top Courses in USA
                                         </h3>
-                                        <div className='section-text text-center mb-40'>
+                                        <div className='section-text text-center m-left mb-40 mb-xs-20'>
                                             Business and management, engineering, mathematics, computer science and social sciences are<br/> some of the popular courses in the USA. US universities are known to offer STEM<br/> (Science, Technology, Engineering, and Mathematics) courses.
                                         </div>
 
@@ -557,7 +557,7 @@ const Dashboard = () => {
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
                                             <div className='col-md-8'>
                                                 <h3 className='fw-600 italic mb-20'>Admission Requirements to Study in US Universities</h3>
-                                                <div className='section-text mb-30'>
+                                                <div className='section-text mb-30 mb-xs-20'>
                                                     Admission requirements for a UG and PG program are different for US universities. Below we have mentioned the general admission requirements to study at USA universities.
                                                 </div>
 
@@ -627,7 +627,7 @@ const Dashboard = () => {
 
                                 <section className='page-section faqs pb-0' id='faqs'>
                                     <div className='container relative'>
-                                        <h3 className="hs-line-3 color text-center font-alt mb-40 mb-xs-30">
+                                        <h3 className="hs-line-3 color text-center m-left font-alt mb-40 mb-xs-30">
                                             Study in USA FAQs
                                         </h3>
                                         <div className='row'>
@@ -656,7 +656,16 @@ const Dashboard = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        No, not all US universities are test-optional for
+                                                        undergraduate admissions, most of the Ivy League
+                                                        schools like - Yale University, and Princeton University do
+                                                        require an SAT or ACT score. There are universities like
+                                                        Columbia University which have officially announced the
+                                                        scrapping of SAT and ACT scores for undergraduate
+                                                        admissions. Some US universities may require SAT or ACT
+                                                        scores based on admission to a specific course.
+                                                        Applicants are required to check the test optionality option
+                                                        if it is available or not
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -670,7 +679,14 @@ const Dashboard = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        Top universities in USA acceptance rates for the 2023 intake are as follows:
+                                                        • Stanford University: 3.75%<br/>
+                                                        • Harvard University: 4.7%<br/>
+                                                        • Columbia University: 5.4%<br/>
+                                                        • Princeton University: 5.5%<br/>
+                                                        • CalTech: 6.4%<br/>
+                                                        • Massachusetts Institute of Technology: 6.7%<br/>
+                                                        • University of Chicago: 7.3%
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -684,7 +700,10 @@ const Dashboard = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        Some of the top-paying jobs in the USA are majorly in
+                                                        Finance and Technology related professions. The following
+                                                        occupations in the USA are highly paid and are also
+                                                        popular jobs in USA
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -698,7 +717,14 @@ const Dashboard = () => {
                                                     </AccordionSummary>
                                                     <AccordionDetails>
                                                     <Typography className='Lato faq-answer'>
-                                                        There are two intakes in USA, the main US intake is Fall intake and the second intake is Spring intake. There is also a Summer intake in the USA but very few full-time course options are available during that time, it is mostly for short-term courses or commonly referred to as summer programs. International students can apply for Fall intake in USA during the month of September each year and applicants begin preparing from July onwards. 90% of the US universities have admissions open during the Fall intake. The Spring intake of USA also opens admissions for international students but for limited courses and universities. Thus, those who are able to apply by Fall intake can take admissions or if not, then apply during Spring intake.
+                                                        The applicants need to be confident and must be able to
+                                                        answer all questions with honesty when going in for an F-1 visa
+                                                        interview. Applicants must have full knowledge of their course
+                                                        and US university they have applied to. They must show interest
+                                                        in coming back to home country and must explain well as to
+                                                        why they wish to study in USA. Get full details about USA F-1 Visa
+                                                        Interview Guide for international students and also check out US
+                                                        Student Visa Interview Tips.
                                                     </Typography>
                                                     </AccordionDetails>
                                                 </Accordion>
@@ -712,7 +738,7 @@ const Dashboard = () => {
                                         <h3 className="hs-line-3 color text-center font-alt mb-20 mb-xs-30">
                                             Intake in USA
                                         </h3>
-                                        <div className='section-text text-center mb-50'>
+                                        <div className='section-text text-center mb-50 mb-xs-30'>
                                             Studying abroad is a huge decision that requires meticulous planning and organization. This guide will help you manoeuvre confusing timelines for fall and spring intakes in USA 2024. It will provide you with an overview of various dates so that you can start your study abroad journey as soon as possible. Also check out the entire timeline for the Fall 2024 US intake and Spring 2024 US intake, which includes when to apply and when to begin preparing for the intended intake as international students.
                                         </div>
 
@@ -838,32 +864,32 @@ const Dashboard = () => {
                                                     <div className='row mb-50'>
                                                             <div className='col-md-6 mb-xs-20'>
                                                                 <div className='pros'>
-                                                                    <p className='mb-10 white fs-16'><b>PROS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>PROS OF SPRING INTAKE</b></p>
 
                                                                     <div className='list-intake'>
-                                                                        Wide range of programs and courses to choose from
+                                                                        If missed on applying in July, applicants can try in Spring for the same year
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        Most number of scholarships and financial aid
+                                                                        Competition is lower in comparison to Fall intake
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        Better possibilities of getting part-time jobs and internships during the break
+                                                                        Batch sizes for Spring intake are usually smaller
                                                                     </div>
                                                                 </div>
                                                             </div>
 
                                                             <div className='col-md-6'>
                                                                 <div className='cons'>
-                                                                    <p className='mb-10 white fs-16'><b>CONS OF FALL INTAKE</b></p>
+                                                                    <p className='mb-10 white fs-16'><b>CONS OF SPRING INTAKE</b></p>
 
                                                                     <div className='list-intake'>
-                                                                        High competition, seats fill out fast
+                                                                        Acceptance cannot be deferred in Spring, new applications will be required for next academic year
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        The cost of living may be higher
+                                                                        Lower financial aids are offered during this intak
                                                                     </div>
                                                                     <div className='list-intake'>
-                                                                        Difficult to get accommodation due to the high demand
+                                                                        Courses on offer are usually lower for Spring in comparison to Fall intake
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -873,70 +899,55 @@ const Dashboard = () => {
 
                                                         <div className='timelines'>
                                                             <ul className="timeline">
-                                                                <li className="timeline-item" data-date="APR – JUN">
-                                                                    <div className='title'>Shortlist the universities based on preference</div>
+                                                                <li className="timeline-item" data-date="JUL - AUG">
+                                                                    <div className='title'>Begin shortlisting universities and courses</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Gather complete information on finances, loans, scholarships</li>
-                                                                            <li>Check for courses on offer</li>
+                                                                            <li>Shortlist two to three US universities you wish to apply to</li>
+                                                                            <li>Check course availability for Spring intake</li>
+                                                                            <li>Also understand the admission requirements</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="JUL – AUG">
-                                                                    <div className='title'>Apply and appear for necessary exams</div>
+                                                                <li className="timeline-item" data-date="SEP - OCT">
+                                                                    <div className='title'>Prepare and appear for the exams</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Give standardized tests based on level of course admission</li>
-                                                                            <li>Also appear for ELP tests based on requirement</li>
+                                                                            <li>Appear for standardised tests based on level of study</li>
+                                                                            <li>Also appear for English Language Proficiency tests</li>
+                                                                            <li>Keep some scope for reappearing for the exams if needed</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="SEP – DEC">
-                                                                    <div className='title'>Begin the application process</div>
+                                                                <li className="timeline-item" data-date="OCT">
+                                                                    <div className='title'>Start applying to the universities</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Universities will begin accepting admission applications from applicants</li>
-                                                                            <li>Adhere to the deadlines</li>
+                                                                            <li>Check for deadlines and begin your applications to the shortlisted universities</li>
+                                                                            <li>Check out the possible scholarship options and apply</li>
+                                                                            <li>Adhere to the course, university and scholarship application deadlines.</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="JAN – FEB">
-                                                                    <div className='title'>Deadline for application and document uploading</div>
+                                                                <li className="timeline-item" data-date="NOV - DEC">
+                                                                    <div className='title'>Wait for admission decisions</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Document uploading deadlines close</li>
+                                                                            <li>In case offers are released, accept or reject based on preference</li>
+                                                                            <li>Apply for I-20 and book visa appointments in case of offer acceptance</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
 
-                                                                <li className="timeline-item" data-date="FEB – APR">
-                                                                    <div className='title'>Admission decisions from universities</div>
+                                                                <li className="timeline-item" data-date="DEC">
+                                                                    <div className='title'>Make travel plans for USA</div>
                                                                     <div class="list-style-3">
                                                                         <ul>
-                                                                            <li>Accept admission offer</li>
-                                                                            <li>Prepare necessary documents for I-20 process</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-
-                                                                <li className="timeline-item" data-date="MAY – JUL">
-                                                                    <div className='title'>Acceptance of I-20</div>
-                                                                    <div class="list-style-3">
-                                                                        <ul>
-                                                                            <li>Apply for student visa for USA</li>
-                                                                            <li>Prepare for interviews</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </li>
-
-                                                                <li className="timeline-item" data-date="AUG">
-                                                                    <div className='title'>Make travel plans</div>
-                                                                    <div class="list-style-3">
-                                                                        <ul>
-                                                                            <li>Get ready for departure</li>
+                                                                            <li>When the student visa is approved, applicants can book their tickets</li>
+                                                                            <li>Prepare to fly to US to study</li>
                                                                         </ul>
                                                                     </div>
                                                                 </li>
@@ -950,7 +961,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter bg-scroll' style={{
+                                <section className='page-section bg-pos-topcenter bg-dark-alfa bg-scroll' style={{
                                         background: `url(${studentvisa_usa})`,
                                 }} id='for-visa'>
                                     <div className='container relative'>

@@ -262,7 +262,7 @@ const Dashboard = () => {
                                 </Typography>
                             </Box>
                         </Modal>
-                        <title>PICS Consultants</title>
+                        <title>Study Abroad Consultants | Overseas Education Consultants | PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
