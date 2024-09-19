@@ -13,6 +13,9 @@ import Booknow from './component/Booknow';
 import Booknowthankyou from './component/Booknowthankyou';
 import StudyAbroadUSA from './component/StudyAbroadUSA';
 import StudyAbroadUK from './component/StudyAbroadUK';
+import StudyAbroadAUS from './component/StudyAbroadAUS';
+import StudyAbroadCanada from './component/StudyAbroadCanada';
+import StudyAbroadIreland from './component/StudyAbroadIreland';
 
 export default function App() {
   return (
@@ -22,6 +25,9 @@ export default function App() {
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/study-abroad-usa" element={<StudyAbroadUSA />}></Route>
         <Route exact path="/study-abroad-uk" element={<StudyAbroadUK />}></Route>
+        <Route exact path="/study-abroad-aus" element={<StudyAbroadAUS />}></Route>
+        <Route exact path="/study-abroad-canada" element={<StudyAbroadCanada />}></Route>
+        <Route exact path="/study-abroad-ireland" element={<StudyAbroadIreland />}></Route>
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/policy" element={<PrivacyPolicy />}></Route>

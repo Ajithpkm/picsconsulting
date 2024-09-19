@@ -186,9 +186,9 @@ const Dashboard = () => {
                                             >
                                             <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
                                             <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
@@ -206,7 +206,7 @@ const Dashboard = () => {
                             </Navbar>
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
-                                    <section className="home-section bg-scroll fixed-height-medium" style={{
+                                    <section className="home-section bg-scroll abroad-pages-height" style={{
                                         background: `url(${usa_bg})`,
                                     }}>
                                         <div className="js-height-parent container-1400">
@@ -289,7 +289,7 @@ const Dashboard = () => {
                                                             <div className='key-benefits mb-20'>
                                                                 <div className='count'>20 Hrs</div>
                                                                 <div className='divider'></div>
-                                                                <div className='desc'>Week Port Time<br/> Work Permit</div>
+                                                                <div className='desc'>Week Part Time<br/> Work Permit</div>
                                                             </div>
                                                         </div>
 
@@ -314,24 +314,30 @@ const Dashboard = () => {
                                                         <div className='col-md-4 mb-xs-20'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={washington_icon} alt="WASHINGTON" />
-                                                                <div className='location'>WASHINGTON</div>
-                                                                <div className='white'>D.C Capital</div>
+                                                                <div>
+                                                                    <div className='location'>WASHINGTON</div>
+                                                                    <div className='white'>D.C Capital</div>
+                                                                </div>
                                                             </div>
                                                         </div>
 
                                                         <div className='col-md-4 mb-xs-20'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={months_icon} alt="12 MONTHS" />
-                                                                <div className='location'>12 MONTHS</div>
-                                                                <div className='white'>Post Study Work Permit</div>
+                                                                <div>
+                                                                    <div className='location'>12 MONTHS</div>
+                                                                    <div className='white'>Post Study Work Permit</div>
+                                                                </div>
                                                             </div>
                                                         </div>
 
                                                         <div className='col-md-4 mb-xs-0'>
                                                             <div className='key-benefits-2'>
                                                                 <img src={english_icon} alt="ENGLISH" />
-                                                                <div className='location'>ENGLISH</div>
-                                                                <div className='white'>Primary Language</div>
+                                                                <div>
+                                                                    <div className='location'>ENGLISH</div>
+                                                                    <div className='white'>Primary Language</div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -986,7 +992,7 @@ const Dashboard = () => {
 
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <img src={visa_usa} />
+                                                <div className='text-center'><img src={visa_usa} /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1177,12 +1183,7 @@ const Dashboard = () => {
                                                     <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS India, Pondicherry</h5>
-                                                            Content to be provided<br/>  by the client <br/> <br/> 
-                                                            <button className='map-link' onClick=''>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
-                                                                </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            Coming Soon
                                                         </div>
                                                     </div>
                                                     <div className='col-md-3 m-center mb-xs-20'>
@@ -1250,12 +1251,7 @@ const Dashboard = () => {
                                                     <div className='col-12 col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS India, Pondicherry</h5>
-                                                            Content to be provided<br/>  by the client <br/> 
-                                                            <button className='map-link' onClick=''>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
-                                                                </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            Coming Soon
                                                         </div>
                                                     </div>
                                                 </div>

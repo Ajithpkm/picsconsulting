@@ -394,7 +394,7 @@ hr.white{
 }
 .uppercase{
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 .font-alt{
     font-family: "Playfair Display", serif;
@@ -2024,6 +2024,9 @@ a.logo:hover{
 }
 .fixed-height-small{
     min-height: 650px;
+}
+.abroad-pages-height {
+    min-height: 760px;
 }
 .leftContent {
     position: absolute;
@@ -4956,6 +4959,12 @@ input:-webkit-autofill:active {
     padding: 15px;
     min-height: 200px;
 }
+.highlights_2 {
+    min-height: 225px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .highlights .desc {
     font-size: 14px;
     color: #8F8F8F;
@@ -5241,7 +5250,7 @@ input:-webkit-autofill:active {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(24, 46, 70, .65);
+    background: rgba(24, 46, 70, .25);
 }
 .read-more {
     font-size: 14px;
@@ -5252,6 +5261,10 @@ input:-webkit-autofill:active {
 .modal-bx-body-2 {
     height: 550px;
     overflow-y: scroll;
+    font-family: "Lato", sans-serif !important;
+    overflow-x: hidden;
+}
+.modal-bx-body-3 {
     font-family: "Lato", sans-serif !important;
     overflow-x: hidden;
 }
@@ -5269,4 +5282,50 @@ input:-webkit-autofill:active {
 }
 .modal-bx-body-2::-webkit-scrollbar-thumb:hover {
     background-color: #333;
+}
+.color-title {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #B9943C;
+    margin-top: 15px;
+}
+.wrc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+}
+.education-system {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 160px;
+}
+.education-system table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.education-system table tr th {
+    background-color: #B9943C;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+.education-system table tr td {
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+.education-system table tr:nth-child(odd) {
+    background-color: #fff;
+}
+.education-system table tr:nth-child(even) {
+    background-color: #FEF7E8;
 }

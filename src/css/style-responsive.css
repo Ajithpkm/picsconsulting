@@ -323,6 +323,46 @@ Project: DT Skill
     .nav-logo-wrap {
         margin-right: 5px;
     }
+    .wrc-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+    .key-benefits .count {
+        font-size: 16px;
+    }
+    .key-benefits .desc {
+        font-size: 15px;
+    }
+    .alt-service-item {
+        padding-bottom: 12px;
+    }
+    .alt-service-icon {
+        top: -8px;
+    }
+    .key-benefits-2 {
+        display: flex;
+        align-items: center;
+        min-height: auto;
+        text-align: left;
+    }
+    .key-benefits-2 img {
+        max-width: 50px;
+        margin-right: 15px;
+    }
+    .key-benefits-2 .location {
+        margin-top: 0;
+    }
+    .alt-services-title br {
+        display: none;
+    }
+    .abroad-pages-height {
+        min-height: 450px;
+    }
+    .abroad-pages-height .js-height-parent {
+        height: 450px;
+    }
     .m-left {
         text-align: left !important;
     }
@@ -334,11 +374,17 @@ Project: DT Skill
         padding: 30px;
         text-align: left;
     }
+    .education-system {
+        margin-right: 0;
+    }
+    .highlights_2 {
+        min-height: 225px;
+    }
     .key-benefits-3 {
         min-height: auto;
     }
     .custom-table {
-        overflow-y: scroll;
+        overflow-x: scroll;
     }
     .right-container-2 .inner-column {
         padding: 25px;
@@ -540,6 +586,12 @@ Project: DT Skill
     }
     .xs-order-4 {
         order: 4;
+    }
+    .color-title {
+        font-size: 16px;
+    }
+    .bg-dark-alfa:before {
+        background: rgba(24, 46, 70, .65);
     }
     .ssh-cell {
         height: 450px;
