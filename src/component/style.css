@@ -2289,7 +2289,7 @@ a.logo:hover{
 .social-icons ul li {
     display: inline-block;
     list-style: none;
-    padding: 0 8px;
+    padding: 0 6px;
 }
 .social-icons ul li:first-child {
     padding-left: 0;
@@ -4863,10 +4863,10 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 .key-benefits {
-    padding-right: 40px;
+    padding-right: 30px;
 }
 .key-benefits .count {
-    font-size: 25px;
+    font-size: 23px;
     font-style: italic;
     font-weight: 700;
 }
@@ -5256,6 +5256,7 @@ input:-webkit-autofill:active {
     font-size: 14px;
     color: #182E46;
     font-weight: 600;
+    cursor: pointer;
     text-decoration: underline;
 }
 .modal-bx-body-2 {
@@ -5284,7 +5285,7 @@ input:-webkit-autofill:active {
     background-color: #333;
 }
 .color-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.5px;
     text-transform: uppercase;

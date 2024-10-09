@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62">
-  <g id="set" transform="translate(1 1)">
-    <path id="Path_11260" data-name="Path 11260" d="M64,38.939V29.061l-8.079-.675a22.5,22.5,0,0,0-2.443-5.9l5.229-6.193-6.986-7-6.193,5.229a22.5,22.5,0,0,0-5.9-2.443L38.939,4H29.061l-.675,8.079a22.5,22.5,0,0,0-5.9,2.443l-6.2-5.229L9.293,16.279l5.229,6.193a22.5,22.5,0,0,0-2.443,5.9L4,29.061V38.95l8.079.675a22.5,22.5,0,0,0,2.443,5.9L9.293,51.721l6.986,6.986,6.193-5.229a22.5,22.5,0,0,0,5.9,2.443L29.061,64H38.95l.675-8.079a22.5,22.5,0,0,0,5.9-2.443l6.193,5.229,6.986-6.986-5.229-6.193a22.5,22.5,0,0,0,2.443-5.9Z" transform="translate(-4 -4)" fill="none" stroke="#8f8f8f" stroke-miterlimit="10" stroke-width="2"/>
-    <ellipse id="Ellipse_41" data-name="Ellipse 41" cx="15.623" cy="15.069" rx="15.623" ry="15.069" transform="translate(14.384 14.923)" fill="none" stroke="#8f8f8f" stroke-miterlimit="10" stroke-width="2"/>
-  </g>
-</svg>

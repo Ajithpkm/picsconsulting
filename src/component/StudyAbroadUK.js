@@ -12,6 +12,8 @@ import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import linkedin from '../images/linkedin.png';
+import youtube from '../images/youtube.png';
 import mail from '../images/mail.png';
 import call from '../images/call.png';
 import usa_bg from '../images/uk/banner-bg.jpg';
@@ -199,7 +201,7 @@ const StudyAbroadUK = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -270,7 +272,7 @@ const StudyAbroadUK = () => {
 
                                                 <div className='section-text'>
                                                     As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%
-                                                    <div><a href='javascript:;' className='read-more' onClick={handleOpen}>Read more</a></div>
+                                                    <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
                                                 <Modal
@@ -1265,7 +1267,7 @@ const StudyAbroadUK = () => {
                                                     <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon
+                                                            Coming Soon 
                                                         </div>
                                                     </div>
                                                     <div className='col-md-3 m-center mb-xs-20'>
@@ -1275,6 +1277,8 @@ const StudyAbroadUK = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -1333,7 +1337,7 @@ const StudyAbroadUK = () => {
                                                     <div className='col-12 col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon
+                                                            Coming Soon 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1346,6 +1350,8 @@ const StudyAbroadUK = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants

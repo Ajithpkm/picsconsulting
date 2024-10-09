@@ -1,10 +1,17 @@
 import React, { useEffect } from 'react';
 import WOW from 'wowjs';
-import { Grow, Card, CardContent, Box, Grid, Radio, RadioGroup, Chip, FormControlLabel, FormControl, ListItemText, ListItemIcon, List, ListItem, ListItemAvatar, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
+import { NavDropdown, Container, Navbar, Nav } from "react-bootstrap";
+import { NavDropdownMenu } from "react-bootstrap-submenu";
 import Logo from '../images/logo.png';
+import FooterLogo from '../images/footer-logo.png';
+import mail from '../images/mail.png';
+import call from '../images/call.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import linkedin from '../images/linkedin.png';
+import youtube from '../images/youtube.png';
 import about_bg from '../images/about-bg.jpg';
 import university_list from '../images/university-list.jpg';
 import whatsappwhite from '../images/whatsapp-w.png';
@@ -170,30 +177,42 @@ const Dashboard = () => {
                         <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
-                            <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav stick-fixed"}>
-                                <div className="container relative clearfix">
-                                    <div className="nav-logo-wrap local-scroll">
+                            <Navbar expand="lg" className="main-nav">
+                                <Container>
+                                    <Navbar.Brand>
                                         <a href="/" className="logo">
                                             <img src={Logo} alt="PICS Consultants" />
                                         </a>
-                                    </div>
-                                    <div className="mobile-nav" role="button" tabIndex={0}>
-                                        <i className="fa fa-bars" />
-                                        <span className="sr-only">Menu</span>
-                                    </div>
-                                    <div className="inner-nav desktop-nav">
-                                        <ul className="clearlist">
-                                            <li className="active xs-hide"><a href="/">Home</a></li>
-                                            <li><a href="about">About</a></li>
-                                            <li><a href="faq">FAQ</a></li>
-                                            <li><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></li>
+                                    </Navbar.Brand>
+                                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                    <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="menu-right">
+                                        <Nav.Link href="/">Home</Nav.Link>
+                                        <NavDropdownMenu
+                                            title="Study Abroad"
+                                            id="collasible-nav-dropdown"
+                                            alignRight
+                                            >
+                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
+                                        </NavDropdownMenu>
+                                        
+                                        <Nav.Link href="about">About</Nav.Link>
+                                        <Nav.Link href="faq">FAQ</Nav.Link>
+                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</span></Nav.Link>
+                                        <Nav.Link>
                                             <div class="whatsapp-icon">
                                                 <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
                                             </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
+                                        </Nav.Link>
+                                    </Nav>
+                                    </Navbar.Collapse>
+                                </Container>
+                            </Navbar>
                             <main id="main">
                                 <div className="home-section fullwidth-slider" id="home">
                                     <section className="home-section bg-scroll fixed-height-medium" style={{
@@ -355,16 +374,17 @@ const Dashboard = () => {
                             </main>
 
                             <footer className="small-section bg-gray-lighter footer pb-60">
-                                <div className="container">
+                                <div className="container-1400">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={FooterLogo} alt="PICS Consultants" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             <div className='dblock'>
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20">
                                                     <ul className="clearlist">
                                                         <li><a href="/">Home</a></li>
+                                                        <li><a href="/about">Study Abroad</a></li>
                                                         <li><a href="/about">About</a></li>
                                                         <li><a href="/faq">FAQ</a></li>
                                                         <li><a href="/contact">Contact</a></li>
@@ -374,36 +394,48 @@ const Dashboard = () => {
                                                     </ul>
                                                 </div>
 
-                                                <div className='footer-widget mb-3'>
-                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
-                                                </div>
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
-                                                            <h5>United Kingdom (Headquarters)</h5>
-                                                            {/* {headandfooterdata?.address} */}
-                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
-                                                            <b>Call & WhatsApp</b> +44 7510 830896
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
-                                                        <div className='footer-widget'>
-                                                            <h5>India</h5>
-                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR<br />Chennai 603 103, India<br />
-                                                            <b>Call & WhatsApp</b> +91 94440 94442
-                                                            {/* {headandfooterdata?.country} */}
-
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-4 m-center mb-xs-20'>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Coming Soon 
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <div className="social-icons mb-10">
                                                                 <ul>
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -412,30 +444,57 @@ const Dashboard = () => {
                                                 </div>
 
                                                 <div className='m-center mt-30'>
-                                                    <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink me-5' onClick={() => window.location = 'mailto:contact@pics.global'}>
+                                                                <img src={mail} className='img-fluid me-2' />
+                                                                {headandfooterdata?.email}
+                                                            </button>
+                                                        </div>
+
+                                                        <div className='col-md-3'>
+                                                            <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                                <img src={call} className='img-fluid me-2' />
+                                                                +91 94440 94442
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
                                             <div className='mblock'>
-                                                <div className='footer-widget xs-order-1'>
-                                                    <div className='title m-center'>{headandfooterdata?.address_title}</div>
-                                                </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
-                                                            <h4>UNITED KINGDOM</h4>
-                                                            27 Duke St, Vision Offices,<br />Chelmsford, CM1 1HT<br /><br />
-                                                            <b>Call & WhatsApp</b><br />+44 7510 830896
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                            <h5>PICS India, Chennai</h5>
+                                                            1st Floor, Elsa Plaza, No 2,<br/>
+                                                            Rajiv Gandhi Salai, Padur,<br/>
+                                                            OMR, Chennai-603103, India
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-6 col-md-6 m-center mb-xs-20'>
-                                                        <div className='footer-widget'>
-                                                            <h4>India</h4>
-                                                            1st Floor, Elsa Plaza, No 2,<br />Rajiv Gandhi Salai, Padur, OMR Chennai 603 103, India<br />
-                                                            <b>Call & WhatsApp</b><br />+91 94440 94442
-                                                            {/* <button className='map-link' onClick=''>Get Directions</button> */}
+                                                    <div className='col-6 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS UK, Chelmsford</h5>
+                                                            Head Quarters : 27, Duke<br/> 
+                                                            Street, Chelmsford,<br/> 
+                                                            England, CM1 1HT, UK
+                                                            <button className='map-link' onClick=''>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                                                    <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
+                                                                </svg>  <span>Get Directions</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-12 col-md-3 m-center mb-xs-20'>
+                                                        <div className='footer-widget '> 
+                                                            <h5>PICS India, Pondicherry</h5>
+                                                            Coming Soon 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -448,6 +507,8 @@ const Dashboard = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -464,6 +525,7 @@ const Dashboard = () => {
                                                         <div className='col-6 col-md-6'>
                                                             <ul className="clearlist">
                                                                 <li><a href="/">Home</a></li>
+                                                                <li><a href="/about">Study Abroad</a></li>
                                                                 <li><a href="/about">About</a></li>
                                                                 <li><a href="/faq">FAQ</a></li>
                                                                 <li><a href="/contact">Contact</a></li>
@@ -481,7 +543,7 @@ const Dashboard = () => {
                                             </div>
 
                                             <div className="footer-copy pt-20 pb-0 m-center">
-                                                {headandfooterdata?.copyright}
+                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
                                             </div>
                                         </div>
                                     </div>

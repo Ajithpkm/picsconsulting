@@ -12,6 +12,8 @@ import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import linkedin from '../images/linkedin.png';
+import youtube from '../images/youtube.png';
 import mail from '../images/mail.png';
 import call from '../images/call.png';
 import usa_bg from '../images/canada/banner-bg.jpg';
@@ -189,7 +191,7 @@ const StudyAbroadCanada = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -1187,6 +1189,8 @@ const StudyAbroadCanada = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -1258,6 +1262,8 @@ const StudyAbroadCanada = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants

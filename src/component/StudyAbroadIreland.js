@@ -11,6 +11,8 @@ import Logo from '../images/logo.png';
 import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
+import linkedin from '../images/linkedin.png';
+import youtube from '../images/youtube.png';
 import whatsapp from '../images/whatsapp.png';
 import mail from '../images/mail.png';
 import call from '../images/call.png';
@@ -204,7 +206,7 @@ const StudyAbroadIreland = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -275,7 +277,7 @@ const StudyAbroadIreland = () => {
 
                                                 <div className='section-text'>
                                                     Candidates looking to pursue higher education in Ireland would be happy to know that pursuing a full-time master’s programme in Ireland would entitle them to up to two years of post-study stay-back option to look for suitable employment in their area of study....
-                                                    <div><a href='javascript:;' className='read-more' onClick={handleOpen}>Read more</a></div>
+                                                    <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
                                                 <Modal
@@ -602,9 +604,7 @@ const StudyAbroadIreland = () => {
                                                     Irish universities have one major enrolment season, which is the autumn intake in September. Some universities admit students for January sessions as well. For undergraduate courses, Irish universities accept applications through Central Applications Office (CAO) an online enrolment system. For postgraduate courses, candidates are required to apply directly to the university. The documents required as part of your admission requirements to Irish universities are as follows:
                                                 </div>
 
-                                                <div className='section-text'>
-                                                    <a href='javascript:;' className='read-more' onClick={handleOpen3}>Read more</a>
-                                                </div>
+                                                <div className='read-more' onClick={handleOpen3}>Read more</div>
 
                                                 <Modal
                                                     open={open3}
@@ -1197,6 +1197,8 @@ const StudyAbroadIreland = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -1268,6 +1270,8 @@ const StudyAbroadIreland = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants

@@ -12,6 +12,8 @@ import FooterLogo from '../images/footer-logo.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import linkedin from '../images/linkedin.png';
+import youtube from '../images/youtube.png';
 import mail from '../images/mail.png';
 import call from '../images/call.png';
 import usa_bg from '../images/aus/banner-bg.jpg';
@@ -205,7 +207,7 @@ const StudyAbroadAUS = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="#">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -276,7 +278,7 @@ const StudyAbroadAUS = () => {
 
                                                 <div className='section-text'>
                                                     More and more international students are studying in Australia because of the high number of job openings in sectors of Business, Healthcare, Engineering, Medicine, etc. Plus Australia offers good remuneration as well to its workforce. The labour laws in Australia are stringent hence, the place is viable for Indian students to work there after studying.
-                                                    <div><a href='javascript:;' className='read-more' onClick={handleOpen}>Read more</a></div>
+                                                    <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
                                                 <Modal
@@ -627,7 +629,7 @@ const StudyAbroadAUS = () => {
                                                     </div>
 
                                                     <div className='section-text'>
-                                                        Australian universities are ranked for various courses across 51 disciplines of Engineering in Australia, Business courses, Arts & Humanities, also Medicine courses in Australia...<a href='javascript:;' className='read-more' onClick={handleOpen2}>Read more</a>
+                                                        Australian universities are ranked for various courses across 51 disciplines of Engineering in Australia, Business courses, Arts & Humanities, also Medicine courses in Australia...<div className='read-more' onClick={handleOpen2}>Read more</div>
                                                     </div>
 
                                                     <Modal
@@ -692,7 +694,8 @@ const StudyAbroadAUS = () => {
                                                 </div>
 
                                                 <div className='section-text'>
-                                                    Band requirement for Australia will be based on the individual universities and courses the applicants are applying to. It is not necessary that the band requirement for Australia is common for all courses or universities. Applicants must ensure they check for all the details and then proceed with their admission process... <a href='javascript:;' className='read-more' onClick={handleOpen3}>Read more</a>
+                                                    Band requirement for Australia will be based on the individual universities and courses the applicants are applying to. It is not necessary that the band requirement for Australia is common for all courses or universities. Applicants must ensure they check for all the details and then proceed with their admission process... 
+                                                    <div className='read-more' onClick={handleOpen3}>Read more</div>
                                                 </div>
 
                                                 <Modal
@@ -1315,6 +1318,8 @@ const StudyAbroadAUS = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants
@@ -1386,6 +1391,8 @@ const StudyAbroadAUS = () => {
                                                                     <li><a href={headandfooterdata?.facebook_link} target='_blank'><img src={facebook} /></a></li>
                                                                     <li><a href={headandfooterdata?.instagram} target='_blank'><img src={instagram} /></a></li>
                                                                     <li><a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsapp} /></a></li>
+                                                                    <li><a href="https://www.linkedin.com/company/picsstudyabroad/" target='_blank'><img src={linkedin} /></a></li>
+                                                                    <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
                                                             @PICSConsultants

@@ -16,6 +16,7 @@ import StudyAbroadUK from './component/StudyAbroadUK';
 import StudyAbroadAUS from './component/StudyAbroadAUS';
 import StudyAbroadCanada from './component/StudyAbroadCanada';
 import StudyAbroadIreland from './component/StudyAbroadIreland';
+import StudyAbroadNZ from './component/StudyAbroadNz';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route exact path="/study-abroad-aus" element={<StudyAbroadAUS />}></Route>
         <Route exact path="/study-abroad-canada" element={<StudyAbroadCanada />}></Route>
         <Route exact path="/study-abroad-ireland" element={<StudyAbroadIreland />}></Route>
+        <Route exact path="/study-abroad-new-zealand" element={<StudyAbroadNZ />}></Route>
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/policy" element={<PrivacyPolicy />}></Route>
