@@ -154,12 +154,12 @@ const TermCondition = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
                                         <Nav.Link href="faq">FAQ</Nav.Link>
-                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</span></Nav.Link>
+                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Enquire now</span></Nav.Link>
                                         <Nav.Link>
                                             <div class="whatsapp-icon">
                                                 <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
@@ -226,7 +226,7 @@ const TermCondition = () => {
                                                 </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h5>PICS India, Chennai</h5>
                                                             1st Floor, Elsa Plaza, No 2,<br/>
@@ -239,7 +239,7 @@ const TermCondition = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS UK, Chelmsford</h5>
                                                             Head Quarters : 27, Duke<br/> 
@@ -252,13 +252,7 @@ const TermCondition = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
-                                                        <div className='footer-widget '> 
-                                                            <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon 
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <div className="social-icons mb-10">
                                                                 <ul>
@@ -269,7 +263,7 @@ const TermCondition = () => {
                                                                     <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
-                                                            @PICSConsultants
+                                                            @picsstudyabroad
                                                         </div>
                                                     </div>
                                                 </div>
@@ -322,12 +316,6 @@ const TermCondition = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-12 col-md-3 m-center mb-xs-20'>
-                                                        <div className='footer-widget '> 
-                                                            <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon 
-                                                        </div>
-                                                    </div>
                                                 </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-0 pb-xs-0'>
@@ -342,7 +330,7 @@ const TermCondition = () => {
                                                                     <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
-                                                            @PICSConsultants
+                                                            @picsstudyabroad
                                                         </div>
                                                     </div>
                                                 </div>

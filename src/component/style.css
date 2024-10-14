@@ -809,13 +809,21 @@ a.btn-mod:focus{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+.hs-line-head {
+    position: relative;
+    text-transform: none;
+    font-size: 60px;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #fff;
+}
 .hs-line-1{
     position: relative;
     text-transform: none;
-    font-size: 45px;
+    font-size: 42px;
     line-height: 1.4;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -1px;
     color: #fff;
 }
@@ -1008,36 +1016,32 @@ a.btn-mod:focus{
 }
 .pics-abbr .desc {
     position: relative;
+    width: 390px;
+    border: 1px solid #182E46
 }
 .pics-abbr .desc-btn {
-    background-color: #B9943C;
-    color: #fff;
-    font-size: 13px;
+    color: #8F8F8F;
+    font-size: 14px;
     font-weight: 600;
     padding: 10px 20px;
-    border-radius: 10px;
+}
+.pics-abbr .desc-btn span {
+    color: #B9943C;
+    font-size: 20px;
     position: relative;
-    min-width: 200px
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    width: 75px;
+    display: block;
 }
-.pics-abbr .desc-btn::after {
-    background-color: #E4E4E4;
-    padding: 6px 15px;
-    z-index: -1;
-    width: 170px;
+.pics-abbr .desc-btn span:after {
+    height: 2px;
+    content: "-";
+    font-size: 20px;
     position: absolute;
-    content: "";
-    right: -115px;
-    top: 0;
-    height: 41px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.desc-info {
-    position: absolute;
-    right: -100px;
-    top: 8px;    
-    font-size: 12px;
-    color: #5d5d5d;
+    right: -20px;
+    top: 0px;
+    background-repeat: no-repeat;
 }
 .desc-info img {
     max-width: 25px;
@@ -3965,7 +3969,7 @@ section:hover .small-item-carousel .owl-next{
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    min-height: 265px;
+    min-height: 276px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     -webkit-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
     -moz-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000); 
@@ -4031,7 +4035,7 @@ section:hover .small-item-carousel .owl-next{
     padding: 4px 20px;
     color: #182E46;
     text-transform: uppercase;
-    min-width: 190px;
+    min-width: 170px;
     min-height: 28px;
     line-height: 25px;
     font-size: 15px;
@@ -4088,6 +4092,36 @@ section:hover .small-item-carousel .owl-next{
     content: "";
     right: 10px;
     top: 8px;
+}
+.pics-tabs .tab-single.ireland::after {
+    background-image: url('../images/ireland-sm.jpg');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.pics-tabs .tab-single.newzealand::after {
+    background-image: url('../images/newzealand-sm.jpg');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 8px;
+}
+.coming-soon-data {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 100%;
 }
 .univ-box {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -4151,8 +4185,9 @@ section:hover .small-item-carousel .owl-next{
     padding: 30px 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
-    min-height: 192px;
+    min-height: 210px;
     margin-bottom: 25px;
+    position: relative;
     p {
         font-size: 14px;
         color: #8F8F8F;
@@ -4185,7 +4220,16 @@ section:hover .small-item-carousel .owl-next{
     text-transform: uppercase;
     margin: 0 0 5px 0;
 }
-
+.step-container .buttonlink3{
+    color: #B9943C;
+    font-size: 12px;
+    text-decoration: underline;
+    text-transform: none;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
 .university-list-bx {
     background-color: #fff;
     border-radius: 15px;
@@ -5329,4 +5373,48 @@ input:-webkit-autofill:active {
 }
 .education-system table tr:nth-child(even) {
     background-color: #FEF7E8;
+}
+.closemodal {
+    position:absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #B9943C;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.border-radius12 {
+    border-radius: 12px;
+}
+.study-abroad {
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    margin: 0 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.study-abroad h4 {
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+    padding: 20px 0;
+    text-align: center;
+    color: #182E46;
+}
+.study-abroad .enquire {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-30%, 0);
+    width: 100%;
+}
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 96%;
+    padding: 35px 0;
 }

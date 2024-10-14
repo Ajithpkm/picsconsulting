@@ -20,21 +20,11 @@ import '../css/verticals.min.css';
 const type_of_stydy_options = [
     'Undergraduate (UG)',
     'Postgraduate (PG)',
-    'PHD',
     'Foundation',
-    'A-Level',
-    'Boarding School',
     'Diploma',
-    'English Study (ELT/EFL)',
-    'IB',
-    'IELTS at SI-UK',
-    'IGCSE',
-    'Other',
-    'Summer Course',
 ];
 
 const year_of_stydy_options = [
-    ' Apr/May/June 2024',
     'Sep/Oct/Nov 2024',
     'Jan/Feb/Mar 2025',
     'Apr/May/June 2025',

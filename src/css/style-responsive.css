@@ -323,6 +323,19 @@ Project: DT Skill
     .nav-logo-wrap {
         margin-right: 5px;
     }
+    .pics-abbr .desc-btn span:after {
+        content: none;
+    }
+    .pics-abbr .desc-btn {
+        padding: 10px;
+    }
+    .step-container .description p {
+        font-size: 12px;
+    }
+    .step-container .buttonlink3 {
+        position: relative;
+        bottom: 0;
+    }
     .wrc-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -533,6 +546,13 @@ Project: DT Skill
     .faq-filter .icon {
         display: none
     }
+    .study-abroads-list button {
+        display: none
+    }
+    .slider-container {
+        overflow-x: scroll;
+        padding: 0 0 35px 0;
+    }
     .nav-logo-wrap .logo {
         height: 75px;
     }
@@ -728,18 +748,39 @@ Project: DT Skill
         display: none;
     }
     .step-container {
-        min-height: 126px;
+        min-height: 171px;
         padding: 12px;
     }
     .step-container h4 {
         font-size: 16px;
     }
     .step-container .description img {
-        max-width: 50px;
+        height: 50px;
         margin: 0 auto;
     }
     .step-container .count {
         font-size: 48px;
+    }
+    .border-radius12 {
+        width: 100% !important;
+        height: 550px;
+        overflow-y: scroll;
+    }
+    .closemodal {
+        right: 10px;
+        top: 10px;
+    }
+    .step-container .description {
+        color: #313131;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
     }
     .univ-box .icon {
         width: 90px;
@@ -1020,7 +1061,7 @@ Project: DT Skill
         height: 38px;
     }
     .hs-line-1 {
-        font-size: 28px;
+        font-size: 25px;
         letter-spacing: 0px;
     }
     .hs-line-2{

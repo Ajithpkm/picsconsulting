@@ -1,15 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Tooltip from "./Tooltip";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Box, Grid, Typography } from '@mui/material';
 import { NavDropdown, Container, Navbar, Nav } from "react-bootstrap";
 import { NavDropdownMenu } from "react-bootstrap-submenu";
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import Logo from '../images/logo.png';
-import university_01 from '../images/united-kingdom.png';
-import university_02 from '../images/united-states.png';
-import university_03 from '../images/canada.png';
-import university_04 from '../images/australia.png';
+import university_01 from '../images/usa-flag.jpg';
+import university_02 from '../images/uk-flag.jpg';
+import university_03 from '../images/australia-flag.jpg';
+import university_04 from '../images/canada-flag.jpg';
+import university_05 from '../images/ireland-flag.jpg';
+import university_06 from '../images/newzealand-flag.jpg';
 import FooterLogo from '../images/footer-logo.png';
 import mail from '../images/mail.png';
 import call from '../images/call.png';
@@ -22,29 +28,47 @@ import whatsappwhite from '../images/whatsapp-w.png';
 import statement from '../images/statement.png';
 import letter from '../images/letter.png';
 import student from '../images/student.png';
-import admission from '../images/admission.png';
-import studentcv from '../images/studentcv.png';
+import visaguidance from '../images/visa-guidance.png';
+import general from '../images/general.png';
+import accomodations from '../images/accomodations.png';
+import flighttickets from '../images/flight-tickets.png';
 import englishtest from '../images/englishtest.png';
+import educationloan from '../images/education-loan.png';
 import preloader from '../images/preloader.gif';
 import application_service_bg from '../images/application-service-bg.jpg';
 import home_bg from '../images/home-bg.jpg';
-import icon_01 from '../images/university-offer.svg';
-import icon_02 from '../images/dedicated-pics-consultant.svg';
-import icon_03 from '../images/professional-service.svg';
-import infoicon from '../images/info.png';
+import dedicatedconsultant from '../images/dedicated-consultant.png';
+import nofee from '../images/no-fee.png';
+import offer from '../images/offer.png';
+import home_faq from '../images/home-faq.jpg';
+import sop from '../images/sop.jpg';
+import lor from '../images/lor.jpg';
+import englishtest2 from '../images/english-test.jpg';
+import loan from '../images/loan.jpg';
+import flight from '../images/flight.jpg';
+import arrow_right from '../images/arrow-right.png';
+import study_abroad_usa from '../images/study-abroad-usa.jpg';
+import study_abroad_uk from '../images/study-abroad-uk.jpg';
+import study_abroad_australia from '../images/study-abroad-australia.jpg';
+import study_abroad_canada from '../images/study-abroad-canada.jpg';
+import study_abroad_ireland from '../images/study-abroad-ireland.jpg';
+import study_abroad_newzealand from '../images/study-abroad-newzealand.jpg';
 import university_list from '../images/university-list.jpg';
 import free_consultation from '../images/free_consultation.jpg';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import SimpleBar from 'react-custom-scrollbars';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import './style.css';
 import '../css/verticals.min.css';
 import '../css/style-responsive.css';
-import { Height } from '@material-ui/icons';
+import { BorderAllRounded, Height } from '@material-ui/icons';
 import { gethomedata, getheaderandfooterdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import { BorderStyleRounded } from '@mui/icons-material';
 
 const style = {
     position: 'absolute',
@@ -55,6 +79,17 @@ const style = {
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
+    p: 4,
+};
+
+const style2 = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 680,
+    bgcolor: 'background.paper',
+    boxShadow: 12,
     p: 4,
 };
 interface TabPanelProps {
@@ -91,10 +126,32 @@ function a11yProps(index: number) {
 }
 
 const Dashboard = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const [open2, setOpen2] = React.useState(false);
+    const handleOpen2 = () => setOpen2(true);
+    const handleClose2 = () => setOpen2(false);
+
+    const [open3, setOpen3] = React.useState(false);
+    const handleOpen3 = () => setOpen3(true);
+    const handleClose3 = () => setOpen3(false);
+
+    const [open4, setOpen4] = React.useState(false);
+    const handleOpen4 = () => setOpen4(true);
+    const handleClose4 = () => setOpen4(false);
+
+    const [open5, setOpen5] = React.useState(false);
+    const handleOpen5 = () => setOpen5(true);
+    const handleClose5 = () => setOpen5(false);
+
     const [value, setValue] = React.useState(0);
     const [ukModelopen, setukModelopen] = React.useState(false);
     const [usaModelopen, setusaModelopen] = React.useState(false);
     const [contactopen, setContactOpen] = React.useState(false);
+    const elementRef = useRef(null);
+    const [arrowDisable, setArrowDisable] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
     const [selectedUniversity, setSelectedUniversity] = React.useState(false);
 
@@ -144,6 +201,22 @@ const Dashboard = () => {
             setusaModelopen(true);
         }, 7000);
     }, []);
+
+    const handleHorizantalScroll = (element, speed, distance, step) => {
+        let scrollAmount = 0;
+        const slideTimer = setInterval(() => {
+            element.scrollLeft += step;
+            scrollAmount += Math.abs(step);
+            if (scrollAmount >= distance) {
+                clearInterval(slideTimer);
+            }
+            if (element.scrollLeft === 0) {
+                setArrowDisable(true);
+            } else {
+                setArrowDisable(false);
+            }
+        }, speed);
+    };
 
     return (
         <>
@@ -209,7 +282,7 @@ const Dashboard = () => {
                                                     selectedUniversity == 3 ? 'CANADA' : 'AUSTRALIA'}<br />University list</div>
                                         </div>
                                         <div className='col-4 col-md-4'>
-                                            <div className='text-center'><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</a></div>
+                                            <div className='text-center'><a href="contact" className='btn btn-mod btn-w btn-circle btn-medium'>Enquire now</a></div>
                                         </div>
                                     </div>
                                 </Typography>
@@ -236,7 +309,7 @@ const Dashboard = () => {
                             </Box>
                         </Modal>
 
-                        <Modal
+                        {/* <Modal
                             open={usaModelopen}
                             onClose={handleUsaClose}
                             className="university-list"
@@ -249,7 +322,7 @@ const Dashboard = () => {
                                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/PpmD5vUlpCQ?si=u6WHnsqUHv1lnJN_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </Typography>
                             </Box>
-                        </Modal>
+                        </Modal> */}
 
                         <Modal
                             open={contactopen}
@@ -291,12 +364,12 @@ const Dashboard = () => {
                                             <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
                                             <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in Newzland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
                                         <Nav.Link href="faq">FAQ</Nav.Link>
-                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Get in Touch</span></Nav.Link>
+                                        <Nav.Link href="contact"><span className='btn btn-mod btn-w btn-circle btn-medium'>Enquire now</span></Nav.Link>
                                         <Nav.Link>
                                             <div class="whatsapp-icon">
                                                 <a href="https://api.whatsapp.com/send?phone=919444094442" target="_blank"><img src={whatsappwhite} /></a>
@@ -315,12 +388,15 @@ const Dashboard = () => {
                                             <div className="home-content">
                                                 <div className="home-text">
                                                     <div className="row d-flex align-items-center justify-content-center">
-                                                        <div className="col-md-8">
+                                                        <div className="col-md-10">
+                                                            <h1 className="hs-line-head text-center no-transp font-alt mb-0 mb-xs-10">
+                                                                PICS
+                                                            </h1>
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.title }}></div>
+                                                                Your Study Abroad Consultant to Study in USA, UK,<br/> Australia, Canada, Ireland & New Zealand
                                                             </h1>
                                                             <div className="hs-line-2 text-center">
-                                                                <div dangerouslySetInnerHTML={{ __html: homedata?.section1?.description }}></div>
+                                                                We'll help you find and get into the perfect program in your<br/> dream study destination.
                                                             </div>
                                                         </div>
                                                     </div>
@@ -332,22 +408,26 @@ const Dashboard = () => {
 
                                 <section className="small-section bg-white pt-30 pb-30">
                                     <div className="container relative">
-                                        <div className="row d-flex justify-content-between">
+                                        <div className="row d-flex align-items-center justify-content-between">
                                             <div className='col-md-5 mb-xs-20'>
                                                 <h2 className="banner-title mb-0 mb-xs-0">
-                                                    {homedata?.section2?.title}
+                                                Degree Programs include
                                                 </h2>
                                                 <div className="banner-desc">
-                                                    <span dangerouslySetInnerHTML={{ __html: homedata?.section2?.description }}></span>
+                                                    Under Graduation & Post Graduation<br/>  
+                                                    Engineering, Management, Medicine,<br/> 
+                                                    Law, Arts & Science & English programs 
                                                 </div>
                                             </div>
-                                            <div className='col-md-6'>
+                                            <div className='col-md-7'>
                                                 <div className='universities'>
                                                     <ul>
-                                                        <li><img src={homedata?.section2?.image1} alt="" /></li>
-                                                        <li><img src={homedata?.section2?.image2} alt="" /></li>
-                                                        <li><img src={homedata?.section2?.image3} alt="" /></li>
-                                                        <li><img src={homedata?.section2?.image4} alt="" /></li>
+                                                        <li><img src={university_01} alt="" /></li>
+                                                        <li><img src={university_02} alt="" /></li>
+                                                        <li><img src={university_03} alt="" /></li>
+                                                        <li><img src={university_04} alt="" /></li>
+                                                        <li><img src={university_05} alt="" /></li>
+                                                        <li><img src={university_06} alt="" /></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -358,28 +438,32 @@ const Dashboard = () => {
                                 <section className='small-section pb-250 pt-xs-30 pb-xs-120'>
                                     <div className='container relative'>
                                         <div className='row d-flex justify-content-between'>
-                                            <div className='col-md-7 mb-xs-20'>
-                                                <div className='image-rounded'><img src={homedata?.section2?.large_image} alt="" className='img-fluid' /></div>
+                                            <div className='col-md-6 mb-xs-20'>
+                                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/W08OwHAcJN4?si=SfM5EoRgHC39WqM1" title="Study Abroad Made Easy With PICS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                             </div>
-                                            <div className='col-md-5'>
+                                            <div className='col-md-6'>
                                                 <div className='inner-container'>
 
                                                     <div className="hs-line-3 color font-alt mb-20 mb-xs-10">
-                                                        {homedata?.section2?.title1}
+                                                        Study Abroad Made<br/> Easy With PICS
                                                     </div>
                                                     <div className='section-text'>
-                                                        <span dangerouslySetInnerHTML={{ __html: homedata?.section2?.description1 }}></span>
+                                                        PICS Consultants takes a <b>Student- Centred Approach (P-I-C-S approach)</b> and our mission is to provide right guidance by having a transparent discussion with the student. We discuss with you to understand your requirement, Use our knowledge and provide you a list of university that’s well-matched and we help you to make the right decision that meet your requirement. Here is our exclusive PICS approach, 
                                                     </div>
                                                     <div className='pics-abbr mt-30'>
                                                         <div className='d-flex align-items-center mb-1'>
                                                             <div className='capital font-alt'>P</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>
-                                                                    {homedata?.section2?.list1}
-                                                                    <div className='desc-info'>
-                                                                        <Tooltip text="Just click Get in Touch button and submit the form and your dedicated PICS consultant will contact you soon">
-                                                                            <img src={infoicon} /> Read more
-                                                                        </Tooltip>
+                                                                    <div className='row'>
+                                                                        <div className='col-md-4'>
+                                                                            <span>Prepare</span>
+                                                                        </div>
+                                                                        <div className='col-md-8'>
+                                                                            <div className='desc-info'>
+                                                                                We'll help you get ready for your application. 
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
@@ -389,11 +473,15 @@ const Dashboard = () => {
                                                             <div className='capital font-alt'>I</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>
-                                                                    {homedata?.section2?.list2}
-                                                                    <div className='desc-info'>
-                                                                        <Tooltip text="Your PICS consultant will identify and understand your requirements like  degree, country, financials & more">
-                                                                            <img src={infoicon} /> Read more
-                                                                        </Tooltip>
+                                                                    <div className='row'>
+                                                                        <div className='col-md-4'>
+                                                                            <span>Identify</span>
+                                                                        </div>
+                                                                        <div className='col-md-8'>
+                                                                            <div className='desc-info'>
+                                                                                We’ll work with you to understand your needs and goals. 
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -402,11 +490,15 @@ const Dashboard = () => {
                                                             <div className='capital font-alt'>C</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>
-                                                                    {homedata?.section2?.list3}
-                                                                    <div className='desc-info'>
-                                                                        <Tooltip text="Your PICS consultants will match your requirements and will provide a list of university for you to choose and make a life time decision">
-                                                                            <img src={infoicon} /> Read more
-                                                                        </Tooltip>
+                                                                    <div className='row'>
+                                                                        <div className='col-md-4'>
+                                                                            <span>Choose</span>
+                                                                        </div>
+                                                                        <div className='col-md-8'>
+                                                                            <div className='desc-info'>
+                                                                                Together, we'll find the universities that are the best fit for you.
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -415,11 +507,15 @@ const Dashboard = () => {
                                                             <div className='capital font-alt'>S</div>
                                                             <div className='desc'>
                                                                 <div className='desc-btn'>
-                                                                    {homedata?.section2?.list4}
-                                                                    <div className='desc-info'>
-                                                                        <Tooltip text="Submit the application for an university offer">
-                                                                            <img src={infoicon} /> Read more
-                                                                        </Tooltip>
+                                                                    <div className='row'>
+                                                                        <div className='col-md-4'>
+                                                                            <span>Submit</span>
+                                                                        </div>
+                                                                        <div className='col-md-8'>
+                                                                            <div className='desc-info'>
+                                                                                We’ll assist you in submitting your application to secure your spot.
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -427,7 +523,7 @@ const Dashboard = () => {
                                                     </div>
 
                                                     <div className='m-center mt-40 mb-0'>
-                                                        <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                        <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -445,43 +541,37 @@ const Dashboard = () => {
                                                     <img src={homedata?.section3?.image} alt='' />
                                                 </div>
                                                 <div className='mt-30'>
-                                                    <h3 className="hs-line-3 white text-center font-alt mb-20 mb-xs-10">
-                                                        {homedata?.section3?.title}
+                                                    <h3 className="hs-line-3 white text-center font-alt mb-30 mb-xs-10">
+                                                        3 Reasons to choose PICS
                                                     </h3>
-                                                    <div className='row d-flex justify-content-center mb-40'>
-                                                        <div className='col-md-9'>
-                                                            <div className='section-text text-center white'>
-                                                                <span dangerouslySetInnerHTML={{ __html: homedata?.section3?.description }}></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+
                                                     <Box className="mt-10">
                                                         <Grid sx={{ mb: 2 }} className="comp-bx" container spacing={2}>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={homedata?.section3?.box1_image} /></div>
-                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box1_title }}></h2>
-                                                                    <p>{homedata?.section3?.box1_desc}</p>
+                                                                    <div className='icon'><img src={nofee} /></div>
+                                                                    <h2>Zero Processing Fee</h2>
+                                                                    <p>Get a free consultation for all our students! From application profiling to application service to admissions offer, we ensure top-notch service for free of charge. Quality will never be compromised.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={homedata?.section3?.box2_image} /></div>
-                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box2_title }}></h2>
-                                                                    <p>{homedata?.section3?.box2_desc}</p>
+                                                                    <div className='icon'><img src={offer} /></div>
+                                                                    <h2>Guaranteed Offer</h2>
+                                                                    <p>PICS has partnered with over 225 global universities for admissions. We assess student requirements and secure admissions offers from eligible partners that meet their criteria.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
-                                                                    <div className='icon'><img src={homedata?.section3?.box3_image} /></div>
-                                                                    <h2 dangerouslySetInnerHTML={{ __html: homedata?.section3?.box3_title }}></h2>
-                                                                    <p>{homedata?.section3?.box3_desc}</p>
+                                                                    <div className='icon'><img src={dedicatedconsultant} /></div>
+                                                                    <h2>Dedicated Consultant</h2>
+                                                                    <p>Our team will assist you throughout the admissions process, ensuring to meet your needs. We prioritize your comfort and make you the heart of our operation.</p>
                                                                 </div>
                                                             </Grid>
                                                         </Grid>
                                                     </Box>
                                                     <div className='mt-40 mb-20 text-center'>
-                                                        <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Get in touch</a>
+                                                        <a href='contact' className='btn btn-mod btn-w btn-round btn-medium'>Enquire now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -495,28 +585,224 @@ const Dashboard = () => {
                                     <div className='container relative'>
                                         <div className='row'>
                                             <div className='col-md-12'>
-                                                <h4 className="hs-line-3 color text-center font-alt mb-60 mb-xs-30">
-                                                    {homedata?.section5?.title}
+                                                <h4 className="hs-line-3 color text-center font-alt mb-30 mb-xs-30">
+                                                    Everything You Need in One Place
                                                 </h4>
                                             </div>
                                         </div>
 
                                         <div className='row d-flex justify-content-center'>
-                                            <div className='col-md-8'>
+                                            <div className='col-md-10'>
                                                 <div className='row d-flex justify-content-center'>
                                                     <div className='col-6 col-md-4'>
                                                         <div className='step-container'>
                                                             <div className='description'>
                                                                 <img src={statement} />
-                                                                <p>Statement of<br />Purpose</p>
+                                                                <p>Statement of Purpose<br/> (SOP)</p>
+                                                                <Button className='buttonlink3' onClick={handleOpen}>Know More</Button>
+                                                            </div>
+                                                        </div>
+
+                                                        <Modal
+                                                            open={open}
+                                                            onClose={handleClose}
+                                                            aria-labelledby="modal-modal-title"
+                                                            aria-describedby="modal-modal-description"
+                                                            >
+                                                            <Box className='border-radius12' sx={style2}>
+                                                                <Typography className='modal-bx' id="modal-modal-description">
+                                                                <div onClick={handleClose} className='closemodal'><CloseIcon /></div>
+                                                                <div className='row'>
+                                                                    <div className='col-md-8'>
+                                                                        <div className='hs-line-2 font-alt color text-left mb-10'>
+                                                                            <b>Statement of Purpose (SOP)</b>
+                                                                        </div>
+                                                                        <div className='section-text'>
+                                                                            An SOP, or Statement of Purpose, is crucial for scholarship applications. It helps the committee understand a candidate's background, abilities, and ambitions in relation to the program's objectives. A strong SOP can make an applicant stand out by revealing their drive, dedication, and individual viewpoint. 
+                                                                        </div>
+                                                                        <div className='m-center mt-20 mb-0'>
+                                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='col-md-4 mt-xs-20'>
+                                                                        <div className='image-rounded'><img src={sop} /></div>
+                                                                    </div>
+                                                                </div>
+                                                                </Typography>
+                                                            </Box>
+                                                        </Modal>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={letter} />
+                                                                <p>Letter of Recommendation (LOR)</p>
+                                                                <Button className='buttonlink3' onClick={handleOpen2}>Know More</Button>
+                                                            </div>
+                                                        </div>
+                                                        <Modal
+                                                            open={open2}
+                                                            onClose={handleClose2}
+                                                            aria-labelledby="modal-modal-title"
+                                                            aria-describedby="modal-modal-description"
+                                                            >
+                                                            <Box className='border-radius12' sx={style2}>
+                                                                <Typography className='modal-bx' id="modal-modal-description">
+                                                                <div onClick={handleClose2} className='closemodal'><CloseIcon /></div>
+                                                                <div className='row'>
+                                                                    <div className='col-md-8'>
+                                                                        <div className='hs-line-2 font-alt color text-left mb-10'>
+                                                                            <b>Letter of Recommendation (LOR)</b>
+                                                                        </div>
+                                                                        <div className='section-text'>
+                                                                            The Letter of Recommendation or LOR is a document that provides the admission officers with a comprehensive insight into your suitable candidature, for admission into the concerned University. It aims to provide a favourable picture of your academic performance, strengths, experiences, achievements, contributions, and skills.
+                                                                        </div>
+                                                                        <div className='m-center mt-20 mb-0'>
+                                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='col-md-4 mt-xs-20'>
+                                                                        <div className='image-rounded'><img src={lor} /></div>
+                                                                    </div>
+                                                                </div>
+                                                                </Typography>
+                                                            </Box>
+                                                        </Modal>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={englishtest} />
+                                                                <p>English test</p>
+                                                                <Button className='buttonlink3' onClick={handleOpen3}>Know More</Button>
+                                                            </div>
+                                                        </div>
+                                                        <Modal
+                                                            open={open3}
+                                                            onClose={handleClose3}
+                                                            aria-labelledby="modal-modal-title"
+                                                            aria-describedby="modal-modal-description"
+                                                            >
+                                                            <Box className='border-radius12' sx={style2}>
+                                                                <Typography className='modal-bx' id="modal-modal-description">
+                                                                <div onClick={handleClose3} className='closemodal'><CloseIcon /></div>
+                                                                <div className='row'>
+                                                                    <div className='col-md-8'>
+                                                                        <div className='hs-line-2 font-alt color text-left mb-10'>
+                                                                            <b>English Test</b>
+                                                                        </div>
+                                                                        <div className='section-text'>
+                                                                            <p className='mb-10'>The world’s most accepted English-language test to prove your proficiency, the TOEFL iBT & GRE test scores are accepted by more than 13,000 universities in 160+ countries, including 100% of universities in Australia, Canada, Ireland, New Zealand, the U.K. and the United States.</p>
+
+                                                                            <p className='mb-10'>At PICS, we wanted the best for our students and we have an exclusive offer for TOEFL & GRE Test.</p>
+
+                                                                            <p>Use code IND4859679 for a discount of<br/>
+                                                                            INR 2005</p>
+                                                                        </div>
+                                                                        <div className='m-center mt-20 mb-0'>
+                                                                            <a href='https://www.etsindia.org/?gad_source=1&gclid=EAIaIQobChMI8-frwYTEhgMVZSKDAx1BiBeyEAAYASAAEgLKRPD_BwE' target='_blank' className='btn btn-mod btn-color btn-round btn-medium'>Get Offer</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='col-md-4 mt-xs-20'>
+                                                                        <div className='image-rounded'><img src={englishtest2} /></div>
+                                                                    </div>
+                                                                </div>
+                                                                </Typography>
+                                                            </Box>
+                                                        </Modal>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={educationloan} />
+                                                                <p>Education Loan</p>
+                                                                <Button className='buttonlink3' onClick={handleOpen4}>Know More</Button>
+                                                            </div>
+                                                        </div>
+                                                        <Modal
+                                                            open={open4}
+                                                            onClose={handleClose4}
+                                                            aria-labelledby="modal-modal-title"
+                                                            aria-describedby="modal-modal-description"
+                                                            >
+                                                            <Box className='border-radius12' sx={style2}>
+                                                                <Typography className='modal-bx' id="modal-modal-description">
+                                                                <div onClick={handleClose4} className='closemodal'><CloseIcon /></div>
+                                                                <div className='row'>
+                                                                    <div className='col-md-8'>
+                                                                        <div className='hs-line-2 font-alt color text-left mb-10'>
+                                                                            <b>Education Loan</b>
+                                                                        </div>
+                                                                        <div className='section-text'>
+                                                                            <p className='mb-10'>Looking for an education loan to study abroad? A student loan is an investment in your future success. If you dream of studying abroad, let the experts at PICS Study Abroad support your journey.</p>
+
+                                                                            <p className='mb-10'>No pressure, no obligation. Complete our form and we’ll reach out to discuss your options for an education loan to study abroad. We’re here to support you!</p>
+                                                                        </div>
+                                                                        <div className='m-center mt-20 mb-0'>
+                                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='col-md-4 mt-xs-20'>
+                                                                        <div className='image-rounded'><img src={loan} /></div>
+                                                                    </div>
+                                                                </div>
+                                                                </Typography>
+                                                            </Box>
+                                                        </Modal>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={accomodations} />
+                                                                <p>Accommodation Bookings</p>
+                                                                <Button className='buttonlink3'>Know More</Button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-4'>
                                                         <div className='step-container'>
                                                             <div className='description'>
-                                                                <img src={letter} />
-                                                                <p>Letter of<br />Recommendation</p>
+                                                                <img src={flighttickets} />
+                                                                <p>Flight Booking </p>
+                                                                <Button className='buttonlink3' onClick={handleOpen5}>Know More</Button>
+                                                            </div>
+                                                        </div>
+                                                        <Modal
+                                                            open={open5}
+                                                            onClose={handleClose5}
+                                                            aria-labelledby="modal-modal-title"
+                                                            aria-describedby="modal-modal-description"
+                                                            >
+                                                            <Box className='border-radius12' sx={style2}>
+                                                                <Typography className='modal-bx' id="modal-modal-description">
+                                                                <div onClick={handleClose5} className='closemodal'><CloseIcon /></div>
+                                                                <div className='row'>
+                                                                    <div className='col-md-8'>
+                                                                        <div className='hs-line-2 font-alt color text-left mb-10'>
+                                                                            <b>Flight Booking</b>
+                                                                        </div>
+                                                                        <div className='section-text'>
+                                                                            <p className='mb-10'>MS World Travel Services is an IATA approved travel agency operating from the past 15 years at Chennai. They offer a highest standard of services to our valued customers like students, sub agents and corporate travellers by assisting them to issue the flight tickets, visas, travel insurance, tour packages, Visa stamping, Attestations and other travel products. We are also an active member of TAAI & TAFI. </p>
+                                                                            
+                                                                            <p><b>Name:</b> Mhd. Imthiyas<br/>
+                                                                            <b>Phone:</b> 044 4232 3228 +91 98843 53228<br/>
+                                                                            <b>Mail:</b> msworldtravels@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className='col-md-4'>
+                                                                        <div className='image-rounded'><img src={flight} /></div>
+                                                                    </div>
+                                                                </div>
+                                                                </Typography>
+                                                            </Box>
+                                                        </Modal>
+                                                    </div>
+                                                    <div className='col-6 col-md-4'>
+                                                        <div className='step-container'>
+                                                            <div className='description'>
+                                                                <img src={visaguidance} />
+                                                                <p>Visa Guidance</p>
+                                                                <Button className='buttonlink3'>Know More</Button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -524,63 +810,115 @@ const Dashboard = () => {
                                                         <div className='step-container'>
                                                             <div className='description'>
                                                                 <img src={student} />
-                                                                <p>student visa</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={admission} />
-                                                                <p>admission essayS</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-6 col-md-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <img src={studentcv} />
                                                                 <p>student cV</p>
+                                                                <Button className='buttonlink3'>Know More</Button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-4'>
                                                         <div className='step-container'>
                                                             <div className='description'>
-                                                                <img src={englishtest} />
-                                                                <p>English test</p>
+                                                                <img src={general} />
+                                                                <p>general</p>
+                                                                <Button className='buttonlink3'>Know More</Button>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div className='col-md-6 xs-order-3'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>03. {homedata?.section5?.title3}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc3 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-6 xs-order-2'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>02. {homedata?.section5?.title2}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc2 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-6 xs-order-4'>
-                                                        <div className='step-container'>
-                                                            <div className='description'>
-                                                                <h4>04. {homedata?.section5?.title4}</h4>
-                                                                <p dangerouslySetInnerHTML={{ __html: homedata?.section5?.desc4 }}></p>
-                                                            </div>
-                                                        </div>
-                                                    </div> */}
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='mt-40 mb-20 text-center'>
-                                            <a href='faq' className='btn btn-mod btn-w btn-round btn-medium'>FAQ</a>
+                                    </div>
+                                </section>
+
+                                <section className='small-section'>
+                                    <div className='container-1400 relative'>
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <h4 className="hs-line-3 color text-center font-alt mb-10 mb-xs-30">
+                                                    Study In Your Dream Destination
+                                                </h4>
+
+                                                <div className='d-flex md-block study-abroads-list'>
+                                                    <Button
+                                                        onClick={() => {
+                                                            handleHorizantalScroll(elementRef.current, 25, 100, -10);
+                                                        }}
+                                                        disabled={arrowDisable}
+                                                    >
+                                                        <ArrowBackIcon className='color' />
+                                                    </Button>
+                                                    <div className="slider-container" ref={elementRef}>
+                                                        <div className='d-flex'>
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_usa} />
+                                                                </div>
+                                                                <h4>Study in USA</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-usa" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_uk} />
+                                                                </div>
+                                                                <h4>Study in UK</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-uk" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_australia} />
+                                                                </div>
+                                                                <h4>Study in Australia</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-aus" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_canada} />
+                                                                </div>
+                                                                <h4>Study in Canada</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-canada" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_ireland} />
+                                                                </div>
+                                                                <h4>Study in Ireland</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-ireland" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="study-abroad">
+                                                                <div className='image-rounded'>
+                                                                    <img src={study_abroad_newzealand} />
+                                                                </div>
+                                                                <h4>Study in New Zealand</h4>
+                                                                <div className='enquire'>
+                                                                    <a href="study-abroad-new-zealand" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <Button
+                                                        onClick={() => {
+                                                            handleHorizantalScroll(elementRef.current, 25, 100, 10);
+                                                        }}
+                                                    >
+                                                        <ArrowForwardIcon className='color' />
+                                                    </Button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </section>
@@ -617,39 +955,14 @@ const Dashboard = () => {
                                             className='pics-tabs'
                                             aria-label="horizontal tabs example"
                                         >
-                                            {
-                                                universitydata?.length > 0 && universitydata?.map((x, i) => (
-                                                    <Tab className={`tab-single ${(x?.name?.toLowerCase())}`} label={x?.name} {...a11yProps(i)} />
-                                                ))
-                                            }
+                                            <Tab className='tab-single usa' label="USA" {...a11yProps(0)} />
+                                            <Tab className='tab-single uk' label="UK" {...a11yProps(1)} />
+                                            <Tab className='tab-single australia' label="Australia" {...a11yProps(2)} />
+                                            <Tab className='tab-single canada' label="Canada" {...a11yProps(3)} />
+                                            <Tab className='tab-single ireland' label="Ireland" {...a11yProps(4)} />
+                                            <Tab className='tab-single newzealand' label="New Zealand" {...a11yProps(5)} />
                                         </Tabs>
                                         <TabPanel value={value} index={0}>
-                                            <Box className='mt-10 xs-padding-12'>
-                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
-                                                    {universitydata?.[0]?.university?.length > 0 ?
-                                                        <>
-                                                            {
-                                                                universitydata?.[0]?.university?.map((x) => (
-                                                                    <Grid item className="univ-box">
-                                                                        <div className='icon'><img src={x?.image} /></div>
-                                                                        <h4>{x?.name}</h4>
-                                                                    </Grid>
-                                                                ))
-                                                            }
-                                                        </> :
-                                                        <>
-                                                            <p>UK data coming soon...</p>
-                                                        </>
-                                                    }
-
-                                                </Grid>
-                                            </Box>
-                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(1)} className='buttonlink2'>View More</Button></div>
-                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
-                                            </div>
-                                        </TabPanel>
-                                        <TabPanel value={value} index={1}>
                                             <Box className='mt-10'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
                                                     {universitydata?.[1]?.university?.length > 0 ?
@@ -672,10 +985,61 @@ const Dashboard = () => {
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(2)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                            </div>
+                                        </TabPanel>
+                                        <TabPanel value={value} index={1}>
+                                            <Box className='mt-10 xs-padding-12'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    {universitydata?.[0]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[0]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <p>UK data coming soon...</p>
+                                                        </>
+                                                    }
+
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(1)} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
                                             </div>
                                         </TabPanel>
                                         <TabPanel value={value} index={2}>
+                                            <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    {universitydata?.[3]?.university?.length > 0 ?
+                                                        <>
+                                                            {
+                                                                universitydata?.[3]?.university?.map((x) => (
+                                                                    <Grid item className="univ-box">
+                                                                        <div className='icon'><img src={x?.image} /></div>
+                                                                        <h4>{x?.name}</h4>
+                                                                    </Grid>
+                                                                ))
+                                                            }
+                                                        </> :
+                                                        <>
+                                                            <div className='coming-soon-data'>AUSTRALIA data coming soon...</div>
+                                                        </>
+                                                    }
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(4)} className='buttonlink2'>View More</Button></div>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                            </div>
+                                        </TabPanel>
+                                        <TabPanel value={value} index={3}>
                                             <Box className='mt-10'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
                                                     {universitydata?.[2]?.university?.length > 0 ?
@@ -698,34 +1062,126 @@ const Dashboard = () => {
                                             </Box>
                                             <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(3)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' onClick={handleOpenContact} className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
                                             </div>
                                         </TabPanel>
-                                        <TabPanel value={value} index={3}>
+                                        <TabPanel value={value} index={4}>
                                             <Box className='mt-10'>
                                                 <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
-                                                    {universitydata?.[3]?.university?.length > 0 ?
-                                                        <>
-                                                            {
-                                                                universitydata?.[3]?.university?.map((x) => (
-                                                                    <Grid item className="univ-box">
-                                                                        <div className='icon'><img src={x?.image} /></div>
-                                                                        <h4>{x?.name}</h4>
-                                                                    </Grid>
-                                                                ))
-                                                            }
-                                                        </> :
-                                                        <>
-                                                            <p>AUSTRALIA data coming soon...</p>
-                                                        </>
-                                                    }
+                                                    <div className='coming-soon-data'>Ireland data coming soon...</div>
                                                 </Grid>
                                             </Box>
-                                            <div className='mt-20 text-center'><Button onClick={() => handleUkOpen(4)} className='buttonlink2'>View More</Button></div>
                                             <div className='mt-20 mb-0 mt-xs-20 text-center'>
-                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Get in touch</a>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
                                             </div>
                                         </TabPanel>
+                                        <TabPanel value={value} index={5}>
+                                            <Box className='mt-10'>
+                                                <Grid sx={{ mb: 2 }} container direction="row" justifyContent="space-between" alignItems="center" spacing={1}>
+                                                    <div className='coming-soon-data'>New Zealand data coming soon...</div>
+                                                </Grid>
+                                            </Box>
+                                            <div className='mt-20 mb-0 mt-xs-20 text-center'>
+                                                <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                            </div>
+                                        </TabPanel>
+                                    </div>
+                                </section>
+
+                                <section className='small-section bg-scroll bg-pos-bottom faqs' style={{
+                                    background: `url(${home_faq})`,
+                                }}>
+                                    <div className='container relative'>
+                                        <div className='row'>
+                                            <div className='col-md-12'>
+                                                <h4 className="hs-line-3 color text-center font-alt mb-30 mb-xs-30">
+                                                    Common Questions, Find a Solution Fast
+                                                </h4>
+
+                                                <Accordion defaultExpanded>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel1-content"
+                                                    id="panel1-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>How can I find my dream program?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        Take just 3 minutes to answer a few questions about your educational goals. What do you want to study? Where do you dream of living? We’ll suggest study programs tailored exactly to what you need.
+                                                        <div className='mt-20 mb-0 mt-xs-20'>
+                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                        </div>
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel2-content"
+                                                    id="panel2-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>How do I apply once I've found the right program?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        Start your application process with PICS. Simply create a free account and begin your application online at any time. It's easy, free, and all online. If you have any questions, feel free to reach out to us.
+                                                        <div className='mt-20 mb-0 mt-xs-20'>
+                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                        </div>
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel3-content"
+                                                    id="panel3-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Why choose PICS?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        Applying to college can be tricky. You might forget something important, and then you could get disqualified. PICS helps you through every step so you don't miss anything. We can even help you improve your chances of getting in; most of our students get accepted. 
+                                                        <div className='mt-20 mb-0 mt-xs-20'>
+                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                        </div>
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel4-content"
+                                                    id="panel4-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>Which countries can I apply to study in?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                    <Typography className='Lato faq-answer'>
+                                                        PICS provides access to more than 250+ universities  in five countries: the United States of America (USA), the United Kingdom (UK), Australia, Canada, Ireland, and New Zealand.
+                                                        <div className='mt-20 mb-0 mt-xs-20'>
+                                                            <a href='contact' className='btn btn-mod btn-color btn-round btn-medium'>Enquire now</a>
+                                                        </div>
+                                                    </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                                <Accordion>
+                                                    <AccordionSummary
+                                                    expandIcon={<ExpandCircleDownIcon />}
+                                                    aria-controls="panel5-content"
+                                                    id="panel5-header"
+                                                    >
+                                                    <Typography className='Lato faq-question'>I've applied, so what's next?</Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails>
+                                                        <Typography className='Lato faq-answer'>
+                                                            After receiving the offer, pay the tuition deposit, apply for your student visa, and start packing for your study abroad adventure.
+                                                        </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                            </div>
+                                        </div>
                                     </div>
                                 </section>
                             </main>
@@ -752,7 +1208,7 @@ const Dashboard = () => {
                                                 </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-20 pb-xs-10'>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget '>
                                                             <h5>PICS India, Chennai</h5>
                                                             1st Floor, Elsa Plaza, No 2,<br/>
@@ -765,7 +1221,7 @@ const Dashboard = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget '> 
                                                             <h5>PICS UK, Chelmsford</h5>
                                                             Head Quarters : 27, Duke<br/> 
@@ -778,13 +1234,7 @@ const Dashboard = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
-                                                        <div className='footer-widget '> 
-                                                            <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon 
-                                                        </div>
-                                                    </div>
-                                                    <div className='col-md-3 m-center mb-xs-20'>
+                                                    <div className='col-md-4 m-center mb-xs-20'>
                                                         <div className='footer-widget'>
                                                             <div className="social-icons mb-10">
                                                                 <ul>
@@ -795,7 +1245,7 @@ const Dashboard = () => {
                                                                     <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
-                                                            @PICSConsultants
+                                                            @picsstudyabroad
                                                         </div>
                                                     </div>
                                                 </div>
@@ -848,12 +1298,6 @@ const Dashboard = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className='col-12 col-md-3 m-center mb-xs-20'>
-                                                        <div className='footer-widget '> 
-                                                            <h5>PICS India, Pondicherry</h5>
-                                                            Coming Soon 
-                                                        </div>
-                                                    </div>
                                                 </div>
 
                                                 <div className='row pt-0 pb-10 pt-xs-0 pb-xs-0'>
@@ -868,7 +1312,7 @@ const Dashboard = () => {
                                                                     <li><a href="https://www.youtube.com/@PicsStudyAbroad" target='_blank'><img src={youtube} /></a></li>
                                                                 </ul>
                                                             </div>
-                                                            @PICSConsultants
+                                                            @picsstudyabroad
                                                         </div>
                                                     </div>
                                                 </div>
