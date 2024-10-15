@@ -22,6 +22,7 @@ import { Height } from '@material-ui/icons';
 import { gethomedata, getheaderandfooterdata, getaboutusdata, getcountrydata, getuniversitydata } from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import {Helmet} from "react-helmet"
 
 const style = {
     position: 'absolute',
@@ -133,6 +134,17 @@ const Dashboard = () => {
 
     return (
         <>
+        <Helmet onChangeClientState={(newState) => {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', 'test description' || '');
+            }
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', 'test keywords' || '');
+            }
+            }}><title>{ 'test title' }</title>
+        </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
                     // acceptOnScroll={true}
