@@ -1231,7 +1231,7 @@ const StudyAbroadAUS = () => {
                                     <div className="container">
                                         <div className='row g-0 d-flex align-items-end'>
                                             <div className='col-md-4 mb-xs-20'>
-                                                <div className='img-round'><img src={getintouch_usa} className='img-fluid' /></div>
+                                                <div className='img-round zindex'><img src={getintouch_usa} className='img-fluid' /></div>
                                             </div>
                                             <div className='col-md-8'>
                                                 <div className='right-container'>

@@ -10,6 +10,7 @@ import call from '../images/call.png';
 import facebook from '../images/facebook.png';
 import instagram from '../images/instagram.png';
 import whatsapp from '../images/whatsapp.png';
+import whatsappSticky from '../images/whatsapp-big.png';
 import linkedin from '../images/linkedin.png';
 import youtube from '../images/youtube.png';
 import about_bg from '../images/about-bg.jpg';
@@ -137,13 +138,13 @@ const Dashboard = () => {
         <Helmet onChangeClientState={(newState) => {
             const metaDescription = document.querySelector('meta[name="description"]');
             if (metaDescription) {
-                metaDescription.setAttribute('content', 'test description' || '');
+                metaDescription.setAttribute('content', 'PICS Study Abroad Consultants is dedicated to identifying your specific requirements and aspirations, then leveraging our extensive experience to provide you with a tailored list of university options perfectly suited to you. We know the admissions landscape inside and out, and we will use that expertise to maximize your chances of getting accepted to the school of your dreams.' || '');
             }
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
-                metaKeywords.setAttribute('content', 'test keywords' || '');
+                metaKeywords.setAttribute('content', 'overseas education consultants, study abroad consultants, abroad education consultants, abroad consultancy, study abroad agency, abroad consultancy near me, overseas consultancy, study abroad consultants near me, foreign education consultants' || '');
             }
-            }}><title>{ 'test title' }</title>
+            }}><title>{ 'About Us - PICS Study Abroad Consultants' }</title>
         </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
@@ -386,6 +387,9 @@ const Dashboard = () => {
                             </main>
 
                             <footer className="small-section bg-gray-lighter footer pb-60">
+                                <div className='sticky-whatsapp'>
+                                    <a href={headandfooterdata?.whatsapp} target='_blank'><img src={whatsappSticky} /></a>
+                                </div>
                                 <div className="container-1400">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
@@ -413,11 +417,11 @@ const Dashboard = () => {
                                                             1st Floor, Elsa Plaza, No 2,<br/>
                                                             Rajiv Gandhi Salai, Padur,<br/>
                                                             OMR, Chennai-603103, India
-                                                            <button className='map-link' onClick=''>
+                                                            <a className='map-link' href='https://maps.app.goo.gl/APoby4Foxrjwssyb7' target='_blank'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                                                                     <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
                                                                 </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div className='col-md-4 m-center mb-xs-20'>
@@ -426,11 +430,11 @@ const Dashboard = () => {
                                                             Head Quarters : 27, Duke<br/> 
                                                             Street, Chelmsford,<br/> 
                                                             England, CM1 1HT, UK
-                                                            <button className='map-link' onClick=''>
+                                                            <a className='map-link' href='https://maps.app.goo.gl/fLKKPtgbhgVL3eCNA' target='_blank'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                                                                     <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
                                                                 </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div className='col-md-4 m-center mb-xs-20'>
@@ -477,11 +481,11 @@ const Dashboard = () => {
                                                             1st Floor, Elsa Plaza, No 2,<br/>
                                                             Rajiv Gandhi Salai, Padur,<br/>
                                                             OMR, Chennai-603103, India
-                                                            <button className='map-link' onClick=''>
+                                                            <a className='map-link' href='https://maps.app.goo.gl/APoby4Foxrjwssyb7' target='_blank'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                                                                     <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
                                                                 </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div className='col-6 col-md-3 m-center mb-xs-20'>
@@ -490,11 +494,11 @@ const Dashboard = () => {
                                                             Head Quarters : 27, Duke<br/> 
                                                             Street, Chelmsford,<br/> 
                                                             England, CM1 1HT, UK
-                                                            <button className='map-link' onClick=''>
+                                                            <a className='map-link' href='https://maps.app.goo.gl/fLKKPtgbhgVL3eCNA' target='_blank'>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                                                                     <path id="Path_12433" data-name="Path 12433" d="M7.575,13.657,20.769,9.231,16.343,22.425l-2.874-5.59a.7.7,0,0,0-.3-.3ZM30,15A15,15,0,1,1,15,0,15.017,15.017,0,0,1,30,15ZM22.382,7.618a.7.7,0,0,0-.721-.169l-16.113,5.4a.7.7,0,0,0-.1,1.292l6.872,3.533,3.533,6.872a.7.7,0,0,0,.625.382l.053,0a.7.7,0,0,0,.614-.477l5.4-16.113a.7.7,0,0,0-.169-.721Z" fill="#182e46"/>
                                                                 </svg>  <span>Get Directions</span>
-                                                            </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>

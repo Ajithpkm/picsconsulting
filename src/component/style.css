@@ -28,6 +28,7 @@ Project: DT Skill
 .overflow {overflow: visible !important;}
 .overflowz99 {overflow: visible !important; z-index: 99;}
 .underline {text-decoration: underline;}
+.zindex {z-index: 99; position: relative;}
 .italic {font-style: italic;}
 .fs-12 {font-size: 12px;}
 .fs-13 {font-size: 13px;}
@@ -821,7 +822,7 @@ a.btn-mod:focus{
 .hs-line-1{
     position: relative;
     text-transform: none;
-    font-size: 42px;
+    font-size: 45px;
     line-height: 1.4;
     font-weight: 400;
     letter-spacing: -1px;
@@ -5075,7 +5076,6 @@ input:-webkit-autofill:active {
     padding: 30px 30px 30px 85px;
     border-radius: 15px;
     margin-left: -50px;
-    z-index: -1;
     position: relative;
 }
 .right-container p {
@@ -5417,4 +5417,9 @@ input:-webkit-autofill:active {
     overflow: hidden;
     width: 96%;
     padding: 35px 0;
+}
+.sticky-whatsapp {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
 }
