@@ -154,7 +154,7 @@ const StudyAbroadNZ = () => {
             }
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
-                metaKeywords.setAttribute('content', 'overseas education consultants, study abroad consultants, abroad education consultants, abroad consultancy, study abroad agency, abroad consultancy near me, overseas consultancy, study abroad consultants near me, foreign education consultants' || '');
+                metaKeywords.setAttribute('content', 'MBA in New Zealand, Best Universities in New Zealand, New Zealand phd' || '');
             }
             }}><title>{ 'Study in New Zealand: Best Overseas Education Consultants in Chennai' }</title>
         </Helmet>
@@ -218,12 +218,12 @@ const StudyAbroadNZ = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -249,10 +249,10 @@ const StudyAbroadNZ = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad NZ
+                                                                Study in New Zealand
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
-                                                                New Zealand
+                                                                Best Overseas Education Consultants
                                                             </h2>
                                                         </div>
                                                     </div>

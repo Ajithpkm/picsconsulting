@@ -360,12 +360,12 @@ const Dashboard = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -387,11 +387,11 @@ const Dashboard = () => {
                                     >
                                         <div className="js-height-parent container-1400">
                                             <div className="home-content">
-                                                <div className="home-text">
+                                                <div className="home-text-bottom">
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-10">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Your Study Abroad Consultant to Study in USA, UK,<br/> Australia, Canada, Ireland & New Zealand
+                                                                Your Study Abroad Consultant for<br/> USA, UK, Australia, Canada, Ireland & New Zealand
                                                             </h1>
                                                             <div className="hs-line-2 text-center">
                                                                 We'll help you find and get into the perfect program in your<br/> dream study destination.
@@ -556,14 +556,14 @@ const Dashboard = () => {
                                                                 <div className="pics-service">
                                                                     <div className='icon'><img src={offer} /></div>
                                                                     <h2>Guaranteed Offer</h2>
-                                                                    <p>PICS has partnered with over 225 global universities for admissions. We assess student requirements and secure admissions offers from eligible partners that meet their criteria.</p>
+                                                                    <p>PICS has partnered with over 225+ global universities for admissions. We assess student requirements and secure admissions offers from eligible partners that meet their criteria.</p>
                                                                 </div>
                                                             </Grid>
                                                             <Grid item xs={12} sm={4}>
                                                                 <div className="pics-service">
                                                                     <div className='icon'><img src={dedicatedconsultant} /></div>
                                                                     <h2>Dedicated Consultant</h2>
-                                                                    <p>Our team will assist you throughout the admissions process, ensuring to meet your needs. We prioritize your comfort and make you the heart of our operation.</p>
+                                                                    <p>We'll guide you through every step to help you achieve your dream of studying abroad. From preparing documents such as SOP, LOR, and meeting eligibility criteria, to submitting your application, we'll secure your admission offer at your preferred university. We prioritize your comfort and make you the heart of the operation. </p>
                                                                 </div>
                                                             </Grid>
                                                         </Grid>
@@ -853,7 +853,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in USA</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-usa" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-usa" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
 
@@ -863,7 +863,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in UK</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-uk" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-uk" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
 
@@ -873,7 +873,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in Australia</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-aus" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-australia" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
 
@@ -883,7 +883,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in Canada</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-canada" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-canada" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
 
@@ -893,7 +893,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in Ireland</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-ireland" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-ireland" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
 
@@ -903,7 +903,7 @@ const Dashboard = () => {
                                                                 </div>
                                                                 <h4>Study in New Zealand</h4>
                                                                 <div className='enquire'>
-                                                                    <a href="study-abroad-new-zealand" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
+                                                                    <a href="study-in-new-zealand" class="btn btn-mod btn-color btn-round btn-medium">Enquire <img src={arrow_right} /></a>
                                                                 </div>
                                                             </div>
                                                         </div>

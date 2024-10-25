@@ -131,13 +131,13 @@ const StudyAbroadCanada = () => {
         <Helmet onChangeClientState={(newState) => {
             const metaDescription = document.querySelector('meta[name="description"]');
             if (metaDescription) {
-                metaDescription.setAttribute('content', 'Studying abroad is a life-changing opportunity that can open doors to unparalleled personal and professional growth. Our Study Abroad Education Consultant in Chennai will be your dedicated partners, leveraging decades of expertise to make your study abroad dreams a reality. From finding the perfect university fit to acing the application process, we handle every step so you can focus on embarking on the adventure of a lifetime.' || '');
+                metaDescription.setAttribute('content', 'Studying abroad is a life-changing opportunity that can open doors to unparalleled personal and professional growth. Our Study Abroad Education Consultants in Chennai will be your dedicated partners, leveraging decades of expertise to make your study abroad dreams a reality. From finding the perfect university fit to acing the application process, we handle every step so you can focus on embarking on the adventure of a lifetime' || '');
             }
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
-                metaKeywords.setAttribute('content', 'overseas education consultants, study abroad consultants, abroad education consultants, abroad consultancy, study abroad agency, abroad consultancy near me, overseas consultancy, study abroad consultants near me, foreign education consultants' || '');
+                metaKeywords.setAttribute('content', 'University in Canada, Canada Student Visa, Canada Scholarships for International Students, IT Courses in Canada, Masters Degree in Canada, Study Visa Canada, Courses in Canada' || '');
             }
-            }}><title>{ 'Study in Canada: Study Abroad Education Consultant in Chennai' }</title>
+            }}><title>{ 'Study in Canada: Study Abroad Education Consultants in Chennai' }</title>
         </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
@@ -199,12 +199,12 @@ const StudyAbroadCanada = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -230,10 +230,10 @@ const StudyAbroadCanada = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad CAN
+                                                                Study in Canada
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
-                                                                Canada
+                                                                Study Abroad Education Consultants 
                                                             </h2>
                                                         </div>
                                                     </div>

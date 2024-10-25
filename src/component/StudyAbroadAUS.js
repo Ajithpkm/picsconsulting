@@ -70,6 +70,7 @@ import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import Modal from '@mui/material/Modal';
+import {Helmet} from "react-helmet";
 
 const style = {
     position: 'absolute',
@@ -142,6 +143,17 @@ const StudyAbroadAUS = () => {
 
     return (
         <>
+        <Helmet onChangeClientState={(newState) => {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', 'PICS Overseas Education Consultants is the right educational path in a bustling city like Chennai can be a daunting task. But with the guidance of our seasoned consultants, you can rest assured your child is on the fast track to success.' || '');
+            }
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', 'Education Consultants for Australia, Deakin University Melbourne, Universities in Australia for International Students, Scholarship in Australia, MBA Scholarships Australia, Australia Scholarships for International Students' || '');
+            }
+            }}><title>{ 'Study in Australia: Top 5 Overseas Education Consultants in Chennai' }</title>
+        </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
                     // acceptOnScroll={true}
@@ -202,12 +214,12 @@ const StudyAbroadAUS = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -233,10 +245,10 @@ const StudyAbroadAUS = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad AUS
+                                                                Study in Australia
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
-                                                                Australia
+                                                                Overseas Education Consultants
                                                             </h2>
                                                         </div>
                                                     </div>

@@ -671,6 +671,12 @@ a.btn-mod:focus{
     height: 100%;
     vertical-align: middle;
 }
+.home-text-bottom {
+    display: table-cell;
+    height: 100%;
+    vertical-align: bottom;
+    padding-bottom: 120px;
+}
 .sliderDesc {
     font-size: 15px;
     color: #767676;
@@ -3970,7 +3976,7 @@ section:hover .small-item-carousel .owl-next{
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    min-height: 276px;
+    min-height: 355px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     -webkit-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000);  
     -moz-transition: all 0.1s cubic-bezier(0.000, 0.000, 0.580, 1.000); 

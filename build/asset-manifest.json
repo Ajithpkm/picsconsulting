@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf48b74f.css",
-    "main.js": "/static/js/main.4681428a.js",
+    "main.css": "/static/css/main.340815a3.css",
+    "main.js": "/static/js/main.15b0e3cc.js",
     "static/js/787.d9774dda.chunk.js": "/static/js/787.d9774dda.chunk.js",
     "static/media/admission-requirement.jpg": "/static/media/admission-requirement.3e1ec3b358a8a85df362.jpg",
     "static/media/usa-bg.png": "/static/media/usa-bg.6c9eac6da0f90ec31bc0.png",
@@ -78,12 +78,12 @@
     "static/media/identity.svg": "/static/media/identity.2b31db891693f1f946bd2a0caed36047.svg",
     "static/media/scholarships.svg": "/static/media/scholarships.2386e9fe3949881b01ab0c4ade827dae.svg",
     "static/media/menu.svg": "/static/media/menu.e6e0605cbb8769baa061.svg",
-    "main.cf48b74f.css.map": "/static/css/main.cf48b74f.css.map",
-    "main.4681428a.js.map": "/static/js/main.4681428a.js.map",
+    "main.340815a3.css.map": "/static/css/main.340815a3.css.map",
+    "main.15b0e3cc.js.map": "/static/js/main.15b0e3cc.js.map",
     "787.d9774dda.chunk.js.map": "/static/js/787.d9774dda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf48b74f.css",
-    "static/js/main.4681428a.js"
+    "static/css/main.340815a3.css",
+    "static/js/main.15b0e3cc.js"
   ]
 }

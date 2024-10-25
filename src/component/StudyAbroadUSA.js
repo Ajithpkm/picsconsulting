@@ -135,9 +135,9 @@ const Dashboard = () => {
             }
             const metaKeywords = document.querySelector('meta[name="keywords"]');
             if (metaKeywords) {
-                metaKeywords.setAttribute('content', 'overseas education consultants, study abroad consultants, abroad education consultants, abroad consultancy, study abroad agency, abroad consultancy near me, overseas consultancy, study abroad consultants near me, foreign education consultants' || '');
+                metaKeywords.setAttribute('content', 'Phd in USA, Masters Degree Courses in USA, Universities in USA for Masters, Study Masters in USA, Phd Universities in USA, University for International Students in USA, USA University Without IELTS' || '');
             }
-            }}><title>{ 'Study in USA: Best Study Abroad Education Consultant in Chennai' }</title>
+            }}><title>{ 'Study in USA: Best Study Abroad Education Consultants in Chennai' }</title>
         </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
@@ -199,12 +199,12 @@ const Dashboard = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -230,10 +230,10 @@ const Dashboard = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad USA
+                                                                Study in USA
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
-                                                                United States of America
+                                                                Best Study Abroad Education Consultants
                                                             </h2>
                                                         </div>
                                                     </div>

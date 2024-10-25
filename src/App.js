@@ -24,12 +24,12 @@ export default function App() {
       <Routes>
         <Route exact path="/" element={<Dashboard />}></Route>
         <Route exact path="/about" element={<About />}></Route>
-        <Route exact path="/study-abroad-usa" element={<StudyAbroadUSA />}></Route>
-        <Route exact path="/study-abroad-uk" element={<StudyAbroadUK />}></Route>
-        <Route exact path="/study-abroad-aus" element={<StudyAbroadAUS />}></Route>
-        <Route exact path="/study-abroad-canada" element={<StudyAbroadCanada />}></Route>
-        <Route exact path="/study-abroad-ireland" element={<StudyAbroadIreland />}></Route>
-        <Route exact path="/study-abroad-new-zealand" element={<StudyAbroadNZ />}></Route>
+        <Route exact path="/study-in-usa" element={<StudyAbroadUSA />}></Route>
+        <Route exact path="/study-in-uk" element={<StudyAbroadUK />}></Route>
+        <Route exact path="/study-in-australia" element={<StudyAbroadAUS />}></Route>
+        <Route exact path="/study-in-canada" element={<StudyAbroadCanada />}></Route>
+        <Route exact path="/study-in-ireland" element={<StudyAbroadIreland />}></Route>
+        <Route exact path="/study-in-new-zealand" element={<StudyAbroadNZ />}></Route>
         <Route exact path="/faq" element={<Faq />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/policy" element={<PrivacyPolicy />}></Route>

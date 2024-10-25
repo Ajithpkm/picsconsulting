@@ -70,6 +70,7 @@ import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
 import TabPanel from '@material-ui/lab/TabPanel';
 import Modal from '@mui/material/Modal';
+import {Helmet} from "react-helmet";
 
 const style = {
     position: 'absolute',
@@ -142,6 +143,17 @@ const StudyAbroadIreland = () => {
 
     return (
         <>
+        <Helmet onChangeClientState={(newState) => {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', 'Studying in Ireland is more than just books and classes. PICS is the Top education consultants in Chennai will handpick the perfect university and program to suit your academic and personal goals, ensuring you make the most of this transformative journey.' || '');
+            }
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', 'Ireland Education Consultants in Chennai, Best Ireland Universities, Ireland Universities for International Students, Ireland Study Abroad, Study in Ireland for International Students' || '');
+            }
+            }}><title>{ 'Study in Ireland: Top education consultants in Chennai' }</title>
+        </Helmet>
             <div>
                 {aboutusdata && <CookieConsent
                     // acceptOnScroll={true}
@@ -202,12 +214,12 @@ const StudyAbroadIreland = () => {
                                             id="collasible-nav-dropdown"
                                             alignRight
                                             >
-                                            <NavDropdown.Item href="study-abroad-usa">Study in USA</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-uk">Study in UK</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-aus">Study in Australia</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-canada">Study in Canada</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-ireland">Study in Ireland</NavDropdown.Item>
-                                            <NavDropdown.Item href="study-abroad-new-zealand">Study in New Zealand</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-usa">Study in USA</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-uk">Study in UK</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-australia">Study in Australia</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-canada">Study in Canada</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-ireland">Study in Ireland</NavDropdown.Item>
+                                            <NavDropdown.Item href="study-in-new-zealand">Study in New Zealand</NavDropdown.Item>
                                         </NavDropdownMenu>
                                         
                                         <Nav.Link href="about">About</Nav.Link>
@@ -233,10 +245,10 @@ const StudyAbroadIreland = () => {
                                                     <div className="row d-flex align-items-center justify-content-center">
                                                         <div className="col-md-8">
                                                             <h1 className="hs-line-1 text-center no-transp font-alt mb-30 mb-xs-10">
-                                                                Study Abroad IRE
+                                                                Study in Ireland
                                                             </h1>
                                                             <h2 className="hs-line-2 text-center">
-                                                                Ireland
+                                                                Top Education Consultants
                                                             </h2>
                                                         </div>
                                                     </div>
