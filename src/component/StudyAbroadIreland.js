@@ -195,14 +195,13 @@ const StudyAbroadIreland = () => {
                         <span className="loader"></span>
                     </div> :
                     <div>
-                        <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <Navbar expand="lg" className="main-nav">
                                 <Container>
                                     <Navbar.Brand>
                                         <a href="/" className="logo">
-                                            <img src={Logo} alt="PICS Consultants" />
+                                            <img src={Logo} alt="PICS Study Abroad" />
                                         </a>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -1156,7 +1155,7 @@ const StudyAbroadIreland = () => {
                                 <div className="container-1400">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={FooterLogo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={FooterLogo} alt="PICS Study Abroad" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             <div className='dblock'>

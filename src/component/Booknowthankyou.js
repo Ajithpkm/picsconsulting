@@ -54,14 +54,13 @@ const Booknowsuccesspage = () => {
                         <span className="loader"></span>
                     </div> :
                     <div>
-                        <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav menu-bg stick-fixed"}>
                                 <div className="container-1400 relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
                                         <a href="/" className="logo">
-                                            <img src={Logo} alt="PICS Consultants" />
+                                            <img src={Logo} alt="PICS Study Abroad" />
                                         </a>
                                     </div>
                                     <div className="mobile-nav" role="button" tabIndex={0}>
@@ -104,7 +103,7 @@ const Booknowsuccesspage = () => {
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={headandfooterdata?.logo} alt="PICS Study Abroad" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             <div className='dblock'>

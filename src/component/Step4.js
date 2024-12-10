@@ -56,7 +56,6 @@ const Dashboard = () => {
                         <span className="loader"></span>
                     </div> :
                     <div>
-                        <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <main id="main">

@@ -291,14 +291,13 @@ const Dashboard = () => {
                         <span className="loader"></span>
                     </div> :
                     <div>
-                        <title>PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <nav className={isScrollValueMoreThanHeaderHeight ? "main-nav stick-fixed sticky-header" : "main-nav menu-bg stick-fixed"}>
                                 <div className="container-1400 relative clearfix">
                                     <div className="nav-logo-wrap local-scroll">
                                         <a href="/" className="logo">
-                                            <img src={Logo} alt="PICS Consultants" />
+                                            <img src={Logo} alt="PICS Study Abroad" />
                                         </a>
                                     </div>
                                     <div className="mobile-nav" role="button" tabIndex={0}>

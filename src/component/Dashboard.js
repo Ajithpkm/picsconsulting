@@ -70,6 +70,7 @@ import { gethomedata, getheaderandfooterdata, getcountrydata, getuniversitydata 
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
 import { BorderStyleRounded } from '@mui/icons-material';
+import {Helmet} from "react-helmet";
 
 const style = {
     position: 'absolute',
@@ -221,6 +222,17 @@ const Dashboard = () => {
 
     return (
         <>
+        <Helmet onChangeClientState={(newState) => {
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', 'PICS Consultants is the best pathway and a Study Abroad & Overseas Education Consultants. We help students to study in the UK, USA, CANADA , AUSTRALIA and Ireland.' || '');
+            }
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+                metaKeywords.setAttribute('content', 'overseas education consultants, study abroad consultants, abroad education consultants, abroad consultancy, study abroad agency, abroad consultancy near me, overseas consultancy, study abroad consultants near me, foreign education consultants' || '');
+            }
+            }}><title>{ 'Study Abroad Consultants  |  Overseas Education Consultants  |  PICS Study Abroad' }</title>
+        </Helmet>
             {homedata && <CookieConsent
                 // acceptOnScroll={true}
                 // acceptOnScrollPercentage={50}
@@ -258,7 +270,7 @@ const Dashboard = () => {
                 {loading === false ?
                     <div className='page-loader'>
                         <span className="loader">
-                            <img src={preloader} alt="PICS Consultants" />
+                            <img src={preloader} alt="PICS Study Abroad" />
                         </span>
                     </div> :
                     <div>
@@ -341,14 +353,13 @@ const Dashboard = () => {
                                 </Typography>
                             </Box>
                         </Modal>
-                        <title>Study Abroad Consultants | Overseas Education Consultants | PICS Consultants</title>
                         <a href="#main" className="btn skip-to-content">Skip to Content</a>
                         <div className="page" id="top">
                             <Navbar expand="lg" className="main-nav">
                                 <Container>
                                     <Navbar.Brand>
                                         <a href="/" className="logo">
-                                            <img src={Logo} alt="PICS Consultants" />
+                                            <img src={Logo} alt="PICS Study Abroad" />
                                         </a>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -1191,7 +1202,7 @@ const Dashboard = () => {
                                 <div className="container-1400">
                                     <div className="row">
                                         <div className="col-md-3 text-center m-center mb-xs-20">
-                                            <a href="#top"><img src={FooterLogo} alt="PICS Consultants" /></a>
+                                            <a href="#top"><img src={FooterLogo} alt="PICS Study Abroad" /></a>
                                         </div>
                                         <div className="col-md-9">
                                             <div className='dblock'>
