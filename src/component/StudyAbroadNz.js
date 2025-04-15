@@ -67,6 +67,7 @@ import './style.css';
 import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
 import { getheaderandfooterdata, getaboutusdata} from '../Actions/Pics';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
 import Tab from '@material-ui/core/Tab';
@@ -288,8 +289,8 @@ const StudyAbroadNZ = () => {
                                                     About New Zealand
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    <p>New Zealand is one of the top study destinations for Indian students. World class education, globally recognized degrees, growing job market and friendly people, there are multiple reasons to study in New Zealand. In 2024, around 59,000+ international students were enrolled across eight New Zealand universities along with its ITPs and PTEs. 10% of these 59,000+ students, were Indian-origin students.</p>
-                                                    <p>With 20,000+ vacancies opening up each year, studying in New Zealand for international students has become one of the preferred choices. The introduction of Green List Occupations in New Zealand after the pandemic has also encouraged international students to study in New Zealand and apply for full-time job roles.</p>
+                                                    <p>New Zealand is one of the top study destinations for Indian students. With world-class education, globally recognized degrees, a growing job market, and friendly people, there are multiple reasons to study in New Zealand. In 2024, around 59,000+ international students were enrolled across eight of the <strong>Best Universities in New Zeland</strong>, along with its ITPs and PTEs. 10% of these 59,000+ students were of Indian origin.</p>
+                                                    <p>With over 20,000+ vacancies opening up each year, studying in New Zealand for international students has become one of the preferred choices. The introduction of Green List Occupations in New Zealand after the pandemic has further encouraged students to pursue higher education, including <strong>New Zeland PhD</strong> programs, and apply for full-time job roles.</p>
                                                 </div>
                                             </div>
 
@@ -420,15 +421,14 @@ const StudyAbroadNZ = () => {
                                             Top Reasons to Study in the New Zealand
                                         </h3>
                                         <div className='section-text'>
-                                            <p>There are top reasons that encourage international students to pursue higher education in New Zealand, including academic as well as post-study work options. From being lower in terms of studying costs, availability of numerous scholarships to ease of finding a job and working while in</p>
-                                            <h3 className='fw-600 italic mb-20'>New Zealand are some of the major reasons along<br/> with the following ones as well:</h3>
+                                            <p>There are many reasons why international students choose to study in New Zealand, including academic benefits and post-study work opportunities. Some key reasons include:</p>
                                             <div className='list-style-3'>
                                                 <ul>
-                                                    <li>The learning experience in New Zealand is qualitative and easier for Indian students to learn in that model.</li>
-                                                    <li>Also, the cost of living in New Zealand is lower than the cost of living in Australia by almost 12%.</li>
-                                                    <li>Pursuing higher education and research in New Zealand is propitious for international students with various benefits of PR, stipends and cost of living exemption.</li>
-                                                    <li>All qualifications of New Zealand are globally recognised, thus, international students can work anywhere in the world.</li>
-                                                    <li>Healthcare and Engineering sectors which hire skilled workers are bound to be paid higher than those in Australia by almost 25%.</li>
+                                                    <li>The learning experience in New Zealand is qualitative and suited for Indian students.</li>
+                                                    <li>The cost of living in New Zealand is lower than Australia by approximately 12%.</li>
+                                                    <li>Studying in New Zealand provides benefits like PR opportunities, stipends, and cost-of-living exemptions.</li>
+                                                    <li>All qualifications in New Zealand are globally recognized, making it easier for graduates to find jobs worldwide.</li>
+                                                    <li>High-demand sectors like healthcare and engineering offer salaries that are almost 25% higher than in australia</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -533,26 +533,20 @@ const StudyAbroadNZ = () => {
                                                 </h3>
                                                 
                                                 <div className='section-text mb-20'>
-                                                    As mentioned above, Canada is recognized for providing affordable education. The education system in Canada is managed by the provincial governments. The study levels and educational stages may vary across different clusters.
+                                                    The education system in New Zealand is well-structured, offering a variety of study levels. It includes:
                                                 </div>
 
                                                 <div className='list-style-3 mb-20'>
                                                     <ul>
-                                                        <li><span className='color-2 uppercase'>Technical & Vocational Education:</span> These institutions are for those students who are studying at the Senior Secondary school level, plus also those, who can pursue a course and specialize, in order to earn a living.</li>
-
-                                                        <li><span className='color-2 uppercase'>Youth Guarantee:</span> These courses are for students aged between 16-19. Gives them an opportunity to study NCEA Level 1-3 or Certificate Level 1-3 which are tertiary courses provided free of cost</li>
-
-                                                        <li><span className='color-2 uppercase'>Trades Academies:</span> These academies run through schools and other education providers and teach trades and technology-related programmes to students aged between 15-18.</li>
-
-                                                        <li><span className='color-2 uppercase'>Institutes of Technology:</span> These are government or industry-funded institutions which offer basic or introductory courses in vocational education.</li>
-
-                                                        <li><span className='color-2 uppercase'>Private Training:</span> Such training institutions offer specific vocational courses at both certificate and diploma levels.</li>
-
-                                                        <li><span className='color-2 uppercase'>Universities:</span> There are eight state-funded Universities in New Zealand offering a variety of courses across all major subjects.</li>
-
-                                                        <li>As per the levels of education in New Zealand designated by NZQF for tertiary education, each level consists of the following level of certificate or diploma or degree awarded to the student upon completion. The following is the level-wise degree/certificate/diploma award in tertiary education</li>
+                                                        <li><strong>Technical &amp; Vocational Education:</strong> For students at the Senior Secondary level and those looking for specialized courses.</li>
+                                                        <li><strong>Youth Guarantee:</strong> Free courses for students aged 16-19, covering NCEA Levels 1-3.</li>
+                                                        <li><strong>Trades Academies:</strong> Programs focused on trades and technology for students aged 15-18.</li>
+                                                        <li><strong>Institutes of Technology:</strong> Government or industry-funded institutions offering vocational education.</li>
+                                                        <li><strong>Private Training:</strong> Institutions providing specific vocational courses at certificate and diploma levels.</li>
+                                                        <li><strong>Universities:</strong> Eight state-funded universities offering a wide range of courses.</li>
                                                     </ul>
                                                 </div>
+                                                <div className='section-text mb-0'>As per the NZQF framework, tertiary education awards certificates, diplomas, or degrees based on study levels.</div>
                                             </div>
 
                                             <div className='col-md-4 mt-xs-20'>
@@ -568,7 +562,7 @@ const StudyAbroadNZ = () => {
                                             Top Courses in New Zealand
                                         </h3>
                                         <div className='section-text text-center m-left mb-40 mb-xs-20'>
-                                            Some of the top courses in New Zealand are offered in areas of management & business, engineering,<br/> medicine, social sciences and science-related subjects. 
+                                            Some of the most in-demand courses in New Zealand for international students include:
                                         </div>
 
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
@@ -584,11 +578,11 @@ const StudyAbroadNZ = () => {
                                                         <div className='col-md-6'>
                                                             <div className='list-style-3'>
                                                                 <ul>
-                                                                    <li>MBA</li>
-                                                                    <li>Information Technology</li>
-                                                                    <li>Graphic Designing</li>
-                                                                    <li>MBBS</li>
-                                                                    <li>Supply Chain Management</li>
+                                                                <li><strong>MBA in New Zeland</strong></li>
+                                                                <li>Information Technology</li>
+                                                                <li>Graphic Designing</li>
+                                                                <li>MBBS</li>
+                                                                <li>Supply Chain Management</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -596,7 +590,7 @@ const StudyAbroadNZ = () => {
                                                             <div className='list-style-3'>
                                                                 <ul>
                                                                     <li>Computer Science</li>
-                                                                    <li>Aeronautical Engineeringg</li>
+                                                                    <li>Aeronautical Engineering</li>
                                                                     <li>Mechanical Engineering</li>
                                                                     <li>Nursing</li>
                                                                 </ul>
@@ -609,38 +603,16 @@ const StudyAbroadNZ = () => {
 
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
                                             <div className='col-md-8 mb-xs-20'>
-                                                <h3 className='fw-600 italic mb-20'>Admission Requirements to Study in New Zealand Universities</h3>
+                                                <h3 className='fw-600 italic mb-20'>Admission Requirements to Study in the Best Universities in New Zeland</h3>
+                                                <div className='color-title mb-10'>Undergraduate Admissions</div>
                                                 <div className='section-text'>
-                                                    The admission requirements for studying in New Zealand universities vary with each level of study for international students. A brief is as follows:
-                                                </div>
-                                                <div className='color-title mb-10'>Undergraduate Admissions in New Zealand</div>
-                                                <div className='section-text'>
-                                                    At the UG level, international students’ admission applications are assessed based on class XII scores. In a few cases, the applicants may be required to submit an entrance test score of SAT. if applying for medical courses, MCAT would be required or LSAT would be required for law-related courses admission at UG level in New Zealand.<br/><br/>
-                                                    The applicants are required to submit English language test scores of TOEFL / IELTS / PTE unless exempted.
-
-                                                    <div className='read-more' onClick={handleOpen3}>Read more</div>
+                                                    <p>For UG courses, admissions are based on Class XII scores. Some universities may require SAT scores, and for medical or law courses, MCAT or LSAT may be required. Students must also submit English language proficiency scores through <strong>IELTS exam computer based</strong>, <strong>TOEFL exam practice test</strong>, or PTE unless exempted.</p>
                                                 </div>
 
-                                                <Modal
-                                                    open={open3}
-                                                    onClose={handleClose3}
-                                                    aria-labelledby="modal-modal-title"
-                                                    aria-describedby="modal-modal-description"
-                                                    >
-                                                    <Box sx={style}>
-                                                        <Typography className='modal-bx-body-3' id="modal-modal-description" sx={{ mt: 2 }}>
-                                                        <div className='section-text'>
-                                                            <h3 className='color-title mb-10'>Postgraduate Admissions in New Zealand</h3>
-
-                                                            <p className='mb-10'>For admission to a postgraduate course in New Zealand, international students will be required to submit undergraduate degree scores and submit their transcripts as well.</p>
-
-                                                            <p className='mb-10'>English language test scores will also be required, TOEFL / IELTS / PTE are accepted. If students have already pursued an undergraduate course from New Zealand, then they may be exempted from submitting these scores.</p>
-
-                                                            <p className='mb-10'>Apart from these, standardised test scores on GRE or GMAT may also be required while applying for a postgraduate course in New Zealand from international students.</p>
-                                                        </div>
-                                                        </Typography>
-                                                    </Box>
-                                                </Modal>
+                                                <div className='color-title mb-10'>Postgraduate Admissions</div>
+                                                <div className='section-text'>
+                                                    <p>For PG courses, applicants must submit undergraduate transcripts and English language test scores. Accepted tests include <strong>IDP IELTS mock test</strong>, <strong>TOEFL website</strong>, and PTE. Additionally, students applying for an <strong>MBA in New Zeland</strong> or other PG courses may need <strong>GRE TOEFL</strong> or GMAT scores.</p>
+                                                </div>
                                             </div>
                                             
                                             <div className='col-md-4'>
@@ -675,13 +647,13 @@ const StudyAbroadNZ = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Post-Study Work Permit in New Zealand</h3>
                                                     <div className='section-text'>
-                                                        <h3 className='color-title mb-10'>In order to apply for a post-study work permit in New Zealand, international students must fulfil the following criteria:</h3>
+                                                        <h3 className='color-title mb-10'>To apply for a post-study work permit, students must</h3>
 
                                                         <div className='list-style-3 mb-20'>
                                                             <ul>
-                                                                <li>Should have studied a Level 7 degree qualification or</li>
-                                                                <li>Should have studied non-degree qualification below Level 7, but the qualification must be listed on the Qualifications Eligible for a Post Study Work Visa list.</li>
-                                                                <li>Having a job related to study subjects would be mandatory if applying through the non-degree Level 7 option.</li>
+                                                                <li>Have completed a Level 7 degree qualification, or</li>
+                                                                <li>Have completed a non-degree Level 7 qualification listed on the Post Study Work Visa eligibility list.</li>
+                                                                <li>Hold a job related to their study field (for non-degree Level 7 applicants).</li>
                                                             </ul>
                                                         </div>
                                                         
@@ -1081,11 +1053,13 @@ const StudyAbroadNZ = () => {
                                                             Work Opportunities in New Zealand
                                                         </h3>
                                                         <div className='section-text mb-30 mb-xs-20'>
-                                                            There are good chances of finding a job in New Zealand, the reason being that over 20,000+ vacancies open up each year. More and more job opportunities are available for international students to bridge the unemployment gap. In 2022 the unemployment rate as last recorded in the September quarter was 3.3%. Along with this, it was also noted that the wages have also gone up for those working in New Zealand by an average of 2.5% per annum.
+                                                            New Zealand has a strong job market, with over 20,000 vacancies opening up yearly. The unemployment rate as of 2022 was 3.3%, and wages have been increasing by an average of 2.5% per annum.
                                                         
                                                             <h3 className='fw-700 italic mt-10 mb-10'>Popular Job Sectors in New Zealand</h3>
 
-                                                            There are a variety of popular job sectors in New Zealand in which international applicants can apply for a job opportunity.
+                                                            International students can find job opportunities in various high-demand sectors, including healthcare, engineering, business, and technology.
+
+                                                            <p>For students preparing for admissions, resources such as <strong>IELTS sample test free</strong>, <strong>TOEFL study material</strong>, and <strong>TOEFL online coaching</strong> are available. Those looking to register for exams can check <strong>GRE cost</strong>, <strong>GRE exam registration</strong>, and <strong>TOEFL IBT price</strong>. For further preparation, <strong>TOEFL training online</strong>, <strong>TOEFL near me</strong>, <strong>TOEFL online classes</strong>, and <strong>TOEFL mock test online</strong> options are also accessible. Consulting the <strong>Best Overseas Education Consultants in Chennai</strong> can help students navigate applications, visa processes, and test preparation efficiently.</p>
 
                                                             <div className='color-title mb-20'>Some of these popular job sectors of New Zealand are as follows</div>
                                                         </div>
@@ -1330,6 +1304,11 @@ const StudyAbroadNZ = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1353,8 +1332,15 @@ const StudyAbroadNZ = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

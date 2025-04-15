@@ -7438,3 +7438,8 @@ section:hover .small-item-carousel .owl-next{
 .file-input:focus {
   outline: none;
 }
+.noBtn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}

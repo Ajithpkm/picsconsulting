@@ -63,6 +63,7 @@ import exam_06 from '../images/exam-06.png';
 import exam_07 from '../images/exam-07.png';
 import visa_uk from '../images/uk/document-required.png';
 import studentvisa_usa from '../images/uk/student-visa.jpg';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import './style.css';
 import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
@@ -279,11 +280,11 @@ const StudyAbroadUK = () => {
                                                     About UK
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    The UK offers an excellent academic experience for students who are looking to learn in some of the world-leading Universities that are known for high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, there were 55,465 Indian students studying in the UK in 2022. The statistics reveal that the UK is becoming a popular destination for international students. Some of the Universities in the UK such as Imperial College London, University College London, etc. have had academic and research ties with Indian Universities since a long period of time. Universities in the UK have recorded an excellent career outcome rate. 
+                                                    The UK offers an excellent academic experience for students looking to learn in world-leading universities known for their high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, 55,465 Indian students were studying in the UK in 2022. These statistics reveal that the UK is becoming a popular destination for international students. Some of the UK Universities for International Students, such as Imperial College London and University College London, have had academic and research ties with Indian universities for a long period. Universities in the UK have recorded an excellent career outcome rate, making it an ideal choice for those pursuing a Master Degree in UK or an MBA in UK for Indian Students.
                                                 </div>
 
                                                 <div className='section-text'>
-                                                    As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%
+                                                    According to the ‘What Do Graduates Do?’ report from Prospects and AGCAS, career outcomes 15 months after graduation in the UK for first-degree graduates were as follows: 57.3% were working full-time in the UK, 11.4% were working part-time, 10.6% were working and studying, 9.2% pursued further studies, 5.7% engaged in other activities
                                                     <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
@@ -296,23 +297,22 @@ const StudyAbroadUK = () => {
                                                     <Box sx={style}>
                                                         <Typography className='modal-bx-body-2' id="modal-modal-description" sx={{ mt: 2 }}>
                                                         <div className='section-text'>
-                                                        <p>The UK offers an excellent academic experience for students who are looking to learn in some of the world-leading Universities that are known for high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, there were 55,465 Indian students studying in the UK in 2022. The statistics reveal that the UK is becoming a popular destination for international students. Some of the Universities in the UK such as Imperial College London, University College London, etc. have had academic and research ties with Indian Universities since a long period of time. Universities in the UK have recorded an excellent career outcome rate.</p> 
+                                                        <p>The UK offers an excellent academic experience for students looking to learn in world-leading universities known for their high quality of academics and research. As per the Ministry of External Affairs data, of Indian students studying abroad, 55,465 Indian students were studying in the UK in 2022. These statistics reveal that the UK is becoming a popular destination for international students. Some of the UK Universities for International Students, such as Imperial College London and University College London, have had academic and research ties with Indian universities for a long period. Universities in the UK have recorded an excellent career outcome rate, making it an ideal choice for those pursuing a Master Degree in UK or an MBA in UK for Indian Students.</p> 
 
-                                                        <p>As per the ‘What Do Graduates Do?’ report from Prospects and AGCAS, following career outcomes, 15-months after graduation, were noted in the UK for first-degree graduates: 57.3% were working full-time in the UK, 11.4% were working part-time in the UK, 10.6% were working and studying, 9.2% went on to study further, 5.7%...    Read more
-                                                        were involved in other activities, and 5.9% were unemployed or were due to start work. Thus, international students can opt for UK to study abroad. Top Reasons to Study in the UK Studying abroad is a life changing decision for every students. Students need compelling reasons to finalize a study destination and academic institution out of a number of choices. Below are a few reasons why you can think of choosing the UK to study abroad:</p>
+                                                        <p>According to the ‘What Do Graduates Do?’ report from Prospects and AGCAS, career outcomes 15 months after graduation in the UK for first-degree graduates were as follows: 57.3% were working full-time in the UK, 11.4% were working part-time, 10.6% were working and studying, 9.2% pursued further studies, 5.7% engaged in other activities, and 5.9% were unemployed or about to start work. This makes the UK an attractive option for international students looking for career growth.</p>
                                                         
                                                         <h3 className='fw-700 italic mb-10'><b>Top Reasons to Study in the UK</b></h3>
-                                                        <p>Studying abroad is a life changing decision for every students. Students need compelling reasons to finalize a study destination and academic institution out of a number of choices. Below are a few reasons why you can think of choosing the UK to study abroad:</p>
+                                                        <p>Studying abroad is a life-changing decision for every student. Choosing the Best Study Abroad Consultants in Chennai can help students navigate their options. Below are a few reasons to consider the UK for higher studies:</p>
 
-                                                        <p>Academic Quality: According to the QS World University Rankings 2023, 4 Universities in the UK come under top 10 ranks. These include University of Cambridge, University of Oxford, Imperial College London, and University College London. According to the Times World University Rankings 2023 University of Oxford is at 1st position. The rankings of these Universities are a testament to their high quality of academics and research.</p>
+                                                        <p><b>Academic Quality:</b> According to the QS World University Rankings 2023, four UK Universities for Masters are in the top 10: University of Cambridge, University of Oxford, Imperial College London, and University College London. The Times World University Rankings 2023 places the University of Oxford in the 1st position. These rankings showcase the high quality of education in the UK.</p>
 
-                                                        <p>Research Quality: The latest Research Excellence Framework 2021 assessed research work of 157 UK universities. The overall quality of research submissions was noted as world-leading (41%), internationally excellent (43%), internationally recognized (14%), and nationally recognized (2%). UK universities have produced excellent research and students, who are willing to pursue research, can definitely think of the UK as an option.</p>
+                                                        <p><b>Research Excellence:</b> The Research Excellence Framework 2021 assessed research work at 157 UK universities. Research quality was categorized as world-leading (41%), internationally excellent (43%), internationally recognized (14%), and nationally recognized (2%). This makes the UK an excellent choice for students pursuing research-intensive degrees.</p>
 
-                                                        <p>Student-friendly Destination: In the academic year 2020-21, nearly 605,000 international students, both EU and non-EU, were studying in UK higher education institutions. Nearly 16% (approximately 55,000) of all new enrollments come from India. Increasing number of international students in the UK show its increasing popularity as a study abroad destination. </p>
+                                                        <p><b>Student-friendly Destination:</b> In the academic year 2020-21, nearly 605,000 international students, including those from the EU and non-EU regions, were studying in UK higher education institutions. Nearly 16% (approximately 55,000) of new enrollments were from India, showcasing the UK’s growing appeal as a study abroad destination.</p>
 
-                                                        <p>Scholarships: Students have access to excellent scholarships in the UK Universities. Some of these include International Scholarships Award, Commonwealth Scholarship and Fellowship, Chevening Scholarships, GREAT Scholarships, Charles Wallace India Trust Scholarships, just to name a few.</p> 
+                                                        <p><b>Scholarships:</b> UK Scholarships provide financial aid to international students. Some of the Best Colleges in London offer scholarships like International Scholarships Award, Commonwealth Scholarship and Fellowship, Chevening Scholarships, GREAT Scholarships, and Charles Wallace India Trust Scholarships.</p> 
 
-                                                        <p>Leisure and Travel: The UK is an interesting place when it comes to exploring the historical places, music concerts, cuisines, and various other cultural festivals. Universities in the UK have a long history associated with them, and studying in those Universities gives you an opportunity to be a part of that heritage.</p>
+                                                        <p><b>Leisure and Travel:</b> The UK offers a rich cultural experience, with historical landmarks, music festivals, diverse cuisines, and other cultural events. Studying at prestigious institutions allows students to be part of this heritage.</p>
                                                         </div>
                                                         </Typography>
                                                     </Box>
@@ -523,39 +523,16 @@ const StudyAbroadUK = () => {
                                                     Education System in UK
                                                 </h3>
                                                 
-                                                <h3 className='fw-600 italic mb-20'>Education system in the UK comprises of five stages that include:</h3>
+                                                <h3 className='fw-600 italic mb-20'>The education system in the UK includes</h3>
                                                 <div className='section-text mb-30'>
-                                                    <p className='mb-10'><b>Education system in the UK comprises of five stages that include:</b><br/>
-                                                    <b>Early Years:</b> Students up to 5 years of age can avail early years
-                                                    education and childcare in various state nursery schools,
-                                                    nursery classes and reception classes within primary schools.</p>
-                                                    
-                                                    <p className='mb-10'><b>Primary Education:</b> It covers children from the age of 5 years to 11
-                                                    years. This is further divided into two Key Stages. Key Stage 1
-                                                    comprises of children from 5 years to 7 years of age and Key
-                                                    Stage 2 comprises of children from 7 years to 11 years of age.</p>
-
-                                                    <p className='mb-10'><b>Secondary Education:</b> It covers students from the age of 11 years
-                                                    to 16 years. This is further divided into two Key Stages. Key Stage
-                                                    3 comprises of students from 11 years to 14 years of age and Key
-                                                    Stage 4 comprises of students from 14 years to 16 years of age.
-                                                    At the end of this education, students usually take external
-                                                    examinations such as GCSE (General Certificate of Secondary
-                                                    Education) in England, Wales and Northern Ireland and Standard
-                                                    Grades in Scotland.</p>
-
-                                                    <p className='mb-10'><b>Further Education:</b> It consists of students from 16 year to 18 years
-                                                    of age. It is post-compulsory education and covers nonadvanced courses. These might include skill development,
-                                                    higher vocational education such as City and Guilds or
-                                                    Foundation Degree. This does not include university education.
-                                                    Higher Education: Higher education is provided in colleges and
-                                                    universities and includes undergraduate and postgraduate
-                                                    degrees (includes Doctoral programmes).</p>
-                                                    
-                                                    <p className='mb-10'>The education system of UK is somewhat similar to that of India.
-                                                    Thus, international students who choose UK to study abroad will
-                                                    not have a major adjustment issue.</p>
-                                                    
+                                                    <ul>
+                                                        <li><strong>Early Years Education</strong>: Available for children up to 5 years of age.</li>
+                                                        <li><strong>Primary Education</strong>: Covers children aged 5 to 11 years and is divided into two key stages.</li>
+                                                        <li><strong>Secondary Education</strong>: Covers students aged 11 to 16 years, leading to external exams like GCSE.</li>
+                                                        <li><strong>Further Education</strong>: For students aged 16 to 18, covering vocational and non-advanced courses.</li>
+                                                        <li><strong>Higher Education</strong>: Includes undergraduate and postgraduate degrees, such as a Masters in UK.</li>
+                                                    </ul>
+                                                    <p>The UK’s education system is similar to India’s, making it easier for Indian students to adjust.</p>
                                                 </div>
                                             </div>
 
@@ -706,7 +683,7 @@ const StudyAbroadUK = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Post-Study Work Permit in UK</h3>
                                                     <div className='section-text'>
-                                                        International students, after completing their undergraduate or postgraduate degree course, can apply for the UK Graduate Route Visa or PSW UK. PSW UK or UK Graduate Visa allows a student to stay back and work for 2 years after completion of his/ her degree. The duration is 3 years in case of Doctoral students. In order to apply for post study work permit in UK, students need to pay an application fee of £715 and an annual healthcare surcharge of £624. After the expiry of UK post study work visa, students can apply for skilled work visa or general work visa (Tier 2 visa) or any other relevant visa.
+                                                        International students who complete a Master Degree in UK or an MBA in UK for Indian Students can apply for a UK Graduate Route Visa (PSW UK). This visa allows them to stay and work for two years post-graduation (three years for doctoral students). The UK post study work visa requires an application fee of £715 and an annual healthcare surcharge of £624. After the visa expires, students can apply for a skilled work visa or Tier 2 general work visa.
                                                     </div>
                                                 </div>
                                             </div>
@@ -1072,7 +1049,7 @@ const StudyAbroadUK = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-0 pb-xs-20' style={{
                                         background: `url(${map_usa})`,
                                 }}>
                                     <div className='container relative'>
@@ -1104,6 +1081,30 @@ const StudyAbroadUK = () => {
                                                     <div className='exam_nam'>
                                                         <div><img src={exam_07} /></div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                
+                                <section className='small-section pt-0 pb-xs-20'>
+                                    <div className='container relative'>
+
+                                        <h3 className="hs-line-3 color text-left font-alt mb-40 mb-xs-10">
+                                            Language Proficiency Tests for<br/> Studying in the UK
+                                        </h3>
+
+                                        <div className='row d-flex justify-content-center'>
+                                            <div className='col-md-12'>
+                                                <div className='section-text'>
+                                                    <p>Students planning to study in the UK must take English proficiency tests like TOEFL and IELTS:</p>
+                                                    <ul>
+                                                        <li><strong>TOEFL Test</strong>: The TOEFL iBT assesses English proficiency in reading, writing, listening, and speaking. Students can prepare using TOEFL speaking exercises. The TOEFL test cost varies by country.</li>
+                                                        <li><strong>IELTS Online Tests</strong>: IELTS mock tests and IELTS online coaching help students prepare. Many institutions offer IELTS preparation online through an IELTS online course.</li>
+                                                        <li><strong>GRE Tests</strong>: Some UK universities require GRE scores. Students can take a GRE practice test, GRE exam, GRE mock test, or use Magoosh GRE for preparation. The ETS GRE website provides official resources to practice GRE skills.</li>
+                                                    </ul>
+                                                    <p>Choosing the Best Study Abroad Consultants in Chennai can help students streamline their application process, identify UK Scholarships, and secure admission to UK Universities for International Students. The UK remains a top destination for higher education, offering excellent career prospects, world-class research opportunities, and a diverse student experience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1365,6 +1366,11 @@ const StudyAbroadUK = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1388,8 +1394,15 @@ const StudyAbroadUK = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

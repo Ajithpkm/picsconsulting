@@ -59,6 +59,7 @@ import exam_06 from '../images/exam-06.png';
 import exam_07 from '../images/exam-07.png';
 import visa_uk from '../images/ireland/document-required.png';
 import studentvisa_usa from '../images/ireland/student-visa.jpg';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import './style.css';
 import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
@@ -284,11 +285,12 @@ const StudyAbroadIreland = () => {
                                                     About Ireland
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    <span className='color-2 uppercase'>Study in Ireland:</span> Ireland has over the years become a popular study-abroad destination. The country enjoys a worldwide reputation for their superior quality of education that is built on the foundation of commitment to excellence. Ireland is home to multiple institutions of higher education that are internationally renowned and offers a variety of programmes in areas such as medicine, science, technology, engineering, business and law among others. International students looking to study in Ireland would be pleased to know that the majority of the courses taught in Ireland are in the English language thus making the country one of the most viable destinations for studying abroad. 
+                                                    <span className='color-2 uppercase'>Study in Ireland:</span> Ireland has over the years become a popular study-abroad destination. The country enjoys a worldwide reputation for its superior quality of education, built on a foundation of commitment to excellence. Ireland is home to multiple institutions of higher education that are internationally renowned, offering a variety of programmes in areas such as medicine, science, technology, engineering, business, and law.
+                                                    <p>International students looking to <strong>study in Ireland for international students</strong> would be pleased to know that the majority of the courses taught in Ireland are in the English language, making the country one of the most viable destinations for studying abroad.</p>
                                                 </div>
 
                                                 <div className='section-text'>
-                                                    Candidates looking to pursue higher education in Ireland would be happy to know that pursuing a full-time master’s programme in Ireland would entitle them to up to two years of post-study stay-back option to look for suitable employment in their area of study....
+                                                    Candidates looking to pursue higher education in Ireland would be happy to know that pursuing a full-time master’s programme in Ireland would entitle them to up to two years of post-study stay-back options to look for suitable employment in their area of study.....
                                                     <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
@@ -301,11 +303,18 @@ const StudyAbroadIreland = () => {
                                                     <Box sx={style}>
                                                         <Typography className='modal-bx-body-3' id="modal-modal-description" sx={{ mt: 2 }}>
                                                         <div className='section-text'>
-                                                            <p className='mb-10'>Candidates looking to pursue higher education in Ireland would be happy to know that pursuing a full-time master’s programme in Ireland would entitle them to up to two years of post-study stay-back option to look for suitable employment in their area of study. One of the fastest growing economies and an integral part of the European Union, Ireland provides lucrative career opportunities as it is home to more than 1,500 MNCs such as Google, Facebook, Apple, Cocoa Cola, and Amazon to name a few.</p>
+                                                            <p className='mb-10'>Ireland has over the years become a popular study-abroad destination. The country enjoys a worldwide reputation for its superior quality of education, built on a foundation of commitment to excellence. Ireland is home to multiple institutions of higher education that are internationally renowned, offering a variety of programmes in areas such as medicine, science, technology, engineering, business, and law.</p>
+
+                                                            <p className='mb-10'>International students looking to <strong>study in Ireland for international students</strong> would be pleased to know that the majority of the courses taught in Ireland are in the English language, making the country one of the most viable destinations for studying abroad.</p>
+
+                                                            <p className='mb-10'>Candidates looking to pursue higher education in Ireland would be happy to know that pursuing a full-time master’s programme in Ireland would entitle them to up to two years of post-study stay-back options to look for suitable employment in their area of study.</p>
+
+                                                            <p className='mb-10'>One of the fastest-growing economies and an integral part of the European Union, Ireland provides lucrative career opportunities as it is home to more than 1,500 MNCs such as Google, Facebook, Apple, Coca-Cola, and Amazon, to name a few. <strong>Ireland universities for international students</strong> are highly ranked, offering strong academic programs with excellent career prospects.</p>
 
                                                             <div className='color-2 uppercase mb-10'>Why Study in Ireland?</div>
-                                                            <p className='mb-10'>Ireland is a popular destination for Indian students looking to study abroad. The country is home to top-ranked universities that  provide  quality  education  and  a  High  Return  on Investments (ROI). The English language is widely spoken in the country with top universities in Ireland opting for English as the medium of education. Many of Ireland’s institutions of higher education are internationally ranked, offering many strong programmes in a variety of areas.</p>
-                                                            <p className='mb-10'>The education system followed by the country is student- friendly offering up to 2 years of post-study stay-back options. With close proximity to Europe, Ireland is an upcoming business hub offering very good career opportunities as it is home to multiple corporate titans.</p>
+                                                            <p className='mb-10'>Ireland is a popular destination for Indian students looking to <strong>study in Ireland for international students</strong>. The country is home to <strong>best Ireland universities</strong> that provide quality education and a high Return on Investment (ROI). The English language is widely spoken in the country, with <strong>top education consultants in Chennai</strong> recommending it as a prime location for higher studies.</p>
+                                                            
+                                                            <p className='mb-10'>Many of <strong>Ireland education consultants in Chennai</strong> guide students to choose from the <strong>best Ireland universities</strong>, ensuring they receive a quality education and promising job opportunities. The education system in Ireland is student-friendly, offering up to two years of post-study stay-back options. With close proximity to Europe, Ireland is an emerging business hub offering excellent career opportunities.</p>
 
                                                         </div>
                                                         </Typography>
@@ -554,7 +563,8 @@ const StudyAbroadIreland = () => {
                                                 </h3>
 
                                                 <div className='section-text mb-30'>
-                                                    In this section, we are going to be talking about the education system followed in Ireland. The country is broadly divided into Primary Education, Secondary Education and Tertiary Education. Tertiary Education is often referred to as pursuing higher education in Ireland which splits into 10 universities, 10 Institutes of Technology (IOTs) and 7+ private higher education institutions. Ireland follows the National Framework of Qualifications (NFQ). The Irish National Framework of Qualifications (NFQ) is a 10-level system used to describe qualifications in the Irish education and training system. The NFQ shows how General Education Awards, Further Education and Training and Higher Education Awards are mapped against the 10 levels of the framework.
+                                                    <p>The education system in Ireland is broadly divided into Primary Education, Secondary Education, and Tertiary Education. Tertiary Education includes <strong>Ireland universities for international students</strong>, comprising 10 universities, 10 Institutes of Technology (IOTs), and more than 7 private higher education institutions.</p>
+                                                    <p>Ireland follows the National Framework of Qualifications (NFQ), a 10-level system used to describe qualifications in the Irish education and training system. The NFQ ensures that General Education Awards, Further Education and Training, and Higher Education Awards align with the 10 levels of the framework.</p>
                                                 </div>
                                             </div>
 
@@ -571,7 +581,7 @@ const StudyAbroadIreland = () => {
                                             Top Courses in Ireland
                                         </h3>
                                         <div className='section-text text-center m-left mb-40 mb-xs-20'>
-                                            Ireland is home to some of the top universities in the world offering a multitude of courses fit for anyone looking to study higher education in Ireland. Popular courses in Ireland are determined by a number of factors; these could vary from the candidates' own interests to job prospects available in a particular county. When we talk about top courses in Ireland, we have
+                                            <p>Ireland is home to some of the <strong>best Ireland universities</strong>, offering a multitude of courses suitable for anyone looking to pursue higher education. Popular courses in Ireland vary based on personal interests and job prospects. Some of the most sought-after fields include technology, business, and healthcare. <strong>Ireland study abroad</strong> programs ensure students gain access to world-class education and career opportunities.</p>
                                         </div>
 
                                         <div className='row d-flex align-items-center mb-60 mb-xs-20'>
@@ -679,7 +689,7 @@ const StudyAbroadIreland = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Education Loan for studying in Ireland</h3>
                                                     <div className='section-text'>
-                                                        Candidates who are not able to get their hands on a fee waiver can definitely apply for an education loan. Studying abroad promises a high return on investments and this would mean paying back your education loan in a matter of years. Candidates can take a look at Education Loan providers on our website.
+                                                        <p>Candidates who are unable to secure a fee waiver can apply for an education loan. <strong>Ireland education consultants in Chennai</strong> assist students in finding the best loan options. Studying abroad promises a high ROI, meaning students can pay back their education loans in just a few years.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -689,10 +699,10 @@ const StudyAbroadIreland = () => {
                                             <div className='col-md-7'>
                                                 <h3 className='fw-600 italic mb-20'>Part-time work options for International students in Irelandd</h3>
                                                 <div className='section-text'>
-                                                    <p>Indian students in Ireland on an Irish Student Visa and enrolled on a full-time course that’s included on the Interim List of Eligible Programmes (ILEP) would be allowed to work part-time up to 20 hours a week during the school year and up to 40 hours a week on holidays (summer and winter holidays).</p>
+                                                    <p>Indian students in Ireland on an Irish Student Visa and enrolled in a full-time course included on the Interim List of Eligible Programmes (ILEP) are allowed to work part-time for up to 20 hours a week during the school year and up to 40 hours a week during holidays.</p>
 
                                                     <div className='color-title mb-10'>Post-study work permit in Ireland</div>
-                                                    <p>Students who have enrolled as full-time students, with an Irish accredited degree would qualify for a non-renewable extension of up to 2 years after course completion as a post-study work permit. This extension is granted for the purpose of finding suitable employment.</p>
+                                                    <p>Students enrolled as full-time students with an Irish-accredited degree qualify for a non-renewable extension of up to two years after course completion as a post-study work permit. This extension helps students find suitable employment and establish their careers in Ireland.</p>
                                                 </div>
                                             </div>
                                             <div className='col-md-5 mb-xs-20'>
@@ -750,7 +760,8 @@ const StudyAbroadIreland = () => {
                                             Intake in Ireland
                                         </h3>
                                         <div className='section-text text-center mb-50 mb-xs-30'>
-                                            Applicants should be aware that Ireland has two primary admission periods: Spring and Fall intakes. Spring admissions typically commence in June/ July , whereas Fall intake consistently begin in September/ October. Some institutions adopt a rolling application system, resulting in various courses having distinct start dates and keeping their application processes active throughout the year. The majority of candidates concentrate on applying for either the Spring or Fall intakes. Fall is notably a significant intake, with all courses available, unlike the Spring intake or other rolling admissions that may be limited to specific courses.
+                                            <p>Applicants should be aware that Ireland has two primary admission periods: Spring and Fall intakes. Spring admissions typically commence in June/July, while Fall intake begins in September/October. Some institutions follow a rolling application system, allowing applications throughout the year.</p>
+                                            <p>Most students focus on the Fall intake, as it offers all available courses, whereas the Spring intake or rolling admissions may have limited options.</p>
                                         </div>
 
                                         <div className='row'>
@@ -957,8 +968,8 @@ const StudyAbroadIreland = () => {
                                                     Student Visa in Ireland
                                                 </h3>
                                                 <div className='section-text white'>
-                                                    <p>Candidates who are planning to pursue a course of study for more than 3 months are required to apply for an Ireland Study Visa. Candidates would be required to visit the official website of the Irish Immigration Service to complete their online student visa application. Ireland Study Visa applicants would be required to complete the online application form, submit supporting documents, and follow instructions on the summary application form generated by the system.</p>
-                                                    <p>Students can apply for their Ireland study Visa up to 3 months before their date of travel to Ireland. The Ireland visa processing time is roughly 8 weeks from the date on which you lodge your application. Students are advised not to buy travel tickets before they know the outcome of their visa application.</p>
+                                                    <p>Candidates planning to pursue a course in Ireland for more than three months must apply for an Ireland Study Visa. The application process involves visiting the official website of the Irish Immigration Service, completing an online student visa application, and submitting required documents. <strong>Top education consultants in Chennai</strong> assist students in navigating the visa process smoothly.</p>
+                                                    <p>Students can apply for their Ireland Study Visa up to three months before their date of travel. The <strong>toefl exam</strong> and <strong>ielts mock test free</strong> are commonly required for visa applications, ensuring English proficiency. The Ireland visa processing time is approximately eight weeks from the date of application. Students are advised to wait for the visa outcome before purchasing travel tickets.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -979,7 +990,7 @@ const StudyAbroadIreland = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-0 pb-xs-20' style={{
                                         background: `url(${map_usa})`,
                                 }}>
                                     <div className='container relative'>
@@ -1011,6 +1022,26 @@ const StudyAbroadIreland = () => {
                                                     <div className='exam_nam'>
                                                         <div><img src={exam_07} /></div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section pt-0 pb-xs-20'>
+                                    <div className='container relative'>
+
+                                        <h3 className="hs-line-3 color text-left font-alt mb-40 mb-xs-10">
+                                            Language Proficiency Tests for<br/> Studying in Ireland
+                                        </h3>
+
+                                        <div className='row d-flex justify-content-center'>
+                                            <div className='col-md-12'>
+                                                <div className='section-text'>
+                                                    <p>To study in Ireland, students may need to take proficiency tests such as <strong>toefl ibt speaking practice</strong>, <strong>gre and toefl</strong>, or <strong>ielts training online</strong>. Many universities require scores from <strong>toefl reading exercises</strong>, <strong>toefl what is it</strong>, and <strong>toefl examination</strong> to assess language skills.</p>
+                                                    <p>Students can prepare for these exams using <strong>toefl online classes</strong>, <strong>gre practice exam</strong>, <strong>gre mock test free</strong>, <strong>gre coaching</strong>, and <strong>gre exam pattern</strong> study materials. Additionally, <strong>gre online practice test</strong> and <strong>gre mock test online free</strong> help students enhance their scores.</p>
+                                                    <p>For IELTS preparation, candidates can take advantage of <strong>ielts online test free</strong>, <strong>ielts mock test online</strong>, <strong>ielts practice test free</strong>, and <strong>ielts preparation online free</strong> to ensure they meet university admission requirements.</p>
+                                                    <p>By leveraging expert guidance from <strong>top education consultants in Chennai</strong>, students can secure admission to <strong>best Ireland universities</strong> and achieve their academic and career aspirations.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1285,6 +1316,11 @@ const StudyAbroadIreland = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1308,8 +1344,15 @@ const StudyAbroadIreland = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

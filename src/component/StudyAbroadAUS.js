@@ -39,7 +39,7 @@ import admission_requirement from '../images/aus/admission-requirement.jpg';
 import admission_aus from '../images/aus/admission-requirement-2.jpg';
 import poststudy_usa from '../images/post-study-usa.jpg';
 import workopportunities_usa from '../images/work-opportunities-usa.png';
-import workopportunities_usa_02 from '../images/aus/workopportunities-aus.jpg';
+import workopportunities_usa_02 from '../images/aus/workopportunities-australia.jpg';
 import getintouch_usa from '../images/getin-touch-usa.jpg';
 import opportunities_icon_01 from '../images/icon-09.png';
 import opportunities_icon_02 from '../images/icon-10.png';
@@ -59,6 +59,7 @@ import exam_06 from '../images/exam-06.png';
 import exam_07 from '../images/exam-07.png';
 import visa_uk from '../images/aus/document-required.png';
 import studentvisa_usa from '../images/aus/student-visa.jpg';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import './style.css';
 import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
@@ -284,11 +285,11 @@ const StudyAbroadAUS = () => {
                                                     About Australia
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    Ranked among the favourite study-abroad destinations, Australia is among the top five countries where international students seek admission. In the year 2022, Australia recorded a footfall of 5,27,529 international students and out of these, around 1,00,009 were Indian students. It is predicted that in 2023 and in the upcoming two years, Australia will witness a 5% increase in its international student population.
+                                                    Ranked among the favourite study-abroad destinations, Australia is among the <strong>Top 5 Overseas Education Consultants in Chennai</strong> recommended study locations where international students seek admission. In 2022, Australia recorded a footfall of 5,27,529 international students, out of which around 1,00,009 were Indian students. It is predicted that in 2023 and the upcoming years, Australia will witness a 5% increase in its international student population.
                                                 </div>
 
                                                 <div className='section-text'>
-                                                    More and more international students are studying in Australia because of the high number of job openings in sectors of Business, Healthcare, Engineering, Medicine, etc. Plus Australia offers good remuneration as well to its workforce. The labour laws in Australia are stringent hence, the place is viable for Indian students to work there after studying.
+                                                    More and more international students are choosing to study in Australia because of the high number of job openings in Business, Healthcare, Engineering, and Medicine. Australia offers good remuneration to its workforce, and its stringent labour laws make it a viable place for Indian students to work post-studies.
                                                     <div className='read-more' onClick={handleOpen}>Read more</div>
                                                 </div>
 
@@ -301,23 +302,23 @@ const StudyAbroadAUS = () => {
                                                     <Box sx={style}>
                                                         <Typography className='modal-bx-body-2' id="modal-modal-description" sx={{ mt: 2 }}>
                                                         <div className='section-text'>
-                                                            <p>Ranked among the favourite study-abroad destinations, Australia is among the top five countries where international students seek admission. In the year 2022, Australia recorded a footfall of 5,27,529 international students and out of these, around 1,00,009 were Indian students. It is predicted that in 2023 and in the upcoming two years, Australia will witness a 5% increase in its international student population.</p>
+                                                                <p>Ranked among the favourite study-abroad destinations, Australia is among the <strong>Top 5 Overseas Education Consultants in Chennai</strong> recommended study locations where international students seek admission. In 2022, Australia recorded a footfall of 5,27,529 international students, out of which around 1,00,009 were Indian students. It is predicted that in 2023 and the upcoming years, Australia will witness a 5% increase in its international student population.</p>
 
-                                                            <p>More and more international students are studying in Australia because of the high number of job openings in sectors of Business, Healthcare, Engineering, Medicine, etc. Plus Australia offers good remuneration as well to its workforce. The labour laws in Australia are stringent hence, the place is viable for Indian students to work there after studying.</p>
-                                                            
-                                                            <h3 className='fw-700 italic mb-10'><b>Top Reasons to Study in the Australia</b></h3>
-                                                            <p>There are numerous reasons to study in Australia as an international student. One of the major attractive factors is Australia’s cost-effective education since over 100,000+ scholarships are available to support education. Other than this there are a couple of more reasons cited below for reference: </p>
+                                                                <p>More and more international students are choosing to study in Australia because of the high number of job openings in Business, Healthcare, Engineering, and Medicine. Australia offers good remuneration to its workforce, and its stringent labour laws make it a viable place for Indian students to work post-studies. Many <strong>Universities in Australia for International Students</strong> offer great post-study opportunities.</p>
 
-                                                            <div className='list-style-3'> 
-                                                                <ul>
-                                                                    <li>The higher education qualifications offered in Australia are globally recognised and accepted.</li> 
-                                                                    <li>Most of the courses offered in Australia encourage students to gain experience while studying, hence, giving students professional experience.</li> 
-                                                                    <li>All 38 Australian universities offer internship and full-time job opportunities through their designated job portals.</li>
-                                                                    <li>In Australia, an international student is allowed to work for more than 40 hours a fortnight part-time and during holidays, full-time work is also allowed. </li>
-                                                                    <li>Over 64,000+ jobs are added to attract new workforce every six to seven months in Australia. Thus, there is ample job opportunity for international students. </li>
-                                                                    <li>To study in australia for indian students after 12th, there are a number of reasons and the above given ones are some of the most popular ones.</li>
-                                                                </ul>
-                                                            </div>
+                                                                <h3 className='fw-700 italic mb-10'><b>Top Reasons to Study in Australia</b></h3>
+                                                                <p>There are numerous reasons to study in Australia as an international student. One of the major attractive factors is Australia&rsquo;s cost-effective education, with over 100,000+ <strong>Scholarship in Australia</strong> opportunities available. Other reasons include:</p>
+                                                                <div className='list-style-3'> 
+                                                                    <ul>
+                                                                        <li>The higher education qualifications in Australia are globally recognized.</li>
+                                                                        <li>Most courses encourage students to gain professional experience while studying.</li>
+                                                                        <li>All 38 Australian universities offer internship and full-time job opportunities.</li>
+                                                                        <li>An international student can work part-time for more than 40 hours a fortnight and full-time during holidays.</li>
+                                                                        <li>Over 64,000+ jobs are added every six to seven months to attract new workforce.</li>
+                                                                        <li><strong>MBA Scholarships Australia</strong> are widely available for students pursuing management degrees.</li>
+                                                                        <li><strong>Australia Scholarships for International Students</strong> make studying more affordable.</li>
+                                                                    </ul>
+                                                                </div>
                                                         </div>
                                                         </Typography>
                                                     </Box>
@@ -560,31 +561,30 @@ const StudyAbroadAUS = () => {
                                                     Education System in Australia
                                                 </h3>
                                                 
-                                                <h3 className='fw-600 italic mb-20'>The education system in Australia is<br/> typically divided into three parts</h3>
+                                                <h3 className='fw-600 italic mb-20'>The education system in Australia is<br/> divided into three levels</h3>
 
                                                 <div className='list-style-3 mb-20'>
                                                     <div className='row'>
                                                         <div className='col-md-4'>
                                                             <ul>
-                                                                <li>primary education</li>
+                                                                <li>Primary education</li>
                                                             </ul>
                                                         </div>
                                                         <div className='col-md-4'>
                                                             <ul>
-                                                                <li>secondary education</li>
+                                                                <li>Secondary education</li>
                                                             </ul>
                                                         </div>
                                                         <div className='col-md-4'>
                                                             <ul>
-                                                                <li>tertiary education</li>
+                                                                <li>Tertiary education</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div className='section-text mb-30'>
-                                                    <p className='mb-10'>Higher education comes under tertiary education like VET courses, English courses, undergraduate, postgraduate and doctoral courses. In fact, foundations or commonly known as pathway programs are also a part of tertiary education in Australia. Education in Australia is regulated by the Australian Qualifications Framework (AQF) for all major levels of study starting from Level 1 to Level 10 in tertiary education.</p>
-                                                    
+                                                    <p>Higher education in Australia includes undergraduate, postgraduate, and doctoral courses. Many students prepare for admission using <strong>TOEFL practice test free</strong> and <strong>IELTS practice test online</strong> to meet language requirements. <strong>Deakin University Melbourne</strong> and other top institutions provide a structured education regulated by the Australian Qualifications Framework (AQF).</p>
                                                 </div>
                                             </div>
 
@@ -611,67 +611,29 @@ const StudyAbroadAUS = () => {
                                             </div>
                                             <div className='col-md-6 mb-xs-20'>
                                                 <div className='inner-column'>
-                                                    <h3 className='fw-600 italic mb-20'>The top-ranking courses in Australia for international students are:</h3>
+                                                    <h3 className='fw-600 italic mb-20'>The top-ranking courses in Australia for international students:</h3>
+                                                    <p>Australian universities rank highly across 51 disciplines, including Engineering, Business, Medicine, and the Arts. Some notable rankings include:</p>
                                                     <div className='row'>
                                                         <div className='col-md-6'>
                                                             <div className='list-style-3'>
                                                                 <ul>
-                                                                    <li>Nursing in Australia</li>
-                                                                    <li>Computer Science</li>
-                                                                    <li>Accountancy</li>
-                                                                    <li>Cybersecurity</li>
-                                                                    <li>Law in Australia</li>
-                                                                    <li>Business Analytics in Australia</li>
+                                                                    <li>Curtin University ranks #2 for Mining &amp; Mineral Engineering.</li>
+                                                                    <li>Australian National University ranks at #6 for Anthropology.</li>
+                                                                    <li>The University of Adelaide ranks #10 for Petroleum Engineering.</li>
+                                                                    <li>The University of Melbourne ranks #12 for Law.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                         <div className='col-md-6'>
                                                             <div className='list-style-3'>
                                                                 <ul>
-                                                                    <li>MBA in Australia</li>
-                                                                    <li>Automotive Engineering</li>
-                                                                    <li>Architecture</li>
-                                                                    <li>Social Work</li>
-                                                                    <li>Psychology</li>
-                                                                    <li>Aerospace Engineering in Australia</li>
+                                                                    <li>The University of Sydney ranks #12 for Nursing.</li>
+                                                                    <li>UNSW ranks #13 for Civil &amp; Structural Engineering.</li>
+                                                                    <li>RMIT University ranks at #15 for Arts and Design.</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div className='section-text'>
-                                                        Australian universities are ranked for various courses across 51 disciplines of Engineering in Australia, Business courses, Arts & Humanities, also Medicine courses in Australia...<div className='read-more' onClick={handleOpen2}>Read more</div>
-                                                    </div>
-
-                                                    <Modal
-                                                        open={open2}
-                                                        onClose={handleClose2}
-                                                        aria-labelledby="modal-modal-title"
-                                                        aria-describedby="modal-modal-description"
-                                                        >
-                                                        <Box sx={style}>
-                                                            <Typography className='modal-bx-body-3' id="modal-modal-description" sx={{ mt: 2 }}>
-                                                            <div className='section-text'>
-                                                                <p className='mb-10'>Australian universities are ranked for various courses across 51 disciplines of Engineering in Australia, Business courses, Arts & Humanities, also Medicine courses in Australia and Sciences.</p>
-                                                                
-                                                                <h3 className='fw-700 color-2 uppercase mb-10'><b>The top-ranking courses in Australia for international students are:</b></h3>
-                                                                <p>There are numerous reasons to study in Australia as an international student. One of the major attractive factors is Australia’s cost-effective education since over 100,000+ scholarships are available to support education. Other than this there are a couple of more reasons cited below for reference: </p>
-
-                                                                <div className='list-style-3'> 
-                                                                    <ul>
-                                                                        <li>Curtin University ranks #2 for Mining & Mineral Engineering.</li>
-                                                                        <li>Australian National University ranks at #6 for its Anthropology course. </li>
-                                                                        <li>The University of Adelaide ranks #10 for its Petroleum Engineering course.</li> 
-                                                                        <li>The University of Melbourne ranks #12 for its Law courses.</li> 
-                                                                        <li>The University of Sydney ranks #12 for its Nursing course.</li> 
-                                                                        <li>UNSW ranks #13 for its Civil & Structural Engineering course.</li> 
-                                                                        <li>RMIT University ranks at #15 for its Arts and Design courses</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            </Typography>
-                                                        </Box>
-                                                    </Modal>
                                                 </div>
                                             </div>
                                         </div>
@@ -680,32 +642,30 @@ const StudyAbroadAUS = () => {
                                             <div className='col-md-6 mb-xs-20'>
                                                 <h3 className='fw-600 italic mb-20'>Admission Requirements to Study in Australian Universities:</h3>
                                                 <div className='section-text'>
-                                                    The admission requirements for international students aiming to apply to Australian universities vary based on their level of course. Commonly both sets of students will have to submit the following documents:
+                                                    Admission requirements vary based on the level of study, but common requirements include:
                                                 </div>
                                                 <div className='row'>
                                                     <div className='col-md-6'>
                                                         <div className='list-style-3'>
                                                             <ul>
                                                                 <li>Transcripts</li>
-                                                                <li>Statement of purpose (SOP)</li>
-                                                                <li>Letters of recommendation (LOR) - two or three</li>
-                                                                <li>English language proficiency test scores like TOEFL / IELTS / PTE / Duolingo</li>
+                                                                <li>Statement of Purpose (SOP)</li>
+                                                                <li>Letters of Recommendation (LOR)</li>
+                                                                <li>English language proficiency test scores such as <strong>TOEFL test preparation</strong>, <strong>ETS TOEFL</strong>, or <strong>IELTS preparation online free</strong></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div className='col-md-6'>
                                                         <div className='list-style-3'>
                                                             <ul>
-                                                                <li>Essays</li>
-                                                                <li>Resume</li>
-                                                                <li>Standardized test scores</li>
+                                                                <li>Standardized test scores like <strong>GRE General Test Sample</strong> for postgraduate studies</li>
+                                                                <li>Essays and resumes</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div className='section-text'>
-                                                    Band requirement for Australia will be based on the individual universities and courses the applicants are applying to. It is not necessary that the band requirement for Australia is common for all courses or universities. Applicants must ensure they check for all the details and then proceed with their admission process... 
                                                     <div className='read-more' onClick={handleOpen3}>Read more</div>
                                                 </div>
 
@@ -718,14 +678,13 @@ const StudyAbroadAUS = () => {
                                                     <Box sx={style}>
                                                         <Typography className='modal-bx-body-3' id="modal-modal-description" sx={{ mt: 2 }}>
                                                         <div className='section-text'>
-                                                            <p className='mb-10'>Band requirement for Australia will be based on the individual universities and courses the applicants are applying to. It is not necessary that the band requirement for Australia is common for all courses or universities. Applicants must ensure they check for all the details and then proceed with their admission process.</p>
                                                             
                                                             <h3 className='color-title mb-10'>Undergraduate Admission Requirements:</h3>
 
-                                                            <p>If the applicant chooses to apply for undergraduate courses then he/she will have to submit SAT or MCAT / NEET UG scores along with either score and other requisites. They must fulfil the basic admission requirements equivalent to ATAR scores or class 12th scores, depending upon the course of choice.</p>
+                                                            <p>Applicants must submit SAT or MCAT/NEET UG scores and fulfill equivalent ATAR or Class 12th requirements.</p>
 
                                                             <h3 className='color-title mb-10'>Postgraduate Admission Requirements:</h3>
-                                                            <p>Whereas, for admission to master’s courses in Australia, international students will be required to submit GRE / GMAT scores or LSAT in case of Law courses. Besides these, applicants might have to appear for an interview and may have to submit additional documents or portfolios.</p>
+                                                            <p><p>For master&rsquo;s programs, applicants may need <strong>GRE registration</strong>, <strong>GRE vocabulary</strong>, or <strong>GMAT scores</strong>. Law courses may require LSAT scores.</p></p>
                                                         </div>
                                                         </Typography>
                                                     </Box>
@@ -764,21 +723,13 @@ const StudyAbroadAUS = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Post-Study Work Permit in Australia</h3>
                                                     <div className='section-text'>
-                                                        International students who graduate from Australian universities can apply for the Temporary Graduate 485 (subclass) visa. This visa lets students live and work in Australia temporarily, the duration of stay varies between two to our years.
-
-                                                        <h3 className='color-title mb-10'>There are certain rules or eligibility criteria that apply for getting this PSW visa in Australia, they are as follows:</h3>
-
-                                                        <div className='list-style-3 mb-20'>
-                                                            <ul>
-                                                                <li>Students must be below the age of 50</li>
-                                                                <li>Applicants should have applied for and been granted their first student visa on or after 5 November 2011</li>
-                                                                <li>Should also have held the student visa in the past six months of applying for the visa.</li>
-                                                            </ul>
-                                                        </div>
-                                                        
-                                                        <div className='section-text'>
-                                                            The Temporary Graduate 485 (subclass) visa in Australia costs AUD 1,895 and the students are allowed to bring along their family members as well, a separate application for which would be required.
-                                                        </div>
+                                                        <p>International students can apply for the <strong>Temporary Graduate 485 (subclass) visa</strong> after completing their studies. Eligibility criteria include:</p>
+                                                        <ul>
+                                                            <li>Must be below 50 years of age</li>
+                                                            <li>Applied for their first student visa on or after 5 November 2011</li>
+                                                            <li>Held a student visa in the past six months</li>
+                                                        </ul>
+                                                        <p>The Temporary Graduate 485 visa costs AUD 1,895 and allows students to bring family members on a separate application.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1101,13 +1052,25 @@ const StudyAbroadAUS = () => {
                                                     Student Visa in Australia
                                                 </h3>
                                                 <div className='section-text white'>
-                                                    <p>Students planning to study in Australia need to apply for a Student Visa. The type of visa would depend on the duration of the course. At present, the Australian Universities recommend and prefer the Simplified Student Visa Framework (SSVF) for Australian Student Visa. International students who qualify for admission at Australian universities and receive their COE or confirmation of enrollment have to apply for a student visa. Applications for student visas for studying in Australia are accepted online. International students are required to apply for a subclass 500 visa in Australia if applying for an undergraduate course and a subclass 485 visa if pursuing a graduate course in Australia. </p>
+                                                    <p>Students must apply for a <strong>Student Visa</strong> based on the course duration. The <strong>Simplified Student Visa Framework (SSVF)</strong> is commonly used. International students need a <strong>subclass 500 visa</strong> for undergraduate courses and a <strong>subclass 485 visa</strong> for graduate studies.</p>
 
                                                     <h3 className='color-title mb-10'>Subclass 500 Visa:</h3>
-                                                    <p>The cost of a subclass 500 visa in Australia is AUD 710 (INR 39,705 approx.). With this visa, students can stay for up to five years in Australia depending upon their course enrolment.</p>
+                                                    <div class="list-style-3">
+                                                        <ul>
+                                                            <li className='white'>Cost: AUD 710</li>
+                                                            <li className='white'>Duration: Up to five years based on enrollment</li>
+                                                        </ul>
+                                                    </div>
 
                                                     <h3 className='color-title mb-10'>Subclass 485 Visa:</h3> 
-                                                    <p>The cost of subclass 485 Temporary Graduate visa in Australia is AUD 1,895 (INR 1,05,971 approx.). Applicants with this visa can stay between two to four years. In both cases, applicants are eligible to request a visa extension in Australia if the need may arise.</p>
+                                                    <div class="list-style-3 mb-20">
+                                                        <ul>
+                                                            <li className='white'>Cost: AUD 1,895</li>
+                                                            <li className='white'>Stay duration: Two to four years</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <p>Both visas allow extensions if required. Applicants can enhance their profiles with TOEFL speaking practice, TOEFL reading practice, and IELTS listening practice online to ensure smooth admission. Universities like Deakin University Melbourne support international students through various resources, making Australia a top destination for higher education.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1402,6 +1365,11 @@ const StudyAbroadAUS = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1425,8 +1393,15 @@ const StudyAbroadAUS = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

@@ -52,6 +52,7 @@ import exam_06 from '../images/exam-06.png';
 import exam_07 from '../images/exam-07.png';
 import visa_uk from '../images/canada/document-required.png';
 import studentvisa_usa from '../images/canada/student-visa.jpg';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import './style.css';
 import "react-bootstrap-submenu/dist/index.css";
 import '../css/verticals.min.css';
@@ -269,13 +270,13 @@ const StudyAbroadCanada = () => {
                                                     About Canada
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    Canada is one of the most preferred destinations for international students. According to the Immigration, Refugees and Citizenship Canada (IRCC) data for the year 2022, Canada saw 551,405 international students from 184 countries. Out of these, 1,83,310 students were Indian students. As of December 31, 2022, India ranked amongst the top 10 countries in terms of source nations for foreign students studying in Canada. 
+                                                    Canada is one of the most preferred destinations for international students. According to the Immigration, Refugees and Citizenship Canada (IRCC) data for the year 2022, Canada saw 551,405 international students from 184 countries. Out of these, 183,310 students were Indian students. As of December 31, 2022, India ranked amongst the top 10 countries in terms of source nations for foreign students studying in Canada.
                                                 </div>
 
                                                 <div className='section-text'>
                                                     <p>Every year, Canada welcomes hundreds of thousands of international students from around the globe. Some of the reasons to study in Canada include a high standard of living, flexible and quality education options, a diverse and inclusive environment, affordable education, and long-term return on investment. As per the U.S. News & World Report 2022, Canada ranks at 3rd place globally for the best quality of life. Let us look at an overview of studying in Canada for international students.</p>
                                                     
-                                                    Many top-ranked universities of Canada have made it to the top 200 in the world according to the Times Higher Education and QS WUR rankings for 2024. With ample state-of-the-art education institutes present and affordable tuition fees, Canada has become a major study destination for international students who want to pursue higher education.
+                                                    <p>Many top-ranked universities in Canada have made it to the top 200 in the world according to the Times Higher Education and QS WUR rankings for 2024. With ample state-of-the-art education institutes present and affordable tuition fees, Canada has become a major study destination for international students who want to pursue higher education.</p>
                                                 </div>
                                             </div>
 
@@ -434,15 +435,15 @@ const StudyAbroadCanada = () => {
                                                     <div className='row'>
                                                         <div className='col-md-12'>
                                                             <ul>
-                                                                <li><span className='uppercase color-2'>World-class universities:</span> Canadian universities are ranked among the top universities in the world. In the QS World University Rankings 2024, a total of 9 Canadian universities are within the first 200 ranks. Whereas, in the Times Higher Education (THE) World Universities Rankings 2023, a total of 7 universities are in the 200 ranks.</li>
- 
-                                                                <li><span className='uppercase color-2'>WAffordable education:</span> Compared to the US and UK, the tuition fee in Canada is fairly cheaper. If we consider the return on investment, Canada is quite a viable option for Indian students. One can also apply for a range of Canadian scholarships to cut down the educational expenses.</li> 
-                                                            
-                                                                <li><span className='uppercase color-2'>WCultural diversity:</span> There are very welcoming and warm people who come from varied ethnic groups with different cultures and lifestyles. This multicultural environment in Canada is one of the noteworthy factors that attract international students as it promotes friendliness and peaceful living like no other country. In Canada, there are more than 250 ethnic origins along with 200 languages from around the world and 70 indigenous languages spoken.</li>
-                                                            
-                                                                <li><span className='uppercase color-2'>WLively and vibrant campus life:</span> At Canadian universities, students can expect fests, events, and activities to be conducted throughout the year. This creates a lively and happy environment for all the students as it helps in making a network and meeting new people, whilst keeping the homesickness away.</li>
-                                                            
-                                                                <li><span className='uppercase color-2'>WImmigration opportunities:</span> The Post-Graduation Work Permit (PGWP Canada) in Canada shall allow students to stay there and get some work experience after the completion of graduation. The maximum length of a PGWP is three years.</li>
+                                                                <li><span className='uppercase color-2'>WORLD-CLASS UNIVERSITIES:</span> Canadian universities are ranked among the top universities in the world. In the QS World University Rankings 2024, a total of 9 Canadian universities are within the first 200 ranks. Whereas, in the Times Higher Education (THE) World Universities Rankings 2023, a total of 7 universities are in the 200 ranks. Many students seek guidance from <strong>Study Abroad Education Consultants in Chennai</strong> to find the best <strong>University in Canada</strong> suited for their career goals.</li>
+                                                                
+                                                                <li><span className='uppercase color-2'>AFFORDABLE EDUCATION:</span> Compared to the US and UK, the tuition fee in Canada is fairly cheaper. If we consider the return on investment, Canada is quite a viable option for Indian students. One can also apply for a range of <strong>Canada Scholarships for International Students</strong> to cut down educational expenses. Many students pursue <strong>Masters Degree in Canada</strong> as an affordable and high-quality option.</li>
+
+                                                                <li><span className='uppercase color-2'>CULTURAL DIVERSITY:</span> Canada is home to a multicultural environment with people from diverse ethnic backgrounds. This multicultural atmosphere attracts international students as it promotes inclusivity and peaceful living. More than 250 ethnic origins and over 200 languages from around the world, including 70 indigenous languages, are spoken in Canada.</li>
+
+                                                                <li><span className='uppercase color-2'>LIVELY AND VIBRANT CAMPUS LIFE:</span> At Canadian universities, students can expect fests, events, and activities to be conducted throughout the year. This helps in networking, making new friends, and keeping homesickness at bay.</li>
+
+                                                                <li><span className='uppercase color-2'>IMMIGRATION OPPORTUNITIES:</span> The <strong>Post-Graduation Work Permit (PGWP Canada)</strong> allows students to stay and work in Canada after graduation. The maximum length of a PGWP is three years, which can significantly contribute to gaining Canadian work experience and qualifying for <strong>Permanent Residency (PR) in Canada</strong> within the Express Entry system.</li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -675,9 +676,9 @@ const StudyAbroadCanada = () => {
                                             <div className='col-md-8 xs-order-2'>
                                                 <h3 className='fw-600 italic mb-20'>Education Loans for Studying in Canada</h3>
                                                 <div className='section-text'>
-                                                    <p className='mb-10'>Canada is the most preferred destination to study abroad by international students. The cost of studying in canada entirely depends on the course, university, duration of the course, and the cost of living. Not everyone can afford to study and live in Canada. This is why various banks and financial institutions offer education loans to students who want to study in Canada.</p>
+                                                    <p className='mb-10'>Canada is the most preferred destination for international students. The cost of studying in Canada depends on the course, university, duration of the course, and cost of living. Many students apply for <strong>Study Visa Canada</strong> through financial assistance such as education loans.</p>
 
-                                                    <p className='mb-10'>Before applying for an educational loan to study in canada, check the eligibility criteria in advance in order to get the loan approval. Note that different types of expenses are covered under different schemes, so check with the banks to know what expenses are covered in the education loan scheme. Some of the expenses covered under the educational loan are:</p>
+                                                    <p className='mb-10'>Before applying for an education loan, students should check eligibility criteria in advance for loan approval. Various banks and financial institutions provide loans covering:</p>
 
                                                     <div className='list-style-3 mb-20'>
                                                         <div className='row'>
@@ -685,14 +686,14 @@ const StudyAbroadCanada = () => {
                                                                 <ul>
                                                                     <li>Tuition fees</li>
                                                                     <li>Travel expenses</li>
-                                                                    <li>Cost of buying books and other study material</li>
-                                                                    <li>Hostel fee</li>
+                                                                    <li>Cost of books and study materials</li>
+                                                                    <li>Hostel fees</li>
                                                                 </ul>
                                                             </div>
                                                             <div className='col-md-6'>
                                                                 <ul>
-                                                                    <li>Laboratory fee</li>
-                                                                    <li>Purchase of laptop</li>
+                                                                    <li>Laboratory fees</li>
+                                                                    <li>Purchase of laptops</li>
                                                                     <li>Expenses for study tours or project tours</li>
                                                                 </ul>
                                                             </div>
@@ -715,15 +716,14 @@ const StudyAbroadCanada = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Part-time Work Options for International Students in Canada</h3>
                                                     <div className='section-text'>
-                                                        <p className='mb-10'>On the Canadian student visa, students can work for 20 hours/week on a paid job, while studying. Generally, for part time jobs in canada, students are paid by hours. On average, the rate of pay is around $13-16 an hour.</p> 
-                                                    
-                                                        <p>However, recently, international students who are in Canada and who have off-campus work authorization on their study permit shall not be restricted by the rule of 20 hours per week. Generally, students can work full-time during school breaks.</p>
+                                                        <p className='mb-10'>On a <strong>Canada Student Visa</strong>, students can work up to 20 hours per week on a paid job while studying. For part-time jobs in Canada, students are generally paid by the hour, with wages averaging around $13-16 per hour.</p>
+                                                        <p>Recently, international students in Canada with off-campus work authorization on their study permit have been allowed to work beyond 20 hours per week. Additionally, students can work full-time during school breaks.</p>
 
                                                         <h3 className='color-title mb-10'>Post-Study Work Permit in Canada</h3>
                                                         
-                                                        <p className='mb-10'>Obtaining a post-graduation work permit while studying in Canada depends a lot on the course and its duration. A work permit under the PGWP Canada is generally issued for the length of the study program. The maximum length of PGWP Canada is 3 years.</p>
+                                                        <p className='mb-10'>Obtaining a <strong>Post-Graduation Work Permit in Canada</strong> depends on the course and its duration. A PGWP is generally issued for the length of the study program, with a maximum length of three years.</p>
                                                         
-                                                        <p>A Post Graduation work permit in Canada allows students to stay there and gain some work experience after completing their graduation. In the long run, getting skilled Canadian work experience through PGWP allows graduates to qualify for PR in Canada within Express Entry.</p>
+                                                        <p className='mb-10'>A <strong>Post-Graduation Work Permit in Canada</strong> allows students to stay and gain work experience after graduation. Gaining skilled Canadian work experience through a PGWP is an important step for those aiming for permanent residency in Canada.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1000,7 +1000,7 @@ const StudyAbroadCanada = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-0 pb-xs-20' style={{
                                         background: `url(${map_usa})`,
                                 }}>
                                     <div className='container relative'>
@@ -1032,6 +1032,59 @@ const StudyAbroadCanada = () => {
                                                     <div className='exam_nam'>
                                                         <div><img src={exam_07} /></div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section className='small-section pt-0 pb-xs-20'>
+                                    <div className='container relative'>
+
+                                        <h3 className="hs-line-3 color text-left font-alt mb-40 mb-xs-10">
+                                            Language Proficiency Tests for<br/> Studying in Canada
+                                        </h3>
+
+                                        <div className='row d-flex justify-content-center'>
+                                            <div className='col-md-12'>
+                                                <div className='section-text'>
+                                                    <p>Students planning to study in Canada must demonstrate English language proficiency through exams like TOEFL and IELTS. Some of the essential resources for preparation include:</p>
+
+                                                    <div className='list-style-3 mb-30'>
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <ul>
+                                                                    <li><strong>TOEFL Preparation Online Free</strong></li>
+                                                                    <li><strong>TOEFL Writing Practice</strong></li>
+                                                                    <li><strong>TOEFL Exam Registration</strong></li>
+                                                                    <li><strong>TOEFL Classes</strong></li>
+                                                                    <li><strong>TST Prep TOEFL</strong></li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div className='col-md-6'>
+                                                                <ul>
+                                                                    <li><strong>TOEFL Vocabulary</strong></li>
+                                                                    <li><strong>ETS TOEFL Practice Test</strong></li>
+                                                                    <li><strong>TOEFL iBT Exam</strong></li>
+                                                                    <li><strong>The Official Guide to the TOEFL Test</strong></li>
+                                                                    <li><strong>TOEFL Listening</strong></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <p>For IELTS, many students opt for <strong>IELTS Exam Coaching</strong>, <strong>IELTS Online</strong>, <strong>IELTS Writing Mock Test</strong>, and <strong>IELTS Mock Exam Online</strong> to ensure success.</p>
+                                                    <p><strong>GRE Preparation for Studying in Canada</strong><br /> Many students looking to pursue higher education, especially a <strong>Masters Degree in Canada</strong>, prepare for the GRE. Essential resources for preparation include:</p>
+
+                                                    <ul>
+                                                        <li><strong>GRE Preparation Course</strong></li>
+                                                        <li><strong>GRE Mock Test Online</strong></li>
+                                                        <li><strong>GRE Exam Practice Test</strong></li>
+                                                        <li><strong>GRE Mock Exam</strong></li>
+                                                    </ul>
+                                                    <p><strong>IT Courses in Canada</strong><br /> For students interested in technology, there are several <strong>IT Courses in Canada</strong> that offer world-class education and career opportunities. These programs provide hands-on experience and open pathways to high-paying jobs in the tech industry.</p>
+                                                    <p><strong>Courses in Canada</strong><br /> Canada offers a diverse range of programs across multiple fields. Whether you are interested in business, healthcare, engineering, or information technology, there are countless <strong>Courses in Canada</strong> to choose from, making it an ideal destination for higher education.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1277,6 +1330,11 @@ const StudyAbroadCanada = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1300,8 +1358,15 @@ const StudyAbroadCanada = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

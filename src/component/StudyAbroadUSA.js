@@ -63,6 +63,7 @@ import '../css/verticals.min.css';
 import { getheaderandfooterdata, getaboutusdata} from '../Actions/Pics';
 import { useDispatch, useSelector } from "react-redux";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
@@ -269,12 +270,12 @@ const Dashboard = () => {
                                                     About USA
                                                 </h3>
                                                 <div className='section-text mb-20'>
-                                                    The USA has always remained the top choice for higher studies among international students. According to the US Citizenship and Immigration Services (USCIS), 4,65,700+ Indian students went to the USA for higher studies in 2022. The number of Indian students in the US increased by more than 19% in 2022. The US is home to the maximum number of top universities in the world. There is always an eagerness among international students for going to the US and experience the higher education system there.
+                                                    The USA has always been the top choice for higher studies among international students. According to the US Citizenship and Immigration Services (USCIS), over 465,700 Indian students pursued higher education in the USA in 2022, marking a 19% increase from the previous year. With the highest number of top-ranked universities globally, the USA attracts students eager to experience its world-class education system. Many international students aim to <strong>study Masters in USA</strong> or pursue a <strong>PhD in USA</strong> at prestigious institutions.
                                                 </div>
 
                                                 <h3 className='fw-700 italic mb-10'><b>Studying in the USA</b></h3>
                                                 <div className='section-text'>
-                                                    US universities have carved a niche for themselves in STEM courses. International students looking to pursue higher studies in STEM courses prefer to go to the USA over other options. Also, it is not just the STEM courses, students looking to study business, management or arts courses can also find top universities in the US.
+                                                    <p>US universities have established themselves as leaders in STEM courses. Students worldwide prefer the USA for higher education in science, technology, engineering, and mathematics. Besides STEM, students interested in business, management, and the arts can also find top <strong>Universities in USA for Masters</strong> and other advanced programs. The <strong>Best Study Abroad Education Consultants in Chennai</strong> can guide students in selecting the ideal <strong>University for International Students in USA</strong> that suits their academic goals.</p>
                                                 </div>
                                             </div>
 
@@ -637,7 +638,7 @@ const Dashboard = () => {
                                                 <div className='inner-column'>
                                                     <h3 className='fw-600 italic mb-20'>Post-Study Work Permit in USA</h3>
                                                     <div className='section-text'>
-                                                        International students require an F1-Visa to study in the USA. This visa allows them to stay for 60 days in the USA after their graduation date. F1 visa holders can apply for OPT (Optional Practical Training) after completing their studies. Optional Practical Training (OPT) is a one-year work and stay-back permit given to international students on completion of a degree program in the US. Working after studies in the USA is one of the most important factors that students choose to pursue higher education in the USA. Students should know everything about the post-study work visa in the USA before applying for the program.
+                                                        <p>International students require an F1-Visa to <strong>study Masters in USA</strong> or enroll in other programs. This visa allows students to stay for 60 days post-graduation. F1 visa holders can apply for <strong>Optional Practical Training (OPT)</strong>, which permits them to work in the USA for a year after completing their studies. Those who complete STEM courses can extend OPT for an additional two years. Many students choose the USA for higher education due to these post-study work opportunities. For students looking to study at a <strong>USA University Without IELTS</strong>, there are several institutions that accept alternate English proficiency tests.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -759,7 +760,7 @@ const Dashboard = () => {
                                             Intake in USA
                                         </h3>
                                         <div className='section-text text-center mb-50 mb-xs-30'>
-                                            Studying abroad is a huge decision that requires meticulous planning and organization. This guide will help you manoeuvre confusing timelines for fall and spring intakes in USA 2024. It will provide you with an overview of various dates so that you can start your study abroad journey as soon as possible. Also check out the entire timeline for the Fall 2024 US intake and Spring 2024 US intake, which includes when to apply and when to begin preparing for the intended intake as international students.
+                                            <p>Planning to study in the USA requires proper preparation and organization. This guide will help students navigate the application timelines for <strong>Fall 2024 US intake</strong> and <strong>Spring 2024 US intake</strong>. Understanding the right time to apply ensures a smooth admission process into the best <strong>PhD Universities in USA</strong> or master's programs.</p>
                                         </div>
 
                                         <div className='row'>
@@ -991,7 +992,7 @@ const Dashboard = () => {
                                                     Student Visa in USA
                                                 </h3>
                                                 <div className='section-text white'>
-                                                    There are different types of US student visas and the F1 visa is the most popular one. Students applying for a program that requires more than 18 hours of study in a week require an F1 visa. Those who are planning to take up their bachelor’s as well as master's in the USA require an F1 study visa. Apart from this, students going to vocational or technical students require an M1 visa.
+                                                    <p>There are different types of student visas for studying in the USA, with the F1 visa being the most common. Students pursuing a <strong>Masters Degree Courses in USA</strong> or a <strong>PhD in USA</strong> require an F1 visa if their program exceeds 18 hours of study per week. For vocational or technical courses, an M1 visa is required.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1012,7 +1013,7 @@ const Dashboard = () => {
                                     </div>
                                 </section>
 
-                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-100 pb-xs-20' style={{
+                                <section className='page-section bg-pos-topcenter fixed-height-small bg-scroll pb-0 pb-xs-20' style={{
                                         background: `url(${map_usa})`,
                                 }}>
                                     <div className='container relative'>
@@ -1044,6 +1045,24 @@ const Dashboard = () => {
                                                     <div className='exam_nam'>
                                                         <div><img src={exam_07} /></div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </section>
+                                <section className='small-section pt-0 pb-xs-20'>
+                                    <div className='container relative'>
+
+                                        <h3 className="hs-line-3 color text-center font-alt mb-60 mb-xs-10">
+                                            Test Preparation for Studying in the USA
+                                        </h3>
+
+                                        <div className='row d-flex justify-content-center text-center'>
+                                            <div className='col-md-8'>
+                                                <div className='section-text'>
+                                                    <p>Students planning to study in the USA often need to take standardized tests like the <strong>TOEFL practice test</strong>, <strong>ETS TOEFL</strong>, <strong>TOEFL preparation</strong>, and <strong>TOEFL mock test</strong> to meet language proficiency requirements. Many universities also require GRE scores, making <strong>GRE registration</strong>, <strong>GRE vocabulary</strong>, and <strong>GRE online course</strong> essential for applicants. Free resources such as <strong>TOEFL practice test free</strong>, <strong>TOEFL reading practice</strong>, <strong>TOEFL speaking practice</strong>, and <strong>GRE preparation online free</strong> can help students achieve competitive scores.</p>
+                                                    <p>For IELTS test-takers, resources like <strong>IELTS mock test free</strong>, <strong>IELTS online classes</strong>, <strong>IELTS online test free</strong>, <strong>IELTS mock test online</strong>, <strong>IELTS training online</strong>, and <strong>IELTS practice test free</strong> can assist in exam preparation. These tests play a crucial role in securing admission to top universities in the USA.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1283,6 +1302,11 @@ const Dashboard = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1306,8 +1330,15 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

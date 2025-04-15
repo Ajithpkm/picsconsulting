@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.340815a3.css",
-    "main.js": "/static/js/main.21424dfa.js",
+    "main.css": "/static/css/main.f523e6d2.css",
+    "main.js": "/static/js/main.12648f5d.js",
     "static/js/787.d9774dda.chunk.js": "/static/js/787.d9774dda.chunk.js",
     "static/media/admission-requirement.jpg": "/static/media/admission-requirement.3e1ec3b358a8a85df362.jpg",
     "static/media/usa-bg.png": "/static/media/usa-bg.6c9eac6da0f90ec31bc0.png",
@@ -9,12 +9,12 @@
     "static/media/workopportunities_uk.jpg": "/static/media/workopportunities_uk.3aa40d80236dbeddb5a2.jpg",
     "static/media/contact-step-1.jpg": "/static/media/contact-step-1.e9ab0ccc3ee2e2c8f8d9.jpg",
     "static/media/study-usa-bg.jpg": "/static/media/study-usa-bg.4f2bd132f95faa220310.jpg",
+    "static/media/workopportunities-australia.jpg": "/static/media/workopportunities-australia.8720df5f88aaa2eacead.jpg",
     "static/media/work-opportunities-usa.png": "/static/media/work-opportunities-usa.745497f13b11ac68b0f8.png",
     "static/media/student-visa.jpg": "/static/media/student-visa.fea3f857c893d2bb7a97.jpg",
     "static/media/contact-step-2.jpg": "/static/media/contact-step-2.aa6c0b546776cf704c15.jpg",
     "static/media/usa-map.png": "/static/media/usa-map.5502bbf06ffff96fbeac.png",
     "static/media/banner-bg.jpg": "/static/media/banner-bg.e8e5aae34d9297c1c3f2.jpg",
-    "static/media/workopportunities-aus.jpg": "/static/media/workopportunities-aus.d9ea04c5a19f37f52f2a.jpg",
     "static/media/document-required.png": "/static/media/document-required.1e0a442b91001de80e2a.png",
     "static/media/contact-step-4.jpg": "/static/media/contact-step-4.e6c20d338e7450722b25.jpg",
     "static/media/why-choose.jpg": "/static/media/why-choose.c7bb0ca68cb166bfb9b8.jpg",
@@ -38,6 +38,7 @@
     "static/media/workopportunities-canada.jpg": "/static/media/workopportunities-canada.d8483175437fc1bcb386.jpg",
     "static/media/preloader.gif": "/static/media/preloader.e0403fe91a32ab6fed72.gif",
     "static/media/loan.jpg": "/static/media/loan.bbbab1d27c757797f2f8.jpg",
+    "static/media/employee-company-handbook-ver-one.pdf": "/static/media/employee-company-handbook-ver-one.8b1fe64bcadf802477d0.pdf",
     "static/media/admission-requirement-5.jpg": "/static/media/admission-requirement-5.0fa4b2b27ed0c4b865d9.jpg",
     "static/media/home-bg.jpg": "/static/media/home-bg.7539cac9e485c82e64b1.jpg",
     "static/media/faq-bg.jpg": "/static/media/faq-bg.047b95114539d29e53e0.jpg",
@@ -72,18 +73,18 @@
     "static/media/prepare.svg": "/static/media/prepare.d4a8bf57e77d826211410ea4d41a7510.svg",
     "static/media/university.svg": "/static/media/university.17b13462f288b923d259bd602190b9e9.svg",
     "static/media/choose.svg": "/static/media/choose.ec81f7ce5d705681de02f8ced1cc798c.svg",
-    "static/media/ielts.svg": "/static/media/ielts.ebe70c63ae4604aeee566137c864eded.svg",
     "index.html": "/index.html",
+    "static/media/ielts.svg": "/static/media/ielts.ebe70c63ae4604aeee566137c864eded.svg",
     "static/media/application.svg": "/static/media/application.5d8a5ce9586eba81aa3cb8aefeb9772e.svg",
     "static/media/identity.svg": "/static/media/identity.2b31db891693f1f946bd2a0caed36047.svg",
     "static/media/scholarships.svg": "/static/media/scholarships.2386e9fe3949881b01ab0c4ade827dae.svg",
     "static/media/menu.svg": "/static/media/menu.e6e0605cbb8769baa061.svg",
-    "main.340815a3.css.map": "/static/css/main.340815a3.css.map",
-    "main.21424dfa.js.map": "/static/js/main.21424dfa.js.map",
+    "main.f523e6d2.css.map": "/static/css/main.f523e6d2.css.map",
+    "main.12648f5d.js.map": "/static/js/main.12648f5d.js.map",
     "787.d9774dda.chunk.js.map": "/static/js/787.d9774dda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.340815a3.css",
-    "static/js/main.21424dfa.js"
+    "static/css/main.f523e6d2.css",
+    "static/js/main.12648f5d.js"
   ]
 }

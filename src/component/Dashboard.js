@@ -62,6 +62,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import whatsappSticky from '../images/whatsapp-big.png';
+import Pdf from '../documents/employee-company-handbook-ver-one.pdf';
 import './style.css';
 import '../css/verticals.min.css';
 import '../css/style-responsive.css';
@@ -457,7 +458,9 @@ const Dashboard = () => {
                                                         Study Abroad Made<br/> Easy With PICS
                                                     </div>
                                                     <div className='section-text'>
-                                                        PICS Consultants takes a <b>Student- Centred Approach (P-I-C-S approach)</b> and our mission is to provide right guidance by having a transparent discussion with the student. We discuss with you to understand your requirement, Use our knowledge and provide you a list of university that’s well-matched and we help you to make the right decision that meet your requirement. Here is our exclusive PICS approach, 
+                                                        <p className='mb-10'>PICS <strong>Study Abroad Consultants</strong> takes a&nbsp;Student- Centred Approach (P-I-C-S approach)&nbsp;and our mission is to provide right guidance by having a transparent discussion with the student. We discuss with you to understand your requirement, Use our knowledge and provide you a list of university that&rsquo;s well-matched and we help you to make the right decision that meet your requirement. Here is our exclusive PICS <strong>Overseas Education Consultants</strong> approach,</p>
+                                                        <p className='mb-10'>PICS <strong>overseas education consultants</strong> can help students in gaining entry to many of the world&rsquo;s leading universities. Our students&rsquo; success is our success and we want the best outcomes for you.</p>
+                                                        <p className='mb-10'>Start your application process with PICS <strong>foreign education consultants</strong>. Simply create a free account and begin your application online at any time. It's easy, free, and all online. If you have any questions, feel free to reach out to us.</p>
                                                     </div>
                                                     <div className='pics-abbr mt-30'>
                                                         <div className='d-flex align-items-center mb-1'>
@@ -1332,6 +1335,11 @@ const Dashboard = () => {
                                                 <div className='m-center'>
                                                     <button className='buttonlink' onClick={() => window.location = 'mailto:contact@pics.global'}>{headandfooterdata?.email}</button>
                                                 </div>
+                                                <div className='m-center mt-xs-10'>
+                                                    <button className='buttonlink' onClick={() => window.location = 'tel:+919444094442'}>
+                                                        +91 94440 94442
+                                                    </button>
+                                                </div>
 
                                                 <div className="footer-menu m-center mt-xs-20 mb-40 mb-xs-20 xs-order-2">
                                                     <div className='row'>
@@ -1355,8 +1363,15 @@ const Dashboard = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="footer-copy pt-20 pb-0 m-center">
-                                                COPYRIGHT@ 2024 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            <div className="footer-copy pt-20 pb-10 m-center">
+                                                COPYRIGHT@ 2025 PICS Global Consultants Ltd. Trading as PICS Global  |  REG NO: 13199591 
+                                            </div>
+                                            <div className='pb-0'>
+                                                <a href={Pdf} without rel="noopener noreferrer" target="_blank">
+                                                    <button trailingIcon="picture_as_pdf" className='noBtn' label="Resume">
+                                                        Employee Company Handbook (Internal)
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
